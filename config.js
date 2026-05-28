@@ -24,7 +24,7 @@ var CONFIG = {
   // === メール設定 ===
   email: {
     // Google Apps Script Web App URL（デプロイ後に設定）
-    webhookUrl: "",
+    webhookUrl: "https://script.google.com/macros/s/AKfycbxAY1SHrPaTYmDasCgkcIwYk1vAhLewR2lvI1O7-ZV9AWUcWT17Dqn7ELjigzaKgF0lJw/exec",
     // 管理者メールアドレス（GAS側でも設定）
     adminEmail: "so@oikk.co.jp",
     // メール件名テンプレート
