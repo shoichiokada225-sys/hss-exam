@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSS認定試験 QRコード</title>
+<style>
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;margin:0;padding:20px}
+.card{background:#fff;border-radius:20px;padding:40px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,0.15);max-width:500px;width:100%}
+h1{font-size:1.3rem;color:#1a5276;margin-bottom:8px}
+.subtitle{font-size:0.85rem;color:#7f8c8d;margin-bottom:24px}
+#qr-container{margin:24px auto;padding:16px;background:#f0f4f8;border-radius:12px;display:inline-block}
+.url{font-size:0.8rem;color:#7f8c8d;word-break:break-all;margin-top:16px;padding:12px;background:#f0f4f8;border-radius:8px}
+.instructions{text-align:left;margin-top:24px;font-size:0.85rem;color:#2c3e50;line-height:1.8}
+.instructions h3{font-size:0.95rem;color:#1a5276;margin-bottom:8px}
+.instructions ol{padding-left:20px}
+.instructions li{margin-bottom:8px}
+.print-btn{margin-top:20px;padding:12px 24px;background:#1a5276;color:#fff;border:none;border-radius:8px;font-size:0.9rem;cursor:pointer;font-family:inherit}
+.print-btn:hover{background:#0e2f44}
+@media print{body{background:#fff;padding:0}.card{box-shadow:none;max-width:100%}.print-btn{display:none}}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>🐷 HSS認定試験</h1>
+  <div class="subtitle">株式会社ヒラノ</div>
+  <div id="qr-container"></div>
+  <div class="url" id="app-url"></div>
+  <div class="instructions">
+    <h3>📱 アプリの使い方</h3>
+    <ol>
+      <li>上のQRコードをスマートフォンのカメラで読み取ります</li>
+      <li>ブラウザでページが開きます</li>
+      <li><strong>iPhone</strong>: 共有ボタン → 「ホーム画面に追加」</li>
+      <li><strong>Android</strong>: メニュー → 「ホーム画面に追加」またはインストールバナー</li>
+      <li>ホーム画面のアイコンからアプリとして起動できます</li>
+    </ol>
+  </div>
+  <button class="print-btn" onclick="window.print()">🖨 印刷する</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<script src="config.js"></script>
+<script>
+(function(){
+  var url = CONFIG.appUrl || window.location.href.replace(/qr\.html.*$/, "");
+  document.getElementById("app-url").textContent = url;
+  if(typeof qrcode !== "undefined"){
+    var qr = qrcode(0, "M");
+    qr.addData(url);
+    qr.make();
+    var size = 8;
+    var svg = qr.createSvgTag(size, 0);
+    // Safe SVG insertion via DOMParser
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(svg, "image/svg+xml");
+    var svgEl = doc.documentElement;
+    if(svgEl && svgEl.tagName === "svg"){
+      document.getElementById("qr-container").appendChild(document.importNode(svgEl, true));
+    }
+  } else {
+    var errMsg = document.createElement("p");
+    errMsg.style.color = "#c0392b";
+    errMsg.textContent = "QRコードライブラリの読み込みに失敗しました";
+    document.getElementById("qr-container").appendChild(errMsg);
+  }
+})();
+</script>
+</body>
+</html>

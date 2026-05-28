@@ -1,0 +1,3602 @@
+[
+  {
+    "question": "母豚の妊娠期間は平均で約何日か？",
+    "answer": "約114日",
+    "options": [
+      "約100日",
+      "約114日",
+      "約130日",
+      "約150日"
+    ],
+    "category": "繁殖関連",
+    "explanation": "母豚の妊娠期間は平均約114日（3ヶ月3週間3日）である。",
+    "en": {
+      "question": "What is the average gestation period of a sow?",
+      "answer": "About 114 days",
+      "options": [
+        "About 100 days",
+        "About 114 days",
+        "About 130 days",
+        "About 150 days"
+      ],
+      "explanation": "The average gestation period of a sow is about 114 days (3 months, 3 weeks, and 3 days)."
+    },
+    "vi": {
+      "question": "Thoi gian mang thai trung binh cua lon nai la bao nhieu ngay?",
+      "answer": "Khoang 114 ngay",
+      "options": [
+        "Khoang 100 ngay",
+        "Khoang 114 ngay",
+        "Khoang 130 ngay",
+        "Khoang 150 ngay"
+      ],
+      "explanation": "Thoi gian mang thai trung binh cua lon nai la khoang 114 ngay (3 thang 3 tuan 3 ngay)."
+    },
+    "ind": {
+      "question": "Berapa rata-rata masa kehamilan induk babi?",
+      "answer": "Sekitar 114 hari",
+      "options": [
+        "Sekitar 100 hari",
+        "Sekitar 114 hari",
+        "Sekitar 130 hari",
+        "Sekitar 150 hari"
+      ],
+      "explanation": "Rata-rata masa kehamilan induk babi adalah sekitar 114 hari (3 bulan 3 minggu 3 hari)."
+    }
+  },
+  {
+    "question": "人工授精（AI）で使用する精液の保存温度として適切なのはどれか？",
+    "answer": "17℃前後",
+    "options": [
+      "0℃前後",
+      "17℃前後",
+      "37℃前後",
+      "4℃前後"
+    ],
+    "category": "繁殖関連",
+    "explanation": "豚の人工授精用精液は17℃前後で保存し、通常3〜5日以内に使用する。",
+    "en": {
+      "question": "What is the appropriate storage temperature for semen used in artificial insemination (AI)?",
+      "answer": "Around 17°C",
+      "options": [
+        "Around 0°C",
+        "Around 17°C",
+        "Around 37°C",
+        "Around 4°C"
+      ],
+      "explanation": "Pig semen for AI is stored at around 17°C and should be used within 3-5 days."
+    },
+    "vi": {
+      "question": "Nhiet do bao quan tinh dich dung cho thu tinh nhan tao (AI) la bao nhieu?",
+      "answer": "Khoang 17°C",
+      "options": [
+        "Khoang 0°C",
+        "Khoang 17°C",
+        "Khoang 37°C",
+        "Khoang 4°C"
+      ],
+      "explanation": "Tinh dich lon dung cho thu tinh nhan tao duoc bao quan o khoang 17°C va su dung trong 3-5 ngay."
+    },
+    "ind": {
+      "question": "Berapa suhu penyimpanan yang tepat untuk semen yang digunakan dalam inseminasi buatan (IB)?",
+      "answer": "Sekitar 17°C",
+      "options": [
+        "Sekitar 0°C",
+        "Sekitar 17°C",
+        "Sekitar 37°C",
+        "Sekitar 4°C"
+      ],
+      "explanation": "Semen babi untuk IB disimpan pada suhu sekitar 17°C dan harus digunakan dalam 3-5 hari."
+    }
+  },
+  {
+    "question": "母豚の発情周期は平均で約何日か？",
+    "answer": "約21日",
+    "options": [
+      "約14日",
+      "約28日",
+      "約21日",
+      "約35日"
+    ],
+    "category": "繁殖関連",
+    "explanation": "母豚の発情周期は平均約21日で、発情持続時間は2〜3日である。",
+    "en": {
+      "question": "What is the average estrous cycle of a sow?",
+      "answer": "About 21 days",
+      "options": [
+        "About 14 days",
+        "About 28 days",
+        "About 21 days",
+        "About 35 days"
+      ],
+      "explanation": "The average estrous cycle of a sow is about 21 days, with estrus lasting 2-3 days."
+    },
+    "vi": {
+      "question": "Chu ky dong duc trung binh cua lon nai la bao nhieu ngay?",
+      "answer": "Khoang 21 ngay",
+      "options": [
+        "Khoang 14 ngay",
+        "Khoang 28 ngay",
+        "Khoang 21 ngay",
+        "Khoang 35 ngay"
+      ],
+      "explanation": "Chu ky dong duc trung binh cua lon nai la khoang 21 ngay, thoi gian dong duc keo dai 2-3 ngay."
+    },
+    "ind": {
+      "question": "Berapa rata-rata siklus birahi induk babi?",
+      "answer": "Sekitar 21 hari",
+      "options": [
+        "Sekitar 14 hari",
+        "Sekitar 28 hari",
+        "Sekitar 21 hari",
+        "Sekitar 35 hari"
+      ],
+      "explanation": "Rata-rata siklus birahi induk babi adalah sekitar 21 hari, dengan birahi berlangsung 2-3 hari."
+    }
+  },
+  {
+    "question": "母豚の分娩時に最も重要な管理項目はどれか？",
+    "answer": "初乳の摂取確認",
+    "options": [
+      "初乳の摂取確認",
+      "すぐに離乳する",
+      "分娩後すぐに交配する",
+      "子豚を別室に移す"
+    ],
+    "category": "繁殖関連",
+    "explanation": "分娩後、子豚が初乳を十分に摂取することが免疫獲得と生存率向上に最も重要である。",
+    "en": {
+      "question": "What is the most important management item during farrowing?",
+      "answer": "Confirming colostrum intake",
+      "options": [
+        "Confirming colostrum intake",
+        "Weaning immediately",
+        "Breeding immediately after farrowing",
+        "Moving piglets to a separate room"
+      ],
+      "explanation": "After farrowing, ensuring piglets receive sufficient colostrum is critical for immune acquisition and survival."
+    },
+    "vi": {
+      "question": "Quan ly quan trong nhat khi lon nai de la gi?",
+      "answer": "Xac nhan lon con bu duoc sua dau",
+      "options": [
+        "Xac nhan lon con bu duoc sua dau",
+        "Cai sua ngay lap tuc",
+        "Phoi giong ngay sau khi de",
+        "Chuyen lon con sang phong khac"
+      ],
+      "explanation": "Sau khi de, dam bao lon con bu du sua dau la rat quan trong de co mien dich va tang ty le song."
+    },
+    "ind": {
+      "question": "Apa hal terpenting dalam manajemen saat kelahiran?",
+      "answer": "Memastikan asupan kolostrum",
+      "options": [
+        "Memastikan asupan kolostrum",
+        "Menyapih segera",
+        "Mengawinkan segera setelah melahirkan",
+        "Memindahkan anak babi ke ruangan lain"
+      ],
+      "explanation": "Setelah kelahiran, memastikan anak babi mendapat kolostrum yang cukup sangat penting untuk kekebalan dan kelangsungan hidup."
+    }
+  },
+  {
+    "question": "離乳後の母豚が再発情するまでの日数は通常どのくらいか？",
+    "answer": "4〜7日",
+    "options": [
+      "1〜2日",
+      "4〜7日",
+      "14〜21日",
+      "30日以上"
+    ],
+    "category": "繁殖関連",
+    "explanation": "離乳後の母豚は通常4〜7日で再発情する。この間にBCS管理が重要となる。",
+    "en": {
+      "question": "How many days after weaning does a sow typically return to estrus?",
+      "answer": "4-7 days",
+      "options": [
+        "1-2 days",
+        "4-7 days",
+        "14-21 days",
+        "Over 30 days"
+      ],
+      "explanation": "A sow typically returns to estrus 4-7 days after weaning. BCS management during this period is important."
+    },
+    "vi": {
+      "question": "Sau khi cai sua, lon nai thuong dong duc lai sau bao nhieu ngay?",
+      "answer": "4-7 ngay",
+      "options": [
+        "1-2 ngay",
+        "4-7 ngay",
+        "14-21 ngay",
+        "Tren 30 ngay"
+      ],
+      "explanation": "Lon nai thuong dong duc lai sau 4-7 ngay sau cai sua. Quan ly the trang trong giai doan nay rat quan trong."
+    },
+    "ind": {
+      "question": "Berapa hari setelah penyapihan induk babi biasanya kembali birahi?",
+      "answer": "4-7 hari",
+      "options": [
+        "1-2 hari",
+        "4-7 hari",
+        "14-21 hari",
+        "Lebih dari 30 hari"
+      ],
+      "explanation": "Induk babi biasanya kembali birahi 4-7 hari setelah penyapihan. Manajemen BCS selama periode ini penting."
+    }
+  },
+  {
+    "question": "母豚の交配適期を判断する方法として正しいのはどれか？",
+    "answer": "スタンディング反射の確認",
+    "options": [
+      "体温測定",
+      "スタンディング反射の確認",
+      "体重測定",
+      "血液検査"
+    ],
+    "category": "繁殖関連",
+    "explanation": "母豚の交配適期は、背中を押した時に静止するスタンディング反射（静止反射）で判断する。",
+    "en": {
+      "question": "What is the correct method to determine the optimal breeding time for a sow?",
+      "answer": "Checking the standing reflex",
+      "options": [
+        "Measuring body temperature",
+        "Checking the standing reflex",
+        "Measuring body weight",
+        "Blood testing"
+      ],
+      "explanation": "The optimal breeding time is determined by the standing reflex, where the sow stands still when pressure is applied to her back."
+    },
+    "vi": {
+      "question": "Phuong phap dung de xac dinh thoi diem phoi giong tot nhat cho lon nai la gi?",
+      "answer": "Kiem tra phan xa dung yen",
+      "options": [
+        "Do nhiet do co the",
+        "Kiem tra phan xa dung yen",
+        "Can trong luong",
+        "Xet nghiem mau"
+      ],
+      "explanation": "Thoi diem phoi giong tot nhat duoc xac dinh bang phan xa dung yen, khi lon nai dung im khi an lung."
+    },
+    "ind": {
+      "question": "Apa metode yang tepat untuk menentukan waktu kawin optimal induk babi?",
+      "answer": "Memeriksa refleks berdiri",
+      "options": [
+        "Mengukur suhu tubuh",
+        "Memeriksa refleks berdiri",
+        "Mengukur berat badan",
+        "Tes darah"
+      ],
+      "explanation": "Waktu kawin optimal ditentukan dengan refleks berdiri, di mana induk babi berdiri diam saat punggungnya ditekan."
+    }
+  },
+  {
+    "question": "母豚の1回の分娩で生まれる子豚の平均頭数はどのくらいか？",
+    "answer": "10〜14頭",
+    "options": [
+      "3〜5頭",
+      "6〜8頭",
+      "10〜14頭",
+      "18〜22頭"
+    ],
+    "category": "繁殖関連",
+    "explanation": "品種や管理にもよるが、一般的な母豚の平均産子数は10〜14頭程度である。",
+    "en": {
+      "question": "What is the average litter size of a sow?",
+      "answer": "10-14 piglets",
+      "options": [
+        "3-5 piglets",
+        "6-8 piglets",
+        "10-14 piglets",
+        "18-22 piglets"
+      ],
+      "explanation": "Depending on breed and management, the average litter size of a sow is about 10-14 piglets."
+    },
+    "vi": {
+      "question": "So lon con trung binh moi lua de cua lon nai la bao nhieu?",
+      "answer": "10-14 con",
+      "options": [
+        "3-5 con",
+        "6-8 con",
+        "10-14 con",
+        "18-22 con"
+      ],
+      "explanation": "Tuy thuoc vao giong va quan ly, so lon con trung binh moi lua de cua lon nai la khoang 10-14 con."
+    },
+    "ind": {
+      "question": "Berapa rata-rata jumlah anak babi per kelahiran?",
+      "answer": "10-14 ekor",
+      "options": [
+        "3-5 ekor",
+        "6-8 ekor",
+        "10-14 ekor",
+        "18-22 ekor"
+      ],
+      "explanation": "Tergantung pada ras dan manajemen, rata-rata jumlah anak per kelahiran adalah sekitar 10-14 ekor."
+    }
+  },
+  {
+    "question": "母豚のBCS（ボディコンディションスコア）の理想的なスコアはどれか？",
+    "answer": "3.0〜3.5",
+    "options": [
+      "1.0〜1.5",
+      "2.0〜2.5",
+      "3.0〜3.5",
+      "4.5〜5.0"
+    ],
+    "category": "繁殖関連",
+    "explanation": "母豚のBCSは5段階評価で、交配時・妊娠中は3.0〜3.5が理想的とされる。",
+    "en": {
+      "question": "What is the ideal BCS (Body Condition Score) for a sow?",
+      "answer": "3.0-3.5",
+      "options": [
+        "1.0-1.5",
+        "2.0-2.5",
+        "3.0-3.5",
+        "4.5-5.0"
+      ],
+      "explanation": "On a 5-point scale, the ideal BCS for a sow at breeding and during gestation is 3.0-3.5."
+    },
+    "vi": {
+      "question": "Diem BCS (the trang co the) ly tuong cua lon nai la bao nhieu?",
+      "answer": "3.0-3.5",
+      "options": [
+        "1.0-1.5",
+        "2.0-2.5",
+        "3.0-3.5",
+        "4.5-5.0"
+      ],
+      "explanation": "Tren thang diem 5, BCS ly tuong cua lon nai khi phoi giong va mang thai la 3.0-3.5."
+    },
+    "ind": {
+      "question": "Berapa skor BCS (Body Condition Score) ideal untuk induk babi?",
+      "answer": "3.0-3.5",
+      "options": [
+        "1.0-1.5",
+        "2.0-2.5",
+        "3.0-3.5",
+        "4.5-5.0"
+      ],
+      "explanation": "Pada skala 5 poin, BCS ideal untuk induk babi saat kawin dan selama kebuntingan adalah 3.0-3.5."
+    }
+  },
+  {
+    "question": "母豚の妊娠鑑定に超音波検査を行う場合、最適な時期はいつか？",
+    "answer": "交配後25〜30日",
+    "options": [
+      "交配後5〜7日",
+      "交配後25〜30日",
+      "交配後60〜70日",
+      "交配後100日以降"
+    ],
+    "category": "繁殖関連",
+    "explanation": "超音波による妊娠鑑定は交配後25〜30日が最適で、この時期に胎児の確認が可能となる。",
+    "en": {
+      "question": "When is the optimal time for ultrasound pregnancy detection in sows?",
+      "answer": "25-30 days after breeding",
+      "options": [
+        "5-7 days after breeding",
+        "25-30 days after breeding",
+        "60-70 days after breeding",
+        "After 100 days of breeding"
+      ],
+      "explanation": "Ultrasound pregnancy detection is optimal at 25-30 days after breeding, when fetal detection becomes possible."
+    },
+    "vi": {
+      "question": "Thoi diem tot nhat de sieu am chan doan thai o lon nai la khi nao?",
+      "answer": "25-30 ngay sau phoi giong",
+      "options": [
+        "5-7 ngay sau phoi giong",
+        "25-30 ngay sau phoi giong",
+        "60-70 ngay sau phoi giong",
+        "Sau 100 ngay phoi giong"
+      ],
+      "explanation": "Sieu am chan doan thai tot nhat vao 25-30 ngay sau phoi giong, khi co the phat hien thai."
+    },
+    "ind": {
+      "question": "Kapan waktu optimal untuk deteksi kebuntingan dengan USG pada induk babi?",
+      "answer": "25-30 hari setelah kawin",
+      "options": [
+        "5-7 hari setelah kawin",
+        "25-30 hari setelah kawin",
+        "60-70 hari setelah kawin",
+        "Setelah 100 hari kawin"
+      ],
+      "explanation": "Deteksi kebuntingan USG optimal pada 25-30 hari setelah kawin, ketika deteksi janin menjadi mungkin."
+    }
+  },
+  {
+    "question": "母豚の年間目標産子回数として適切なのはどれか？",
+    "answer": "2.3〜2.5回",
+    "options": [
+      "1.0〜1.5回",
+      "2.3〜2.5回",
+      "3.5〜4.0回",
+      "5.0回以上"
+    ],
+    "category": "繁殖関連",
+    "explanation": "効率的な養豚経営では、母豚1頭あたり年間2.3〜2.5回の分娩を目標とする。",
+    "en": {
+      "question": "What is the appropriate target number of farrowings per sow per year?",
+      "answer": "2.3-2.5 times",
+      "options": [
+        "1.0-1.5 times",
+        "2.3-2.5 times",
+        "3.5-4.0 times",
+        "Over 5.0 times"
+      ],
+      "explanation": "In efficient pig farming, the target is 2.3-2.5 farrowings per sow per year."
+    },
+    "vi": {
+      "question": "Muc tieu so lua de moi nam cua lon nai la bao nhieu?",
+      "answer": "2.3-2.5 lan",
+      "options": [
+        "1.0-1.5 lan",
+        "2.3-2.5 lan",
+        "3.5-4.0 lan",
+        "Tren 5.0 lan"
+      ],
+      "explanation": "Trong chan nuoi hieu qua, muc tieu la 2.3-2.5 lua de moi lon nai moi nam."
+    },
+    "ind": {
+      "question": "Berapa target jumlah kelahiran per induk babi per tahun yang tepat?",
+      "answer": "2,3-2,5 kali",
+      "options": [
+        "1,0-1,5 kali",
+        "2,3-2,5 kali",
+        "3,5-4,0 kali",
+        "Lebih dari 5,0 kali"
+      ],
+      "explanation": "Dalam peternakan babi yang efisien, targetnya adalah 2,3-2,5 kelahiran per induk per tahun."
+    }
+  },
+  {
+    "question": "雄豚の初交配に適した月齢はどれか？",
+    "answer": "8〜10ヶ月齢",
+    "options": [
+      "4〜5ヶ月齢",
+      "8〜10ヶ月齢",
+      "14〜16ヶ月齢",
+      "18ヶ月齢以上"
+    ],
+    "category": "繁殖関連",
+    "explanation": "雄豚は8〜10ヶ月齢で体が十分に成長してから初交配を行うのが適切である。",
+    "en": {
+      "question": "At what age is a boar suitable for first mating?",
+      "answer": "8-10 months",
+      "options": [
+        "4-5 months",
+        "8-10 months",
+        "14-16 months",
+        "Over 18 months"
+      ],
+      "explanation": "A boar is suitable for first mating at 8-10 months when physically mature enough."
+    },
+    "vi": {
+      "question": "Lon duc thich hop phoi giong lan dau o thang tuoi nao?",
+      "answer": "8-10 thang tuoi",
+      "options": [
+        "4-5 thang tuoi",
+        "8-10 thang tuoi",
+        "14-16 thang tuoi",
+        "Tren 18 thang tuoi"
+      ],
+      "explanation": "Lon duc thich hop phoi giong lan dau o 8-10 thang tuoi khi co the da truong thanh du."
+    },
+    "ind": {
+      "question": "Pada usia berapa pejantan cocok untuk kawin pertama?",
+      "answer": "8-10 bulan",
+      "options": [
+        "4-5 bulan",
+        "8-10 bulan",
+        "14-16 bulan",
+        "Lebih dari 18 bulan"
+      ],
+      "explanation": "Pejantan cocok untuk kawin pertama pada usia 8-10 bulan ketika sudah cukup matang secara fisik."
+    }
+  },
+  {
+    "question": "母豚の分娩誘発に使用されるホルモンはどれか？",
+    "answer": "プロスタグランジン",
+    "options": [
+      "オキシトシン",
+      "プロスタグランジン",
+      "エストロゲン",
+      "テストステロン"
+    ],
+    "category": "繁殖関連",
+    "explanation": "分娩予定日の1〜2日前にプロスタグランジンを投与することで分娩を誘発できる。",
+    "en": {
+      "question": "Which hormone is used to induce farrowing in sows?",
+      "answer": "Prostaglandin",
+      "options": [
+        "Oxytocin",
+        "Prostaglandin",
+        "Estrogen",
+        "Testosterone"
+      ],
+      "explanation": "Prostaglandin can be administered 1-2 days before the expected farrowing date to induce labor."
+    },
+    "vi": {
+      "question": "Hormone nao duoc su dung de gay de cho lon nai?",
+      "answer": "Prostaglandin",
+      "options": [
+        "Oxytocin",
+        "Prostaglandin",
+        "Estrogen",
+        "Testosterone"
+      ],
+      "explanation": "Prostaglandin co the duoc tiem 1-2 ngay truoc ngay de du kien de gay de."
+    },
+    "ind": {
+      "question": "Hormon apa yang digunakan untuk menginduksi kelahiran pada induk babi?",
+      "answer": "Prostaglandin",
+      "options": [
+        "Oksitosin",
+        "Prostaglandin",
+        "Estrogen",
+        "Testosteron"
+      ],
+      "explanation": "Prostaglandin dapat diberikan 1-2 hari sebelum tanggal kelahiran yang diperkirakan untuk menginduksi persalinan."
+    }
+  },
+  {
+    "question": "生後間もない子豚に鉄剤を注射する主な目的は何か？",
+    "answer": "貧血の予防",
+    "options": [
+      "貧血の予防",
+      "成長促進",
+      "感染症予防",
+      "下痢予防"
+    ],
+    "category": "子豚管理",
+    "explanation": "母乳中の鉄分が不足するため、生後1〜3日目に鉄剤を筋肉注射して貧血を予防する。",
+    "en": {
+      "question": "What is the main purpose of iron injection in newborn piglets?",
+      "answer": "Prevention of anemia",
+      "options": [
+        "Prevention of anemia",
+        "Growth promotion",
+        "Infection prevention",
+        "Diarrhea prevention"
+      ],
+      "explanation": "Due to insufficient iron in sow's milk, iron is injected intramuscularly at 1-3 days of age to prevent anemia."
+    },
+    "vi": {
+      "question": "Muc dich chinh cua viec tiem sat cho lon con so sinh la gi?",
+      "answer": "Phong ngua thieu mau",
+      "options": [
+        "Phong ngua thieu mau",
+        "Thuc day tang truong",
+        "Phong ngua nhiem trung",
+        "Phong ngua tieu chay"
+      ],
+      "explanation": "Do sua me thieu sat, lon con duoc tiem sat vao co o ngay 1-3 sau sinh de phong thieu mau."
+    },
+    "ind": {
+      "question": "Apa tujuan utama injeksi zat besi pada anak babi yang baru lahir?",
+      "answer": "Pencegahan anemia",
+      "options": [
+        "Pencegahan anemia",
+        "Promosi pertumbuhan",
+        "Pencegahan infeksi",
+        "Pencegahan diare"
+      ],
+      "explanation": "Karena kekurangan zat besi dalam susu induk, zat besi disuntikkan secara intramuskular pada usia 1-3 hari untuk mencegah anemia."
+    }
+  },
+  {
+    "question": "子豚の断尾（尾の切断）を行う主な理由は何か？",
+    "answer": "尾かじりの防止",
+    "options": [
+      "外見の改善",
+      "成長促進",
+      "尾かじりの防止",
+      "病気予防"
+    ],
+    "category": "子豚管理",
+    "explanation": "豚はストレスなどにより他の豚の尾をかじる行動を示すため、断尾により尾かじりを予防する。",
+    "en": {
+      "question": "What is the main reason for tail docking in piglets?",
+      "answer": "Prevention of tail biting",
+      "options": [
+        "Improving appearance",
+        "Growth promotion",
+        "Prevention of tail biting",
+        "Disease prevention"
+      ],
+      "explanation": "Pigs may bite other pigs' tails due to stress, so tail docking prevents tail biting behavior."
+    },
+    "vi": {
+      "question": "Ly do chinh cua viec cat duoi lon con la gi?",
+      "answer": "Phong ngua can duoi",
+      "options": [
+        "Cai thien ngoai hinh",
+        "Thuc day tang truong",
+        "Phong ngua can duoi",
+        "Phong benh"
+      ],
+      "explanation": "Lon co the can duoi lon khac do stress, nen cat duoi de phong ngua hanh vi can duoi."
+    },
+    "ind": {
+      "question": "Apa alasan utama pemotongan ekor pada anak babi?",
+      "answer": "Pencegahan gigitan ekor",
+      "options": [
+        "Memperbaiki penampilan",
+        "Promosi pertumbuhan",
+        "Pencegahan gigitan ekor",
+        "Pencegahan penyakit"
+      ],
+      "explanation": "Babi dapat menggigit ekor babi lain karena stres, sehingga pemotongan ekor mencegah perilaku gigitan ekor."
+    }
+  },
+  {
+    "question": "子豚の犬歯切り（切歯）を行う適切な時期はいつか？",
+    "answer": "生後1〜3日以内",
+    "options": [
+      "生後1〜3日以内",
+      "生後7〜10日",
+      "生後14〜21日",
+      "離乳時"
+    ],
+    "category": "子豚管理",
+    "explanation": "犬歯切りは生後1〜3日以内に行い、母豚の乳頭や他の子豚への傷害を防ぐ。",
+    "en": {
+      "question": "When is the appropriate time for teeth clipping in piglets?",
+      "answer": "Within 1-3 days after birth",
+      "options": [
+        "Within 1-3 days after birth",
+        "7-10 days after birth",
+        "14-21 days after birth",
+        "At weaning"
+      ],
+      "explanation": "Teeth clipping is performed within 1-3 days after birth to prevent injury to the sow's teats and other piglets."
+    },
+    "vi": {
+      "question": "Thoi diem thich hop de bat rang cho lon con la khi nao?",
+      "answer": "Trong vong 1-3 ngay sau sinh",
+      "options": [
+        "Trong vong 1-3 ngay sau sinh",
+        "7-10 ngay sau sinh",
+        "14-21 ngay sau sinh",
+        "Khi cai sua"
+      ],
+      "explanation": "Bat rang duoc thuc hien trong 1-3 ngay sau sinh de phong ton thuong vu lon me va lon con khac."
+    },
+    "ind": {
+      "question": "Kapan waktu yang tepat untuk pemotongan gigi pada anak babi?",
+      "answer": "Dalam 1-3 hari setelah lahir",
+      "options": [
+        "Dalam 1-3 hari setelah lahir",
+        "7-10 hari setelah lahir",
+        "14-21 hari setelah lahir",
+        "Saat penyapihan"
+      ],
+      "explanation": "Pemotongan gigi dilakukan dalam 1-3 hari setelah lahir untuk mencegah cedera pada puting induk dan anak babi lain."
+    }
+  },
+  {
+    "question": "子豚の去勢を行う一般的な時期はいつか？",
+    "answer": "生後7〜14日",
+    "options": [
+      "生後1〜2日",
+      "生後7〜14日",
+      "生後30日以降",
+      "出荷前"
+    ],
+    "category": "子豚管理",
+    "explanation": "去勢は一般的に生後7〜14日で行い、雄臭（ボアテイント）の防止と管理のしやすさのために実施する。",
+    "en": {
+      "question": "When is the common time for castration of piglets?",
+      "answer": "7-14 days after birth",
+      "options": [
+        "1-2 days after birth",
+        "7-14 days after birth",
+        "After 30 days",
+        "Before shipping"
+      ],
+      "explanation": "Castration is typically performed at 7-14 days to prevent boar taint and for easier management."
+    },
+    "vi": {
+      "question": "Thoi diem pho bien de thien lon con la khi nao?",
+      "answer": "7-14 ngay sau sinh",
+      "options": [
+        "1-2 ngay sau sinh",
+        "7-14 ngay sau sinh",
+        "Sau 30 ngay",
+        "Truoc khi xuat chuong"
+      ],
+      "explanation": "Thien thuong duoc thuc hien vao ngay 7-14 de phong mui hoi duc va de quan ly hon."
+    },
+    "ind": {
+      "question": "Kapan waktu umum untuk kastrasi anak babi?",
+      "answer": "7-14 hari setelah lahir",
+      "options": [
+        "1-2 hari setelah lahir",
+        "7-14 hari setelah lahir",
+        "Setelah 30 hari",
+        "Sebelum pengiriman"
+      ],
+      "explanation": "Kastrasi biasanya dilakukan pada hari ke 7-14 untuk mencegah bau jantan dan memudahkan manajemen."
+    }
+  },
+  {
+    "question": "子豚の離乳日齢として一般的なのはどれか？",
+    "answer": "21〜28日齢",
+    "options": [
+      "7〜10日齢",
+      "14〜17日齢",
+      "21〜28日齢",
+      "35〜42日齢"
+    ],
+    "category": "子豚管理",
+    "explanation": "現代の養豚では21〜28日齢での離乳が一般的で、早期離乳により母豚の回転率を上げる。",
+    "en": {
+      "question": "What is the common weaning age for piglets?",
+      "answer": "21-28 days",
+      "options": [
+        "7-10 days",
+        "14-17 days",
+        "21-28 days",
+        "35-42 days"
+      ],
+      "explanation": "In modern pig farming, weaning at 21-28 days is common, allowing faster sow turnover."
+    },
+    "vi": {
+      "question": "Tuoi cai sua pho bien cua lon con la bao nhieu?",
+      "answer": "21-28 ngay tuoi",
+      "options": [
+        "7-10 ngay tuoi",
+        "14-17 ngay tuoi",
+        "21-28 ngay tuoi",
+        "35-42 ngay tuoi"
+      ],
+      "explanation": "Trong chan nuoi hien dai, cai sua o 21-28 ngay tuoi la pho bien, giup tang hieu suat lon nai."
+    },
+    "ind": {
+      "question": "Berapa usia penyapihan yang umum untuk anak babi?",
+      "answer": "21-28 hari",
+      "options": [
+        "7-10 hari",
+        "14-17 hari",
+        "21-28 hari",
+        "35-42 hari"
+      ],
+      "explanation": "Dalam peternakan babi modern, penyapihan pada usia 21-28 hari umum dilakukan untuk meningkatkan perputaran induk."
+    }
+  },
+  {
+    "question": "離乳直後の子豚に最も注意すべきことはどれか？",
+    "answer": "下痢の発生",
+    "options": [
+      "下痢の発生",
+      "過剰な体重増加",
+      "歯の成長",
+      "毛並みの変化"
+    ],
+    "category": "子豚管理",
+    "explanation": "離乳直後は飼料変更と母乳由来の免疫低下により下痢が発生しやすく、最も注意が必要である。",
+    "en": {
+      "question": "What should be most carefully monitored immediately after weaning?",
+      "answer": "Occurrence of diarrhea",
+      "options": [
+        "Occurrence of diarrhea",
+        "Excessive weight gain",
+        "Teeth growth",
+        "Changes in coat"
+      ],
+      "explanation": "Diarrhea is common after weaning due to feed changes and declining maternal immunity."
+    },
+    "vi": {
+      "question": "Dieu gi can chu y nhat ngay sau khi cai sua?",
+      "answer": "Tieu chay",
+      "options": [
+        "Tieu chay",
+        "Tang can qua muc",
+        "Rang moc",
+        "Thay doi long"
+      ],
+      "explanation": "Tieu chay de xay ra sau cai sua do thay doi thuc an va giam mien dich tu me."
+    },
+    "ind": {
+      "question": "Apa yang harus paling diperhatikan segera setelah penyapihan?",
+      "answer": "Terjadinya diare",
+      "options": [
+        "Terjadinya diare",
+        "Kenaikan berat badan berlebihan",
+        "Pertumbuhan gigi",
+        "Perubahan bulu"
+      ],
+      "explanation": "Diare umum terjadi setelah penyapihan karena perubahan pakan dan penurunan kekebalan maternal."
+    }
+  },
+  {
+    "question": "子豚のクリープフィーディングとは何か？",
+    "answer": "母豚とは別に子豚専用の飼料を与えること",
+    "options": [
+      "母豚とは別に子豚専用の飼料を与えること",
+      "母豚と同じ飼料を与えること",
+      "離乳後に液体飼料を与えること",
+      "人工哺乳で育てること"
+    ],
+    "category": "子豚管理",
+    "explanation": "クリープフィーディングは哺乳中の子豚に母豚とは別に固形飼料を与え、離乳への移行をスムーズにする方法。",
+    "en": {
+      "question": "What is creep feeding for piglets?",
+      "answer": "Providing feed exclusively for piglets separate from the sow",
+      "options": [
+        "Providing feed exclusively for piglets separate from the sow",
+        "Feeding the same feed as the sow",
+        "Giving liquid feed after weaning",
+        "Raising with artificial milk"
+      ],
+      "explanation": "Creep feeding provides solid feed to suckling piglets separately from the sow to ease the transition to weaning."
+    },
+    "vi": {
+      "question": "Cho an bo sung (creep feeding) cho lon con la gi?",
+      "answer": "Cho lon con an thuc an rieng, tach biet voi lon me",
+      "options": [
+        "Cho lon con an thuc an rieng, tach biet voi lon me",
+        "Cho an cung thuc an voi lon me",
+        "Cho an thuc an long sau cai sua",
+        "Nuoi bang sua nhan tao"
+      ],
+      "explanation": "Cho an bo sung la cung cap thuc an ran cho lon con dang bu rieng voi lon me de chuyen doi cai sua de dang hon."
+    },
+    "ind": {
+      "question": "Apa itu creep feeding untuk anak babi?",
+      "answer": "Memberikan pakan khusus anak babi terpisah dari induk",
+      "options": [
+        "Memberikan pakan khusus anak babi terpisah dari induk",
+        "Memberikan pakan yang sama dengan induk",
+        "Memberikan pakan cair setelah penyapihan",
+        "Memelihara dengan susu buatan"
+      ],
+      "explanation": "Creep feeding menyediakan pakan padat untuk anak babi menyusu secara terpisah dari induk untuk memudahkan transisi penyapihan."
+    }
+  },
+  {
+    "question": "新生子豚に適した環境温度はどれか？",
+    "answer": "32〜34℃",
+    "options": [
+      "20〜22℃",
+      "25〜27℃",
+      "32〜34℃",
+      "38〜40℃"
+    ],
+    "category": "子豚管理",
+    "explanation": "新生子豚は体温調節能力が未発達のため、32〜34℃の保温環境が必要である。",
+    "en": {
+      "question": "What is the appropriate environmental temperature for newborn piglets?",
+      "answer": "32-34°C",
+      "options": [
+        "20-22°C",
+        "25-27°C",
+        "32-34°C",
+        "38-40°C"
+      ],
+      "explanation": "Newborn piglets have underdeveloped thermoregulation and require a warm environment of 32-34°C."
+    },
+    "vi": {
+      "question": "Nhiet do moi truong thich hop cho lon con so sinh la bao nhieu?",
+      "answer": "32-34°C",
+      "options": [
+        "20-22°C",
+        "25-27°C",
+        "32-34°C",
+        "38-40°C"
+      ],
+      "explanation": "Lon con so sinh chua phat trien kha nang dieu hoa than nhiet nen can moi truong am 32-34°C."
+    },
+    "ind": {
+      "question": "Berapa suhu lingkungan yang tepat untuk anak babi yang baru lahir?",
+      "answer": "32-34°C",
+      "options": [
+        "20-22°C",
+        "25-27°C",
+        "32-34°C",
+        "38-40°C"
+      ],
+      "explanation": "Anak babi baru lahir belum mampu mengatur suhu tubuh sehingga membutuhkan lingkungan hangat 32-34°C."
+    }
+  },
+  {
+    "question": "子豚の圧死を防ぐために分娩房に設置するものはどれか？",
+    "answer": "ガードレール（クラッシングバー）",
+    "options": [
+      "ガードレール（クラッシングバー）",
+      "天井ファン",
+      "自動給餌器",
+      "監視カメラ"
+    ],
+    "category": "子豚管理",
+    "explanation": "分娩房にガードレール（クラッシングバー）を設置し、母豚が横になった際の子豚の圧死を防止する。",
+    "en": {
+      "question": "What is installed in the farrowing pen to prevent piglet crushing?",
+      "answer": "Guard rails (crushing bars)",
+      "options": [
+        "Guard rails (crushing bars)",
+        "Ceiling fans",
+        "Automatic feeders",
+        "Surveillance cameras"
+      ],
+      "explanation": "Guard rails (crushing bars) are installed in farrowing pens to prevent piglet crushing when the sow lies down."
+    },
+    "vi": {
+      "question": "Thiet bi nao duoc lap trong chuong de de phong lon con bi de chet?",
+      "answer": "Thanh chan (thanh chong de)",
+      "options": [
+        "Thanh chan (thanh chong de)",
+        "Quat tran",
+        "May cho an tu dong",
+        "Camera giam sat"
+      ],
+      "explanation": "Thanh chan duoc lap trong chuong de de phong lon con bi de chet khi lon me nam xuong."
+    },
+    "ind": {
+      "question": "Apa yang dipasang di kandang beranak untuk mencegah anak babi tertindih?",
+      "answer": "Pagar pengaman (crushing bar)",
+      "options": [
+        "Pagar pengaman (crushing bar)",
+        "Kipas langit-langit",
+        "Pemberi pakan otomatis",
+        "Kamera pengawas"
+      ],
+      "explanation": "Pagar pengaman dipasang di kandang beranak untuk mencegah anak babi tertindih saat induk berbaring."
+    }
+  },
+  {
+    "question": "子豚への鉄剤注射の適切な投与部位はどれか？",
+    "answer": "首の側面の筋肉",
+    "options": [
+      "腹部",
+      "首の側面の筋肉",
+      "背中",
+      "臀部"
+    ],
+    "category": "子豚管理",
+    "explanation": "鉄剤は首の側面（頸部）の筋肉に注射するのが一般的で、安全かつ吸収が良い。",
+    "en": {
+      "question": "What is the appropriate injection site for iron in piglets?",
+      "answer": "Neck muscle (lateral)",
+      "options": [
+        "Abdomen",
+        "Neck muscle (lateral)",
+        "Back",
+        "Hip"
+      ],
+      "explanation": "Iron is typically injected into the lateral neck muscle, which is safe and provides good absorption."
+    },
+    "vi": {
+      "question": "Vi tri tiem sat thich hop cho lon con la o dau?",
+      "answer": "Co ben co",
+      "options": [
+        "Bung",
+        "Co ben co",
+        "Lung",
+        "Mong"
+      ],
+      "explanation": "Sat thuong duoc tiem vao co ben co, an toan va hap thu tot."
+    },
+    "ind": {
+      "question": "Di mana lokasi injeksi zat besi yang tepat untuk anak babi?",
+      "answer": "Otot leher (samping)",
+      "options": [
+        "Perut",
+        "Otot leher (samping)",
+        "Punggung",
+        "Pinggul"
+      ],
+      "explanation": "Zat besi biasanya disuntikkan ke otot leher samping, yang aman dan memberikan penyerapan yang baik."
+    }
+  },
+  {
+    "question": "オールイン・オールアウト方式の主な目的はどれか？",
+    "answer": "病原体の蓄積を防ぐ",
+    "options": [
+      "飼料コストの削減",
+      "病原体の蓄積を防ぐ",
+      "労働時間の短縮",
+      "豚舎の耐久性向上"
+    ],
+    "category": "衛生管理",
+    "explanation": "オールイン・オールアウトは同一豚房の豚を一斉に導入・出荷し、洗浄・消毒を行うことで病原体の蓄積を防ぐ。",
+    "en": {
+      "question": "What is the main purpose of the all-in/all-out system?",
+      "answer": "Preventing pathogen accumulation",
+      "options": [
+        "Reducing feed costs",
+        "Preventing pathogen accumulation",
+        "Reducing labor hours",
+        "Improving barn durability"
+      ],
+      "explanation": "All-in/all-out introduces and ships all pigs in a room at the same time, with cleaning and disinfection between groups to prevent pathogen buildup."
+    },
+    "vi": {
+      "question": "Muc dich chinh cua phuong phap cung vao/cung ra (all-in/all-out) la gi?",
+      "answer": "Ngan ngua tich tu mam benh",
+      "options": [
+        "Giam chi phi thuc an",
+        "Ngan ngua tich tu mam benh",
+        "Giam gio lao dong",
+        "Tang do ben chuong trai"
+      ],
+      "explanation": "All-in/all-out dua vao va xuat tat ca lon cung luc, ve sinh khu trung giua cac dot de ngan tich tu mam benh."
+    },
+    "ind": {
+      "question": "Apa tujuan utama sistem all-in/all-out?",
+      "answer": "Mencegah akumulasi patogen",
+      "options": [
+        "Mengurangi biaya pakan",
+        "Mencegah akumulasi patogen",
+        "Mengurangi jam kerja",
+        "Meningkatkan daya tahan kandang"
+      ],
+      "explanation": "All-in/all-out memasukkan dan mengeluarkan semua babi sekaligus, dengan pembersihan dan disinfeksi antar kelompok untuk mencegah penumpukan patogen."
+    }
+  },
+  {
+    "question": "豚舎の消毒で最も基本的な手順として正しいのはどれか？",
+    "answer": "洗浄→乾燥→消毒",
+    "options": [
+      "消毒→洗浄→乾燥",
+      "洗浄→乾燥→消毒",
+      "乾燥→消毒→洗浄",
+      "消毒のみ"
+    ],
+    "category": "衛生管理",
+    "explanation": "効果的な消毒には、まず有機物を洗浄で除去し、乾燥させた後に消毒薬を適用する手順が重要。",
+    "en": {
+      "question": "What is the correct basic procedure for barn disinfection?",
+      "answer": "Wash → Dry → Disinfect",
+      "options": [
+        "Disinfect → Wash → Dry",
+        "Wash → Dry → Disinfect",
+        "Dry → Disinfect → Wash",
+        "Disinfect only"
+      ],
+      "explanation": "Effective disinfection requires first removing organic matter by washing, drying, then applying disinfectant."
+    },
+    "vi": {
+      "question": "Thu tu co ban dung cho viec khu trung chuong trai la gi?",
+      "answer": "Rua → Lam kho → Khu trung",
+      "options": [
+        "Khu trung → Rua → Lam kho",
+        "Rua → Lam kho → Khu trung",
+        "Lam kho → Khu trung → Rua",
+        "Chi khu trung"
+      ],
+      "explanation": "Khu trung hieu qua can loai bo chat huu co bang cach rua, lam kho, roi su dung thuoc khu trung."
+    },
+    "ind": {
+      "question": "Apa prosedur dasar yang benar untuk disinfeksi kandang?",
+      "answer": "Cuci → Keringkan → Disinfeksi",
+      "options": [
+        "Disinfeksi → Cuci → Keringkan",
+        "Cuci → Keringkan → Disinfeksi",
+        "Keringkan → Disinfeksi → Cuci",
+        "Disinfeksi saja"
+      ],
+      "explanation": "Disinfeksi yang efektif membutuhkan pembersihan bahan organik terlebih dahulu, pengeringan, lalu penerapan disinfektan."
+    }
+  },
+  {
+    "question": "養豚場への来場者が遵守すべきバイオセキュリティ対策として適切なのはどれか？",
+    "answer": "専用の長靴と作業着に着替える",
+    "options": [
+      "手を洗えば自分の服のままでよい",
+      "専用の長靴と作業着に着替える",
+      "消毒液を飲む",
+      "マスクだけ着用すればよい"
+    ],
+    "category": "衛生管理",
+    "explanation": "来場者は専用の長靴と作業着に着替え、消毒を行ってから豚舎に入るのがバイオセキュリティの基本。",
+    "en": {
+      "question": "What biosecurity measure should visitors to a pig farm follow?",
+      "answer": "Change into designated boots and work clothes",
+      "options": [
+        "Own clothes are fine if hands are washed",
+        "Change into designated boots and work clothes",
+        "Drink disinfectant solution",
+        "Only wearing a mask is sufficient"
+      ],
+      "explanation": "Visitors must change into designated boots and work clothes and disinfect before entering barns."
+    },
+    "vi": {
+      "question": "Bien phap an toan sinh hoc nao khach tham quan trai lon can tuan thu?",
+      "answer": "Thay ung va quan ao chuyen dung",
+      "options": [
+        "Mac do cua minh neu da rua tay",
+        "Thay ung va quan ao chuyen dung",
+        "Uong dung dich khu trung",
+        "Chi can deo khau trang"
+      ],
+      "explanation": "Khach tham quan phai thay ung va quan ao chuyen dung va khu trung truoc khi vao chuong."
+    },
+    "ind": {
+      "question": "Tindakan biosekuriti apa yang harus diikuti pengunjung peternakan babi?",
+      "answer": "Mengganti sepatu boot dan pakaian kerja khusus",
+      "options": [
+        "Boleh pakai baju sendiri jika cuci tangan",
+        "Mengganti sepatu boot dan pakaian kerja khusus",
+        "Minum larutan disinfektan",
+        "Cukup memakai masker saja"
+      ],
+      "explanation": "Pengunjung harus mengganti sepatu boot dan pakaian kerja khusus serta mendisinfeksi sebelum masuk kandang."
+    }
+  },
+  {
+    "question": "豚舎における踏込み消毒槽の消毒液の交換頻度として適切なのはどれか？",
+    "answer": "毎日〜週に2回程度",
+    "options": [
+      "月に1回",
+      "毎日〜週に2回程度",
+      "年に1回",
+      "汚れが目立った時のみ"
+    ],
+    "category": "衛生管理",
+    "explanation": "踏込み消毒槽の消毒液は有機物で効果が低下するため、毎日〜週2回程度の交換が推奨される。",
+    "en": {
+      "question": "How often should the disinfectant in a footbath at the barn entrance be changed?",
+      "answer": "Daily to twice a week",
+      "options": [
+        "Once a month",
+        "Daily to twice a week",
+        "Once a year",
+        "Only when visibly dirty"
+      ],
+      "explanation": "Footbath disinfectant loses effectiveness due to organic matter, so changing daily to twice weekly is recommended."
+    },
+    "vi": {
+      "question": "Tan suat thay dung dich khu trung trong ho nham chan o chuong lon la bao nhieu?",
+      "answer": "Hang ngay den 2 lan moi tuan",
+      "options": [
+        "Moi thang 1 lan",
+        "Hang ngay den 2 lan moi tuan",
+        "Moi nam 1 lan",
+        "Chi khi thay ban ro"
+      ],
+      "explanation": "Dung dich khu trung ho nham giam hieu qua do chat huu co nen thay hang ngay den 2 lan moi tuan."
+    },
+    "ind": {
+      "question": "Seberapa sering disinfektan di bak celup kaki di pintu masuk kandang harus diganti?",
+      "answer": "Setiap hari hingga dua kali seminggu",
+      "options": [
+        "Sebulan sekali",
+        "Setiap hari hingga dua kali seminggu",
+        "Setahun sekali",
+        "Hanya saat terlihat kotor"
+      ],
+      "explanation": "Disinfektan bak celup kaki kehilangan efektivitas karena bahan organik, sehingga penggantian harian hingga dua kali seminggu direkomendasikan."
+    }
+  },
+  {
+    "question": "豚舎で使用する消毒薬として広く用いられるのはどれか？",
+    "answer": "逆性石鹸（塩化ベンザルコニウム）",
+    "options": [
+      "食塩水",
+      "逆性石鹸（塩化ベンザルコニウム）",
+      "アルコールスプレー",
+      "酢酸"
+    ],
+    "category": "衛生管理",
+    "explanation": "逆性石鹸（塩化ベンザルコニウム）は広範囲の病原体に有効で、養豚場で広く使用されている。",
+    "en": {
+      "question": "Which disinfectant is widely used in pig barns?",
+      "answer": "Quaternary ammonium compounds (benzalkonium chloride)",
+      "options": [
+        "Saline solution",
+        "Quaternary ammonium compounds (benzalkonium chloride)",
+        "Alcohol spray",
+        "Acetic acid"
+      ],
+      "explanation": "Quaternary ammonium compounds (benzalkonium chloride) are effective against a wide range of pathogens and widely used in pig farms."
+    },
+    "vi": {
+      "question": "Chat khu trung nao duoc su dung rong rai trong chuong lon?",
+      "answer": "Hop chat amoni bac bon (benzalkonium chloride)",
+      "options": [
+        "Nuoc muoi",
+        "Hop chat amoni bac bon (benzalkonium chloride)",
+        "Con xit",
+        "Acid acetic"
+      ],
+      "explanation": "Hop chat amoni bac bon co hieu qua voi nhieu loai mam benh va duoc su dung rong rai trong trai lon."
+    },
+    "ind": {
+      "question": "Disinfektan apa yang banyak digunakan di kandang babi?",
+      "answer": "Senyawa amonium kuarterner (benzalkonium klorida)",
+      "options": [
+        "Larutan garam",
+        "Senyawa amonium kuarterner (benzalkonium klorida)",
+        "Semprotan alkohol",
+        "Asam asetat"
+      ],
+      "explanation": "Senyawa amonium kuarterner efektif terhadap berbagai patogen dan banyak digunakan di peternakan babi."
+    }
+  },
+  {
+    "question": "養豚場でのネズミ対策が重要な理由はどれか？",
+    "answer": "病原体を媒介し、飼料を汚染するため",
+    "options": [
+      "豚を直接攻撃するため",
+      "病原体を媒介し、飼料を汚染するため",
+      "豚舎の外観が悪くなるため",
+      "騒音を出すため"
+    ],
+    "category": "衛生管理",
+    "explanation": "ネズミはサルモネラ等の病原体を媒介し、飼料や水を汚染するため、駆除と防除が重要。",
+    "en": {
+      "question": "Why is rodent control important on pig farms?",
+      "answer": "They carry pathogens and contaminate feed",
+      "options": [
+        "They directly attack pigs",
+        "They carry pathogens and contaminate feed",
+        "They worsen barn appearance",
+        "They make noise"
+      ],
+      "explanation": "Rodents carry pathogens like Salmonella and contaminate feed and water, making control essential."
+    },
+    "vi": {
+      "question": "Tai sao kiem soat chuot quan trong o trai lon?",
+      "answer": "Chung mang mam benh va lam o nhiem thuc an",
+      "options": [
+        "Chung tan cong lon truc tiep",
+        "Chung mang mam benh va lam o nhiem thuc an",
+        "Chung lam xau chuong trai",
+        "Chung gay tieng on"
+      ],
+      "explanation": "Chuot mang mam benh nhu Salmonella va lam o nhiem thuc an va nuoc, nen kiem soat la can thiet."
+    },
+    "ind": {
+      "question": "Mengapa pengendalian tikus penting di peternakan babi?",
+      "answer": "Mereka membawa patogen dan mencemari pakan",
+      "options": [
+        "Mereka menyerang babi secara langsung",
+        "Mereka membawa patogen dan mencemari pakan",
+        "Mereka memperburuk penampilan kandang",
+        "Mereka membuat kebisingan"
+      ],
+      "explanation": "Tikus membawa patogen seperti Salmonella dan mencemari pakan dan air, sehingga pengendalian sangat penting."
+    }
+  },
+  {
+    "question": "豚舎に入る前のシャワーイン制度の主な目的は何か？",
+    "answer": "外部からの病原体侵入を防ぐ",
+    "options": [
+      "作業者の体温を下げる",
+      "外部からの病原体侵入を防ぐ",
+      "豚のストレスを軽減する",
+      "害虫を洗い流す"
+    ],
+    "category": "衛生管理",
+    "explanation": "シャワーイン制度は、作業者が体に付着した病原体を洗い流し、農場内への侵入を防ぐバイオセキュリティ対策。",
+    "en": {
+      "question": "What is the main purpose of the shower-in system before entering the barn?",
+      "answer": "Preventing pathogen entry from outside",
+      "options": [
+        "Cooling down workers",
+        "Preventing pathogen entry from outside",
+        "Reducing pig stress",
+        "Washing away insects"
+      ],
+      "explanation": "The shower-in system is a biosecurity measure where workers wash off pathogens from their bodies before entering the farm."
+    },
+    "vi": {
+      "question": "Muc dich chinh cua he thong tam truoc khi vao chuong la gi?",
+      "answer": "Ngan mam benh xam nhap tu ben ngoai",
+      "options": [
+        "Lam mat cong nhan",
+        "Ngan mam benh xam nhap tu ben ngoai",
+        "Giam stress cho lon",
+        "Rua troi con trung"
+      ],
+      "explanation": "He thong tam la bien phap an toan sinh hoc, cong nhan rua sach mam benh truoc khi vao trai."
+    },
+    "ind": {
+      "question": "Apa tujuan utama sistem mandi sebelum masuk kandang?",
+      "answer": "Mencegah masuknya patogen dari luar",
+      "options": [
+        "Mendinginkan pekerja",
+        "Mencegah masuknya patogen dari luar",
+        "Mengurangi stres babi",
+        "Membersihkan serangga"
+      ],
+      "explanation": "Sistem mandi adalah tindakan biosekuriti di mana pekerja membersihkan patogen dari tubuh sebelum memasuki peternakan."
+    }
+  },
+  {
+    "question": "養豚場でワクチン接種記録を管理する主な理由はどれか？",
+    "answer": "適切な接種スケジュールの維持と疾病追跡のため",
+    "options": [
+      "法律で義務付けられていないため不要",
+      "適切な接種スケジュールの維持と疾病追跡のため",
+      "飼料コストの計算のため",
+      "出荷価格の決定のため"
+    ],
+    "category": "衛生管理",
+    "explanation": "ワクチン接種記録は適切な予防プログラムの維持、疾病発生時の追跡調査に不可欠である。",
+    "en": {
+      "question": "What is the main reason for maintaining vaccination records on pig farms?",
+      "answer": "To maintain proper vaccination schedules and disease traceability",
+      "options": [
+        "Not required as it is not legally mandated",
+        "To maintain proper vaccination schedules and disease traceability",
+        "To calculate feed costs",
+        "To determine shipping prices"
+      ],
+      "explanation": "Vaccination records are essential for maintaining proper prevention programs and tracing disease outbreaks."
+    },
+    "vi": {
+      "question": "Ly do chinh cua viec quan ly ho so tiem phong o trai lon la gi?",
+      "answer": "Duy tri lich tiem dung va truy vet dich benh",
+      "options": [
+        "Khong can thiet vi luat khong yeu cau",
+        "Duy tri lich tiem dung va truy vet dich benh",
+        "De tinh chi phi thuc an",
+        "De xac dinh gia ban"
+      ],
+      "explanation": "Ho so tiem phong rat quan trong de duy tri chuong trinh phong benh va truy vet khi co dich."
+    },
+    "ind": {
+      "question": "Apa alasan utama mengelola catatan vaksinasi di peternakan babi?",
+      "answer": "Menjaga jadwal vaksinasi dan pelacakan penyakit",
+      "options": [
+        "Tidak diperlukan karena tidak diwajibkan hukum",
+        "Menjaga jadwal vaksinasi dan pelacakan penyakit",
+        "Untuk menghitung biaya pakan",
+        "Untuk menentukan harga jual"
+      ],
+      "explanation": "Catatan vaksinasi penting untuk menjaga program pencegahan dan pelacakan wabah penyakit."
+    }
+  },
+  {
+    "question": "死亡した豚の適切な処理方法はどれか？",
+    "answer": "法令に従い、適切に焼却または埋却処理する",
+    "options": [
+      "豚舎の裏に放置する",
+      "法令に従い、適切に焼却または埋却処理する",
+      "そのまま堆肥にする",
+      "河川に流す"
+    ],
+    "category": "衛生管理",
+    "explanation": "死亡豚は感染源となりうるため、法令に基づき速やかに焼却または埋却処理を行う必要がある。",
+    "en": {
+      "question": "What is the proper way to dispose of dead pigs?",
+      "answer": "Incinerate or bury according to regulations",
+      "options": [
+        "Leave behind the barn",
+        "Incinerate or bury according to regulations",
+        "Compost as-is",
+        "Dispose in a river"
+      ],
+      "explanation": "Dead pigs can be a source of infection and must be promptly incinerated or buried according to regulations."
+    },
+    "vi": {
+      "question": "Cach xu ly lon chet dung la gi?",
+      "answer": "Thieu huy hoac chon theo quy dinh phap luat",
+      "options": [
+        "De phia sau chuong",
+        "Thieu huy hoac chon theo quy dinh phap luat",
+        "U phan ngay",
+        "Tha xuong song"
+      ],
+      "explanation": "Lon chet co the la nguon lay nhiem va phai duoc thieu huy hoac chon nhanh theo quy dinh."
+    },
+    "ind": {
+      "question": "Apa cara yang tepat untuk membuang babi yang mati?",
+      "answer": "Dibakar atau dikubur sesuai peraturan",
+      "options": [
+        "Ditinggalkan di belakang kandang",
+        "Dibakar atau dikubur sesuai peraturan",
+        "Dikompos langsung",
+        "Dibuang ke sungai"
+      ],
+      "explanation": "Babi mati dapat menjadi sumber infeksi dan harus segera dibakar atau dikubur sesuai peraturan."
+    }
+  },
+  {
+    "question": "豚のワクチン接種で「ブースター接種」とは何か？",
+    "answer": "初回接種後に行う追加接種で免疫を強化すること",
+    "options": [
+      "最初のワクチン接種のこと",
+      "初回接種後に行う追加接種で免疫を強化すること",
+      "ワクチンの種類を変えること",
+      "ワクチン接種を中止すること"
+    ],
+    "category": "衛生管理",
+    "explanation": "ブースター接種は初回接種後に行う追加接種で、免疫反応を増強し長期的な防御力を確立する。",
+    "en": {
+      "question": "What is a 'booster vaccination' in pigs?",
+      "answer": "An additional dose after the initial vaccination to strengthen immunity",
+      "options": [
+        "The first vaccination",
+        "An additional dose after the initial vaccination to strengthen immunity",
+        "Changing the type of vaccine",
+        "Stopping vaccination"
+      ],
+      "explanation": "A booster is an additional dose after the initial vaccination that enhances the immune response and establishes long-term protection."
+    },
+    "vi": {
+      "question": "'Tiem nhac lai' (booster) o lon la gi?",
+      "answer": "Tiem bo sung sau lan tiem dau de tang cuong mien dich",
+      "options": [
+        "Lan tiem dau tien",
+        "Tiem bo sung sau lan tiem dau de tang cuong mien dich",
+        "Doi loai vaccine",
+        "Ngung tiem"
+      ],
+      "explanation": "Tiem nhac lai la lieu bo sung sau lan tiem dau, tang cuong dap ung mien dich va bao ve lau dai."
+    },
+    "ind": {
+      "question": "Apa itu 'vaksinasi booster' pada babi?",
+      "answer": "Dosis tambahan setelah vaksinasi awal untuk memperkuat kekebalan",
+      "options": [
+        "Vaksinasi pertama",
+        "Dosis tambahan setelah vaksinasi awal untuk memperkuat kekebalan",
+        "Mengganti jenis vaksin",
+        "Menghentikan vaksinasi"
+      ],
+      "explanation": "Booster adalah dosis tambahan setelah vaksinasi awal yang meningkatkan respons imun dan membangun perlindungan jangka panjang."
+    }
+  },
+  {
+    "question": "肉豚の肥育期に与える飼料で重要な栄養素の比率はどれか？",
+    "answer": "エネルギーとタンパク質のバランス",
+    "options": [
+      "ビタミンCのみ",
+      "エネルギーとタンパク質のバランス",
+      "カルシウムのみ",
+      "水分のみ"
+    ],
+    "category": "飼養管理",
+    "explanation": "肥育期はエネルギーとタンパク質のバランスが重要で、成長段階に応じて飼料配合を調整する。",
+    "en": {
+      "question": "What is the important nutrient ratio in feed during the finishing period?",
+      "answer": "Balance of energy and protein",
+      "options": [
+        "Vitamin C only",
+        "Balance of energy and protein",
+        "Calcium only",
+        "Water only"
+      ],
+      "explanation": "During finishing, the balance of energy and protein is crucial, with feed formulation adjusted according to growth stage."
+    },
+    "vi": {
+      "question": "Ty le dinh duong quan trong trong thuc an giai doan voi beo la gi?",
+      "answer": "Can bang nang luong va protein",
+      "options": [
+        "Chi vitamin C",
+        "Can bang nang luong va protein",
+        "Chi canxi",
+        "Chi nuoc"
+      ],
+      "explanation": "Giai doan voi beo can can bang nang luong va protein, dieu chinh cong thuc thuc an theo giai doan tang truong."
+    },
+    "ind": {
+      "question": "Apa rasio nutrisi penting dalam pakan selama periode penggemukan?",
+      "answer": "Keseimbangan energi dan protein",
+      "options": [
+        "Hanya vitamin C",
+        "Keseimbangan energi dan protein",
+        "Hanya kalsium",
+        "Hanya air"
+      ],
+      "explanation": "Selama penggemukan, keseimbangan energi dan protein sangat penting, dengan formulasi pakan disesuaikan dengan tahap pertumbuhan."
+    }
+  },
+  {
+    "question": "豚の飲水量として成豚1頭あたりの1日の目安はどれか？",
+    "answer": "10〜15リットル",
+    "options": [
+      "1〜3リットル",
+      "5〜7リットル",
+      "10〜15リットル",
+      "30〜40リットル"
+    ],
+    "category": "飼養管理",
+    "explanation": "成豚は1日あたり10〜15リットルの水を必要とし、泌乳中の母豚はさらに多くの水が必要。",
+    "en": {
+      "question": "How much water does an adult pig need per day?",
+      "answer": "10-15 liters",
+      "options": [
+        "1-3 liters",
+        "5-7 liters",
+        "10-15 liters",
+        "30-40 liters"
+      ],
+      "explanation": "An adult pig needs 10-15 liters of water per day, with lactating sows requiring even more."
+    },
+    "vi": {
+      "question": "Luong nuoc uong cua lon truong thanh moi ngay la bao nhieu?",
+      "answer": "10-15 lit",
+      "options": [
+        "1-3 lit",
+        "5-7 lit",
+        "10-15 lit",
+        "30-40 lit"
+      ],
+      "explanation": "Lon truong thanh can 10-15 lit nuoc moi ngay, lon nai dang cho con can nhieu hon."
+    },
+    "ind": {
+      "question": "Berapa banyak air yang dibutuhkan babi dewasa per hari?",
+      "answer": "10-15 liter",
+      "options": [
+        "1-3 liter",
+        "5-7 liter",
+        "10-15 liter",
+        "30-40 liter"
+      ],
+      "explanation": "Babi dewasa membutuhkan 10-15 liter air per hari, dengan induk menyusui membutuhkan lebih banyak."
+    }
+  },
+  {
+    "question": "飼料のカビ毒（マイコトキシン）汚染を防ぐために重要なことはどれか？",
+    "answer": "飼料の適切な保管と在庫管理",
+    "options": [
+      "飼料を大量にまとめ買いする",
+      "飼料の適切な保管と在庫管理",
+      "飼料を常に湿らせておく",
+      "飼料に塩を大量に混ぜる"
+    ],
+    "category": "飼養管理",
+    "explanation": "カビ毒汚染防止には乾燥した涼しい場所での保管、適切な在庫回転（先入れ先出し）が重要。",
+    "en": {
+      "question": "What is important to prevent mycotoxin contamination of feed?",
+      "answer": "Proper feed storage and inventory management",
+      "options": [
+        "Buying feed in bulk",
+        "Proper feed storage and inventory management",
+        "Keeping feed moist at all times",
+        "Mixing large amounts of salt into feed"
+      ],
+      "explanation": "Prevention of mycotoxin contamination requires storage in dry, cool places and proper inventory rotation (FIFO)."
+    },
+    "vi": {
+      "question": "Dieu gi quan trong de phong nhiem doc to nam moc (mycotoxin) trong thuc an?",
+      "answer": "Bao quan thuc an dung cach va quan ly ton kho",
+      "options": [
+        "Mua thuc an so luong lon",
+        "Bao quan thuc an dung cach va quan ly ton kho",
+        "Giu thuc an luon am",
+        "Tron nhieu muoi vao thuc an"
+      ],
+      "explanation": "Phong nhiem mycotoxin can bao quan noi kho mat va quan ly ton kho dung (vao truoc ra truoc)."
+    },
+    "ind": {
+      "question": "Apa yang penting untuk mencegah kontaminasi mikotoksin pada pakan?",
+      "answer": "Penyimpanan pakan yang tepat dan manajemen inventaris",
+      "options": [
+        "Membeli pakan dalam jumlah besar",
+        "Penyimpanan pakan yang tepat dan manajemen inventaris",
+        "Menjaga pakan tetap lembab",
+        "Mencampurkan banyak garam ke pakan"
+      ],
+      "explanation": "Pencegahan kontaminasi mikotoksin memerlukan penyimpanan di tempat kering dan sejuk serta rotasi inventaris (FIFO)."
+    }
+  },
+  {
+    "question": "泌乳中の母豚に必要な1日あたりの飼料量の目安はどれか？",
+    "answer": "6〜8kg",
+    "options": [
+      "1〜2kg",
+      "3〜4kg",
+      "6〜8kg",
+      "15〜20kg"
+    ],
+    "category": "飼養管理",
+    "explanation": "泌乳中の母豚は子豚への授乳に大量のエネルギーが必要なため、1日6〜8kgの飼料が目安。",
+    "en": {
+      "question": "How much feed per day does a lactating sow need?",
+      "answer": "6-8 kg",
+      "options": [
+        "1-2 kg",
+        "3-4 kg",
+        "6-8 kg",
+        "15-20 kg"
+      ],
+      "explanation": "A lactating sow needs about 6-8 kg of feed per day due to high energy demands for nursing piglets."
+    },
+    "vi": {
+      "question": "Lon nai dang cho con can bao nhieu thuc an moi ngay?",
+      "answer": "6-8 kg",
+      "options": [
+        "1-2 kg",
+        "3-4 kg",
+        "6-8 kg",
+        "15-20 kg"
+      ],
+      "explanation": "Lon nai dang cho con can khoang 6-8 kg thuc an moi ngay do nhu cau nang luong cao cho viec cho bu."
+    },
+    "ind": {
+      "question": "Berapa banyak pakan per hari yang dibutuhkan induk babi menyusui?",
+      "answer": "6-8 kg",
+      "options": [
+        "1-2 kg",
+        "3-4 kg",
+        "6-8 kg",
+        "15-20 kg"
+      ],
+      "explanation": "Induk babi menyusui membutuhkan sekitar 6-8 kg pakan per hari karena kebutuhan energi tinggi untuk menyusui."
+    }
+  },
+  {
+    "question": "豚の飼料に添加される抗生物質の使用について正しいのはどれか？",
+    "answer": "成長促進目的の使用は規制されている",
+    "options": [
+      "自由に使用してよい",
+      "成長促進目的の使用は規制されている",
+      "治療目的でも使用禁止",
+      "消費者には影響しない"
+    ],
+    "category": "飼養管理",
+    "explanation": "薬剤耐性菌対策として、成長促進目的の抗生物質使用は多くの国で規制されている。",
+    "en": {
+      "question": "Which statement about antibiotic use in pig feed is correct?",
+      "answer": "Growth promotion use is regulated",
+      "options": [
+        "Can be used freely",
+        "Growth promotion use is regulated",
+        "Prohibited even for treatment",
+        "Has no impact on consumers"
+      ],
+      "explanation": "To combat antimicrobial resistance, growth-promoting antibiotic use is regulated in many countries."
+    },
+    "vi": {
+      "question": "Phat bieu nao ve su dung khang sinh trong thuc an lon la dung?",
+      "answer": "Su dung de kich thich tang truong bi quy dinh",
+      "options": [
+        "Co the su dung tu do",
+        "Su dung de kich thich tang truong bi quy dinh",
+        "Cam su dung ke ca dieu tri",
+        "Khong anh huong den nguoi tieu dung"
+      ],
+      "explanation": "De chong khang thuoc, su dung khang sinh kich thich tang truong bi quy dinh o nhieu nuoc."
+    },
+    "ind": {
+      "question": "Pernyataan mana tentang penggunaan antibiotik dalam pakan babi yang benar?",
+      "answer": "Penggunaan untuk promosi pertumbuhan diatur",
+      "options": [
+        "Dapat digunakan secara bebas",
+        "Penggunaan untuk promosi pertumbuhan diatur",
+        "Dilarang bahkan untuk pengobatan",
+        "Tidak berdampak pada konsumen"
+      ],
+      "explanation": "Untuk memerangi resistensi antimikroba, penggunaan antibiotik untuk promosi pertumbuhan diatur di banyak negara."
+    }
+  },
+  {
+    "question": "飼料中のリジンが豚にとって重要な理由はどれか？",
+    "answer": "第一制限アミノ酸であり、成長に不可欠",
+    "options": [
+      "第一制限アミノ酸であり、成長に不可欠",
+      "ビタミンの吸収を助ける",
+      "脂肪の分解を促進する",
+      "免疫力を高める"
+    ],
+    "category": "飼養管理",
+    "explanation": "リジンは豚にとって第一制限アミノ酸で、タンパク質合成と筋肉の成長に不可欠な栄養素。",
+    "en": {
+      "question": "Why is lysine important for pigs?",
+      "answer": "It is the first limiting amino acid and essential for growth",
+      "options": [
+        "It is the first limiting amino acid and essential for growth",
+        "It helps vitamin absorption",
+        "It promotes fat breakdown",
+        "It boosts immunity"
+      ],
+      "explanation": "Lysine is the first limiting amino acid for pigs, essential for protein synthesis and muscle growth."
+    },
+    "vi": {
+      "question": "Tai sao lysine quan trong doi voi lon?",
+      "answer": "La amino acid gioi han dau tien va can thiet cho tang truong",
+      "options": [
+        "La amino acid gioi han dau tien va can thiet cho tang truong",
+        "Giup hap thu vitamin",
+        "Thuc day phan giai chat beo",
+        "Tang cuong mien dich"
+      ],
+      "explanation": "Lysine la amino acid gioi han dau tien cua lon, can thiet cho tong hop protein va tang truong co bap."
+    },
+    "ind": {
+      "question": "Mengapa lisin penting bagi babi?",
+      "answer": "Merupakan asam amino pembatas pertama dan penting untuk pertumbuhan",
+      "options": [
+        "Merupakan asam amino pembatas pertama dan penting untuk pertumbuhan",
+        "Membantu penyerapan vitamin",
+        "Mempromosikan pemecahan lemak",
+        "Meningkatkan kekebalan"
+      ],
+      "explanation": "Lisin adalah asam amino pembatas pertama bagi babi, penting untuk sintesis protein dan pertumbuhan otot."
+    }
+  },
+  {
+    "question": "妊娠中の母豚の飼料管理で正しいのはどれか？",
+    "answer": "妊娠前期は制限給餌、後期は増量する",
+    "options": [
+      "妊娠中は常に自由採食",
+      "妊娠前期は制限給餌、後期は増量する",
+      "妊娠中は飼料を与えない",
+      "妊娠中は水のみ"
+    ],
+    "category": "飼養管理",
+    "explanation": "妊娠前期は過肥を防ぐため制限給餌し、後期は胎児の成長に合わせて増量する。",
+    "en": {
+      "question": "What is the correct feed management for pregnant sows?",
+      "answer": "Restricted feeding in early gestation, increased in late gestation",
+      "options": [
+        "Ad libitum feeding throughout gestation",
+        "Restricted feeding in early gestation, increased in late gestation",
+        "No feed during gestation",
+        "Water only during gestation"
+      ],
+      "explanation": "Feed is restricted in early gestation to prevent obesity and increased in late gestation to match fetal growth."
+    },
+    "vi": {
+      "question": "Quan ly thuc an dung cho lon nai mang thai la gi?",
+      "answer": "Han che thuc an dau thai ky, tang o cuoi thai ky",
+      "options": [
+        "Cho an tu do suot thai ky",
+        "Han che thuc an dau thai ky, tang o cuoi thai ky",
+        "Khong cho an trong thai ky",
+        "Chi cho uong nuoc trong thai ky"
+      ],
+      "explanation": "Thuc an bi han che dau thai ky de phong beo va tang cuoi thai ky theo su phat trien cua thai."
+    },
+    "ind": {
+      "question": "Apa manajemen pakan yang benar untuk induk babi bunting?",
+      "answer": "Pemberian pakan terbatas di awal kebuntingan, ditingkatkan di akhir",
+      "options": [
+        "Pemberian pakan ad libitum sepanjang kebuntingan",
+        "Pemberian pakan terbatas di awal kebuntingan, ditingkatkan di akhir",
+        "Tidak diberi pakan selama kebuntingan",
+        "Hanya air selama kebuntingan"
+      ],
+      "explanation": "Pakan dibatasi di awal kebuntingan untuk mencegah kegemukan dan ditingkatkan di akhir sesuai pertumbuhan janin."
+    }
+  },
+  {
+    "question": "豚の飲水器（ニップル）の適切な設置高さの基準はどれか？",
+    "answer": "豚の肩の高さ",
+    "options": [
+      "床面と同じ高さ",
+      "豚の肩の高さ",
+      "天井近く",
+      "豚の腹の高さ"
+    ],
+    "category": "飼養管理",
+    "explanation": "ニップル型飲水器は豚の肩の高さに設置するのが適切で、水の無駄を減らし飲水量を確保できる。",
+    "en": {
+      "question": "What is the appropriate installation height for a nipple drinker?",
+      "answer": "Shoulder height of the pig",
+      "options": [
+        "Same height as the floor",
+        "Shoulder height of the pig",
+        "Near the ceiling",
+        "Belly height of the pig"
+      ],
+      "explanation": "Nipple drinkers should be installed at the pig's shoulder height to reduce waste and ensure adequate water intake."
+    },
+    "vi": {
+      "question": "Chieu cao lap dat voi uong kieu num thich hop la bao nhieu?",
+      "answer": "Ngang vai lon",
+      "options": [
+        "Ngang san",
+        "Ngang vai lon",
+        "Gan tran",
+        "Ngang bung lon"
+      ],
+      "explanation": "Voi uong kieu num nen duoc lap ngang vai lon de giam lang phi va dam bao luong nuoc uong."
+    },
+    "ind": {
+      "question": "Berapa tinggi pemasangan yang tepat untuk tempat minum tipe nipple?",
+      "answer": "Setinggi bahu babi",
+      "options": [
+        "Setinggi lantai",
+        "Setinggi bahu babi",
+        "Dekat langit-langit",
+        "Setinggi perut babi"
+      ],
+      "explanation": "Tempat minum nipple harus dipasang setinggi bahu babi untuk mengurangi pemborosan dan memastikan asupan air yang cukup."
+    }
+  },
+  {
+    "question": "液状飼料（リキッドフィーディング）の利点はどれか？",
+    "answer": "食品残さの利用が可能で飼料コストを削減できる",
+    "options": [
+      "保管が容易",
+      "食品残さの利用が可能で飼料コストを削減できる",
+      "すべての農場に適している",
+      "栄養管理が不要になる"
+    ],
+    "category": "飼養管理",
+    "explanation": "液状飼料は食品残さ等を活用でき、飼料コストの削減と食品リサイクルに貢献する。",
+    "en": {
+      "question": "What is an advantage of liquid feeding?",
+      "answer": "Can utilize food by-products and reduce feed costs",
+      "options": [
+        "Easy to store",
+        "Can utilize food by-products and reduce feed costs",
+        "Suitable for all farms",
+        "Eliminates the need for nutrition management"
+      ],
+      "explanation": "Liquid feeding can utilize food by-products, reducing feed costs and contributing to food recycling."
+    },
+    "vi": {
+      "question": "Uu diem cua cho an dang long (liquid feeding) la gi?",
+      "answer": "Co the tan dung phu pham thuc pham va giam chi phi thuc an",
+      "options": [
+        "De bao quan",
+        "Co the tan dung phu pham thuc pham va giam chi phi thuc an",
+        "Phu hop voi moi trai",
+        "Khong can quan ly dinh duong"
+      ],
+      "explanation": "Cho an dang long co the tan dung phu pham thuc pham, giam chi phi va gop phan tai che thuc pham."
+    },
+    "ind": {
+      "question": "Apa keuntungan dari pemberian pakan cair (liquid feeding)?",
+      "answer": "Dapat memanfaatkan sisa makanan dan mengurangi biaya pakan",
+      "options": [
+        "Mudah disimpan",
+        "Dapat memanfaatkan sisa makanan dan mengurangi biaya pakan",
+        "Cocok untuk semua peternakan",
+        "Menghilangkan kebutuhan manajemen nutrisi"
+      ],
+      "explanation": "Pemberian pakan cair dapat memanfaatkan sisa makanan, mengurangi biaya pakan dan berkontribusi pada daur ulang makanan."
+    }
+  },
+  {
+    "question": "豚の飼育において「群管理」が重要な理由はどれか？",
+    "answer": "同じ成長段階の豚をまとめることで管理効率と成績が向上する",
+    "options": [
+      "見た目が良いから",
+      "同じ成長段階の豚をまとめることで管理効率と成績が向上する",
+      "豚が寂しがらないから",
+      "飼料コストが上がるから"
+    ],
+    "category": "飼養管理",
+    "explanation": "群管理により同じ成長段階・体格の豚をまとめて飼養することで、適切な飼料管理と効率的な作業が可能。",
+    "en": {
+      "question": "Why is 'group management' important in pig farming?",
+      "answer": "Grouping pigs of similar growth stages improves management efficiency and performance",
+      "options": [
+        "It looks better",
+        "Grouping pigs of similar growth stages improves management efficiency and performance",
+        "So pigs don't feel lonely",
+        "It increases feed costs"
+      ],
+      "explanation": "Group management allows proper feed management and efficient operations by keeping pigs of similar size and growth stage together."
+    },
+    "vi": {
+      "question": "Tai sao 'quan ly theo nhom' quan trong trong chan nuoi lon?",
+      "answer": "Nhom lon cung giai doan tang truong giup tang hieu qua quan ly va hieu suat",
+      "options": [
+        "Trong dep hon",
+        "Nhom lon cung giai doan tang truong giup tang hieu qua quan ly va hieu suat",
+        "De lon khong co don",
+        "Tang chi phi thuc an"
+      ],
+      "explanation": "Quan ly theo nhom cho phep quan ly thuc an dung va van hanh hieu qua bang cach giu lon cung kich co va giai doan."
+    },
+    "ind": {
+      "question": "Mengapa 'manajemen kelompok' penting dalam peternakan babi?",
+      "answer": "Mengelompokkan babi pada tahap pertumbuhan serupa meningkatkan efisiensi dan performa",
+      "options": [
+        "Terlihat lebih baik",
+        "Mengelompokkan babi pada tahap pertumbuhan serupa meningkatkan efisiensi dan performa",
+        "Agar babi tidak kesepian",
+        "Meningkatkan biaya pakan"
+      ],
+      "explanation": "Manajemen kelompok memungkinkan pengelolaan pakan yang tepat dan operasi efisien dengan menjaga babi ukuran dan tahap serupa bersama."
+    }
+  },
+  {
+    "question": "哺乳豚（ほにゅうとん）の飼育期間はどれか？",
+    "answer": "出生から離乳まで（約3〜4週間）",
+    "options": [
+      "出生から離乳まで（約3〜4週間）",
+      "離乳から体重30kgまで",
+      "体重30kgから70kgまで",
+      "体重70kgから出荷まで"
+    ],
+    "category": "飼育段階",
+    "explanation": "哺乳豚は出生から離乳（約21〜28日齢）までの子豚で、母乳を主な栄養源とする。",
+    "en": {
+      "question": "What is the suckling pig period?",
+      "answer": "From birth to weaning (about 3-4 weeks)",
+      "options": [
+        "From birth to weaning (about 3-4 weeks)",
+        "From weaning to 30 kg",
+        "From 30 kg to 70 kg",
+        "From 70 kg to market"
+      ],
+      "explanation": "Suckling pigs are from birth to weaning (about 21-28 days), relying mainly on sow's milk for nutrition."
+    },
+    "vi": {
+      "question": "Giai doan lon theo me la gi?",
+      "answer": "Tu khi sinh den cai sua (khoang 3-4 tuan)",
+      "options": [
+        "Tu khi sinh den cai sua (khoang 3-4 tuan)",
+        "Tu cai sua den 30 kg",
+        "Tu 30 kg den 70 kg",
+        "Tu 70 kg den xuat chuong"
+      ],
+      "explanation": "Lon theo me la tu khi sinh den cai sua (khoang 21-28 ngay), dinh duong chinh tu sua me."
+    },
+    "ind": {
+      "question": "Apa periode anak babi menyusu?",
+      "answer": "Dari lahir hingga penyapihan (sekitar 3-4 minggu)",
+      "options": [
+        "Dari lahir hingga penyapihan (sekitar 3-4 minggu)",
+        "Dari penyapihan hingga 30 kg",
+        "Dari 30 kg hingga 70 kg",
+        "Dari 70 kg hingga pasar"
+      ],
+      "explanation": "Anak babi menyusu dari lahir hingga penyapihan (sekitar 21-28 hari), bergantung pada susu induk untuk nutrisi."
+    }
+  },
+  {
+    "question": "離乳子豚の保育期間（ナーサリー）の体重範囲はどれか？",
+    "answer": "約7kgから25〜30kg",
+    "options": [
+      "約2kgから7kg",
+      "約7kgから25〜30kg",
+      "約30kgから70kg",
+      "約70kgから115kg"
+    ],
+    "category": "飼育段階",
+    "explanation": "ナーサリー期間は離乳後（約7kg）から25〜30kg程度まで、専用の保育施設で飼養する。",
+    "en": {
+      "question": "What is the weight range for the nursery period?",
+      "answer": "About 7 kg to 25-30 kg",
+      "options": [
+        "About 2 kg to 7 kg",
+        "About 7 kg to 25-30 kg",
+        "About 30 kg to 70 kg",
+        "About 70 kg to 115 kg"
+      ],
+      "explanation": "The nursery period is from weaning (about 7 kg) to 25-30 kg, housed in dedicated nursery facilities."
+    },
+    "vi": {
+      "question": "Khoang trong luong cua giai doan uom (nursery) la bao nhieu?",
+      "answer": "Khoang 7 kg den 25-30 kg",
+      "options": [
+        "Khoang 2 kg den 7 kg",
+        "Khoang 7 kg den 25-30 kg",
+        "Khoang 30 kg den 70 kg",
+        "Khoang 70 kg den 115 kg"
+      ],
+      "explanation": "Giai doan uom la tu cai sua (khoang 7 kg) den 25-30 kg, nuoi trong co so uom chuyen dung."
+    },
+    "ind": {
+      "question": "Berapa kisaran berat badan untuk periode nursery?",
+      "answer": "Sekitar 7 kg hingga 25-30 kg",
+      "options": [
+        "Sekitar 2 kg hingga 7 kg",
+        "Sekitar 7 kg hingga 25-30 kg",
+        "Sekitar 30 kg hingga 70 kg",
+        "Sekitar 70 kg hingga 115 kg"
+      ],
+      "explanation": "Periode nursery dari penyapihan (sekitar 7 kg) hingga 25-30 kg, dipelihara di fasilitas nursery khusus."
+    }
+  },
+  {
+    "question": "育成期（グローワー）の豚の体重範囲はどれか？",
+    "answer": "約30kgから70kg",
+    "options": [
+      "約7kgから25kg",
+      "約30kgから70kg",
+      "約70kgから115kg",
+      "約115kg以上"
+    ],
+    "category": "飼育段階",
+    "explanation": "育成期（グローワー）は約30kgから70kgまでの期間で、骨格と筋肉の発達が著しい時期。",
+    "en": {
+      "question": "What is the weight range for the grower stage?",
+      "answer": "About 30 kg to 70 kg",
+      "options": [
+        "About 7 kg to 25 kg",
+        "About 30 kg to 70 kg",
+        "About 70 kg to 115 kg",
+        "Over 115 kg"
+      ],
+      "explanation": "The grower stage is from about 30 kg to 70 kg, a period of significant bone and muscle development."
+    },
+    "vi": {
+      "question": "Khoang trong luong cua giai doan lon choai (grower) la bao nhieu?",
+      "answer": "Khoang 30 kg den 70 kg",
+      "options": [
+        "Khoang 7 kg den 25 kg",
+        "Khoang 30 kg den 70 kg",
+        "Khoang 70 kg den 115 kg",
+        "Tren 115 kg"
+      ],
+      "explanation": "Giai doan lon choai la tu khoang 30 kg den 70 kg, thoi ky phat trien xuong va co bap manh."
+    },
+    "ind": {
+      "question": "Berapa kisaran berat badan untuk tahap grower?",
+      "answer": "Sekitar 30 kg hingga 70 kg",
+      "options": [
+        "Sekitar 7 kg hingga 25 kg",
+        "Sekitar 30 kg hingga 70 kg",
+        "Sekitar 70 kg hingga 115 kg",
+        "Lebih dari 115 kg"
+      ],
+      "explanation": "Tahap grower dari sekitar 30 kg hingga 70 kg, periode perkembangan tulang dan otot yang signifikan."
+    }
+  },
+  {
+    "question": "肥育期（フィニッシャー）の豚の出荷体重の目安はどれか？",
+    "answer": "約110〜120kg",
+    "options": [
+      "約70〜80kg",
+      "約90〜100kg",
+      "約110〜120kg",
+      "約150〜160kg"
+    ],
+    "category": "飼育段階",
+    "explanation": "日本の一般的な肉豚の出荷体重は約110〜120kgで、この体重で適切な枝肉が得られる。",
+    "en": {
+      "question": "What is the target market weight for finisher pigs?",
+      "answer": "About 110-120 kg",
+      "options": [
+        "About 70-80 kg",
+        "About 90-100 kg",
+        "About 110-120 kg",
+        "About 150-160 kg"
+      ],
+      "explanation": "In Japan, the typical market weight for finishing pigs is about 110-120 kg, yielding appropriate carcasses."
+    },
+    "vi": {
+      "question": "Trong luong xuat chuong muc tieu cua lon voi beo la bao nhieu?",
+      "answer": "Khoang 110-120 kg",
+      "options": [
+        "Khoang 70-80 kg",
+        "Khoang 90-100 kg",
+        "Khoang 110-120 kg",
+        "Khoang 150-160 kg"
+      ],
+      "explanation": "O Nhat Ban, trong luong xuat chuong tieu chuan cua lon thit la khoang 110-120 kg."
+    },
+    "ind": {
+      "question": "Berapa target berat badan pasar untuk babi finisher?",
+      "answer": "Sekitar 110-120 kg",
+      "options": [
+        "Sekitar 70-80 kg",
+        "Sekitar 90-100 kg",
+        "Sekitar 110-120 kg",
+        "Sekitar 150-160 kg"
+      ],
+      "explanation": "Di Jepang, berat pasar tipikal untuk babi finishing adalah sekitar 110-120 kg."
+    }
+  },
+  {
+    "question": "肥育豚の1日あたりの増体量（DG）の目標値はどれか？",
+    "answer": "700〜900g",
+    "options": [
+      "200〜300g",
+      "400〜500g",
+      "700〜900g",
+      "1500〜2000g"
+    ],
+    "category": "飼育段階",
+    "explanation": "肥育豚の1日あたりの増体量（Daily Gain）は700〜900gが目標で、飼料効率の指標となる。",
+    "en": {
+      "question": "What is the target daily gain (DG) for finishing pigs?",
+      "answer": "700-900 g",
+      "options": [
+        "200-300 g",
+        "400-500 g",
+        "700-900 g",
+        "1500-2000 g"
+      ],
+      "explanation": "The target daily gain for finishing pigs is 700-900 g, serving as an indicator of feed efficiency."
+    },
+    "vi": {
+      "question": "Muc tieu tang trong hang ngay (DG) cua lon voi beo la bao nhieu?",
+      "answer": "700-900 g",
+      "options": [
+        "200-300 g",
+        "400-500 g",
+        "700-900 g",
+        "1500-2000 g"
+      ],
+      "explanation": "Muc tieu tang trong hang ngay cua lon voi beo la 700-900 g, la chi so hieu qua su dung thuc an."
+    },
+    "ind": {
+      "question": "Berapa target pertambahan berat harian (DG) untuk babi finisher?",
+      "answer": "700-900 g",
+      "options": [
+        "200-300 g",
+        "400-500 g",
+        "700-900 g",
+        "1500-2000 g"
+      ],
+      "explanation": "Target pertambahan berat harian untuk babi finisher adalah 700-900 g, sebagai indikator efisiensi pakan."
+    }
+  },
+  {
+    "question": "飼料要求率（FCR）とは何か？",
+    "answer": "体重1kg増加に必要な飼料の量",
+    "options": [
+      "1日に食べる飼料の量",
+      "体重1kg増加に必要な飼料の量",
+      "飼料中のタンパク質含量",
+      "飼料の消化率"
+    ],
+    "category": "飼育段階",
+    "explanation": "FCR（Feed Conversion Ratio）は体重1kg増加に必要な飼料量で、値が小さいほど効率が良い。",
+    "en": {
+      "question": "What is the Feed Conversion Ratio (FCR)?",
+      "answer": "Amount of feed needed to gain 1 kg of body weight",
+      "options": [
+        "Amount of feed eaten per day",
+        "Amount of feed needed to gain 1 kg of body weight",
+        "Protein content of feed",
+        "Digestibility of feed"
+      ],
+      "explanation": "FCR is the amount of feed needed to gain 1 kg of body weight; a lower value indicates better efficiency."
+    },
+    "vi": {
+      "question": "Ty le chuyen hoa thuc an (FCR) la gi?",
+      "answer": "Luong thuc an can de tang 1 kg trong luong",
+      "options": [
+        "Luong thuc an an moi ngay",
+        "Luong thuc an can de tang 1 kg trong luong",
+        "Ham luong protein trong thuc an",
+        "Ty le tieu hoa thuc an"
+      ],
+      "explanation": "FCR la luong thuc an can de tang 1 kg trong luong; gia tri cang thap cang hieu qua."
+    },
+    "ind": {
+      "question": "Apa itu Rasio Konversi Pakan (FCR)?",
+      "answer": "Jumlah pakan yang dibutuhkan untuk menambah 1 kg berat badan",
+      "options": [
+        "Jumlah pakan yang dimakan per hari",
+        "Jumlah pakan yang dibutuhkan untuk menambah 1 kg berat badan",
+        "Kandungan protein pakan",
+        "Kecernaan pakan"
+      ],
+      "explanation": "FCR adalah jumlah pakan yang dibutuhkan untuk menambah 1 kg berat badan; nilai lebih rendah menunjukkan efisiensi lebih baik."
+    }
+  },
+  {
+    "question": "肥育豚の一般的なFCR（飼料要求率）の目標値はどれか？",
+    "answer": "2.5〜3.0",
+    "options": [
+      "1.0〜1.5",
+      "2.5〜3.0",
+      "4.5〜5.0",
+      "7.0〜8.0"
+    ],
+    "category": "飼育段階",
+    "explanation": "肥育豚のFCRは2.5〜3.0が一般的な目標で、つまり1kg増体に2.5〜3.0kgの飼料が必要。",
+    "en": {
+      "question": "What is the typical target FCR for finishing pigs?",
+      "answer": "2.5-3.0",
+      "options": [
+        "1.0-1.5",
+        "2.5-3.0",
+        "4.5-5.0",
+        "7.0-8.0"
+      ],
+      "explanation": "The typical target FCR for finishing pigs is 2.5-3.0, meaning 2.5-3.0 kg of feed per 1 kg of gain."
+    },
+    "vi": {
+      "question": "Muc tieu FCR thong thuong cua lon voi beo la bao nhieu?",
+      "answer": "2.5-3.0",
+      "options": [
+        "1.0-1.5",
+        "2.5-3.0",
+        "4.5-5.0",
+        "7.0-8.0"
+      ],
+      "explanation": "Muc tieu FCR thong thuong cua lon voi beo la 2.5-3.0, nghia la 2.5-3.0 kg thuc an cho 1 kg tang trong."
+    },
+    "ind": {
+      "question": "Berapa target FCR tipikal untuk babi finisher?",
+      "answer": "2,5-3,0",
+      "options": [
+        "1,0-1,5",
+        "2,5-3,0",
+        "4,5-5,0",
+        "7,0-8,0"
+      ],
+      "explanation": "Target FCR tipikal untuk babi finisher adalah 2,5-3,0, artinya 2,5-3,0 kg pakan per 1 kg pertambahan."
+    }
+  },
+  {
+    "question": "育成期から肥育期への移行で最も重要な管理変更はどれか？",
+    "answer": "飼料の配合（タンパク質比率）の変更",
+    "options": [
+      "飼料の配合（タンパク質比率）の変更",
+      "飲水を制限する",
+      "照明を消す",
+      "運動を増やす"
+    ],
+    "category": "飼育段階",
+    "explanation": "育成期から肥育期への移行では、タンパク質比率を下げエネルギー比率を上げた飼料に変更する。",
+    "en": {
+      "question": "What is the most important management change from grower to finisher stage?",
+      "answer": "Changing feed formulation (protein ratio)",
+      "options": [
+        "Changing feed formulation (protein ratio)",
+        "Restricting water",
+        "Turning off lights",
+        "Increasing exercise"
+      ],
+      "explanation": "The transition from grower to finisher involves switching to feed with lower protein and higher energy ratio."
+    },
+    "vi": {
+      "question": "Thay doi quan ly quan trong nhat khi chuyen tu giai doan lon choai sang voi beo la gi?",
+      "answer": "Thay doi cong thuc thuc an (ty le protein)",
+      "options": [
+        "Thay doi cong thuc thuc an (ty le protein)",
+        "Han che nuoc uong",
+        "Tat den",
+        "Tang van dong"
+      ],
+      "explanation": "Chuyen tu giai doan choai sang voi beo bao gom thay doi thuc an giam protein tang nang luong."
+    },
+    "ind": {
+      "question": "Apa perubahan manajemen terpenting dari tahap grower ke finisher?",
+      "answer": "Mengubah formulasi pakan (rasio protein)",
+      "options": [
+        "Mengubah formulasi pakan (rasio protein)",
+        "Membatasi air",
+        "Mematikan lampu",
+        "Menambah olahraga"
+      ],
+      "explanation": "Transisi dari grower ke finisher melibatkan pergantian ke pakan dengan protein lebih rendah dan rasio energi lebih tinggi."
+    }
+  },
+  {
+    "question": "出荷前の休薬期間（withdrawal period）の目的はどれか？",
+    "answer": "薬剤が体内から排出され、残留基準を満たすため",
+    "options": [
+      "豚を太らせるため",
+      "薬剤が体内から排出され、残留基準を満たすため",
+      "ストレスを軽減するため",
+      "肉質を向上させるため"
+    ],
+    "category": "飼育段階",
+    "explanation": "休薬期間は投薬した薬剤が体内から十分に排出され、食肉の残留基準値以下になるために必要。",
+    "en": {
+      "question": "What is the purpose of the withdrawal period before shipping?",
+      "answer": "To ensure drugs are eliminated from the body and meet residue standards",
+      "options": [
+        "To fatten the pig",
+        "To ensure drugs are eliminated from the body and meet residue standards",
+        "To reduce stress",
+        "To improve meat quality"
+      ],
+      "explanation": "The withdrawal period ensures administered drugs are sufficiently eliminated from the body to meet food residue standards."
+    },
+    "vi": {
+      "question": "Muc dich cua thoi gian ngung thuoc (withdrawal period) truoc khi xuat chuong la gi?",
+      "answer": "Dam bao thuoc duoc dao thai khoi co the va dat tieu chuan ton du",
+      "options": [
+        "De lon tang can",
+        "Dam bao thuoc duoc dao thai khoi co the va dat tieu chuan ton du",
+        "De giam stress",
+        "De cai thien chat luong thit"
+      ],
+      "explanation": "Thoi gian ngung thuoc dam bao thuoc duoc dao thai du khoi co the de dat tieu chuan ton du thuc pham."
+    },
+    "ind": {
+      "question": "Apa tujuan masa henti obat (withdrawal period) sebelum pengiriman?",
+      "answer": "Memastikan obat dieliminasi dari tubuh dan memenuhi standar residu",
+      "options": [
+        "Untuk menggemukkan babi",
+        "Memastikan obat dieliminasi dari tubuh dan memenuhi standar residu",
+        "Untuk mengurangi stres",
+        "Untuk meningkatkan kualitas daging"
+      ],
+      "explanation": "Masa henti obat memastikan obat yang diberikan cukup dieliminasi dari tubuh untuk memenuhi standar residu pangan."
+    }
+  },
+  {
+    "question": "PSE肉とはどのような状態の肉か？",
+    "answer": "蒼白（Pale）、軟弱（Soft）、水っぽい（Exudative）肉",
+    "options": [
+      "蒼白（Pale）、軟弱（Soft）、水っぽい（Exudative）肉",
+      "暗赤色で硬い肉",
+      "霜降りの多い肉",
+      "通常の良質な肉"
+    ],
+    "category": "飼育段階",
+    "explanation": "PSE肉はストレスにより筋肉のpHが急激に低下し、蒼白・軟弱・水っぽくなった異常な豚肉。",
+    "en": {
+      "question": "What is PSE meat?",
+      "answer": "Pale, Soft, Exudative meat",
+      "options": [
+        "Pale, Soft, Exudative meat",
+        "Dark red and firm meat",
+        "Highly marbled meat",
+        "Normal quality meat"
+      ],
+      "explanation": "PSE meat results from stress-induced rapid pH decline in muscle, causing pale, soft, and watery pork."
+    },
+    "vi": {
+      "question": "Thit PSE la gi?",
+      "answer": "Thit nhat mau (Pale), mem (Soft), ri nuoc (Exudative)",
+      "options": [
+        "Thit nhat mau (Pale), mem (Soft), ri nuoc (Exudative)",
+        "Thit do sam va cung",
+        "Thit nhieu van mo",
+        "Thit chat luong binh thuong"
+      ],
+      "explanation": "Thit PSE do stress lam pH co giam nhanh, khien thit lon nhat, mem va nhieu nuoc."
+    },
+    "ind": {
+      "question": "Apa itu daging PSE?",
+      "answer": "Daging Pucat (Pale), Lembek (Soft), Berair (Exudative)",
+      "options": [
+        "Daging Pucat (Pale), Lembek (Soft), Berair (Exudative)",
+        "Daging merah gelap dan keras",
+        "Daging dengan banyak marbling",
+        "Daging berkualitas normal"
+      ],
+      "explanation": "Daging PSE diakibatkan oleh penurunan pH otot yang cepat akibat stres, menyebabkan daging babi pucat, lembek, dan berair."
+    }
+  },
+  {
+    "question": "「経産豚」とはどのような豚のことか？",
+    "answer": "1回以上分娩を経験した母豚",
+    "options": [
+      "まだ交配していない若い雌豚",
+      "1回以上分娩を経験した母豚",
+      "去勢された雄豚",
+      "種雄豚"
+    ],
+    "category": "豚の分類",
+    "explanation": "経産豚は1回以上の分娩経験がある母豚のことで、初産豚（初めての分娩）と区別される。",
+    "en": {
+      "question": "What is a 'multiparous sow'?",
+      "answer": "A sow that has farrowed at least once",
+      "options": [
+        "A young female pig not yet bred",
+        "A sow that has farrowed at least once",
+        "A castrated male pig",
+        "A breeding boar"
+      ],
+      "explanation": "A multiparous sow has experienced one or more farrowings, distinguished from primiparous sows (first farrowing)."
+    },
+    "vi": {
+      "question": "'Lon nai kinh san' la gi?",
+      "answer": "Lon nai da de it nhat mot lan",
+      "options": [
+        "Lon cai tre chua phoi giong",
+        "Lon nai da de it nhat mot lan",
+        "Lon duc da thien",
+        "Lon duc giong"
+      ],
+      "explanation": "Lon nai kinh san la lon nai da trai qua mot hoac nhieu lan de, phan biet voi lon de lan dau."
+    },
+    "ind": {
+      "question": "Apa itu 'induk babi multipara'?",
+      "answer": "Induk babi yang telah melahirkan setidaknya sekali",
+      "options": [
+        "Babi betina muda yang belum dikawinkan",
+        "Induk babi yang telah melahirkan setidaknya sekali",
+        "Babi jantan yang dikebiri",
+        "Pejantan pembibit"
+      ],
+      "explanation": "Induk babi multipara telah mengalami satu atau lebih kelahiran, dibedakan dari induk primipara (kelahiran pertama)."
+    }
+  },
+  {
+    "question": "「未経産豚（ギルト）」とはどのような豚のことか？",
+    "answer": "まだ分娩を経験していない若い雌豚",
+    "options": [
+      "まだ分娩を経験していない若い雌豚",
+      "去勢された雄豚",
+      "分娩後の母豚",
+      "肥育中の雌豚"
+    ],
+    "category": "豚の分類",
+    "explanation": "ギルト（gilt）はまだ1度も分娩を経験していない若い雌豚のことで、繁殖候補の雌豚を指す。",
+    "en": {
+      "question": "What is a 'gilt'?",
+      "answer": "A young female pig that has not yet farrowed",
+      "options": [
+        "A young female pig that has not yet farrowed",
+        "A castrated male pig",
+        "A sow after farrowing",
+        "A female pig being fattened"
+      ],
+      "explanation": "A gilt is a young female pig that has not yet farrowed, typically a breeding candidate."
+    },
+    "vi": {
+      "question": "'Lon hau bi (gilt)' la gi?",
+      "answer": "Lon cai tre chua de lan nao",
+      "options": [
+        "Lon cai tre chua de lan nao",
+        "Lon duc da thien",
+        "Lon nai sau khi de",
+        "Lon cai dang voi beo"
+      ],
+      "explanation": "Gilt la lon cai tre chua de lan nao, thuong la ung vien sinh san."
+    },
+    "ind": {
+      "question": "Apa itu 'gilt'?",
+      "answer": "Babi betina muda yang belum pernah melahirkan",
+      "options": [
+        "Babi betina muda yang belum pernah melahirkan",
+        "Babi jantan yang dikebiri",
+        "Induk babi setelah melahirkan",
+        "Babi betina yang sedang digemukkan"
+      ],
+      "explanation": "Gilt adalah babi betina muda yang belum pernah melahirkan, biasanya calon pembibit."
+    }
+  },
+  {
+    "question": "「バロウ（barrow）」とはどのような豚のことか？",
+    "answer": "去勢された雄豚",
+    "options": [
+      "未経産の雌豚",
+      "去勢された雄豚",
+      "種雄豚",
+      "母豚"
+    ],
+    "category": "豚の分類",
+    "explanation": "バロウは去勢された雄豚のことで、主に肉用として肥育される。去勢により雄臭を防ぐ。",
+    "en": {
+      "question": "What is a 'barrow'?",
+      "answer": "A castrated male pig",
+      "options": [
+        "An unbred female pig",
+        "A castrated male pig",
+        "A breeding boar",
+        "A sow"
+      ],
+      "explanation": "A barrow is a castrated male pig, mainly raised for meat. Castration prevents boar taint."
+    },
+    "vi": {
+      "question": "'Barrow' la gi?",
+      "answer": "Lon duc da thien",
+      "options": [
+        "Lon cai chua phoi giong",
+        "Lon duc da thien",
+        "Lon duc giong",
+        "Lon nai"
+      ],
+      "explanation": "Barrow la lon duc da thien, chu yeu nuoi lay thit. Thien giup phong mui hoi duc."
+    },
+    "ind": {
+      "question": "Apa itu 'barrow'?",
+      "answer": "Babi jantan yang dikebiri",
+      "options": [
+        "Babi betina yang belum dikawinkan",
+        "Babi jantan yang dikebiri",
+        "Pejantan pembibit",
+        "Induk babi"
+      ],
+      "explanation": "Barrow adalah babi jantan yang dikebiri, terutama dipelihara untuk daging. Kastrasi mencegah bau jantan."
+    }
+  },
+  {
+    "question": "三元交配（スリーウェイクロス）の代表的な組み合わせはどれか？",
+    "answer": "LWD（ランドレース×大ヨークシャー×デュロック）",
+    "options": [
+      "LWD（ランドレース×大ヨークシャー×デュロック）",
+      "BBB（バークシャー×バークシャー×バークシャー）",
+      "LLL（ランドレース×ランドレース×ランドレース）",
+      "DDD（デュロック×デュロック×デュロック）"
+    ],
+    "category": "豚の分類",
+    "explanation": "LWDはランドレース（L）×大ヨークシャー（W）のF1雌にデュロック（D）の雄を交配する代表的な三元交配。",
+    "en": {
+      "question": "What is the typical three-way cross combination?",
+      "answer": "LWD (Landrace x Large White x Duroc)",
+      "options": [
+        "LWD (Landrace x Large White x Duroc)",
+        "BBB (Berkshire x Berkshire x Berkshire)",
+        "LLL (Landrace x Landrace x Landrace)",
+        "DDD (Duroc x Duroc x Duroc)"
+      ],
+      "explanation": "LWD crosses an F1 female (Landrace x Large White) with a Duroc boar, the most common three-way cross."
+    },
+    "vi": {
+      "question": "To hop lai ba mau (three-way cross) dien hinh la gi?",
+      "answer": "LWD (Landrace x Yorkshire x Duroc)",
+      "options": [
+        "LWD (Landrace x Yorkshire x Duroc)",
+        "BBB (Berkshire x Berkshire x Berkshire)",
+        "LLL (Landrace x Landrace x Landrace)",
+        "DDD (Duroc x Duroc x Duroc)"
+      ],
+      "explanation": "LWD lai lon cai F1 (Landrace x Yorkshire) voi lon duc Duroc, la phep lai ba mau pho bien nhat."
+    },
+    "ind": {
+      "question": "Apa kombinasi persilangan tiga jalur (three-way cross) yang umum?",
+      "answer": "LWD (Landrace x Large White x Duroc)",
+      "options": [
+        "LWD (Landrace x Large White x Duroc)",
+        "BBB (Berkshire x Berkshire x Berkshire)",
+        "LLL (Landrace x Landrace x Landrace)",
+        "DDD (Duroc x Duroc x Duroc)"
+      ],
+      "explanation": "LWD menyilangkan betina F1 (Landrace x Large White) dengan pejantan Duroc, persilangan tiga jalur paling umum."
+    }
+  },
+  {
+    "question": "デュロック種の主な特徴はどれか？",
+    "answer": "赤毛で肉質に優れ、増体性が高い",
+    "options": [
+      "白色で多産",
+      "赤毛で肉質に優れ、増体性が高い",
+      "黒色で小型",
+      "黒白の帯模様"
+    ],
+    "category": "豚の分類",
+    "explanation": "デュロック種は赤褐色の毛色で、優れた肉質と増体性を持ち、三元交配の止め雄として広く利用される。",
+    "en": {
+      "question": "What is the main characteristic of the Duroc breed?",
+      "answer": "Red-colored with excellent meat quality and high growth rate",
+      "options": [
+        "White with high prolificacy",
+        "Red-colored with excellent meat quality and high growth rate",
+        "Black and small-sized",
+        "Black and white belted pattern"
+      ],
+      "explanation": "Duroc pigs are reddish-brown with excellent meat quality and growth rate, widely used as terminal sires in three-way crosses."
+    },
+    "vi": {
+      "question": "Dac diem chinh cua giong Duroc la gi?",
+      "answer": "Long do, chat luong thit tot va tang truong cao",
+      "options": [
+        "Mau trang, de nhieu con",
+        "Long do, chat luong thit tot va tang truong cao",
+        "Mau den va nho",
+        "Hoa van dai den trang"
+      ],
+      "explanation": "Lon Duroc co mau nau do, chat luong thit va tang truong tot, duoc dung rong rai lam duc cuoi trong lai ba mau."
+    },
+    "ind": {
+      "question": "Apa karakteristik utama ras Duroc?",
+      "answer": "Berwarna merah dengan kualitas daging sangat baik dan pertumbuhan tinggi",
+      "options": [
+        "Putih dengan kesuburan tinggi",
+        "Berwarna merah dengan kualitas daging sangat baik dan pertumbuhan tinggi",
+        "Hitam dan berukuran kecil",
+        "Pola sabuk hitam putih"
+      ],
+      "explanation": "Babi Duroc berwarna merah-cokelat dengan kualitas daging dan pertumbuhan sangat baik, banyak digunakan sebagai pejantan terminal."
+    }
+  },
+  {
+    "question": "ランドレース種の主な特徴はどれか？",
+    "answer": "白色で体が長く、産子数が多い",
+    "options": [
+      "赤色で肉質が良い",
+      "黒色で小型",
+      "白色で体が長く、産子数が多い",
+      "斑点模様"
+    ],
+    "category": "豚の分類",
+    "explanation": "ランドレース種はデンマーク原産の白色種で、体が長く産子数が多いため母豚として広く利用される。",
+    "en": {
+      "question": "What is the main characteristic of the Landrace breed?",
+      "answer": "White, long-bodied, and highly prolific",
+      "options": [
+        "Red with good meat quality",
+        "Black and small-sized",
+        "White, long-bodied, and highly prolific",
+        "Spotted pattern"
+      ],
+      "explanation": "Landrace pigs originated in Denmark, are white with a long body and high prolificacy, widely used as dam breed."
+    },
+    "vi": {
+      "question": "Dac diem chinh cua giong Landrace la gi?",
+      "answer": "Mau trang, than dai va de nhieu con",
+      "options": [
+        "Mau do, thit ngon",
+        "Mau den va nho",
+        "Mau trang, than dai va de nhieu con",
+        "Hoa van dom"
+      ],
+      "explanation": "Lon Landrace co nguon goc Dan Mach, mau trang than dai va de nhieu con, duoc dung rong rai lam lon me."
+    },
+    "ind": {
+      "question": "Apa karakteristik utama ras Landrace?",
+      "answer": "Putih, berbadan panjang, dan sangat subur",
+      "options": [
+        "Merah dengan kualitas daging baik",
+        "Hitam dan berukuran kecil",
+        "Putih, berbadan panjang, dan sangat subur",
+        "Pola berbintik"
+      ],
+      "explanation": "Babi Landrace berasal dari Denmark, berwarna putih dengan tubuh panjang dan kesuburan tinggi, banyak digunakan sebagai induk."
+    }
+  },
+  {
+    "question": "大ヨークシャー種の主な特徴はどれか？",
+    "answer": "白色で大型、母性能に優れる",
+    "options": [
+      "白色で大型、母性能に優れる",
+      "赤色で筋肉質",
+      "黒色で脂肪が多い",
+      "小型で早熟"
+    ],
+    "category": "豚の分類",
+    "explanation": "大ヨークシャー種はイギリス原産で白色大型。産子数、母性能に優れ母豚として利用される。",
+    "en": {
+      "question": "What is the main characteristic of the Large White (Yorkshire) breed?",
+      "answer": "White, large-framed, excellent maternal ability",
+      "options": [
+        "White, large-framed, excellent maternal ability",
+        "Red and muscular",
+        "Black with high fat content",
+        "Small and early-maturing"
+      ],
+      "explanation": "Large White pigs originated in England, are white and large-framed with excellent prolificacy and maternal ability."
+    },
+    "vi": {
+      "question": "Dac diem chinh cua giong Yorkshire lon (Large White) la gi?",
+      "answer": "Mau trang, than lon, tinh me tot",
+      "options": [
+        "Mau trang, than lon, tinh me tot",
+        "Mau do va nhieu co",
+        "Mau den va nhieu mo",
+        "Nho va chin som"
+      ],
+      "explanation": "Lon Large White co nguon goc Anh, mau trang than lon, de nhieu con va tinh me tot."
+    },
+    "ind": {
+      "question": "Apa karakteristik utama ras Large White (Yorkshire)?",
+      "answer": "Putih, bertubuh besar, kemampuan keibuan sangat baik",
+      "options": [
+        "Putih, bertubuh besar, kemampuan keibuan sangat baik",
+        "Merah dan berotot",
+        "Hitam dengan kandungan lemak tinggi",
+        "Kecil dan cepat dewasa"
+      ],
+      "explanation": "Babi Large White berasal dari Inggris, berwarna putih bertubuh besar dengan kesuburan dan kemampuan keibuan sangat baik."
+    }
+  },
+  {
+    "question": "バークシャー種の主な特徴はどれか？",
+    "answer": "黒色で四肢と鼻が白く、肉質が良い",
+    "options": [
+      "全身白色で大型",
+      "黒色で四肢と鼻が白く、肉質が良い",
+      "赤褐色で増体が良い",
+      "帯状の模様がある"
+    ],
+    "category": "豚の分類",
+    "explanation": "バークシャー種は黒色で四肢端と鼻端が白い「六白」が特徴。肉質に優れ、黒豚ブランドとして知られる。",
+    "en": {
+      "question": "What is the main characteristic of the Berkshire breed?",
+      "answer": "Black with white feet and nose, excellent meat quality",
+      "options": [
+        "All white and large-framed",
+        "Black with white feet and nose, excellent meat quality",
+        "Reddish-brown with good growth",
+        "Belted pattern"
+      ],
+      "explanation": "Berkshire pigs are black with white feet and nose ('six whites'), known for excellent meat quality as a premium brand."
+    },
+    "vi": {
+      "question": "Dac diem chinh cua giong Berkshire la gi?",
+      "answer": "Mau den, chan va mui trang, chat luong thit tot",
+      "options": [
+        "Toan than trang va lon",
+        "Mau den, chan va mui trang, chat luong thit tot",
+        "Mau nau do tang truong tot",
+        "Co hoa van dai"
+      ],
+      "explanation": "Lon Berkshire mau den voi chan va mui trang ('sau trang'), noi tieng ve chat luong thit cao cap."
+    },
+    "ind": {
+      "question": "Apa karakteristik utama ras Berkshire?",
+      "answer": "Hitam dengan kaki dan hidung putih, kualitas daging sangat baik",
+      "options": [
+        "Seluruh putih dan bertubuh besar",
+        "Hitam dengan kaki dan hidung putih, kualitas daging sangat baik",
+        "Cokelat kemerahan dengan pertumbuhan baik",
+        "Pola sabuk"
+      ],
+      "explanation": "Babi Berkshire berwarna hitam dengan kaki dan hidung putih, terkenal dengan kualitas daging premium."
+    }
+  },
+  {
+    "question": "豚舎の適切な換気の目的として最も重要なのはどれか？",
+    "answer": "有害ガス（アンモニア等）の排出と新鮮な空気の供給",
+    "options": [
+      "室温を下げるだけ",
+      "有害ガス（アンモニア等）の排出と新鮮な空気の供給",
+      "臭いを外に出すだけ",
+      "湿度を上げるため"
+    ],
+    "category": "施設管理",
+    "explanation": "換気は有害ガス（アンモニア・硫化水素等）の排出、新鮮な空気の供給、温度・湿度の調節が主目的。",
+    "en": {
+      "question": "What is the most important purpose of proper ventilation in pig barns?",
+      "answer": "Removing harmful gases (ammonia, etc.) and supplying fresh air",
+      "options": [
+        "Just lowering temperature",
+        "Removing harmful gases (ammonia, etc.) and supplying fresh air",
+        "Just removing odor",
+        "Increasing humidity"
+      ],
+      "explanation": "Ventilation primarily removes harmful gases (ammonia, hydrogen sulfide), supplies fresh air, and regulates temperature and humidity."
+    },
+    "vi": {
+      "question": "Muc dich quan trong nhat cua thong gio dung trong chuong lon la gi?",
+      "answer": "Loai bo khi doc (amoniac, v.v.) va cung cap khong khi trong lanh",
+      "options": [
+        "Chi giam nhiet do",
+        "Loai bo khi doc (amoniac, v.v.) va cung cap khong khi trong lanh",
+        "Chi loai bo mui",
+        "Tang do am"
+      ],
+      "explanation": "Thong gio chu yeu loai bo khi doc (amoniac, hydro sunfua), cung cap khong khi va dieu hoa nhiet do, do am."
+    },
+    "ind": {
+      "question": "Apa tujuan terpenting dari ventilasi yang tepat di kandang babi?",
+      "answer": "Mengeluarkan gas berbahaya (amonia, dll.) dan menyuplai udara segar",
+      "options": [
+        "Hanya menurunkan suhu",
+        "Mengeluarkan gas berbahaya (amonia, dll.) dan menyuplai udara segar",
+        "Hanya menghilangkan bau",
+        "Meningkatkan kelembaban"
+      ],
+      "explanation": "Ventilasi terutama mengeluarkan gas berbahaya (amonia, hidrogen sulfida), menyuplai udara segar, dan mengatur suhu serta kelembaban."
+    }
+  },
+  {
+    "question": "肥育豚に適した1頭あたりの飼育面積はどれか？",
+    "answer": "約0.7〜1.0㎡",
+    "options": [
+      "約0.2〜0.3㎡",
+      "約0.7〜1.0㎡",
+      "約2.0〜3.0㎡",
+      "約5.0㎡以上"
+    ],
+    "category": "施設管理",
+    "explanation": "肥育豚には1頭あたり約0.7〜1.0㎡の飼育面積が推奨され、過密は成績低下の原因となる。",
+    "en": {
+      "question": "What is the appropriate floor space per finishing pig?",
+      "answer": "About 0.7-1.0 m²",
+      "options": [
+        "About 0.2-0.3 m²",
+        "About 0.7-1.0 m²",
+        "About 2.0-3.0 m²",
+        "Over 5.0 m²"
+      ],
+      "explanation": "About 0.7-1.0 m² per finishing pig is recommended; overcrowding causes reduced performance."
+    },
+    "vi": {
+      "question": "Dien tich san thich hop cho moi con lon voi beo la bao nhieu?",
+      "answer": "Khoang 0.7-1.0 m²",
+      "options": [
+        "Khoang 0.2-0.3 m²",
+        "Khoang 0.7-1.0 m²",
+        "Khoang 2.0-3.0 m²",
+        "Tren 5.0 m²"
+      ],
+      "explanation": "Khoang 0.7-1.0 m² cho moi lon voi beo duoc khuyen nghi; qua dong lam giam hieu suat."
+    },
+    "ind": {
+      "question": "Berapa luas lantai yang tepat per ekor babi finisher?",
+      "answer": "Sekitar 0,7-1,0 m²",
+      "options": [
+        "Sekitar 0,2-0,3 m²",
+        "Sekitar 0,7-1,0 m²",
+        "Sekitar 2,0-3,0 m²",
+        "Lebih dari 5,0 m²"
+      ],
+      "explanation": "Sekitar 0,7-1,0 m² per ekor babi finisher direkomendasikan; kepadatan berlebih menyebabkan penurunan performa."
+    }
+  },
+  {
+    "question": "豚舎のスラット床の利点はどれか？",
+    "answer": "糞尿が自動的に床下に落ち、衛生管理が容易",
+    "options": [
+      "床が暖かい",
+      "糞尿が自動的に床下に落ち、衛生管理が容易",
+      "建設コストが安い",
+      "豚の足に優しい"
+    ],
+    "category": "施設管理",
+    "explanation": "スラット床は糞尿がスリットから下に落ちるため、豚房の衛生管理が容易になり労力も削減できる。",
+    "en": {
+      "question": "What is the advantage of slatted floors in pig barns?",
+      "answer": "Manure falls through automatically, making hygiene management easier",
+      "options": [
+        "The floor is warm",
+        "Manure falls through automatically, making hygiene management easier",
+        "Construction cost is low",
+        "Gentle on pig's feet"
+      ],
+      "explanation": "Slatted floors allow manure to fall through the slats, making hygiene management easier and reducing labor."
+    },
+    "vi": {
+      "question": "Uu diem cua san khe (slatted floor) trong chuong lon la gi?",
+      "answer": "Phan tu dong roi xuong duoi san, de quan ly ve sinh",
+      "options": [
+        "San am",
+        "Phan tu dong roi xuong duoi san, de quan ly ve sinh",
+        "Chi phi xay dung thap",
+        "Nhe nhang voi chan lon"
+      ],
+      "explanation": "San khe cho phep phan roi qua khe, giup quan ly ve sinh de dang va giam lao dong."
+    },
+    "ind": {
+      "question": "Apa keuntungan lantai slat di kandang babi?",
+      "answer": "Kotoran jatuh otomatis, memudahkan manajemen kebersihan",
+      "options": [
+        "Lantai hangat",
+        "Kotoran jatuh otomatis, memudahkan manajemen kebersihan",
+        "Biaya konstruksi rendah",
+        "Lembut untuk kaki babi"
+      ],
+      "explanation": "Lantai slat memungkinkan kotoran jatuh melalui celah, memudahkan manajemen kebersihan dan mengurangi tenaga kerja."
+    }
+  },
+  {
+    "question": "豚舎のアンモニア濃度の上限目安はどれか？",
+    "answer": "25ppm以下",
+    "options": [
+      "5ppm以下",
+      "25ppm以下",
+      "100ppm以下",
+      "500ppm以下"
+    ],
+    "category": "施設管理",
+    "explanation": "豚舎のアンモニア濃度は25ppm以下に維持することが推奨され、高濃度は呼吸器疾患のリスクとなる。",
+    "en": {
+      "question": "What is the recommended upper limit for ammonia concentration in pig barns?",
+      "answer": "25 ppm or less",
+      "options": [
+        "5 ppm or less",
+        "25 ppm or less",
+        "100 ppm or less",
+        "500 ppm or less"
+      ],
+      "explanation": "Ammonia concentration in pig barns should be kept at 25 ppm or less; high levels increase respiratory disease risk."
+    },
+    "vi": {
+      "question": "Gioi han tren cua nong do amoniac trong chuong lon la bao nhieu?",
+      "answer": "25 ppm tro xuong",
+      "options": [
+        "5 ppm tro xuong",
+        "25 ppm tro xuong",
+        "100 ppm tro xuong",
+        "500 ppm tro xuong"
+      ],
+      "explanation": "Nong do amoniac trong chuong lon nen duoc giu o 25 ppm tro xuong; nong do cao tang nguy co benh ho hap."
+    },
+    "ind": {
+      "question": "Berapa batas atas konsentrasi amonia yang direkomendasikan di kandang babi?",
+      "answer": "25 ppm atau kurang",
+      "options": [
+        "5 ppm atau kurang",
+        "25 ppm atau kurang",
+        "100 ppm atau kurang",
+        "500 ppm atau kurang"
+      ],
+      "explanation": "Konsentrasi amonia di kandang babi harus dijaga 25 ppm atau kurang; kadar tinggi meningkatkan risiko penyakit pernapasan."
+    }
+  },
+  {
+    "question": "豚糞尿の堆肥化処理で重要な管理項目はどれか？",
+    "answer": "適切な水分管理と切り返し（攪拌）",
+    "options": [
+      "密閉して放置",
+      "適切な水分管理と切り返し（攪拌）",
+      "水を大量に加える",
+      "冷凍保存"
+    ],
+    "category": "施設管理",
+    "explanation": "堆肥化には適切な水分（60〜65%）の維持と定期的な切り返しによる酸素供給が重要。",
+    "en": {
+      "question": "What is the important management item in composting pig manure?",
+      "answer": "Proper moisture management and turning (mixing)",
+      "options": [
+        "Seal and leave",
+        "Proper moisture management and turning (mixing)",
+        "Add large amounts of water",
+        "Freeze for storage"
+      ],
+      "explanation": "Composting requires proper moisture (60-65%) and regular turning for oxygen supply."
+    },
+    "vi": {
+      "question": "Quan ly quan trong trong qua trinh u phan lon la gi?",
+      "answer": "Quan ly do am dung va dao tron",
+      "options": [
+        "Dong kin va de yen",
+        "Quan ly do am dung va dao tron",
+        "Them nhieu nuoc",
+        "Dong lanh bao quan"
+      ],
+      "explanation": "U phan can do am thich hop (60-65%) va dao tron dinh ky de cung cap oxy."
+    },
+    "ind": {
+      "question": "Apa hal penting dalam manajemen pengomposan kotoran babi?",
+      "answer": "Manajemen kelembaban yang tepat dan pembalikan (pengadukan)",
+      "options": [
+        "Tutup rapat dan diamkan",
+        "Manajemen kelembaban yang tepat dan pembalikan (pengadukan)",
+        "Menambahkan banyak air",
+        "Membekukan untuk penyimpanan"
+      ],
+      "explanation": "Pengomposan memerlukan kelembaban yang tepat (60-65%) dan pembalikan rutin untuk suplai oksigen."
+    }
+  },
+  {
+    "question": "夏季の豚舎における暑熱対策として効果的なのはどれか？",
+    "answer": "ミスト冷却と換気扇の増強",
+    "options": [
+      "窓を全て閉める",
+      "ミスト冷却と換気扇の増強",
+      "暖房を入れる",
+      "飲水を制限する"
+    ],
+    "category": "施設管理",
+    "explanation": "夏季の暑熱対策にはミスト冷却、換気扇の増強、遮光ネット等が効果的。",
+    "en": {
+      "question": "What is an effective heat stress countermeasure in summer for pig barns?",
+      "answer": "Mist cooling and increased ventilation fans",
+      "options": [
+        "Close all windows",
+        "Mist cooling and increased ventilation fans",
+        "Turn on heating",
+        "Restrict water intake"
+      ],
+      "explanation": "Effective summer heat measures include mist cooling, increased fan ventilation, and shade nets."
+    },
+    "vi": {
+      "question": "Bien phap chong nong hieu qua cho chuong lon vao mua he la gi?",
+      "answer": "Lam mat bang suong mu va tang quat thong gio",
+      "options": [
+        "Dong het cua so",
+        "Lam mat bang suong mu va tang quat thong gio",
+        "Bat may suoi",
+        "Han che nuoc uong"
+      ],
+      "explanation": "Bien phap chong nong mua he hieu qua gom lam mat suong mu, tang quat thong gio va luoi che nang."
+    },
+    "ind": {
+      "question": "Apa tindakan penanggulangan stres panas yang efektif di kandang babi saat musim panas?",
+      "answer": "Pendinginan kabut dan penambahan kipas ventilasi",
+      "options": [
+        "Menutup semua jendela",
+        "Pendinginan kabut dan penambahan kipas ventilasi",
+        "Menyalakan pemanas",
+        "Membatasi asupan air"
+      ],
+      "explanation": "Tindakan panas musim panas yang efektif termasuk pendinginan kabut, peningkatan kipas ventilasi, dan jaring peneduh."
+    }
+  },
+  {
+    "question": "分娩房の適切な温度管理について正しいのはどれか？",
+    "answer": "母豚エリアは18〜20℃、子豚エリアは32〜34℃",
+    "options": [
+      "全体を30℃に保つ",
+      "母豚エリアは18〜20℃、子豚エリアは32〜34℃",
+      "全体を15℃に保つ",
+      "温度管理は不要"
+    ],
+    "category": "施設管理",
+    "explanation": "分娩房では母豚と子豚の至適温度が異なるため、子豚用の保温エリア（ヒートランプ等）を設ける。",
+    "en": {
+      "question": "What is the correct temperature management in the farrowing room?",
+      "answer": "Sow area at 18-20°C, piglet area at 32-34°C",
+      "options": [
+        "Keep entire room at 30°C",
+        "Sow area at 18-20°C, piglet area at 32-34°C",
+        "Keep entire room at 15°C",
+        "Temperature control not needed"
+      ],
+      "explanation": "Farrowing rooms need different temperatures for sows and piglets, using heat lamps for the piglet zone."
+    },
+    "vi": {
+      "question": "Quan ly nhiet do dung trong phong de la gi?",
+      "answer": "Khu lon me 18-20°C, khu lon con 32-34°C",
+      "options": [
+        "Giu toan phong 30°C",
+        "Khu lon me 18-20°C, khu lon con 32-34°C",
+        "Giu toan phong 15°C",
+        "Khong can quan ly nhiet do"
+      ],
+      "explanation": "Phong de can nhiet do khac nhau cho lon me va lon con, dung den suoi cho khu lon con."
+    },
+    "ind": {
+      "question": "Apa manajemen suhu yang benar di ruang beranak?",
+      "answer": "Area induk 18-20°C, area anak babi 32-34°C",
+      "options": [
+        "Jaga seluruh ruangan 30°C",
+        "Area induk 18-20°C, area anak babi 32-34°C",
+        "Jaga seluruh ruangan 15°C",
+        "Kontrol suhu tidak diperlukan"
+      ],
+      "explanation": "Ruang beranak membutuhkan suhu berbeda untuk induk dan anak babi, menggunakan lampu pemanas untuk zona anak babi."
+    }
+  },
+  {
+    "question": "豚舎の汚水処理施設として一般的に使用されるのはどれか？",
+    "answer": "活性汚泥処理法",
+    "options": [
+      "海洋投棄",
+      "活性汚泥処理法",
+      "焼却処分",
+      "そのまま河川放流"
+    ],
+    "category": "施設管理",
+    "explanation": "豚舎の汚水処理には活性汚泥処理法が広く用いられ、微生物の分解作用で有機物を処理する。",
+    "en": {
+      "question": "What wastewater treatment system is commonly used for pig farms?",
+      "answer": "Activated sludge process",
+      "options": [
+        "Ocean dumping",
+        "Activated sludge process",
+        "Incineration",
+        "Direct discharge to rivers"
+      ],
+      "explanation": "The activated sludge process is widely used for pig farm wastewater, using microorganisms to break down organic matter."
+    },
+    "vi": {
+      "question": "He thong xu ly nuoc thai nao thuong duoc su dung cho trai lon?",
+      "answer": "Phuong phap bun hoat tinh",
+      "options": [
+        "Do ra bien",
+        "Phuong phap bun hoat tinh",
+        "Thieu huy",
+        "Xa thang ra song"
+      ],
+      "explanation": "Phuong phap bun hoat tinh duoc su dung rong rai de xu ly nuoc thai trai lon bang vi sinh vat phan huy chat huu co."
+    },
+    "ind": {
+      "question": "Sistem pengolahan air limbah apa yang umum digunakan untuk peternakan babi?",
+      "answer": "Proses lumpur aktif",
+      "options": [
+        "Pembuangan ke laut",
+        "Proses lumpur aktif",
+        "Pembakaran",
+        "Pembuangan langsung ke sungai"
+      ],
+      "explanation": "Proses lumpur aktif banyak digunakan untuk air limbah peternakan babi, menggunakan mikroorganisme untuk mengurai bahan organik."
+    }
+  },
+  {
+    "question": "豚舎における照明管理の効果として正しいのはどれか？",
+    "answer": "適切な照明は繁殖成績と行動に影響する",
+    "options": [
+      "照明は豚に影響しない",
+      "適切な照明は繁殖成績と行動に影響する",
+      "暗闘環境が最も良い",
+      "24時間照明が最適"
+    ],
+    "category": "施設管理",
+    "explanation": "適切な照明プログラムは母豚の発情促進や、豚の行動・福祉に影響を与える。",
+    "en": {
+      "question": "What is the correct effect of lighting management in pig barns?",
+      "answer": "Proper lighting affects breeding performance and behavior",
+      "options": [
+        "Lighting has no effect on pigs",
+        "Proper lighting affects breeding performance and behavior",
+        "Dark environment is best",
+        "24-hour lighting is optimal"
+      ],
+      "explanation": "Proper lighting programs promote sow estrus and influence pig behavior and welfare."
+    },
+    "vi": {
+      "question": "Tac dong dung cua quan ly anh sang trong chuong lon la gi?",
+      "answer": "Anh sang thich hop anh huong den hieu suat sinh san va hanh vi",
+      "options": [
+        "Anh sang khong anh huong den lon",
+        "Anh sang thich hop anh huong den hieu suat sinh san va hanh vi",
+        "Moi truong toi la tot nhat",
+        "Chieu sang 24 gio la tot nhat"
+      ],
+      "explanation": "Chuong trinh chieu sang thich hop thuc day dong duc lon nai va anh huong den hanh vi va phuc loi lon."
+    },
+    "ind": {
+      "question": "Apa efek yang benar dari manajemen pencahayaan di kandang babi?",
+      "answer": "Pencahayaan yang tepat mempengaruhi performa reproduksi dan perilaku",
+      "options": [
+        "Pencahayaan tidak berpengaruh pada babi",
+        "Pencahayaan yang tepat mempengaruhi performa reproduksi dan perilaku",
+        "Lingkungan gelap paling baik",
+        "Pencahayaan 24 jam paling optimal"
+      ],
+      "explanation": "Program pencahayaan yang tepat mendorong birahi induk dan mempengaruhi perilaku serta kesejahteraan babi."
+    }
+  },
+  {
+    "question": "冬季の豚舎で注意すべき点として正しいのはどれか？",
+    "answer": "保温と換気のバランスを取る",
+    "options": [
+      "換気を完全に止める",
+      "保温と換気のバランスを取る",
+      "窓を全開にする",
+      "暖房は不要"
+    ],
+    "category": "施設管理",
+    "explanation": "冬季は保温を優先しがちだが、換気を完全に止めると有害ガスが蓄積するため、バランスが重要。",
+    "en": {
+      "question": "What should be carefully managed in pig barns during winter?",
+      "answer": "Balance between insulation and ventilation",
+      "options": [
+        "Stop ventilation completely",
+        "Balance between insulation and ventilation",
+        "Open all windows",
+        "Heating is unnecessary"
+      ],
+      "explanation": "In winter, prioritizing insulation can lead to harmful gas buildup if ventilation is stopped, so balance is crucial."
+    },
+    "vi": {
+      "question": "Dieu can chu y trong chuong lon vao mua dong la gi?",
+      "answer": "Can bang giua giu am va thong gio",
+      "options": [
+        "Ngung hoan toan thong gio",
+        "Can bang giua giu am va thong gio",
+        "Mo het cua so",
+        "Khong can suoi am"
+      ],
+      "explanation": "Mua dong uu tien giu am co the dan den tich tu khi doc neu ngung thong gio, nen can bang rat quan trong."
+    },
+    "ind": {
+      "question": "Apa yang harus diperhatikan di kandang babi selama musim dingin?",
+      "answer": "Keseimbangan antara insulasi dan ventilasi",
+      "options": [
+        "Hentikan ventilasi sepenuhnya",
+        "Keseimbangan antara insulasi dan ventilasi",
+        "Buka semua jendela",
+        "Pemanas tidak diperlukan"
+      ],
+      "explanation": "Di musim dingin, mengutamakan insulasi bisa menyebabkan penumpukan gas berbahaya jika ventilasi dihentikan, sehingga keseimbangan sangat penting."
+    }
+  },
+  {
+    "question": "豚流行性下痢（PED）の主な症状はどれか？",
+    "answer": "激しい水様性下痢と嘔吐",
+    "options": [
+      "皮膚の発疹",
+      "激しい水様性下痢と嘔吐",
+      "関節の腫れ",
+      "尾の壊死"
+    ],
+    "category": "疾病管理",
+    "explanation": "PEDはコロナウイルスが原因で、激しい水様性下痢と嘔吐が主症状。特に哺乳子豚で致死率が高い。",
+    "en": {
+      "question": "What are the main symptoms of Porcine Epidemic Diarrhea (PED)?",
+      "answer": "Severe watery diarrhea and vomiting",
+      "options": [
+        "Skin rash",
+        "Severe watery diarrhea and vomiting",
+        "Joint swelling",
+        "Tail necrosis"
+      ],
+      "explanation": "PED is caused by a coronavirus, with severe watery diarrhea and vomiting as main symptoms; high mortality in suckling piglets."
+    },
+    "vi": {
+      "question": "Trieu chung chinh cua benh tieu chay cap o lon (PED) la gi?",
+      "answer": "Tieu chay nuoc du doi va non",
+      "options": [
+        "Phat ban da",
+        "Tieu chay nuoc du doi va non",
+        "Sung khop",
+        "Hoai tu duoi"
+      ],
+      "explanation": "PED do coronavirus gay ra, trieu chung chinh la tieu chay nuoc va non; ty le chet cao o lon con theo me."
+    },
+    "ind": {
+      "question": "Apa gejala utama Porcine Epidemic Diarrhea (PED)?",
+      "answer": "Diare berair parah dan muntah",
+      "options": [
+        "Ruam kulit",
+        "Diare berair parah dan muntah",
+        "Pembengkakan sendi",
+        "Nekrosis ekor"
+      ],
+      "explanation": "PED disebabkan oleh coronavirus, dengan diare berair parah dan muntah sebagai gejala utama; kematian tinggi pada anak babi menyusu."
+    }
+  },
+  {
+    "question": "豚繁殖・呼吸障害症候群（PRRS）の主な影響はどれか？",
+    "answer": "母豚の流産・死産と子豚の呼吸器症状",
+    "options": [
+      "皮膚の変色のみ",
+      "母豚の流産・死産と子豚の呼吸器症状",
+      "食欲増進",
+      "体重の急激な増加"
+    ],
+    "category": "疾病管理",
+    "explanation": "PRRSはウイルス性疾患で、母豚の繁殖障害（流産・死産）と子豚〜育成豚の呼吸器症状が特徴。",
+    "en": {
+      "question": "What are the main effects of Porcine Reproductive and Respiratory Syndrome (PRRS)?",
+      "answer": "Sow abortion/stillbirth and respiratory symptoms in piglets",
+      "options": [
+        "Skin discoloration only",
+        "Sow abortion/stillbirth and respiratory symptoms in piglets",
+        "Increased appetite",
+        "Rapid weight gain"
+      ],
+      "explanation": "PRRS is a viral disease causing reproductive failure (abortion, stillbirth) in sows and respiratory symptoms in growing pigs."
+    },
+    "vi": {
+      "question": "Anh huong chinh cua Hoi chung roi loan sinh san va ho hap o lon (PRRS) la gi?",
+      "answer": "Say thai/thai chet o lon nai va trieu chung ho hap o lon con",
+      "options": [
+        "Chi doi mau da",
+        "Say thai/thai chet o lon nai va trieu chung ho hap o lon con",
+        "Tang ngon an",
+        "Tang can nhanh"
+      ],
+      "explanation": "PRRS la benh virus gay roi loan sinh san (say thai, thai chet) o lon nai va trieu chung ho hap o lon dang lon."
+    },
+    "ind": {
+      "question": "Apa dampak utama Porcine Reproductive and Respiratory Syndrome (PRRS)?",
+      "answer": "Aborsi/lahir mati pada induk dan gejala pernapasan pada anak babi",
+      "options": [
+        "Hanya perubahan warna kulit",
+        "Aborsi/lahir mati pada induk dan gejala pernapasan pada anak babi",
+        "Peningkatan nafsu makan",
+        "Kenaikan berat badan cepat"
+      ],
+      "explanation": "PRRS adalah penyakit virus yang menyebabkan kegagalan reproduksi pada induk dan gejala pernapasan pada babi yang sedang tumbuh."
+    }
+  },
+  {
+    "question": "豚コレラ（CSF）の法的分類として正しいのはどれか？",
+    "answer": "家畜伝染病予防法の監視伝染病",
+    "options": [
+      "届出不要の一般的な病気",
+      "家畜伝染病予防法の監視伝染病",
+      "人にも感染する人獣共通感染症",
+      "ワクチンで完全に制御可能"
+    ],
+    "category": "疾病管理",
+    "explanation": "豚コレラ（CSF）は家畜伝染病予防法で監視伝染病に指定されており、発生時は届出義務がある。",
+    "en": {
+      "question": "What is the legal classification of Classical Swine Fever (CSF)?",
+      "answer": "A notifiable disease under the Act on Domestic Animal Infectious Diseases",
+      "options": [
+        "A common disease not requiring notification",
+        "A notifiable disease under the Act on Domestic Animal Infectious Diseases",
+        "A zoonotic disease transmissible to humans",
+        "Completely controllable by vaccination"
+      ],
+      "explanation": "CSF is designated as a notifiable disease under the Act on Domestic Animal Infectious Diseases, requiring mandatory reporting."
+    },
+    "vi": {
+      "question": "Phan loai phap ly cua benh Dich ta lon co dien (CSF) la gi?",
+      "answer": "Benh truyen nhiem phai giam sat theo Luat Phong chong benh truyen nhiem gia suc",
+      "options": [
+        "Benh thuong khong can bao cao",
+        "Benh truyen nhiem phai giam sat theo Luat Phong chong benh truyen nhiem gia suc",
+        "Benh lay tu dong vat sang nguoi",
+        "Co the kiem soat hoan toan bang vaccine"
+      ],
+      "explanation": "CSF duoc chi dinh la benh truyen nhiem phai giam sat, bao cao bat buoc khi phat hien."
+    },
+    "ind": {
+      "question": "Apa klasifikasi hukum Classical Swine Fever (CSF)?",
+      "answer": "Penyakit yang harus dilaporkan berdasarkan Undang-Undang Penyakit Menular Hewan",
+      "options": [
+        "Penyakit umum yang tidak perlu dilaporkan",
+        "Penyakit yang harus dilaporkan berdasarkan Undang-Undang Penyakit Menular Hewan",
+        "Penyakit zoonosis yang menular ke manusia",
+        "Dapat dikontrol sepenuhnya dengan vaksinasi"
+      ],
+      "explanation": "CSF ditetapkan sebagai penyakit yang harus dilaporkan berdasarkan undang-undang, dengan pelaporan wajib saat terjadi wabah."
+    }
+  },
+  {
+    "question": "アフリカ豚熱（ASF）について正しいのはどれか？",
+    "answer": "有効なワクチンがなく、致死率が非常に高い",
+    "options": [
+      "有効なワクチンがある",
+      "有効なワクチンがなく、致死率が非常に高い",
+      "人に感染する",
+      "症状が軽い"
+    ],
+    "category": "疾病管理",
+    "explanation": "ASFは有効なワクチンがなく致死率がほぼ100%の重大な家畜伝染病で、厳格な防疫対策が必要。",
+    "en": {
+      "question": "Which statement about African Swine Fever (ASF) is correct?",
+      "answer": "No effective vaccine exists and mortality rate is extremely high",
+      "options": [
+        "An effective vaccine exists",
+        "No effective vaccine exists and mortality rate is extremely high",
+        "It infects humans",
+        "Symptoms are mild"
+      ],
+      "explanation": "ASF has no effective vaccine and a near 100% mortality rate, requiring strict biosecurity measures."
+    },
+    "vi": {
+      "question": "Phat bieu nao ve benh Dich ta lon chau Phi (ASF) la dung?",
+      "answer": "Khong co vaccine hieu qua va ty le tu vong rat cao",
+      "options": [
+        "Co vaccine hieu qua",
+        "Khong co vaccine hieu qua va ty le tu vong rat cao",
+        "Lay sang nguoi",
+        "Trieu chung nhe"
+      ],
+      "explanation": "ASF khong co vaccine hieu qua va ty le tu vong gan 100%, can bien phap an toan sinh hoc nghiem ngat."
+    },
+    "ind": {
+      "question": "Pernyataan mana tentang African Swine Fever (ASF) yang benar?",
+      "answer": "Tidak ada vaksin efektif dan tingkat kematian sangat tinggi",
+      "options": [
+        "Vaksin efektif tersedia",
+        "Tidak ada vaksin efektif dan tingkat kematian sangat tinggi",
+        "Menular ke manusia",
+        "Gejalanya ringan"
+      ],
+      "explanation": "ASF tidak memiliki vaksin efektif dan tingkat kematian mendekati 100%, memerlukan tindakan biosekuriti yang ketat."
+    }
+  },
+  {
+    "question": "豚丹毒の主な症状はどれか？",
+    "answer": "菱形の皮膚発疹と高熱",
+    "options": [
+      "激しい下痢",
+      "菱形の皮膚発疹と高熱",
+      "咳と鼻汁",
+      "四肢の麻痺"
+    ],
+    "category": "疾病管理",
+    "explanation": "豚丹毒は細菌性疾患で、特徴的な菱形（ダイヤモンド形）の皮膚発疹と高熱が主症状。",
+    "en": {
+      "question": "What are the main symptoms of swine erysipelas?",
+      "answer": "Diamond-shaped skin lesions and high fever",
+      "options": [
+        "Severe diarrhea",
+        "Diamond-shaped skin lesions and high fever",
+        "Cough and nasal discharge",
+        "Limb paralysis"
+      ],
+      "explanation": "Swine erysipelas is a bacterial disease with characteristic diamond-shaped skin lesions and high fever."
+    },
+    "vi": {
+      "question": "Trieu chung chinh cua benh Dan doc lon la gi?",
+      "answer": "Phat ban da hinh thoi va sot cao",
+      "options": [
+        "Tieu chay nang",
+        "Phat ban da hinh thoi va sot cao",
+        "Ho va chay nuoc mui",
+        "Liet chi"
+      ],
+      "explanation": "Benh Dan doc lon la benh vi khuan voi dac trung phat ban da hinh thoi (hinh kim cuong) va sot cao."
+    },
+    "ind": {
+      "question": "Apa gejala utama erisipelas babi?",
+      "answer": "Lesi kulit berbentuk berlian dan demam tinggi",
+      "options": [
+        "Diare parah",
+        "Lesi kulit berbentuk berlian dan demam tinggi",
+        "Batuk dan leleran hidung",
+        "Kelumpuhan anggota badan"
+      ],
+      "explanation": "Erisipelas babi adalah penyakit bakteri dengan lesi kulit berbentuk berlian yang khas dan demam tinggi."
+    }
+  },
+  {
+    "question": "マイコプラズマ肺炎の特徴的な症状はどれか？",
+    "answer": "乾いた咳（マイコプラズマ咳）",
+    "options": [
+      "皮膚の水疱",
+      "乾いた咳（マイコプラズマ咳）",
+      "血便",
+      "眼の異常"
+    ],
+    "category": "疾病管理",
+    "explanation": "マイコプラズマ肺炎は慢性の乾いた咳が特徴で、発育遅延と飼料効率の低下を引き起こす。",
+    "en": {
+      "question": "What is the characteristic symptom of mycoplasma pneumonia?",
+      "answer": "Dry cough (mycoplasma cough)",
+      "options": [
+        "Skin blisters",
+        "Dry cough (mycoplasma cough)",
+        "Bloody stool",
+        "Eye abnormalities"
+      ],
+      "explanation": "Mycoplasma pneumonia features chronic dry cough, causing growth retardation and reduced feed efficiency."
+    },
+    "vi": {
+      "question": "Trieu chung dac trung cua viem phoi do Mycoplasma la gi?",
+      "answer": "Ho khan (ho Mycoplasma)",
+      "options": [
+        "Mun nuoc tren da",
+        "Ho khan (ho Mycoplasma)",
+        "Phan co mau",
+        "Bat thuong mat"
+      ],
+      "explanation": "Viem phoi Mycoplasma dac trung boi ho khan man tinh, gay cham lon va giam hieu qua thuc an."
+    },
+    "ind": {
+      "question": "Apa gejala khas pneumonia mikoplasma?",
+      "answer": "Batuk kering (batuk mikoplasma)",
+      "options": [
+        "Lepuh kulit",
+        "Batuk kering (batuk mikoplasma)",
+        "Tinja berdarah",
+        "Kelainan mata"
+      ],
+      "explanation": "Pneumonia mikoplasma ditandai dengan batuk kering kronis, menyebabkan pertumbuhan terhambat dan efisiensi pakan menurun."
+    }
+  },
+  {
+    "question": "豚の回虫症を予防するために重要なことはどれか？",
+    "answer": "定期的な駆虫と豚舎の清掃",
+    "options": [
+      "ワクチン接種",
+      "定期的な駆虫と豚舎の清掃",
+      "抗生物質の投与",
+      "飼料の変更"
+    ],
+    "category": "疾病管理",
+    "explanation": "回虫症は寄生虫疾患のため、定期的な駆虫薬の投与と豚舎の衛生管理が予防に重要。",
+    "en": {
+      "question": "What is important for preventing ascaris (roundworm) infection in pigs?",
+      "answer": "Regular deworming and barn cleaning",
+      "options": [
+        "Vaccination",
+        "Regular deworming and barn cleaning",
+        "Antibiotic administration",
+        "Feed changes"
+      ],
+      "explanation": "Ascaris is a parasitic disease, so regular deworming and barn hygiene are essential for prevention."
+    },
+    "vi": {
+      "question": "Dieu gi quan trong de phong benh giun dua o lon?",
+      "answer": "Tay giun dinh ky va ve sinh chuong trai",
+      "options": [
+        "Tiem vaccine",
+        "Tay giun dinh ky va ve sinh chuong trai",
+        "Dung khang sinh",
+        "Thay doi thuc an"
+      ],
+      "explanation": "Benh giun dua la benh ky sinh trung, nen tay giun dinh ky va ve sinh chuong trai rat quan trong de phong benh."
+    },
+    "ind": {
+      "question": "Apa yang penting untuk mencegah infeksi cacing gelang (ascaris) pada babi?",
+      "answer": "Pemberian obat cacing rutin dan pembersihan kandang",
+      "options": [
+        "Vaksinasi",
+        "Pemberian obat cacing rutin dan pembersihan kandang",
+        "Pemberian antibiotik",
+        "Perubahan pakan"
+      ],
+      "explanation": "Ascaris adalah penyakit parasit, sehingga pemberian obat cacing rutin dan kebersihan kandang penting untuk pencegahan."
+    }
+  },
+  {
+    "question": "豚の体温を測定する際の正常体温範囲はどれか？",
+    "answer": "38.0〜39.5℃",
+    "options": [
+      "35.0〜36.0℃",
+      "37.0〜37.5℃",
+      "38.0〜39.5℃",
+      "41.0〜42.0℃"
+    ],
+    "category": "疾病管理",
+    "explanation": "豚の正常体温は38.0〜39.5℃で、これを超える場合は感染症や熱中症を疑う。",
+    "en": {
+      "question": "What is the normal body temperature range for pigs?",
+      "answer": "38.0-39.5°C",
+      "options": [
+        "35.0-36.0°C",
+        "37.0-37.5°C",
+        "38.0-39.5°C",
+        "41.0-42.0°C"
+      ],
+      "explanation": "The normal body temperature for pigs is 38.0-39.5°C; temperatures above this may indicate infection or heat stress."
+    },
+    "vi": {
+      "question": "Pham vi than nhiet binh thuong cua lon la bao nhieu?",
+      "answer": "38.0-39.5°C",
+      "options": [
+        "35.0-36.0°C",
+        "37.0-37.5°C",
+        "38.0-39.5°C",
+        "41.0-42.0°C"
+      ],
+      "explanation": "Than nhiet binh thuong cua lon la 38.0-39.5°C; nhiet do tren muc nay co the la nhiem trung hoac stress nhiet."
+    },
+    "ind": {
+      "question": "Berapa kisaran suhu tubuh normal babi?",
+      "answer": "38,0-39,5°C",
+      "options": [
+        "35,0-36,0°C",
+        "37,0-37,5°C",
+        "38,0-39,5°C",
+        "41,0-42,0°C"
+      ],
+      "explanation": "Suhu tubuh normal babi adalah 38,0-39,5°C; suhu di atas ini mungkin menunjukkan infeksi atau stres panas."
+    }
+  },
+  {
+    "question": "口蹄疫の豚における主な症状はどれか？",
+    "answer": "口や蹄に水疱ができ、跛行する",
+    "options": [
+      "血便と発熱",
+      "口や蹄に水疱ができ、跛行する",
+      "皮膚の黒変",
+      "急激な体重減少のみ"
+    ],
+    "category": "疾病管理",
+    "explanation": "口蹄疫は口や蹄に水疱を形成し、跛行や採食困難を引き起こす重大な家畜伝染病。",
+    "en": {
+      "question": "What are the main symptoms of Foot-and-Mouth Disease (FMD) in pigs?",
+      "answer": "Blisters on mouth and hooves, causing lameness",
+      "options": [
+        "Bloody stool and fever",
+        "Blisters on mouth and hooves, causing lameness",
+        "Blackening of skin",
+        "Only rapid weight loss"
+      ],
+      "explanation": "FMD forms blisters on the mouth and hooves, causing lameness and difficulty eating; a serious notifiable disease."
+    },
+    "vi": {
+      "question": "Trieu chung chinh cua benh Lo mom long mong (FMD) o lon la gi?",
+      "answer": "Mun nuoc o mieng va mong, gay que",
+      "options": [
+        "Phan co mau va sot",
+        "Mun nuoc o mieng va mong, gay que",
+        "Da bi den",
+        "Chi sut can nhanh"
+      ],
+      "explanation": "FMD tao mun nuoc o mieng va mong, gay que va kho an; la benh truyen nhiem nghiem trong phai bao cao."
+    },
+    "ind": {
+      "question": "Apa gejala utama Penyakit Mulut dan Kuku (PMK) pada babi?",
+      "answer": "Lepuh pada mulut dan kuku, menyebabkan pincang",
+      "options": [
+        "Tinja berdarah dan demam",
+        "Lepuh pada mulut dan kuku, menyebabkan pincang",
+        "Kulit menghitam",
+        "Hanya penurunan berat badan cepat"
+      ],
+      "explanation": "PMK membentuk lepuh pada mulut dan kuku, menyebabkan pincang dan kesulitan makan; penyakit menular serius yang wajib dilaporkan."
+    }
+  },
+  {
+    "question": "豚サーコウイルス2型（PCV2）感染で引き起こされる主な疾病はどれか？",
+    "answer": "離乳後多臓器性消耗症候群（PMWS）",
+    "options": [
+      "口蹄疫",
+      "離乳後多臓器性消耗症候群（PMWS）",
+      "アフリカ豚熱",
+      "豚丹毒"
+    ],
+    "category": "疾病管理",
+    "explanation": "PCV2は離乳後多臓器性消耗症候群（PMWS）の主要原因で、離乳子豚の消耗や発育不良を引き起こす。",
+    "en": {
+      "question": "What is the main disease caused by Porcine Circovirus type 2 (PCV2)?",
+      "answer": "Post-weaning Multisystemic Wasting Syndrome (PMWS)",
+      "options": [
+        "Foot-and-Mouth Disease",
+        "Post-weaning Multisystemic Wasting Syndrome (PMWS)",
+        "African Swine Fever",
+        "Swine Erysipelas"
+      ],
+      "explanation": "PCV2 is the main cause of PMWS, causing wasting and poor growth in weaned piglets."
+    },
+    "vi": {
+      "question": "Benh chinh do Circovirus lon type 2 (PCV2) gay ra la gi?",
+      "answer": "Hoi chung suy kiet da co quan sau cai sua (PMWS)",
+      "options": [
+        "Benh Lo mom long mong",
+        "Hoi chung suy kiet da co quan sau cai sua (PMWS)",
+        "Dich ta lon chau Phi",
+        "Benh Dan doc lon"
+      ],
+      "explanation": "PCV2 la nguyen nhan chinh cua PMWS, gay suy kiet va cham lon o lon con sau cai sua."
+    },
+    "ind": {
+      "question": "Apa penyakit utama yang disebabkan oleh Porcine Circovirus type 2 (PCV2)?",
+      "answer": "Post-weaning Multisystemic Wasting Syndrome (PMWS)",
+      "options": [
+        "Penyakit Mulut dan Kuku",
+        "Post-weaning Multisystemic Wasting Syndrome (PMWS)",
+        "African Swine Fever",
+        "Erisipelas Babi"
+      ],
+      "explanation": "PCV2 adalah penyebab utama PMWS, menyebabkan pelemahan dan pertumbuhan buruk pada anak babi yang disapih."
+    }
+  }
+]

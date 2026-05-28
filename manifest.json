@@ -1,0 +1,31 @@
+{
+  "name": "HSS認定試験 - 株式会社ヒラノ",
+  "short_name": "HSS試験",
+  "description": "HSS認定制度の本試験アプリ。養豚基礎知識の理解度テスト。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["education"],
+  "lang": "ja"
+}

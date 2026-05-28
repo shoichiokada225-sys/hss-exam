@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>HSS Exam Icon Generator</title>
+<style>body{font-family:sans-serif;padding:20px;text-align:center}canvas{border:1px solid #ccc;margin:10px}a{display:inline-block;margin:10px;padding:10px 20px;background:#667eea;color:#fff;text-decoration:none;border-radius:8px}</style>
+</head>
+<body>
+<h1>PWA Icon Generator</h1>
+<p>Click links below to download icons</p>
+<canvas id="c192" width="192" height="192"></canvas>
+<canvas id="c512" width="512" height="512"></canvas>
+<br>
+<a id="dl192" download="icon-192.png">Download 192x192</a>
+<a id="dl512" download="icon-512.png">Download 512x512</a>
+<script>
+function drawIcon(canvas, size) {
+  var ctx = canvas.getContext("2d");
+  var grad = ctx.createLinearGradient(0, 0, size, size);
+  grad.addColorStop(0, "#667eea");
+  grad.addColorStop(1, "#764ba2");
+  var r = size * 0.18;
+  ctx.beginPath();
+  ctx.moveTo(r, 0); ctx.lineTo(size - r, 0);
+  ctx.arcTo(size, 0, size, r, r); ctx.lineTo(size, size - r);
+  ctx.arcTo(size, size, size - r, size, r); ctx.lineTo(r, size);
+  ctx.arcTo(0, size, 0, size - r, r); ctx.lineTo(0, r);
+  ctx.arcTo(0, 0, r, 0, r);
+  ctx.closePath(); ctx.fillStyle = grad; ctx.fill();
+  ctx.font = (size * 0.32) + "px serif";
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText("🐷", size / 2, size * 0.35);
+  ctx.font = "bold " + (size * 0.16) + "px sans-serif";
+  ctx.fillStyle = "white";
+  ctx.fillText("HSS", size / 2, size * 0.65);
+  ctx.font = (size * 0.07) + "px sans-serif";
+  ctx.fillStyle = "rgba(255,255,255,0.8)";
+  ctx.fillText("認定試験", size / 2, size * 0.8);
+}
+drawIcon(document.getElementById("c192"), 192);
+drawIcon(document.getElementById("c512"), 512);
+document.getElementById("dl192").href = document.getElementById("c192").toDataURL("image/png");
+document.getElementById("dl512").href = document.getElementById("c512").toDataURL("image/png");
+</script>
+</body>
+</html>
