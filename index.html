@@ -1004,6 +1004,21 @@ function sendConfirmResult(answer){
   var noBtn = document.getElementById("confirm-no");
   yesBtn.disabled = true; noBtn.disabled = true;
 
+  var isYes = answer === "yes";
+  var icon = isYes ? t("confirmResultYesIcon") : t("confirmResultNoIcon");
+  var title = isYes ? t("confirmResultYesTitle") : t("confirmResultNoTitle");
+  var msg = isYes ? t("confirmResultYesMsg").replace("{name}", confirmName) : t("confirmResultNoMsg").replace("{name}", confirmName);
+
+  // Show result screen immediately
+  var resultEl = document.getElementById("confirm-result-content");
+  resultEl.textContent = "";
+  var iconDiv = document.createElement("div"); iconDiv.className = "result-icon"; iconDiv.textContent = icon;
+  var h3 = document.createElement("h3"); h3.textContent = title;
+  var p = document.createElement("p"); p.textContent = msg;
+  resultEl.appendChild(iconDiv); resultEl.appendChild(h3); resultEl.appendChild(p);
+  showScreen("confirm-result-screen");
+
+  // Send webhook in background (fire-and-forget)
   var resultData = {
     type: "confirm",
     name: confirmName,
@@ -1011,24 +1026,13 @@ function sendConfirmResult(answer){
     date: formatDate(new Date()),
     lang: currentLang
   };
-
   sendToWebhook(resultData).then(function(success){
-    var isYes = answer === "yes";
-    var icon = isYes ? t("confirmResultYesIcon") : t("confirmResultNoIcon");
-    var title = isYes ? t("confirmResultYesTitle") : t("confirmResultNoTitle");
-    var msg = isYes ? t("confirmResultYesMsg").replace("{name}", confirmName) : t("confirmResultNoMsg").replace("{name}", confirmName);
-    document.getElementById("confirm-result-content").innerHTML =
-      '<div class="result-icon">'+icon+'</div><h3>'+escHtml(title)+'</h3><p>'+escHtml(msg)+'</p>';
-    showScreen("confirm-result-screen");
-  }).catch(function(){
-    // Fallback: mailto
-    var subject = CONFIG.email.subjectConfirm.replace("{name}", confirmName);
-    var body = "受験意志確認\n氏名: "+confirmName+"\n回答: "+(answer==="yes"?"はい":"いいえ")+"\n日時: "+formatDate(new Date());
-    window.location.href = "mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
-    var isYes = answer === "yes";
-    document.getElementById("confirm-result-content").innerHTML =
-      '<div class="result-icon">'+(isYes?"✅":"📋")+'</div><h3>回答を記録しました</h3><p>メールアプリが開きます。送信してください。</p>';
-    showScreen("confirm-result-screen");
+    if(!success){
+      // Fallback: mailto
+      var subject = CONFIG.email.subjectConfirm.replace("{name}", confirmName);
+      var body = "受験意志確認\n氏名: "+confirmName+"\n回答: "+(answer==="yes"?"はい":"いいえ")+"\n日時: "+formatDate(new Date());
+      window.location.href = "mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    }
   });
 }
 document.getElementById("confirm-yes").addEventListener("click",function(){ sendConfirmResult("yes"); });
