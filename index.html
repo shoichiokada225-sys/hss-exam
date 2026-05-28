@@ -496,7 +496,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
   </div>
 
   <!-- EXAM: RESULTS -->
-  <div id="results-screen" class="screen" role="region" aria-label="テスト結果">
+  <div id="results-screen" class="screen" role="region" aria-label="テスト結果" aria-live="polite">
     <div class="card results-card fade-in" id="results-card"></div>
   </div>
 
@@ -504,13 +504,13 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 </div>
 
 <!-- Overlays -->
-<div class="timeout-overlay" id="timeout-overlay" role="alertdialog" aria-label="時間切れ">
+<div class="timeout-overlay" id="timeout-overlay" role="alertdialog" aria-modal="true" aria-labelledby="timeout-title">
   <div class="timeout-card">
     <h2 id="timeout-title">⏰ 時間切れ</h2>
     <p id="timeout-msg">制限時間を超過しました。<br>結果を表示します...</p>
   </div>
 </div>
-<div class="loading-overlay" id="loading-overlay">
+<div class="loading-overlay" id="loading-overlay" role="status" aria-live="polite">
   <div class="loading-card">
     <div class="spinner"></div>
     <p id="loading-msg">送信中...</p>
@@ -855,6 +855,10 @@ document.getElementById("lang-selector").addEventListener("change",function(){
   currentLang = this.value;
   localStorage.setItem("hss_lang", currentLang);
   applyTranslations();
+  // Re-render current question if quiz is active
+  if(document.getElementById("quiz-screen").classList.contains("active") && selectedQuestions.length > 0 && !quizLocked){
+    renderQuestion();
+  }
 });
 
 function applyTranslations(){
@@ -1019,6 +1023,7 @@ function loadQuestions(){
       console.error("Failed to load questions:",err);
       document.getElementById("loading-overlay").classList.remove("show");
       alert("問題データの読み込みに失敗しました。ページを再読み込みしてください。");
+      showScreen("password-screen");
     });
 }
 
@@ -1421,7 +1426,7 @@ function generateExcelAndSend(subject, body, pct, passOrFail, dateStr, timedOut,
       if(navigator.share && file){
         navigator.share({title:subject,text:body,files:[file]}).then(function(){
           btn.textContent = t("sent");
-          document.getElementById("submit-notice").innerHTML = escHtml(t("shared"))+"<br>"+escHtml(t("sendTo"))+CONFIG.email.adminEmail;
+          document.getElementById("submit-notice").innerHTML = escHtml(t("shared"))+"<br>"+escHtml(t("sendTo"))+escHtml(CONFIG.email.adminEmail);
         }).catch(function(){
           downloadAndMailto(blob, fileName, subject, body, btn);
         });
@@ -1442,7 +1447,7 @@ function downloadAndMailto(blob, fileName, subject, body, btn){
   }catch(e){console.error("Download error:",e);}
   setTimeout(function(){window.location.href="mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);},800);
   btn.disabled=true;btn.textContent=t("sentProcess");
-  document.getElementById("submit-notice").innerHTML=t("excelDownloaded")+"<br>"+escHtml(t("sendTo"))+CONFIG.email.adminEmail;
+  document.getElementById("submit-notice").innerHTML=escHtml(t("excelDownloaded"))+"<br>"+escHtml(t("sendTo"))+escHtml(CONFIG.email.adminEmail);
 }
 
 function fallbackMailto(subject, body, btn){

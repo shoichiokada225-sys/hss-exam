@@ -36,6 +36,7 @@ self.addEventListener("fetch", function(event) {
   if (event.request.method !== "GET") return;
   if (event.request.url.includes("script.google.com")) return;
   if (event.request.url.includes("cdnjs.cloudflare.com")) return;
+  if (event.request.url.includes("cdn.jsdelivr.net")) return;
 
   event.respondWith(
     caches.match(event.request).then(function(cached) {

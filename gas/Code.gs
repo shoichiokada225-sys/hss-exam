@@ -21,13 +21,28 @@ var ADMIN_EMAIL = "so@oikk.co.jp";
 /**
  * POSTリクエストを処理
  */
+function sanitize(val) {
+  if (typeof val !== "string") return String(val || "");
+  return val.replace(/[\r\n]/g, " ").substring(0, 500);
+}
+
 function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents);
 
+    // Input validation
+    if (!data || !data.type || !data.name || typeof data.name !== "string") {
+      return ContentService.createTextOutput(JSON.stringify({status: "error", message: "Invalid input"}))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
     if (data.type === "confirm") {
       handleConfirmation(data);
     } else if (data.type === "exam") {
+      if (!Array.isArray(data.answers)) {
+        return ContentService.createTextOutput(JSON.stringify({status: "error", message: "Invalid answers"}))
+          .setMimeType(ContentService.MimeType.JSON);
+      }
       handleExamResult(data);
     }
 
@@ -52,15 +67,16 @@ function doGet(e) {
  * 受験意志確認の処理
  */
 function handleConfirmation(data) {
+  var name = sanitize(data.name);
   var answerJa = data.answer === "yes" ? "はい" : "いいえ";
-  var subject = "【HSS認定試験】受験意志確認 - " + data.name;
+  var subject = "【HSS認定試験】受験意志確認 - " + name;
 
   var body = "HSS認定試験 受験意志確認\n";
   body += "================================\n\n";
-  body += "氏名: " + data.name + "\n";
+  body += "氏名: " + name + "\n";
   body += "回答: " + answerJa + "\n";
-  body += "日時: " + data.date + "\n";
-  body += "言語: " + data.lang + "\n";
+  body += "日時: " + sanitize(data.date) + "\n";
+  body += "言語: " + sanitize(data.lang) + "\n";
   body += "\n================================\n";
   body += "※ このメールはHSS認定試験アプリから自動送信されています。\n";
 
@@ -71,29 +87,32 @@ function handleConfirmation(data) {
   });
 
   // スプレッドシートにも記録（オプション）
-  logToSheet("受験意志確認", [data.name, answerJa, data.date, data.lang]);
+  logToSheet("受験意志確認", [name, answerJa, sanitize(data.date), sanitize(data.lang)]);
 }
 
 /**
  * 試験結果の処理
  */
 function handleExamResult(data) {
-  var subject = "【HSS認定試験】結果通知 - " + data.name + " - " + data.result;
+  var name = sanitize(data.name);
+  var result = sanitize(data.result);
+  var subject = "【HSS認定試験】結果通知 - " + name + " - " + result;
 
   var body = "HSS認定 本試験 結果報告\n";
   body += "================================\n\n";
-  body += "受験者名: " + data.name + "\n";
-  body += "受験日時: " + data.date + "\n";
-  body += "所要時間: " + data.elapsed + (data.timedOut ? "（時間切れ）" : "") + "\n\n";
-  body += "得点: " + data.score + " / " + data.total + "（" + data.percentage + "%）\n";
-  body += "合否: " + data.result + "（合格基準: " + data.passRate + "%以上）\n";
-  body += "制限時間: " + data.timeLimit + "分\n\n";
+  body += "受験者名: " + name + "\n";
+  body += "受験日時: " + sanitize(data.date) + "\n";
+  body += "所要時間: " + sanitize(data.elapsed) + (data.timedOut ? "（時間切れ）" : "") + "\n\n";
+  body += "得点: " + sanitize(String(data.score)) + " / " + sanitize(String(data.total)) + "（" + sanitize(String(data.percentage)) + "%）\n";
+  body += "合否: " + result + "（合格基準: " + sanitize(String(data.passRate)) + "%以上）\n";
+  body += "制限時間: " + sanitize(String(data.timeLimit)) + "分\n\n";
 
   body += "--- 回答詳細 ---\n";
   if (data.answers && data.answers.length > 0) {
     data.answers.forEach(function(a) {
-      var mark = a.userAnswer === "（未回答）" ? "[未回答]" : (a.correct ? "[○]" : "[×]");
-      body += mark + " 問" + a.num + "（" + a.category + "）: 「" + a.userAnswer + "」正解「" + a.correctAnswer + "」\n";
+      var userAns = sanitize(a.userAnswer);
+      var mark = userAns === "（未回答）" ? "[未回答]" : (a.correct ? "[○]" : "[×]");
+      body += mark + " 問" + sanitize(String(a.num)) + "（" + sanitize(a.category) + "）: 「" + userAns + "」正解「" + sanitize(a.correctAnswer) + "」\n";
     });
   }
   body += "\n================================\n";
@@ -107,9 +126,9 @@ function handleExamResult(data) {
 
   // スプレッドシートにも記録
   logToSheet("本試験結果", [
-    data.name, data.date, data.score + "/" + data.total,
-    data.percentage + "%", data.result, data.elapsed,
-    data.timedOut ? "はい" : "いいえ", data.lang
+    name, sanitize(data.date), sanitize(String(data.score)) + "/" + sanitize(String(data.total)),
+    sanitize(String(data.percentage)) + "%", result, sanitize(data.elapsed),
+    data.timedOut ? "はい" : "いいえ", sanitize(data.lang)
   ]);
 }
 
