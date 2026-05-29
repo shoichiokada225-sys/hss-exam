@@ -624,7 +624,7 @@ var TRANSLATIONS = {
     timeoutTitle: "⏰ 時間切れ", timeoutMsg: "制限時間を超過しました。<br>結果を表示します...",
     resultTitle: "HSS認定 本試験｜結果", correctRate: "正答率",
     scoreDetail: "{total}問中 {score}問正解",
-    pass: "合格です。お疲れさまでした。", fail: "不合格です。復習の上、再度挑戦してください。",
+    pass: "合格です。お疲れさまでした。", fail: "不合格です。",
     perfect: "満点合格です。素晴らしい！",
     examinee: "受験者：", examDate: "受験日時：",
     timeLimitLabel: "制限時間：", elapsed: "所要時間：", timedOut: "（時間切れ）",
@@ -686,7 +686,7 @@ var TRANSLATIONS = {
     timeoutTitle: "⏰ Time's Up", timeoutMsg: "Time limit exceeded.<br>Showing results...",
     resultTitle: "HSS Certification Exam | Results", correctRate: "Score",
     scoreDetail: "{score} correct out of {total}",
-    pass: "Passed! Well done.", fail: "Not passed. Please review and try again.",
+    pass: "Passed! Well done.", fail: "Not passed.",
     perfect: "Perfect score! Excellent!",
     examinee: "Examinee:", examDate: "Date:",
     timeLimitLabel: "Time Limit:", elapsed: "Time Taken:", timedOut: "(Timed out)",
@@ -748,7 +748,7 @@ var TRANSLATIONS = {
     timeoutTitle: "⏰ Het gio", timeoutMsg: "Da het thoi gian.<br>Dang hien thi ket qua...",
     resultTitle: "Ket qua thi chung chi HSS", correctRate: "Ty le dung",
     scoreDetail: "Dung {score}/{total} cau",
-    pass: "Dat! Xin chuc mung.", fail: "Chua dat. Hay on tap va thu lai.",
+    pass: "Dat! Xin chuc mung.", fail: "Chua dat.",
     perfect: "Diem tuyet doi! Xuat sac!",
     examinee: "Thi sinh:", examDate: "Ngay thi:",
     timeLimitLabel: "Thoi gian gioi han:", elapsed: "Thoi gian lam bai:", timedOut: "(Het gio)",
@@ -810,7 +810,7 @@ var TRANSLATIONS = {
     timeoutTitle: "⏰ Waktu Habis", timeoutMsg: "Batas waktu terlampaui.<br>Menampilkan hasil...",
     resultTitle: "Hasil Ujian Sertifikasi HSS", correctRate: "Nilai",
     scoreDetail: "{score} benar dari {total}",
-    pass: "Lulus! Kerja bagus.", fail: "Belum lulus. Pelajari dan coba lagi.",
+    pass: "Lulus! Kerja bagus.", fail: "Belum lulus.",
     perfect: "Nilai sempurna! Luar biasa!",
     examinee: "Peserta:", examDate: "Tanggal:",
     timeLimitLabel: "Batas Waktu:", elapsed: "Waktu Pengerjaan:", timedOut: "(Waktu habis)",
@@ -1365,7 +1365,7 @@ function finishQuiz(){
   html += '<div class="submit-notice" id="submit-notice">'+escHtml(t("sending"))+'</div>';
   html += '<div class="results-actions">';
   html += '<button class="btn-submit" id="submit-btn" style="display:none">'+escHtml(t("submitBtn"))+'</button>';
-  html += '<button class="btn-retry" id="retry-btn">'+escHtml(t("retryBtn"))+'</button>';
+  // retry button removed
   html += '<button class="btn-home" id="results-home-btn">'+escHtml(t("homeBtn"))+'</button>';
   html += '</div>';
 
@@ -1373,7 +1373,7 @@ function finishQuiz(){
   card.innerHTML = html;
   card.classList.remove("fade-in"); void card.offsetWidth; card.classList.add("fade-in");
 
-  document.getElementById("retry-btn").addEventListener("click",function(){ showScreen("exam-name-screen"); });
+  // retry button removed
   document.getElementById("results-home-btn").addEventListener("click",function(){ showScreen("home-screen"); });
 
   // Auto-send results
