@@ -34,7 +34,7 @@ var CONFIG = {
 
   // === 試験設定 ===
   test: {
-    questionsPerTest: 60,   // 1回の試験で出題する問題数
+    questionsPerTest: 60,   // 1回の試験で出題する問題数（全60問から60問＝全問出題）
     timeLimit: 60,          // 制限時間（分）
     passRate: 70,           // 合格基準（%）
   },

@@ -30,7 +30,7 @@
   --font: "Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;
   --cat-breeding: #e74c3c; --cat-piglet: #3498db; --cat-hygiene: #2ecc71;
   --cat-feeding: #f39c12; --cat-stage: #9b59b6; --cat-class: #1abc9c;
-  --cat-facility: #e67e22; --cat-disease: #8e44ad;
+  --cat-facility: #e67e22; --cat-disease: #8e44ad; --cat-motto: #2c3e50;
 }
 [data-theme="dark"] {
   --bg: #1a1a2e; --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -167,6 +167,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .cat-class { background: rgba(26,188,156,0.12); color: var(--cat-class); }
 .cat-facility { background: rgba(230,126,34,0.12); color: var(--cat-facility); }
 .cat-disease { background: rgba(142,68,173,0.12); color: var(--cat-disease); }
+.cat-motto { background: rgba(44,62,80,0.12); color: var(--cat-motto); }
 .question-section-title { font-size: 0.85rem; color: var(--primary-light); font-weight: 700; margin-bottom: 12px; }
 .question-label { font-weight: 700; font-size: 1.05rem; margin-bottom: 18px; color: var(--text); line-height: 1.8; }
 .options { display: flex; flex-direction: column; gap: 10px; }
@@ -382,7 +383,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
     <div class="entry-card fade-in-delay2" id="entry-exam" tabindex="0" role="button" aria-label="本試験">
       <span class="card-badge badge-exam" id="badge-exam">本試験</span>
       <h2 id="entry-exam-title">HSS認定 本試験を受験する</h2>
-      <div class="card-desc" id="entry-exam-desc">HSS認定制度の本試験です。パスワードが必要です。80問からランダムに60問を出題します。</div>
+      <div class="card-desc" id="entry-exam-desc">HSS認定制度の本試験です。パスワードが必要です。全60問を出題します。</div>
       <div class="card-meta">
         <span id="meta-q">📝 60問</span>
         <span id="meta-t">⏱ 60分</span>
@@ -465,7 +466,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
         </div>
         <div class="test-info" id="test-info">
           <div><strong id="ti-testname-label">テスト名：</strong><span id="ti-testname-value">HSS認定 本試験</span></div>
-          <div><strong id="ti-qcount-label">問題数：</strong><span id="ti-qcount-value">全80問からランダムに60問出題</span></div>
+          <div><strong id="ti-qcount-label">問題数：</strong><span id="ti-qcount-value">全60問出題</span></div>
           <div><strong id="ti-format-label">形式：</strong><span id="ti-format-value">四択形式</span></div>
           <div><strong id="ti-time-label">制限時間：</strong><span id="ti-time-value">60分</span></div>
           <div><strong id="ti-pass-label">合格基準：</strong><span id="ti-pass-value">正答率70%以上</span></div>
@@ -588,7 +589,7 @@ var TRANSLATIONS = {
     entryConfirmTitle: "受験意志を回答する",
     entryConfirmDesc: "試験を受けるかどうかの意志確認です。氏名を入力し、「はい」または「いいえ」で回答してください。",
     entryExamTitle: "HSS認定 本試験を受験する",
-    entryExamDesc: "HSS認定制度の本試験です。パスワードが必要です。80問からランダムに60問を出題します。",
+    entryExamDesc: "HSS認定制度の本試験です。パスワードが必要です。全60問を出題します。",
     metaQ: "📝 60問", metaT: "⏱ 60分", metaP: "🎯 70%合格",
     langNote: "🌐 日本語・English・Tiếng Việt・Bahasa Indonesia 対応",
     footer: "© 株式会社ヒラノ HSS認定制度",
@@ -609,7 +610,7 @@ var TRANSLATIONS = {
     welcomeTitle: "ようこそ",
     welcomeDesc: "HSS認定制度の本試験を行います。<br>氏名を入力してテストを開始してください。",
     testName: "テスト名：", testNameValue: "HSS認定 本試験",
-    questionCount: "問題数：", questionCountValue: "全80問からランダムに60問出題",
+    questionCount: "問題数：", questionCountValue: "全60問出題",
     format: "形式：", formatValue: "四択形式",
     timeLimit: "制限時間：", timeLimitValue: "60分",
     passCriteria: "合格基準：", passCriteriaValue: "正答率70%以上",
@@ -650,7 +651,7 @@ var TRANSLATIONS = {
     entryConfirmTitle: "Respond to Exam Intention",
     entryConfirmDesc: "Confirm whether you intend to take the exam. Enter your name and respond with Yes or No.",
     entryExamTitle: "Take HSS Certification Exam",
-    entryExamDesc: "HSS Certification main exam. Password required. 60 questions randomly selected from 80.",
+    entryExamDesc: "HSS Certification main exam. Password required. 60 questions.",
     metaQ: "📝 60 Questions", metaT: "⏱ 60 min", metaP: "🎯 70% to pass",
     langNote: "🌐 Japanese, English, Vietnamese, Indonesian",
     footer: "© Hirano Co., Ltd. HSS Certification",
@@ -671,7 +672,7 @@ var TRANSLATIONS = {
     welcomeTitle: "Welcome",
     welcomeDesc: "This is the HSS Certification main exam.<br>Enter your name and start the test.",
     testName: "Test Name:", testNameValue: "HSS Certification Main Exam",
-    questionCount: "Questions:", questionCountValue: "60 randomly selected from 80",
+    questionCount: "Questions:", questionCountValue: "60 questions",
     format: "Format:", formatValue: "Multiple choice (4 options)",
     timeLimit: "Time Limit:", timeLimitValue: "60 minutes",
     passCriteria: "Pass Criteria:", passCriteriaValue: "70% or higher",
@@ -712,7 +713,7 @@ var TRANSLATIONS = {
     entryConfirmTitle: "Tra loi y dinh du thi",
     entryConfirmDesc: "Xac nhan ban co du dinh thi hay khong. Nhap ho ten va tra loi Co hoac Khong.",
     entryExamTitle: "Thi chung chi HSS chinh thuc",
-    entryExamDesc: "Ky thi chinh thuc chung chi HSS. Can mat khau. 60 cau ngau nhien tu 80 cau.",
+    entryExamDesc: "Ky thi chinh thuc chung chi HSS. Can mat khau. 60 cau.",
     metaQ: "📝 60 cau", metaT: "⏱ 60 phut", metaP: "🎯 70% dat",
     langNote: "🌐 Tieng Nhat, Tieng Anh, Tieng Viet, Tieng Indonesia",
     footer: "© Cong ty Hirano Chung chi HSS",
@@ -733,7 +734,7 @@ var TRANSLATIONS = {
     welcomeTitle: "Chao mung",
     welcomeDesc: "Day la ky thi chinh thuc chung chi HSS.<br>Nhap ho ten va bat dau lam bai.",
     testName: "Ten bai thi:", testNameValue: "Thi chinh thuc chung chi HSS",
-    questionCount: "So cau:", questionCountValue: "60 cau ngau nhien tu 80 cau",
+    questionCount: "So cau:", questionCountValue: "60 cau",
     format: "Hinh thuc:", formatValue: "Trac nghiem 4 dap an",
     timeLimit: "Thoi gian:", timeLimitValue: "60 phut",
     passCriteria: "Tieu chuan dat:", passCriteriaValue: "Tu 70% tro len",
@@ -774,7 +775,7 @@ var TRANSLATIONS = {
     entryConfirmTitle: "Konfirmasi Niat Ujian",
     entryConfirmDesc: "Konfirmasi apakah Anda berniat mengikuti ujian. Masukkan nama dan jawab Ya atau Tidak.",
     entryExamTitle: "Ikuti Ujian Sertifikasi HSS",
-    entryExamDesc: "Ujian utama sertifikasi HSS. Memerlukan kata sandi. 60 soal acak dari 80.",
+    entryExamDesc: "Ujian utama sertifikasi HSS. Memerlukan kata sandi. 60 soal.",
     metaQ: "📝 60 Soal", metaT: "⏱ 60 menit", metaP: "🎯 70% lulus",
     langNote: "🌐 Jepang, Inggris, Vietnam, Indonesia",
     footer: "© PT Hirano Sertifikasi HSS",
@@ -795,7 +796,7 @@ var TRANSLATIONS = {
     welcomeTitle: "Selamat Datang",
     welcomeDesc: "Ini adalah ujian utama sertifikasi HSS.<br>Masukkan nama dan mulai ujian.",
     testName: "Nama Ujian:", testNameValue: "Ujian Utama Sertifikasi HSS",
-    questionCount: "Jumlah Soal:", questionCountValue: "60 soal acak dari 80",
+    questionCount: "Jumlah Soal:", questionCountValue: "60 soal",
     format: "Format:", formatValue: "Pilihan ganda (4 opsi)",
     timeLimit: "Batas Waktu:", timeLimitValue: "60 menit",
     passCriteria: "Kriteria Lulus:", passCriteriaValue: "70% atau lebih",
@@ -833,16 +834,16 @@ var TRANSLATIONS = {
 };
 
 var CATEGORY_NAMES = {
-  ja: {"繁殖関連":"繁殖関連","子豚管理":"子豚管理","衛生管理":"衛生管理","飼養管理":"飼養管理","飼育段階":"飼育段階","豚の分類":"豚の分類","施設管理":"施設管理","疾病管理":"疾病管理"},
-  en: {"繁殖関連":"Breeding","子豚管理":"Piglet Care","衛生管理":"Hygiene","飼養管理":"Feed Mgmt","飼育段階":"Growth Stage","豚の分類":"Classification","施設管理":"Facility","疾病管理":"Disease"},
-  vi: {"繁殖関連":"Sinh san","子豚管理":"Heo con","衛生管理":"Ve sinh","飼養管理":"Thuc an","飼育段階":"Giai doan","豚の分類":"Phan loai","施設管理":"Chuong trai","疾病管理":"Benh"},
-  id: {"繁殖関連":"Pembiakan","子豚管理":"Anak Babi","衛生管理":"Kebersihan","飼養管理":"Pakan","飼育段階":"Tahap","豚の分類":"Klasifikasi","施設管理":"Fasilitas","疾病管理":"Penyakit"}
+  ja: {"繁殖関連":"繁殖関連","子豚管理":"子豚管理","衛生管理":"衛生管理","飼養管理":"飼養管理","飼育段階":"飼育段階","豚の分類":"豚の分類","施設管理":"施設管理","疾病管理":"疾病管理","社訓":"社訓"},
+  en: {"繁殖関連":"Breeding","子豚管理":"Piglet Care","衛生管理":"Hygiene","飼養管理":"Feed Mgmt","飼育段階":"Growth Stage","豚の分類":"Classification","施設管理":"Facility","疾病管理":"Disease","社訓":"Company Motto"},
+  vi: {"繁殖関連":"Sinh san","子豚管理":"Heo con","衛生管理":"Ve sinh","飼養管理":"Thuc an","飼育段階":"Giai doan","豚の分類":"Phan loai","施設管理":"Chuong trai","疾病管理":"Benh","社訓":"Phuong cham"},
+  id: {"繁殖関連":"Pembiakan","子豚管理":"Anak Babi","衛生管理":"Kebersihan","飼養管理":"Pakan","飼育段階":"Tahap","豚の分類":"Klasifikasi","施設管理":"Fasilitas","疾病管理":"Penyakit","社訓":"Moto Perusahaan"}
 };
 
 var CATEGORY_CLASSES = {
   "繁殖関連":"cat-breeding","子豚管理":"cat-piglet","衛生管理":"cat-hygiene",
   "飼養管理":"cat-feeding","飼育段階":"cat-stage","豚の分類":"cat-class",
-  "施設管理":"cat-facility","疾病管理":"cat-disease"
+  "施設管理":"cat-facility","疾病管理":"cat-disease","社訓":"cat-motto"
 };
 
 // ==================== STATE ====================
