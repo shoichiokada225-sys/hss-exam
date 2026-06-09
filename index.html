@@ -1105,8 +1105,15 @@ function submitExamName(){
 // ==================== QUIZ ENGINE ====================
 function startQuiz(){
   currentQuestion = 0; score = 0; answers = []; quizLocked = false;
-  var qPerTest = CONFIG.test.questionsPerTest;
-  selectedQuestions = shuffle(allQuestions.slice()).slice(0, qPerTest);
+  // 出題ルール: Word(本試験)由来は必ず全問出題 + Excel(セットA)由来からランダムに excelRandomCount 問
+  var isWord = function(q){ return String(q.source || "").indexOf("honshiken") === 0; };
+  var fixedQs = allQuestions.filter(isWord);                       // 本試験10問（固定）
+  var excelPool = allQuestions.filter(function(q){ return !isWord(q); });
+  var nRandom = (CONFIG.test.excelRandomCount != null)
+    ? CONFIG.test.excelRandomCount
+    : Math.max(0, CONFIG.test.questionsPerTest - fixedQs.length);
+  var pickedExcel = shuffle(excelPool.slice()).slice(0, nRandom);  // セットAから50問
+  selectedQuestions = shuffle(fixedQs.concat(pickedExcel));        // 合計60問を順序シャッフル
   userAnswers = new Array(selectedQuestions.length).fill(null);
   shuffledOptions = selectedQuestions.map(function(q){ return shuffle(q.options.slice()); });
   totalTime = CONFIG.test.timeLimit * 60;
