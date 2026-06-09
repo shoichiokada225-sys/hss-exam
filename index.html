@@ -1560,7 +1560,26 @@ function _verifyRecorded(id){
   });
 }
 
-// 確実送信: jitter→(POST→verify)をリトライ。記録確認できたらtrueを返す。
+// サーバーが verify(JSONP) に対応した新GASかを判定（応答が返ればtrue）。
+// これにより、GAS未再デプロイ(旧GAS)でも安全に動く＝デプロイ順序に依存しない。
+function _probeVerifySupport(){
+  return new Promise(function(resolve){
+    if(!CONFIG.email.webhookUrl){ resolve(false); return; }
+    var cb = "hssprobe_" + Date.now() + "_" + Math.floor(Math.random()*1e6);
+    var s = document.createElement("script");
+    var done = false;
+    var timer = setTimeout(function(){ finish(false); }, 6000);
+    function finish(v){ if(done) return; done=true; clearTimeout(timer); try{ delete window[cb]; }catch(e){ window[cb]=undefined; } if(s.parentNode) s.parentNode.removeChild(s); resolve(v); }
+    window[cb] = function(){ finish(true); };   // JSONP応答が返れば新GAS
+    s.onerror = function(){ finish(false); };
+    s.src = CONFIG.email.webhookUrl + "?action=verify&id=__probe__&callback=" + cb;
+    document.body.appendChild(s);
+  });
+}
+var _verifyCapPromise = null;
+function serverSupportsVerify(){ if(!_verifyCapPromise) _verifyCapPromise = _probeVerifySupport(); return _verifyCapPromise; }
+
+// 確実送信: 新GAS→jitter+リトライ+記録確認。旧GAS→従来どおり1回送信(メール1通/再送なし)。
 function reliableSubmit(payload, opts){
   opts = opts || {};
   if(!payload.submissionId) payload.submissionId = genSubmissionId(payload.type);
@@ -1568,6 +1587,15 @@ function reliableSubmit(payload, opts){
   var onStatus = opts.onStatus || function(){};
   var jitter = (opts.jitter !== false);
   return (async function(){
+    var supported = await serverSupportsVerify();
+    if(!supported){
+      // 旧GAS（または応答不可）: 1回だけ送信。再送ループしない＝メール連発を防ぐ（旧挙動と同等で安全）
+      onStatus("sending", 1);
+      await _postNoCors(payload);
+      _removePending(payload.submissionId);
+      onStatus("done", 1);
+      return true;
+    }
     if(jitter){ await _delay(_randInt(SUBMIT_JITTER_MS)); }
     for(var attempt=1; attempt<=SUBMIT_ATTEMPTS; attempt++){
       onStatus("sending", attempt);
