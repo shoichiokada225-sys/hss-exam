@@ -1019,22 +1019,16 @@ function sendConfirmResult(answer){
   resultEl.appendChild(iconDiv); resultEl.appendChild(h3); resultEl.appendChild(p);
   showScreen("confirm-result-screen");
 
-  // Send webhook in background (fire-and-forget)
+  // 結果はスプレッドシートに確実記録（localStorage保持＋自動再送・重複排除）
   var resultData = {
     type: "confirm",
     name: confirmName,
     answer: answer,
     date: formatDate(new Date()),
-    lang: currentLang
+    lang: currentLang,
+    submissionId: genSubmissionId("confirm")
   };
-  sendToWebhook(resultData).then(function(success){
-    if(!success){
-      // Fallback: mailto
-      var subject = CONFIG.email.subjectConfirm.replace("{name}", confirmName);
-      var body = "受験意志確認\n氏名: "+confirmName+"\n回答: "+(answer==="yes"?"はい":"いいえ")+"\n日時: "+formatDate(new Date());
-      window.location.href = "mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
-    }
-  });
+  reliableSubmit(resultData, { jitter: false });
 }
 document.getElementById("confirm-yes").addEventListener("click",function(){ sendConfirmResult("yes"); });
 document.getElementById("confirm-no").addEventListener("click",function(){ sendConfirmResult("no"); });
@@ -1202,7 +1196,6 @@ function renderQuestion(){
   document.getElementById("q-section-title").textContent = t("question")+(currentQuestion+1);
   document.getElementById("q-label").textContent = getQ(q,"question");
   var jaOpts = shuffledOptions[currentQuestion];
-  var letters = ["A","B","C","D"];
   var optHTML = "";
   var currentAnswer = userAnswers[currentQuestion];
   jaOpts.forEach(function(jaOpt,i){
@@ -1211,7 +1204,7 @@ function renderQuestion(){
     var displayOpt = (currentLang !== "ja" && q[langKey] && q[langKey].options) ? q[langKey].options[origIdx] : jaOpt;
     var sel = (currentAnswer === i) ? " selected" : "";
     var checked = (currentAnswer === i) ? "true" : "false";
-    optHTML += '<button class="option-btn'+sel+'" data-index="'+i+'" role="radio" aria-checked="'+checked+'" tabindex="0"><span class="option-letter">'+letters[i]+'</span><span>'+escHtml(displayOpt)+'</span></button>';
+    optHTML += '<button class="option-btn'+sel+'" data-index="'+i+'" role="radio" aria-checked="'+checked+'" tabindex="0"><span class="option-letter">'+String.fromCharCode(65+i)+'</span><span>'+escHtml(displayOpt)+'</span></button>';
   });
   document.getElementById("q-options").innerHTML = optHTML;
   document.querySelectorAll(".option-btn").forEach(function(btn){
@@ -1269,7 +1262,7 @@ document.addEventListener("keydown",function(e){
   if(quizLocked) return;
   var btns = document.querySelectorAll(".option-btn");
   if(btns.length === 0) return;
-  if(e.key>="1" && e.key<="4"){var idx=parseInt(e.key)-1;if(idx<btns.length){btns[idx].click();e.preventDefault();}}
+  if(e.key>="1" && e.key<="9"){var idx=parseInt(e.key)-1;if(idx<btns.length){btns[idx].click();e.preventDefault();}}
   if(e.key==="Enter" && userAnswers[currentQuestion]!==null){
     if(currentQuestion===selectedQuestions.length-1) submitQuiz();
     else goNext();
@@ -1417,12 +1410,14 @@ function autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec){
     })
   };
 
-  sendToWebhook(resultData).then(function(success){
-    if(success){
-      document.getElementById("submit-notice").innerHTML = escHtml(t("autoSent"));
-    } else {
-      showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec);
-    }
+  resultData.submissionId = genSubmissionId("exam");
+  var notice = document.getElementById("submit-notice");
+  reliableSubmit(resultData, { onStatus: function(state){
+    if(state === "sending") notice.textContent = t("sending");
+    else if(state === "done") notice.textContent = t("autoSent");
+  }}).then(function(success){
+    if(success){ notice.textContent = t("autoSent"); }
+    else { showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec); }
   }).catch(function(){
     showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec);
   });
@@ -1522,22 +1517,80 @@ function fallbackMailto(subject, body, btn){
 }
 
 // ==================== WEBHOOK (Google Apps Script) ====================
-function sendToWebhook(data){
-  if(!CONFIG.email.webhookUrl){
-    return Promise.resolve(false);
-  }
+// ==================== 確実送信モジュール（150人同時対応） ====================
+// 方針: 送信前にジッターでバースト分散 → POST(no-cors)後にJSONPで記録確認 →
+//       未記録なら自動再送。結果はlocalStorageに保持し、再アクセス時に未達分を再送。
+var SUBMIT_JITTER_MS = 15000;  // 送信前ランダム遅延の最大(ms)。一斉終了のバーストを平準化
+var SUBMIT_ATTEMPTS  = 6;      // 最大試行回数
+var PENDING_KEY      = "hss_pending_v1";
+
+function genSubmissionId(type){
+  var who = (type === "confirm" ? confirmName : playerName) || "x";
+  return type + "_" + String(who).replace(/\s+/g,"") + "_" + Date.now() + "_" + Math.floor(Math.random()*1e6);
+}
+function _delay(ms){ return new Promise(function(res){ setTimeout(res, ms); }); }
+function _randInt(maxMs){ return Math.floor(Math.random()*maxMs); }
+
+function _loadPending(){ try{ return JSON.parse(localStorage.getItem(PENDING_KEY)||"[]"); }catch(e){ return []; } }
+function _savePending(list){ try{ localStorage.setItem(PENDING_KEY, JSON.stringify(list)); }catch(e){} }
+function _addPending(p){ var l=_loadPending(); if(!l.some(function(x){return x.submissionId===p.submissionId;})){ l.push(p); _savePending(l); } }
+function _removePending(id){ _savePending(_loadPending().filter(function(x){return x.submissionId!==id;})); }
+
+function _postNoCors(payload){
+  if(!CONFIG.email.webhookUrl) return Promise.resolve();
   return fetch(CONFIG.email.webhookUrl,{
-    method:"POST",
-    headers:{"Content-Type":"text/plain"},
-    body: JSON.stringify(data),
-    mode: "no-cors"
-  }).then(function(){
-    return true;
-  }).catch(function(err){
-    console.error("Webhook error:",err);
-    return false;
+    method:"POST", headers:{"Content-Type":"text/plain"},
+    body: JSON.stringify(payload), mode:"no-cors"
+  }).catch(function(){ /* no-cors: 応答は読めない。記録確認はJSONPで行う */ });
+}
+
+// JSONPでサーバーに「このIDは記録済みか」を問い合わせる（CORS制約を回避して応答を読む）
+function _verifyRecorded(id){
+  return new Promise(function(resolve){
+    if(!CONFIG.email.webhookUrl){ resolve(false); return; }
+    var cb = "hsscb_" + Date.now() + "_" + Math.floor(Math.random()*1e6);
+    var s = document.createElement("script");
+    var done = false;
+    var timer = setTimeout(function(){ finish(false); }, 6000);
+    function finish(val){ if(done) return; done=true; clearTimeout(timer); try{ delete window[cb]; }catch(e){ window[cb]=undefined; } if(s.parentNode) s.parentNode.removeChild(s); resolve(val); }
+    window[cb] = function(res){ finish(!!(res && res.recorded)); };
+    s.onerror = function(){ finish(false); };
+    s.src = CONFIG.email.webhookUrl + "?action=verify&id=" + encodeURIComponent(id) + "&callback=" + cb;
+    document.body.appendChild(s);
   });
 }
+
+// 確実送信: jitter→(POST→verify)をリトライ。記録確認できたらtrueを返す。
+function reliableSubmit(payload, opts){
+  opts = opts || {};
+  if(!payload.submissionId) payload.submissionId = genSubmissionId(payload.type);
+  _addPending(payload);
+  var onStatus = opts.onStatus || function(){};
+  var jitter = (opts.jitter !== false);
+  return (async function(){
+    if(jitter){ await _delay(_randInt(SUBMIT_JITTER_MS)); }
+    for(var attempt=1; attempt<=SUBMIT_ATTEMPTS; attempt++){
+      onStatus("sending", attempt);
+      await _postNoCors(payload);
+      await _delay(1500 + attempt*500);          // サーバー処理を待ってから確認
+      if(await _verifyRecorded(payload.submissionId)){
+        _removePending(payload.submissionId);
+        onStatus("done", attempt);
+        return true;
+      }
+      await _delay(Math.min(1000*Math.pow(2, attempt), 8000)); // 指数バックオフ
+    }
+    onStatus("failed", SUBMIT_ATTEMPTS);
+    return false; // localStorageに残し、次回アクセス時に自動再送
+  })();
+}
+
+// 起動時: 前回未達の結果を自動再送
+function flushPending(){
+  var list = _loadPending();
+  list.forEach(function(p){ reliableSubmit(p, {jitter:false}); });
+}
+window.addEventListener("load", function(){ try{ flushPending(); }catch(e){} });
 
 // ==================== SERVICE WORKER ====================
 if("serviceWorker" in navigator){
