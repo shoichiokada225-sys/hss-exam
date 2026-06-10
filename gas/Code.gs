@@ -196,20 +196,7 @@ function cleanupSheets() {
   });
 }
 
-// ---- 実データ点検：保存されている氏名・タイトルをログ出力（診断用） ----
-function dumpRows() {
-  var ss = getSpreadsheet_();
-  Logger.log("スプレッドシート名=[" + ss.getName() + "]");
-  var sh = ss.getSheetByName("本試験結果");
-  if (!sh) { Logger.log("本試験結果タブ なし"); return; }
-  var data = sh.getDataRange().getValues();
-  Logger.log("本試験結果 行数=" + data.length);
-  for (var r = Math.max(1, data.length - 6); r < data.length; r++) {
-    Logger.log("行" + (r + 1) + " 氏名=[" + data[r][0] + "] ID=[" + data[r][8] + "] 受信=[" + data[r][9] + "]");
-  }
-}
-
-// ---- 接続テスト行(test_conn_*)を削除（1回実行） ----
+// ---- 接続テスト/サンプル行(test_conn_*, sample_*)を削除（1回実行） ----
 function purgeTestRows() {
   var ss = getSpreadsheet_();
   var targets = [{ name: "本試験結果", idCol: 9 }, { name: "回答詳細", idCol: 1 }, { name: "受験意志確認", idCol: 5 }];
@@ -219,7 +206,8 @@ function purgeTestRows() {
     if (!sh) return;
     var data = sh.getDataRange().getValues();
     for (var r = data.length - 1; r >= 1; r--) {
-      if (String(data[r][t.idCol - 1] || "").indexOf("test_conn_") === 0) { sh.deleteRow(r + 1); removed++; }
+      var v = String(data[r][t.idCol - 1] || "");
+      if (v.indexOf("test_conn_") === 0 || v.indexOf("sample_") === 0) { sh.deleteRow(r + 1); removed++; }
     }
   });
   Logger.log("削除したテスト行数: " + removed);
