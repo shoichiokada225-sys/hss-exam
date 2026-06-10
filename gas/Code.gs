@@ -196,6 +196,19 @@ function cleanupSheets() {
   });
 }
 
+// ---- 実データ点検：保存されている氏名・タイトルをログ出力（診断用） ----
+function dumpRows() {
+  var ss = getSpreadsheet_();
+  Logger.log("スプレッドシート名=[" + ss.getName() + "]");
+  var sh = ss.getSheetByName("本試験結果");
+  if (!sh) { Logger.log("本試験結果タブ なし"); return; }
+  var data = sh.getDataRange().getValues();
+  Logger.log("本試験結果 行数=" + data.length);
+  for (var r = Math.max(1, data.length - 6); r < data.length; r++) {
+    Logger.log("行" + (r + 1) + " 氏名=[" + data[r][0] + "] ID=[" + data[r][8] + "] 受信=[" + data[r][9] + "]");
+  }
+}
+
 // ---- 接続テスト行(test_conn_*)を削除（1回実行） ----
 function purgeTestRows() {
   var ss = getSpreadsheet_();

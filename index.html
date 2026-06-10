@@ -1539,7 +1539,7 @@ function _removePending(id){ _savePending(_loadPending().filter(function(x){retu
 function _postNoCors(payload){
   if(!CONFIG.email.webhookUrl) return Promise.resolve();
   return fetch(CONFIG.email.webhookUrl,{
-    method:"POST", headers:{"Content-Type":"text/plain"},
+    method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"},
     body: JSON.stringify(payload), mode:"no-cors"
   }).catch(function(){ /* no-cors: 応答は読めない。記録確認はJSONPで行う */ });
 }
