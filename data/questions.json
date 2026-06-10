@@ -836,8 +836,7 @@
     "options": [
       "粗タンパク質（Crude Protein）",
       "可消化タンパク質（Convertible Protein）",
-      "粗脂肪（Crude Lipid",
-      "CP表記）",
+      "粗脂肪（Crude Lipid/CP表記）",
       "完全タンパク質（Complete Protein）"
     ],
     "answer": "粗タンパク質（Crude Protein）",
