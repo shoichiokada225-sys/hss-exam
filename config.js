@@ -35,7 +35,7 @@ var CONFIG = {
   // === 試験設定 ===
   test: {
     questionsPerTest: 60,   // 1回の試験で出題する問題数（Word本試験10問 + Excel50問 = 60問）
-    excelRandomCount: 50,   // Excel(セットA70問)からランダム出題する数。Word(本試験)10問は必ず全問出題される
+    excelRandomCount: 50,   // Excel(セットA61問)からランダム出題する数。Word(本試験)10問は必ず全問出題される
     timeLimit: 60,          // 制限時間（分）
     passRate: 70,           // 合格基準（%）
   },

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""修正版Excel(HSS問題確認_全82問_2026-06-09.xlsx)を唯一のソースに data/questions.json を再生成。
+"""修正版Excel(HSS問題確認_全71問_重複削除済.xlsx)を唯一のソースに data/questions.json を再生成。
 列: No, 出典, カテゴリ, 問題文, 正答, 正答番号, 選択肢1-5, 解説
 出典が 'Word' を含む行 = 本試験(必出, source=honshiken-*), それ以外 = セットA(source=setA-*)
 """
@@ -8,16 +8,16 @@ sys.stdout.reconfigure(encoding='utf-8')
 import openpyxl
 
 ROOT = r"C:\Users\so\hss-exam"
-SRC  = r"C:\Users\so\OneDrive\デスクトップ\HSS問題確認_全82問_2026-06-09.xlsx"
+SRC  = r"C:\Users\so\Downloads\HSS問題確認_全71問_重複削除済.xlsx"
 DATA = os.path.join(ROOT, "data", "questions.json")
 
 def norm(s): return re.sub(r"\s+", "", (s or "").strip())
 
-# backup current (82版) - 旧60問backupは触らない
+# backup current (80問版) - 旧backupは触らない
 cur = json.load(open(DATA, encoding="utf-8"))
-with open(os.path.join(ROOT,"data","questions_backup_82問_pre-edit.json"),"w",encoding="utf-8") as f:
+with open(os.path.join(ROOT,"data","questions_backup_80問_2026-06-10_pre-71反映.json"),"w",encoding="utf-8") as f:
     json.dump(cur, f, ensure_ascii=False, indent=2)
-print(f"[backup] 編集前 {len(cur)} 問 -> questions_backup_82問_pre-edit.json")
+print(f"[backup] 編集前 {len(cur)} 問 -> questions_backup_80問_2026-06-10_pre-71反映.json")
 
 wb = openpyxl.load_workbook(SRC, data_only=True)
 ws = wb.active
