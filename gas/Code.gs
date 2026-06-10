@@ -196,6 +196,22 @@ function cleanupSheets() {
   });
 }
 
+// ---- 接続テスト行(test_conn_*)を削除（1回実行） ----
+function purgeTestRows() {
+  var ss = getSpreadsheet_();
+  var targets = [{ name: "本試験結果", idCol: 9 }, { name: "回答詳細", idCol: 1 }, { name: "受験意志確認", idCol: 5 }];
+  var removed = 0;
+  targets.forEach(function (t) {
+    var sh = ss.getSheetByName(t.name);
+    if (!sh) return;
+    var data = sh.getDataRange().getValues();
+    for (var r = data.length - 1; r >= 1; r--) {
+      if (String(data[r][t.idCol - 1] || "").indexOf("test_conn_") === 0) { sh.deleteRow(r + 1); removed++; }
+    }
+  });
+  Logger.log("削除したテスト行数: " + removed);
+}
+
 // ---- 日次サマリーの自動実行トリガーを設置（エディタで1回だけ実行すればOK） ----
 function installDailyTrigger() {
   ScriptApp.getProjectTriggers().forEach(function (t) {
