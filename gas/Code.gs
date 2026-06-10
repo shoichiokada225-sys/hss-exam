@@ -182,6 +182,15 @@ function sendDailySummary() {
   MailApp.sendEmail({ to: ADMIN_EMAIL, subject: "【HSS認定試験】日次サマリー " + today + "（受験" + total + "名）", body: body });
 }
 
+// ---- 日次サマリーの自動実行トリガーを設置（エディタで1回だけ実行すればOK） ----
+function installDailyTrigger() {
+  ScriptApp.getProjectTriggers().forEach(function (t) {
+    if (t.getHandlerFunction() === "sendDailySummary") ScriptApp.deleteTrigger(t);
+  });
+  ScriptApp.newTrigger("sendDailySummary").timeBased().everyDays(1).atHour(20).create();
+  Logger.log("日次サマリートリガーを設置しました（毎日20時台に sendDailySummary を実行）");
+}
+
 // ---- ユーティリティ ----
 function jsonOut_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
