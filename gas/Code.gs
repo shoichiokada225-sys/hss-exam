@@ -163,10 +163,11 @@ function sendDailySummary() {
   var pass = 0, fail = 0, total = 0;
   var lines = [];
   if (sheet && sheet.getLastRow() > 1) {
-    var values = sheet.getDataRange().getValues();
+    // getDisplayValues: appendRowで書いた日時文字列はシート側で日付型セルに自動変換されるため、
+    // getValues()だとDateオブジェクトが返り文字列比較が常に不一致になる（受験者0名バグの原因）
+    var values = sheet.getDataRange().getDisplayValues();
     for (var r = 1; r < values.length; r++) {
-      var serverTime = String(values[r][9] || "");
-      if (serverTime.indexOf(today) !== 0) continue; // サーバー受信日が今日のものだけ
+      if (dayPrefix_(values[r][9]) !== today) continue; // サーバー受信日が今日のものだけ
       total++;
       var result = String(values[r][4] || "");
       if (result.indexOf("合格") === 0 && result.indexOf("不合格") !== 0) pass++; else fail++;
@@ -231,5 +232,10 @@ function jsonpOut_(callback, obj) {
   return ContentService.createTextOutput(cb + "(" + JSON.stringify(obj) + ")").setMimeType(ContentService.MimeType.JAVASCRIPT);
 }
 function pad2_(n) { return (n < 10 ? "0" : "") + n; }
+// セルの表示文字列から YYYY/MM/DD を取り出す（"2026/6/10 12:26" のような0埋めなし表示にも対応）
+function dayPrefix_(v) {
+  var m = String(v || "").match(/(\d{4})[\/\-](\d{1,2})[\/\-](\d{1,2})/);
+  return m ? m[1] + "/" + pad2_(Number(m[2])) + "/" + pad2_(Number(m[3])) : "";
+}
 function formatDate_(d) { return d.getFullYear() + "/" + pad2_(d.getMonth() + 1) + "/" + pad2_(d.getDate()); }
 function formatDateTime_(d) { return formatDate_(d) + " " + pad2_(d.getHours()) + ":" + pad2_(d.getMinutes()) + ":" + pad2_(d.getSeconds()); }
