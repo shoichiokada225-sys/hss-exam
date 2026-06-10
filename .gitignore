@@ -4,3 +4,6 @@ Thumbs.db
 *.swo
 *~
 .env
+
+# Ralph Loop state (tooling)
+.claude/ralph-loop.local.md
