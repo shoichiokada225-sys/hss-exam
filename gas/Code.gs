@@ -182,6 +182,20 @@ function sendDailySummary() {
   MailApp.sendEmail({ to: ADMIN_EMAIL, subject: "【HSS認定試験】日次サマリー " + today + "（受験" + total + "名）", body: body });
 }
 
+// ---- 記録シートの名前を正す＆中身点検（文字化け修正用・1回実行） ----
+function cleanupSheets() {
+  var ss = getSpreadsheet_();
+  ss.rename("HSS試験記録_" + new Date().getFullYear());
+  getSheet_(ss, "本試験結果");
+  getSheet_(ss, "回答詳細");
+  getSheet_(ss, "受験意志確認");
+  Logger.log("スプレッドシート名: " + ss.getName());
+  Logger.log("URL: " + ss.getUrl());
+  ss.getSheets().forEach(function (sh) {
+    Logger.log("タブ「" + sh.getName() + "」 行数=" + sh.getLastRow());
+  });
+}
+
 // ---- 日次サマリーの自動実行トリガーを設置（エディタで1回だけ実行すればOK） ----
 function installDailyTrigger() {
   ScriptApp.getProjectTriggers().forEach(function (t) {
