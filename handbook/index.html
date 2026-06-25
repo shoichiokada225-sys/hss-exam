@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>養豚の基礎ハンドブック ― 株式会社ヒラノ HSS認定 研修テキスト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f2ec;
+    --ink:#2e2a26;
+    --ink-soft:#6b6258;
+    --terra:#a8472a;
+    --terra-d:#86371f;
+    --terra-l:#b04d2c;
+    --line:#e3d9cc;
+    --tint:#f9f1ea;
+    --dark:#2a2521;
+    --cream:#efe7da;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{
+    font-family:"Noto Sans JP",sans-serif;
+    color:var(--ink);
+    background:#cfc7ba;
+    font-size:13px;
+    line-height:1.75;
+  }
+  .serif{font-family:"Noto Serif JP",serif;}
+  .mono{font-family:"JetBrains Mono",monospace;}
+
+  /* ---- page ---- */
+  .page{
+    width:210mm;height:297mm;
+    background:var(--paper);
+    margin:0 auto;
+    padding:18mm 16mm 16mm;
+    position:relative;
+    display:flex;flex-direction:column;
+    overflow:hidden;
+  }
+  .page + .page{margin-top:8mm;}
+  @media print{
+    body{background:none;}
+    .page{margin:0;height:296mm;page-break-after:always;box-shadow:none;}
+    .page + .page{margin-top:0;}
+    .page:last-child{page-break-after:auto;}
+  }
+  @page{size:A4;margin:0;}
+
+  .body{flex:1;display:flex;flex-direction:column;}
+
+  /* ---- header ---- */
+  .ph{display:flex;align-items:baseline;gap:14px;border-bottom:1.5px solid var(--line);padding-bottom:12px;margin-bottom:18px;}
+  .badge{
+    font-family:"JetBrains Mono",monospace;font-weight:700;font-size:12px;letter-spacing:1px;
+    background:var(--terra);color:#fff;padding:4px 10px;border-radius:5px;white-space:nowrap;
+  }
+  .ptitle{font-family:"Noto Serif JP",serif;font-weight:600;font-size:23px;color:var(--ink);}
+  .psub{font-family:"Noto Serif JP",serif;color:var(--terra);font-size:14px;margin-left:auto;letter-spacing:1px;opacity:.85;}
+
+  /* ---- lead ---- */
+  .lead{
+    background:var(--tint);border-left:5px solid var(--terra);
+    padding:14px 18px;margin-bottom:20px;border-radius:0 6px 6px 0;font-size:13px;
+  }
+  .lead b{color:var(--terra);}
+
+  h2.sec{font-family:"Noto Serif JP",serif;color:var(--terra);font-size:17px;font-weight:600;margin:18px 0 10px;}
+  h3{font-family:"Noto Serif JP",serif;color:var(--terra);font-size:14px;font-weight:600;margin-bottom:4px;}
+  p{margin-bottom:6px;}
+  b{color:var(--ink);}
+  .em b{color:var(--terra);}
+
+  /* ---- boxes ---- */
+  .box{border:1px solid var(--line);border-radius:9px;padding:14px 18px;margin:10px 0;background:rgba(255,255,255,.35);}
+  .center{text-align:center;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:10px 0;}
+  .card{border:1px solid var(--line);border-radius:9px;padding:12px 15px;background:rgba(255,255,255,.35);}
+  .card p{font-size:12px;margin-bottom:0;color:#4a443c;}
+
+  /* ---- list ---- */
+  ul.dot{list-style:none;margin:8px 0;}
+  ul.dot li{position:relative;padding-left:18px;margin-bottom:7px;font-size:12.5px;}
+  ul.dot li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--terra);}
+
+  /* ---- table ---- */
+  table.tbl{width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px;}
+  table.tbl thead th{background:var(--terra);color:#fff;text-align:left;padding:8px 12px;font-weight:700;font-size:12px;}
+  table.tbl tbody td{padding:8px 12px;border-bottom:1px solid var(--line);}
+  table.tbl tbody tr td:first-child{font-weight:700;color:var(--ink);white-space:nowrap;}
+  table.tbl tbody tr:nth-child(even){background:rgba(255,255,255,.4);}
+
+  /* ---- stats ---- */
+  .stats{display:flex;gap:12px;margin:10px 0;}
+  .stat{flex:1;border:1px solid var(--line);border-top:3px solid var(--terra);border-radius:8px;padding:12px;text-align:center;background:rgba(255,255,255,.35);}
+  .stat .num{font-family:"Noto Serif JP",serif;font-size:24px;font-weight:600;color:var(--terra);line-height:1.2;}
+  .stat .cap{font-size:11px;color:var(--ink-soft);margin-top:3px;}
+
+  /* ---- numbered 10 ---- */
+  .ol{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin:6px 0;}
+  .ol .it{display:flex;gap:10px;font-size:12.5px;}
+  .ol .n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--terra);color:#fff;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;font-family:"JetBrains Mono",monospace;}
+  .ol .it b{color:var(--terra);}
+
+  /* ---- quote ---- */
+  .quote{border:1.5px dashed #d8b9a8;border-radius:9px;padding:12px 18px;margin:14px 0;font-style:italic;color:#6b5a50;background:rgba(249,241,234,.5);font-size:12.5px;}
+  .quote::before{content:"\201C";color:var(--terra);font-size:18px;font-weight:700;margin-right:4px;}
+
+  /* ---- keypoint ---- */
+  .keypoint{background:var(--dark);color:var(--cream);border-radius:10px;padding:14px 18px;margin-top:auto;}
+  .keypoint .kt{color:#e8a07f;font-family:"Noto Serif JP",serif;font-weight:600;font-size:13px;margin-bottom:5px;}
+  .keypoint p{font-size:12.5px;margin:0;color:var(--cream);}
+  .keypoint b{color:#fff;}
+
+  /* ---- note ---- */
+  .note{font-size:11.5px;color:var(--ink-soft);margin-top:6px;}
+  .tag{display:inline-block;background:var(--cream);color:var(--terra);border-radius:4px;padding:1px 7px;font-size:11px;font-weight:700;margin-right:6px;}
+
+  /* ---- footer ---- */
+  .pfoot{position:absolute;left:16mm;right:16mm;bottom:9mm;display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:6px;}
+  .pfoot .pg{font-family:"JetBrains Mono",monospace;color:var(--terra);font-weight:700;}
+
+  /* ---- cover ---- */
+  .cover{
+    background:linear-gradient(160deg,var(--terra-l) 0%, var(--terra) 45%, var(--terra-d) 100%);
+    color:#fdf6f0;justify-content:flex-start;
+  }
+  .cover .pill{display:inline-block;border:1px solid rgba(255,255,255,.55);border-radius:30px;padding:7px 20px;font-size:12px;letter-spacing:4px;margin-bottom:auto;}
+  .cover .ttl{font-family:"Noto Serif JP",serif;font-weight:700;font-size:46px;line-height:1.25;margin-bottom:14px;}
+  .cover .sub{font-family:"Noto Serif JP",serif;font-size:18px;color:#f3d8cb;margin-bottom:26px;letter-spacing:1px;}
+  .cover .intro{font-size:13.5px;max-width:78%;line-height:1.9;color:#fbeae0;}
+  .cover .cfoot{margin-top:auto;border-top:1px solid rgba(255,255,255,.4);padding-top:14px;display:flex;justify-content:space-between;align-items:flex-end;}
+  .cover .cfoot .l b{font-family:"Noto Serif JP",serif;font-size:15px;display:block;margin-bottom:3px;}
+  .cover .cfoot .l span{font-size:11.5px;color:#f1d3c6;}
+  .cover .pigs{font-size:20px;letter-spacing:3px;}
+  .cover .mid{margin-top:34%;}
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="page cover">
+  <span class="pill">従 業 員 研 修 テ キ ス ト</span>
+  <div class="mid">
+    <div class="ttl">養豚の基礎<br>ハンドブック</div>
+    <div class="sub">― いのちを育てる一年、現場で活きる基礎 ―</div>
+    <p class="intro">この冊子は、養豚の現場で働くすべての仲間のための入門書です。豚を健康に育て、安全でおいしい豚肉を食卓へ届けるために、私たちが毎日大切にしている「考え方」と「作業の意味」をまとめました。</p>
+  </div>
+  <div class="cfoot">
+    <div class="l">
+      <b>株式会社ヒラノ ／ 養豚基礎ハンドブック</b>
+      <span>HSS認定制度 公式研修テキスト ／ 全19章＋まとめ</span>
+    </div>
+    <div class="pigs">🐖🐖🐖</div>
+  </div>
+</section>
+
+<!-- ============ GUIDE / TOC ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">GUIDE</span><span class="ptitle serif">この資料について・目次</span><span class="psub">はじめに</span></div>
+  <div class="lead">専門書は詳しすぎて、現場ではかえって分かりにくいことがあります。この冊子は<b>「なぜその作業をするのか」</b>を、はじめての人にも伝わる言葉でまとめた現場のガイドです。マニュアルは<b>ゴールではなくスタート</b>。ここから、毎日の観察と工夫を積み重ねていきましょう。</div>
+
+  <h2 class="sec">この冊子で学べること</h2>
+  <div class="grid2" style="gap:2px 26px;">
+    <table class="tbl" style="margin:0;"><tbody>
+      <tr><td class="mono" style="color:var(--terra);">01</td><td style="font-weight:400;">養豚ってどんな産業？</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">02</td><td style="font-weight:400;">5S ― プロの基本</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">03</td><td style="font-weight:400;">バイオセキュリティとMD</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">04</td><td style="font-weight:400;">ツーサイト方式</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">05</td><td style="font-weight:400;">三大基本要素</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">06</td><td style="font-weight:400;">観察と五感</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">07</td><td style="font-weight:400;">水の大切さ</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">08</td><td style="font-weight:400;">母豚の管理とBCS</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">09</td><td style="font-weight:400;">母豚の給餌</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">10</td><td style="font-weight:400;">分娩前後の管理</td></tr>
+    </tbody></table>
+    <table class="tbl" style="margin:0;"><tbody>
+      <tr><td class="mono" style="color:var(--terra);">11</td><td style="font-weight:400;">初乳と免疫 ― 時間が勝負</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">12</td><td style="font-weight:400;">初生子豚の処置（個体管理）</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">13</td><td style="font-weight:400;">離乳の管理</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">14</td><td style="font-weight:400;">繁殖・交配（NS／AI）</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">15</td><td style="font-weight:400;">離乳豚舎の環境管理</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">16</td><td style="font-weight:400;">肥育と飼料要求率</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">17</td><td style="font-weight:400;">ふん尿処理① たい肥化</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">18</td><td style="font-weight:400;">ふん尿処理② 排水処理</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">19</td><td style="font-weight:400;">経営理念・行動規範</td></tr>
+      <tr><td class="mono" style="color:var(--terra);">★</td><td style="font-weight:400;">まとめ ― 現場で活きる10カ条</td></tr>
+    </tbody></table>
+  </div>
+
+  <h2 class="sec">学びの土台</h2>
+  <div class="grid3">
+    <div class="card"><h3>🏠 ツーサイト経営</h3><p>母豚規模の一貫経営を、繁殖・分娩の「サイト1」と、離乳・肥育・出荷の「サイト2」に分けて運営します。</p></div>
+    <div class="card"><h3>📅 一年の流れ</h3><p>交配・分娩から離乳・肥育・出荷、そしてふん尿処理まで。豚の繁殖サイクルに作業を合わせて回します。</p></div>
+    <div class="card"><h3>🎯 私たちの約束</h3><p>「Farm to Table（農場から食卓へ）」「定数・定量・定質」。安全・安心な豚肉づくりが私たちの仕事です。</p></div>
+  </div>
+ </div>
+ <div class="pfoot"><span>養豚基礎ハンドブック</span><span class="pg">02</span></div>
+</section>
+
+<!-- ============ CH01 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.01</span><span class="ptitle serif">養豚ってどんな産業？</span><span class="psub">Farm to Table</span></div>
+  <div class="lead">私たちが育てているのは「商品」である前に「いのち」です。そして豚肉は、消費者に<b>喜んで食べてもらって初めて収入になります</b>。出荷して終わりではなく、食卓までを思い描くことが養豚の第一歩です。</div>
+
+  <h2 class="sec">ポークチェーン ― 食卓までの流れ</h2>
+  <p>豚は次のように、たくさんの人の手を通って食卓に届きます。私たちはこの長い鎖の「最初の作り手」です。</p>
+  <div class="box center"><b>生産者（農場）→ パッカー（食肉処理場）→ 食肉卸 → スーパー・小売 → 消費者の食卓</b></div>
+
+  <div class="grid2">
+    <div>
+      <h2 class="sec" style="margin-top:10px;">豚肉という食べもの</h2>
+      <ul class="dot em">
+        <li>豚肉は身近で栄養価が高く、特に<b>ビタミンB1</b>が豊富で夏バテ（夏労）防止に効きます。</li>
+        <li>大切な<b>タンパク質源</b>。ハム・ベーコンなどの加工品にもなります。</li>
+        <li>部位はカタロース・ロース・ヒレ・カタ・バラ・モモなど。</li>
+      </ul>
+      <div class="box" style="background:var(--tint);"><span class="tag">用語</span><b>肉豚（にくとん）</b>＝食肉を目的として肥育・出荷される豚。</div>
+    </div>
+    <div>
+      <h2 class="sec" style="margin-top:10px;">数字で見る1頭</h2>
+      <div class="stat" style="margin-bottom:10px;"><div class="num">約115kg</div><div class="cap">出荷体重</div></div>
+      <div class="stat"><div class="num">約54〜55kg</div><div class="cap">1頭からとれる正肉</div></div>
+    </div>
+  </div>
+
+  <h2 class="sec">生産性を高める4つの柱</h2>
+  <div class="grid2">
+    <div class="card"><h3>① 健康管理</h3><p>清潔で快適な環境づくり。不健康な豚は大きくなりません。</p></div>
+    <div class="card"><h3>② 育種改良</h3><p>多産で丈夫な体・良質な肉質をめざします。</p></div>
+    <div class="card"><h3>③ 飼養技術</h3><p>目的をもった作業。「なぜやるか」を考えます。</p></div>
+    <div class="card"><h3>④ 飼料と資材</h3><p>発育ステージと品種に合ったものを使います。</p></div>
+  </div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>養豚場は「食品工場」。豚を健康に育てることがそのままコスト削減と収益につながります。コスト削減とは、お金を使わないことではなく、適切な環境と快適な職場をつくることです。</p></div>
+ </div>
+ <div class="pfoot"><span>第1章 養豚ってどんな産業？</span><span class="pg">03</span></div>
+</section>
+
+<!-- ============ CH02 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.02</span><span class="ptitle serif">5S ― プロの基本</span><span class="psub">仕事の土台</span></div>
+  <div class="lead">良い豚をつくる前に、まず良い「ヒト」になること。<b>5S</b>は養豚場にかぎらず、どの職場でも求められる社会人の基本です。優秀な農場ほど、豚舎も人もきれいです。</div>
+
+  <table class="tbl">
+    <thead><tr><th style="width:24%;">5つのS</th><th>意味</th></tr></thead>
+    <tbody>
+      <tr><td>整理</td><td>いるものといらないものを区別し、いらないものは処分する。</td></tr>
+      <tr><td>整頓</td><td>必要なものを必要なときにすぐ使える状態に。使ったら元に戻す。</td></tr>
+      <tr><td>清掃</td><td>汚れを掃除し、豚舎・施設・事務所をきれいに保つ。</td></tr>
+      <tr><td>清潔</td><td>整理・整頓・清掃された状態を保ちつづける。</td></tr>
+      <tr><td>躾（しつけ）</td><td>決められたことを習慣にする。法令（コンプライアンス）も社内ルールも守る。</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">毎日の5S ― 実践のかたち</h2>
+  <div class="grid2">
+    <div class="card"><h3>🗣 挨拶は自分から</h3><p>明るく大きな声で。豚にも「おはよう」と声をかけましょう。</p></div>
+    <div class="card"><h3>🤝 来客へのマナー</h3><p>顔を見て言葉で挨拶。会釈だけで済ませません。</p></div>
+    <div class="card"><h3>⏰ 時間を守る</h3><p>ミーティングや全員作業は最低5分前に集合（朝礼は7:45）。</p></div>
+    <div class="card"><h3>🧹 豚舎は掃除が命</h3><p>においに慣れて汚れが気にならなくなったらアウトです。</p></div>
+  </div>
+  <div class="quote">小さく見える仕事も、1つひとつ責任を持ってやってください。</div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>ゴミのポイ捨て、死んだ豚の放置、換気不足でアンモニアが充満した豚舎 ― これらは「モラルの欠如」です。自分のためでなく、周囲の仲間と豚のために働きましょう。</p></div>
+ </div>
+ <div class="pfoot"><span>第2章 5S ― プロの基本</span><span class="pg">04</span></div>
+</section>
+
+<!-- ============ CH03 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.03</span><span class="ptitle serif">バイオセキュリティとMD</span><span class="psub">病気を入れない</span></div>
+  <div class="lead">病気の侵入は経営に大きな打撃になります。出荷頭数が減れば収益が直接減るからです。だから私たちは、毎日<b>「病気を持ち込まない」</b>ことを意識します。</div>
+
+  <div class="grid2">
+    <div class="card"><h3>🛡 バイオセキュリティ</h3><p>農場への病気の侵入を防ぐ管理活動。病気は「豚→豚」だけでなく「豚→人」「人→豚」でも伝わります。車両の消毒、靴底の洗浄・消毒、空舎期間の設定などで防ぎます。</p></div>
+    <div class="card"><h3>🎯 MD（ミニマル・ディジーズ）</h3><p>「疾病を最小限に抑える」衛生管理プログラム。無菌ではなく、経済的に大きな被害を出す病気を防いで健康な豚体を維持し、収益を最大にすること。「闘わずに勝つ」。</p></div>
+  </div>
+
+  <h2 class="sec">病気はどこから入る？</h2>
+  <div class="grid2">
+    <div class="card"><h3>① 豚そのもの</h3><p>導入する豚、精液など。</p></div>
+    <div class="card"><h3>② 豚以外</h3><p>人（従業員・訪問者）、物、車両（飼料・出荷トラック）、害鳥・害虫など。</p></div>
+  </div>
+
+  <h2 class="sec">現場での守りごと</h2>
+  <ul class="dot">
+    <li><b>シャワーイン・シャワーアウト</b> ― 豚を扱う前後に必ずシャワー。爪の中まで洗います。</li>
+    <li><b>クリーンエリアとダーティエリアを分ける</b> ― エリアの行き来は必ず着替えとシャワー。</li>
+    <li><b>踏み込み消毒槽</b> ― ふん・尿・敷料で効果が落ちるので毎日交換します。</li>
+    <li><b>長靴・サンダルは専用に</b> ― 豚舎用と事務所用を分ける。人の汚れが病気を運びます。</li>
+  </ul>
+
+  <div class="grid3">
+    <div class="card"><h3>🧼 消毒の正しい手順</h3><p><b>洗浄 → 乾燥 → 消毒</b>。汚れを落とし、乾かしてから消毒。汚れが残ると消毒効果はゼロになります。</p></div>
+    <div class="card"><h3>💉 ワクチン接種</h3><p>特定の感染症に対する<b>免疫をつけて発症・まん延を防ぐ</b>ため。計画に沿って確実に接種します。</p></div>
+    <div class="card"><h3>🔄 オールイン・オールアウト</h3><p>1つの豚舎へ同時期に<b>一斉導入</b>し、同時期に<b>一斉搬出</b>する方式。間に洗浄・消毒・空舎期間をとり、病気の連鎖を断ちます。</p></div>
+  </div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>消毒槽は汚れたら効果ゼロ。「やっているつもり」が一番危険です。決められた濃度・量・交換頻度を必ず守りましょう。予防のコストは、病気で失うコストよりずっと安いのです。</p></div>
+ </div>
+ <div class="pfoot"><span>第3章 バイオセキュリティとMD</span><span class="pg">05</span></div>
+</section>
+
+<!-- ============ CH04 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.04</span><span class="ptitle serif">ツーサイト方式</span><span class="psub">農場を分ける知恵</span></div>
+  <div class="lead"><b>ツーサイト方式</b>とは、一貫経営の中で「交配から離乳まで」と「離乳から出荷まで」を、離れた2つの農場に分けて管理する方法です。3か所に分ける場合は「スリーサイト方式」、それ以上に分ける方式を総称して「マルチサイト方式」と呼びます。</div>
+
+  <div class="grid2">
+    <div class="card"><h3>サイト1 ＝ 繁殖農場</h3><p>交配 → 妊娠 → 分娩 → 授乳 → 離乳。母豚と生まれたての子豚を育てる場所です。</p></div>
+    <div class="card"><h3>サイト2 ＝ 肥育農場</h3><p>離乳した子豚を受け入れ → 肥育 → 出荷（約115kg）。売上を生む最後の部門です。</p></div>
+  </div>
+
+  <h2 class="sec">なぜ分けるのか</h2>
+  <p>農場を2つに分けておくと、万一どちらかに病気が入っても、被害を小規模に食い止められます。一貫農場のすべてが止まってしまうリスクを避けられるのです。</p>
+
+  <h2 class="sec">週で動く ― プログラムド・プロダクション</h2>
+  <p>母豚は離乳の4〜5日後に発情が来ます。この繁殖サイクルを利用して、離乳・交配・分娩の作業を曜日で組み立てます。だから、分娩豚舎と繁殖豚舎の仕事はぴったり連動して回ります。</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">2</div><div class="cap">サイト数（繁殖／肥育）</div></div>
+    <div class="stat"><div class="num">約600頭</div><div class="cap">母豚規模の一例</div></div>
+    <div class="stat"><div class="num">4〜5日</div><div class="cap">離乳後に発情が来る</div></div>
+  </div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>農場を分けるのは「防疫」のため。そして、繁殖サイクルという豚の自然なリズムに、人の作業スケジュールを合わせることで、ムダなく安定した生産ができます。</p></div>
+ </div>
+ <div class="pfoot"><span>第4章 ツーサイト方式</span><span class="pg">06</span></div>
+</section>
+
+<!-- ============ CH05 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.05</span><span class="ptitle serif">三大基本要素</span><span class="psub">豚が育つ3条件</span></div>
+  <div class="lead">豚が健康に育つには、3つの条件がすべてそろっていなければなりません。1つでも欠けると豚は元気をなくします。これが養豚管理の土台です。</div>
+
+  <div class="grid3">
+    <div class="card"><h3>🌾 ① きれいで新鮮な飼料</h3><p>日本の飼料はほぼ100%が輸入原料で、高温多湿で傷みやすい。タンクは「つぎ足し」せず、週末に空にして中を確認します。</p></div>
+    <div class="card"><h3>💧 ② きれいで新鮮な水</h3><p>飼料を食べるほど水も必要。給水器（ピッカー）は毎日チェック。冷たく新鮮な水が出ているか確認します。</p></div>
+    <div class="card"><h3>🏠 ③ 暖かく乾燥した生活場所</h3><p>すき間風のない環境。温度だけでなく、常に換気して新鮮な空気を保つことが最も大切です。</p></div>
+  </div>
+
+  <h2 class="sec">飼料のいろいろ</h2>
+  <table class="tbl">
+    <thead><tr><th style="width:24%;">種類</th><th>特徴</th></tr></thead>
+    <tbody>
+      <tr><td>マッシュ</td><td>最も普及している粉状の配合飼料。</td></tr>
+      <tr><td>ペレット</td><td>蒸気で加工し円柱状に高圧成形した固形飼料。</td></tr>
+      <tr><td>クランブル</td><td>ペレットを粗く砕いた、粒のそろった固形飼料。</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">最適な温度帯（覚えておきたい数値）</h2>
+  <div class="stats">
+    <div class="stat"><div class="num">30℃</div><div class="cap">生まれてすぐの子豚（その後 徐々に下げる）</div></div>
+    <div class="stat"><div class="num">16〜18℃</div><div class="cap">母豚</div></div>
+    <div class="stat"><div class="num">115kg</div><div class="cap">肥育後期・出荷体重</div></div>
+  </div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>飼料・水・環境が正しく与えられているかは、豚の行動を見れば分かります。三大基本要素は毎日の点検項目。1つでも欠けていないか、五感で確かめましょう。</p></div>
+ </div>
+ <div class="pfoot"><span>第5章 三大基本要素</span><span class="pg">07</span></div>
+</section>
+
+<!-- ============ CH06 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.06</span><span class="ptitle serif">観察と五感</span><span class="psub">豚の声を聞く</span></div>
+  <div class="lead">豚は言葉を話せませんが、行動やボディランゲージで「いま何を感じているか」を伝えています。観察とは<b>「変化を見比べること」</b>。今日と昨日、隣の豚舎との違いに気づくことです。</div>
+
+  <h2 class="sec">五感を鍛える</h2>
+  <div class="grid3">
+    <div class="card"><h3>👁 観る</h3><p>ただ眺めず「読もう」とする。豚舎に入ったらまず全頭の目を見ます。</p></div>
+    <div class="card"><h3>👂 聴く</h3><p>走り回る音や鳴き声など、いつもと違う異常音に気づく。</p></div>
+    <div class="card"><h3>👃 におう</h3><p>飼料の変質や下痢のにおいを嗅ぎ分ける。</p></div>
+    <div class="card"><h3>👅 味わう</h3><p>飼料を少しなめて傷み・酸化をチェック。</p></div>
+    <div class="card"><h3>✋ 触る</h3><p>毛並み・体温、水が出るかを手で確かめる。</p></div>
+    <div class="card"><h3>🧠 集中する</h3><p>効率よく、回数を重ねて。記録と勘を活かす。</p></div>
+  </div>
+
+  <h2 class="sec">豚が出すサインを読む</h2>
+  <table class="tbl">
+    <thead><tr><th style="width:38%;">サイン</th><th>読み取れること</th></tr></thead>
+    <tbody>
+      <tr><td>きれいに並んで寝る</td><td>快適な温度。✕重なって寝る＝寒い・感染症の疑い。</td></tr>
+      <tr><td>こちらを向く・目が生き生き</td><td>健康。元気のない豚は何かのサインを出している。</td></tr>
+      <tr><td>コロコロのふん</td><td>便秘ぎみ。下痢・軟便は病気の前ぶれ。</td></tr>
+      <tr><td>飼料を残す／完食</td><td>残す＝体調確認。ピカピカに完食＝増し飼いのサイン。</td></tr>
+    </tbody>
+  </table>
+  <div class="quote">観察は力なり、継続は力なり。経験を積むとは、五感を鍛えること。</div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>うまくいかない時は必ず「なぜ」がある。PDCAサイクル（計画→実行→確認→改善）で考えましょう。「段取り8分、仕事2分」。固定概念や先入観は改善のさまたげになります。</p></div>
+ </div>
+ <div class="pfoot"><span>第6章 観察と五感</span><span class="pg">08</span></div>
+</section>
+
+<!-- ============ CH07 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.07</span><span class="ptitle serif">水の大切さ</span><span class="psub">命の源</span></div>
+  <div class="lead">水は飼料以上に見落とされがちですが、豚にとって最も重要な要素のひとつです。とくに豚は腎臓の尿濃縮能力が低く、子豚はさらに低いため、常にたっぷりの水が必要です。</div>
+
+  <h2 class="sec">水の4つのはたらき</h2>
+  <div class="grid2">
+    <div class="card"><h3>① 体温の調節</h3><p>汗をかけない豚にとって大切。</p></div>
+    <div class="card"><h3>② 栄養と老廃物の運搬・排出</h3><p>体のすみずみへ栄養を届け、不要物を出す。</p></div>
+    <div class="card"><h3>③ ミネラル・酸塩基バランス</h3><p>体の調子を整える。</p></div>
+    <div class="card"><h3>④ 消化と老廃物の除去</h3><p>水が足りないと腎臓に負担がかかる。</p></div>
+  </div>
+
+  <h2 class="sec">ステージ別の給水のめやす</h2>
+  <table class="tbl">
+    <thead><tr><th>ステージ</th><th>飼料(kg)</th><th>水(L/日)</th><th>ニップル高</th></tr></thead>
+    <tbody>
+      <tr><td>離乳前</td><td>0.5</td><td>10〜15</td><td>25〜30cm</td></tr>
+      <tr><td>離乳〜20kg</td><td>1.0</td><td>15〜20</td><td>45cm</td></tr>
+      <tr><td>育成 20〜40kg</td><td>1.0〜1.5</td><td>15〜20</td><td>60cm</td></tr>
+      <tr><td>肥育 40〜100kg</td><td>1.5〜3.0</td><td>50〜100</td><td>75cm</td></tr>
+    </tbody>
+  </table>
+
+  <div class="stats">
+    <div class="stat"><div class="num">40L以上</div><div class="cap">母豚の1日の飲水量（授乳期は60L超も）</div></div>
+    <div class="stat"><div class="num">0.1L</div><div class="cap">肥育豚は体重1kgあたり1日に必要な水</div></div>
+    <div class="stat"><div class="num">20秒</div><div class="cap">母豚給水の流速めやす（500mL満タン）</div></div>
+  </div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>「飼料を食べるには水が大事」。食欲が落ちた豚を見たら、まず水が十分に飲めているかを疑いましょう。ニップルの目詰まり、ぬるい水、低すぎる流速 ― 毎日の点検が命を守ります。</p></div>
+ </div>
+ <div class="pfoot"><span>第7章 水の大切さ</span><span class="pg">09</span></div>
+</section>
+
+<!-- ============ CH08 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.08</span><span class="ptitle serif">母豚の管理とBCS</span><span class="psub">繁殖の要</span></div>
+  <div class="lead">母豚が最大の能力を発揮できる環境をつくることが、繁殖成績のすべての土台です。太りすぎても痩せすぎても、受胎率や分娩がうまくいきません。だから<b>体型の管理</b>がとても大切です。</div>
+
+  <p><b>BCS（ボディコンディション・スコア）</b>は母豚の体型を1〜5で評価する方法です。平均を3.0として、より正確にはP2点（背脂肪厚）を測って組み合わせます。</p>
+  <table class="tbl">
+    <thead><tr><th>タイミング</th><th>BCS目標</th><th>P2点（背脂肪厚）</th></tr></thead>
+    <tbody>
+      <tr><td>交配前</td><td>2.5</td><td>―</td></tr>
+      <tr><td>分娩前／分娩時</td><td>3.0〜3.5</td><td>約19mm</td></tr>
+      <tr><td>離乳時</td><td>2.5〜3.0</td><td>16〜19mm</td></tr>
+    </tbody>
+  </table>
+  <p class="note">※P2点の測定位置は、最後の肋骨から背骨の左右に5〜6cm離れた部位。候補豚は最大21mmまで。</p>
+
+  <h2 class="sec">繁殖の数値 ― 計画通りに回す</h2>
+  <div class="grid2">
+    <div class="card"><h3>📐 妊娠率・分娩率</h3><p>妊娠率＝妊娠頭数÷種付け頭数×100％／分娩率＝分娩頭数÷種付け頭数×100％。種付けした母豚の<b>約90％</b>が分娩できれば計画通り。</p></div>
+    <div class="card"><h3>🐷 候補豚の初回種付け</h3><p>候補豚（将来の繁殖豚として選抜・育成中の若い豚）は生後7〜8か月齢で130〜150kgがめやす。育ちすぎ・脂肪過多は難産や受胎率低下の原因。</p></div>
+  </div>
+  <div class="box" style="background:var(--tint);"><span class="tag">用語</span><b>妊娠鑑定（にんしんかんてい）</b>＝種付け後（およそ21〜35日）に超音波などで母豚が妊娠しているかを確認する検査。空胎（受胎していない母豚）を早く見つけ、再交配や淘汰の判断につなげます。</div>
+  <p class="note">分娩後の母豚は、子豚や胎盤が出ていくため、体重が分娩前の約90％になります（例：200kg→約177kg）。授乳でさらに痩せるので、給餌でしっかり支えます。</p>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>気候や母豚のコンディションで受胎率・分娩率は日々変わります。だからマニュアルはスタート。毎週・各グループの「分娩率」を確認し、書き換えながら改善していきましょう。</p></div>
+ </div>
+ <div class="pfoot"><span>第8章 母豚の管理とBCS</span><span class="pg">10</span></div>
+</section>
+
+<!-- ============ CH09 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.09</span><span class="ptitle serif">母豚の給餌</span><span class="psub">体力＋母乳をつくる</span></div>
+  <div class="lead">母豚の給餌量は「母豚自身の体力維持」＋「母乳の生産」の2つを満たす量です。子豚が大きくなるほど母乳の必要量が増えるので、<b>授乳期に母豚を痩せさせない</b>ことが大切です。</div>
+
+  <h2 class="sec">分娩前後の給餌カーブ</h2>
+  <table class="tbl">
+    <thead><tr><th>時期</th><th>給餌量のめやす</th></tr></thead>
+    <tbody>
+      <tr><td>分娩予定の3日前から</td><td>少しずつ減らす</td></tr>
+      <tr><td>分娩当日</td><td>0kg</td></tr>
+      <tr><td>分娩後</td><td>1日1kgずつ増やす</td></tr>
+      <tr><td>8日目以降</td><td>1日3回（朝・昼・夕）に分けて給餌</td></tr>
+    </tbody>
+  </table>
+  <p class="note">※授乳ピークには1日5〜7kg食べる母豚も。一気に増やさず、回数を分けて増やします。</p>
+
+  <div class="quote">母豚が飼料を食べなくなったら？ まずは飼料を替えて清掃、1回抜く、次は半量から。そして「食べない理由」を探す。飼料を食べるには水が大事！ ただし食欲不振は体調不良のサインでもあります。発熱・乳房炎・便の異常などがないか、母豚の健康状態そのものを観察・管理することも忘れないでください。</div>
+
+  <ul class="dot">
+    <li>維持に必要な量：体重の約1％（体重200kgなら2.0kg）。</li>
+    <li>泌乳に必要な量：体重の約0.5％（約1.0kg）を上乗せ。子豚が多いほど母乳の必要量も増えます。</li>
+    <li>妊娠期間は約115日（個体差112〜117日）。交配日から数えます。</li>
+  </ul>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>大事なのは「与えた量」ではなく「実際に母豚が食べた量」。母乳の質と量は母豚の食下量で決まり、それが次の繁殖成績まで左右します。</p></div>
+ </div>
+ <div class="pfoot"><span>第9章 母豚の給餌</span><span class="pg">11</span></div>
+</section>
+
+<!-- ============ CH10 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.10</span><span class="ptitle serif">分娩前後の管理</span><span class="psub">いのちを迎える</span></div>
+  <div class="lead">胎子は妊娠後半、特に<b>14週（98日）ごろから急に大きくなります</b>。この時期に栄養が足りないと、生まれる子豚が弱々しくなります。分娩は母豚にとっても子豚にとっても勝負の時です。</div>
+
+  <h2 class="sec">分娩が近いサイン（分娩徴候）</h2>
+  <div class="grid2">
+    <div class="card"><h3>🪹 巣づくり行動</h3><p>前足で床をひっかくしぐさ。</p></div>
+    <div class="card"><h3>🥛 漏乳→射乳</h3><p>乳が「ピュッ」と勢いよく出たら、数時間以内に分娩開始。</p></div>
+    <div class="card"><h3>🌡 体温の上昇</h3><p>平熱37.5〜38℃。近づくと上がる。</p></div>
+    <div class="card"><h3>🔴 外陰部の腫れ</h3><p>ふっくら赤くなる。食欲も落ちてくる。</p></div>
+  </div>
+
+  <h2 class="sec">分娩前の準備 ― 3つの基本</h2>
+  <table class="tbl">
+    <thead><tr><th style="width:18%;">要素</th><th>めやす</th></tr></thead>
+    <tbody>
+      <tr><td>水量</td><td>きれいな水が 1〜1.5L/分 出ているか</td></tr>
+      <tr><td>洗浄</td><td>餌槽・スノコ・壁の隅に汚れがこびりついていないか</td></tr>
+      <tr><td>温度</td><td>母豚は22℃、分娩3日前には26℃になるように</td></tr>
+    </tbody>
+  </table>
+  <p class="note">マット・ヒーター・保温箱を整え、子豚が冷えない場所をつくります。初産豚（初めて出産する母豚）は神経質なので、分娩予定の5日前には分娩豚舎へ移します。</p>
+
+  <div class="grid2">
+    <div class="card"><h3>🩺 母豚の体温管理</h3><p>平熱は37.5〜38℃。<b>39.5℃以上の発熱があれば抗菌薬を注射</b>します（指示に従う）。発熱は乳房炎・子宮炎などのサイン。</p></div>
+    <div class="card"><h3>🛡 圧死を防ぐ</h3><p><b>圧死（あっし）</b>＝母豚が寝返りなどで子豚を押しつぶす事故。<b>圧死防止バー（分娩ストール）</b>で母豚の動きを制限し、子豚が下に入り込むのを防ぎます。保温箱・ヒーターで子豚を母豚から離れた暖所に集めることも有効。</p></div>
+  </div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>分娩は夜間に多いもの。母豚を1頭決めて、生まれるまで様子を観察し続けると変化がよく分かります。「母豚が安心して分娩できる環境」を整えることが、元気な子豚への第一歩です。</p></div>
+ </div>
+ <div class="pfoot"><span>第10章 分娩前後の管理</span><span class="pg">12</span></div>
+</section>
+
+<!-- ============ CH11 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.11</span><span class="ptitle serif">初乳と免疫 ― 時間が勝負</span><span class="psub">最初の数時間</span></div>
+  <div class="lead">豚はヒトと違い、お腹の中（胎盤）では母豚の免疫を子豚に渡せません。だから生まれた子豚は無防備。唯一の免疫源が<b>「初乳」</b>です。初乳は、いわば最後のワクチンです。</div>
+
+  <h2 class="sec">免疫抗体を吸収できる力は、時間とともに激減する</h2>
+  <table class="tbl">
+    <thead><tr><th>生後の時間</th><th>免疫抗体の吸収能力</th></tr></thead>
+    <tbody>
+      <tr><td>0〜3時間</td><td>100％</td></tr>
+      <tr><td>3〜9時間</td><td>50％</td></tr>
+      <tr><td>9〜12時間</td><td>5〜10％</td></tr>
+    </tbody>
+  </table>
+  <p class="note">子豚側が初乳を吸収できる時間も、母豚側が初乳を出す時間（生後24時間以内）も、ごく短い。さらに初乳中の免疫グロブリン（IgG）濃度も<b>分娩後36〜48時間で著しく減少</b>します。だから「生まれたらできるだけ早く初乳を飲ませる」ことが何より大切です。</p>
+
+  <h2 class="sec">弱い子豚を救う工夫</h2>
+  <div class="grid2">
+    <div class="card"><h3>🍼 分割授乳</h3><p>大きい子豚を半数だけカゴに1時間隔離し、小さい子豚に先に初乳を飲ませます。全頭に均等に初乳が行き渡るようにする方法です。</p></div>
+    <div class="card"><h3>🐖 里子（養子）</h3><p>産子数が多い母豚の子豚を、余裕のある他の母豚に預けること。子豚が「自分の母の初乳」を飲んでから、分娩2〜3日以内に頭数を均します。</p></div>
+  </div>
+  <p class="note">標準的な生時体重は約<b>1.2〜1.5kg</b>。<b>900g未満は「弱子」</b>として最後に授乳させ、人工乳で補助します。常乳は脂肪6〜11％・固形分16〜23％と濃く、母豚は高泌乳牛に匹敵する生産能力を持っています。</p>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>初乳は「時間が勝負」。お産が長引いて子豚に活力がない、大きさにばらつきがある ― そんな時こそ分割授乳の出番です。母乳をしっかり飲んだ子豚は、離乳後も下痢をしにくく丈夫に育ちます。</p></div>
+ </div>
+ <div class="pfoot"><span>第11章 初乳と免疫</span><span class="pg">13</span></div>
+</section>
+
+<!-- ============ CH12 (NEW) ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.12</span><span class="ptitle serif">初生子豚の処置（個体管理）</span><span class="psub">生まれて数日のしごと</span></div>
+  <div class="lead">生まれた子豚には、生後数日のうちに行う基本処置があります。どれも<b>「健康に・見分けられるように・トラブルなく育てる」</b>ための作業。清潔・素早く・最小限のストレスで行い、器具は必ず消毒します。</div>
+
+  <div class="grid2">
+    <div class="card"><h3>🏷 耳刻（じこく）</h3><p>耳に切れ込みを入れて<b>個体識別</b>する。どの母豚の子か、いつ生まれたかを記録と結びつけ、生涯にわたって管理できるようにします。</p></div>
+    <div class="card"><h3>✂ 断尾（だんび）</h3><p>尾を短く切る処置。群飼育で起こる<b>「尾かじり」</b>による傷・感染を防ぐため。傷口は化膿しやすいので清潔に。</p></div>
+    <div class="card"><h3>♂ 去勢（きょせい）</h3><p>雄豚の<b>精巣を外科的に除去</b>する処置。雄特有のにおい（雄臭）を防ぎ、肉質を保つために行います。</p></div>
+    <div class="card"><h3>💉 鉄剤投与（てつざいとうよ）</h3><p>子豚は母乳だけでは鉄が不足し<b>貧血</b>になりやすい。生後数日以内に鉄剤を注射して貧血を予防します。</p></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="num">約1.2〜1.5kg</div><div class="cap">標準的な生時体重</div></div>
+    <div class="stat"><div class="num">900g未満</div><div class="cap">「弱子」＝最後に授乳・人工乳で補助</div></div>
+    <div class="stat"><div class="num">数日以内</div><div class="cap">耳刻・断尾・去勢・鉄剤の実施めやす</div></div>
+  </div>
+
+  <div class="quote">小さな処置こそ「個体を見る」第一歩。1頭ずつ、記録と結びつけて管理する。</div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>処置は「子豚のため」の作業です。痛み・出血・感染を最小限にし、終わったら必ず母豚のもとへ戻して保温を確認。記録（耳刻番号・処置日）を残すことで、その後の成長や事故を追えるようになります。</p></div>
+ </div>
+ <div class="pfoot"><span>第12章 初生子豚の処置</span><span class="pg">14</span></div>
+</section>
+
+<!-- ============ CH13 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.13</span><span class="ptitle serif">離乳の管理</span><span class="psub">一生で一番のストレス</span></div>
+  <div class="lead"><b>離乳</b>とは、子豚を母豚から引き離し、独立して固形飼料を食べさせるようにする作業です。生後<b>25〜26日齢</b>で行います。母子分離・群編成・食べ物の変化が一度に起こる、子豚にとって一生で一番のストレスの時期です。</div>
+
+  <h2 class="sec">飼料は段階的に切り替える（一気に替えない）</h2>
+  <table class="tbl">
+    <thead><tr><th>日齢</th><th>飼料</th></tr></thead>
+    <tbody>
+      <tr><td>0〜5日齢</td><td>母乳がメイン</td></tr>
+      <tr><td>5日齢〜</td><td>乳付け（クリープフィード）開始</td></tr>
+      <tr><td>10〜12日齢</td><td>人工乳A</td></tr>
+      <tr><td>25日齢（離乳）</td><td>人工乳B</td></tr>
+    </tbody>
+  </table>
+  <p class="note">過食にならないよう1日4回に分けて給餌。できるだけ子豚の大きさをそろえて離乳することが大切です。</p>
+
+  <div class="grid2">
+    <div class="card"><h3>😴 離乳子豚の行動</h3><p>離乳5日の子豚は1日の約<b>61.9%を睡眠</b>に費やします（橋本啓一 1992「離乳子豚の行動観察」）。よく寝るのは正常な姿。</p></div>
+    <div class="card"><h3>🗓 環境に慣れるまで</h3><p>離乳直後の子豚が新しい環境に慣れるまで、およそ<b>1週間</b>かかります。この間は温度・水・飼料を特に手厚く。</p></div>
+  </div>
+
+  <h2 class="sec">離乳の作業（木曜が基本）</h2>
+  <ul class="dot">
+    <li>追い込み板で子豚を集め、在庫頭数と実際の離乳頭数を確認する。</li>
+    <li>体重を測定し、母豚を繁殖担当へ引き渡す。</li>
+    <li>離乳後は豚房を片付け、天井・配管のすき間まで水洗・消毒する。</li>
+    <li>データをPCに入力し、実績グラフに記入する。</li>
+  </ul>
+  <div class="quote">離乳して終わり、ではない。次の豚を迎える準備まで含めて、丸一日かける大切な仕事。</div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>離乳直後の子豚は小さくデリケート。母乳をしっかり飲んできた子ほど強い。在庫頭数は「誰が見てもひと目で分かる」よう大きく表示し、記憶ではなく記録で管理しましょう。</p></div>
+ </div>
+ <div class="pfoot"><span>第13章 離乳の管理</span><span class="pg">15</span></div>
+</section>
+
+<!-- ============ CH14 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.14</span><span class="ptitle serif">繁殖・交配（NS／AI）</span><span class="psub">適期を見極める</span></div>
+  <div class="lead">離乳した母豚は<b>4〜5日後</b>に発情が来ます。受胎率を高める最大のポイントは「交配適期の見極め」。<b>発情</b>（雌豚が交配可能な状態を示す生理的な現象）のサインを正しく読むことが、繁殖成績を左右します。</div>
+
+  <h2 class="sec">離乳後の外陰部の変化</h2>
+  <table class="tbl">
+    <thead><tr><th>日数</th><th>変化</th></tr></thead>
+    <tbody>
+      <tr><td>1〜2日目</td><td>陰部の軟化（乳房の張りが収まる）</td></tr>
+      <tr><td>3日目</td><td>発情・赤味が出る</td></tr>
+      <tr><td>4〜5日目</td><td>発情・粘液分泌＝交配適期（雄当て開始）</td></tr>
+    </tbody>
+  </table>
+  <p class="note">発情のしぐさ：起立してじっと動かなくなる（<b>不動化</b>）、耳を立てる、背中を押されても立ち止まる、飼料を残す、など。</p>
+
+  <h2 class="sec">2つの交配方法</h2>
+  <div class="grid2">
+    <div class="card"><h3>♂ NS（本交・自然交配）</h3><p>1回目に行う。雄豚は1度使ったら数日休ませる（連続使用は2交配が限界）。交配後の雄は神経質なので油断は禁物。</p></div>
+    <div class="card"><h3>💉 AI（人工授精／Artificial Insemination）</h3><p>2回目に行う。精液は人肌35〜37℃に温め、恒温器16℃で保存し約3日で使い切る。外陰部を洗ってカテーテルを静かに挿入します。</p></div>
+  </div>
+  <p class="note">未経産豚は発情持続が長いので、発情後12時間程度の間隔で3交配（NS＋AI＋AI）。発情周期は平均21日で、交配後3週間後にマークが来る母豚群は発情確認の意識を上げます。母豚に赤・青・緑の色マークを付けて状況を記録します。</p>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>交配は「記憶より記録」。マークの色と位置で、どの母豚がいつ交配し、いつ再発情しそうかが一目で分かります。受胎しなかった母豚を見逃さない仕組みが、安定生産を支えます。</p></div>
+ </div>
+ <div class="pfoot"><span>第14章 繁殖・交配（NS／AI）</span><span class="pg">16</span></div>
+</section>
+
+<!-- ============ CH15 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.15</span><span class="ptitle serif">離乳豚舎の環境管理</span><span class="psub">温度と換気</span></div>
+  <div class="lead">離乳豚舎は力仕事は少ないですが、そのぶん<b>五感と環境管理</b>が問われる部門です。小さな子豚は環境の変化に弱いので、温度と換気を細やかに整えます。</div>
+
+  <h2 class="sec">換気の4つの目的（離乳も肥育も同じ）</h2>
+  <div class="grid2">
+    <div class="card"><h3>① 酸素の供給</h3><p>新鮮な空気を届ける。</p></div>
+    <div class="card"><h3>② ガス・においの除去</h3><p>アンモニアなどを外へ。</p></div>
+    <div class="card"><h3>③ 湿気の除去</h3><p>豚自身からも湿気が出る。</p></div>
+    <div class="card"><h3>④ 温度の調整</h3><p>暑さ・寒さをやわらげる。</p></div>
+  </div>
+  <p class="note">換気のめやす（ウィンドウレス豚舎）：寒い時期は3回/時、暑い時期は60回/時。入気が速すぎると冷たい外気が子豚を直撃するので、入気バッフルで角度を変えて空気を混ぜてから入れます。温度を下げても湿度が高いと体感温度は下がりません。</p>
+
+  <div class="box"><h3>⚡ 見落としやすい点検</h3><p>養豚場で最も多いのは電気系統のトラブル。ファン・ポンプ・スクレーパーの異音、ブレーカーのクモの巣（漏電・発熱の原因）、ピッカーの目詰まりを毎日チェックし、日報に正確に記録します。</p></div>
+  <ul class="dot">
+    <li>床暖房の設定めやす：10〜12月＝30℃、1〜3月＝35℃、4〜5月＝33℃（気象により調整）。</li>
+    <li>保温箱は分娩豚舎より2〜3℃高めに。子豚が自ら入ってくれば快適なサインです。</li>
+    <li>温度計・センサーは人の目線でなく、豚がいる床の近くに設置します。</li>
+  </ul>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>「観察＝豚を見ること」だけではありません。豚を支える機械・環境こそ毎日チェック。異常への気づきが、リスク管理の第一歩です。</p></div>
+ </div>
+ <div class="pfoot"><span>第15章 離乳豚舎の環境管理</span><span class="pg">17</span></div>
+</section>
+
+<!-- ============ CH16 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.16</span><span class="ptitle serif">肥育と飼料要求率</span><span class="psub">コストの大半は飼料</span></div>
+  <div class="lead"><b>肥育</b>（離乳後の豚を出荷体重まで太らせる飼育段階）は売上を生む最後の部門です。そして豚の生産コストの<b>50〜60％は飼料費</b>。だから「いかにムダなく飼料を肉に変えるか」が経営を大きく左右します。</div>
+
+  <div class="box"><h3>飼料要求率（FCR）とは</h3><p>増体1kgに必要な飼料の量のこと。数値が低いほど効率が良い。例えば飼料を<b>3kg</b>食べて<b>1kg</b>増えたら、飼料要求率は<b>3.0</b>です。</p></div>
+  <div class="box" style="background:var(--tint);"><h3>💰 要求率0.1の差が、年間370万円</h3><p>飼料単価35円/kg・増体80kgのとき、要求率2.9なら8,120円/頭、3.0なら8,400円/頭で280円/頭の差。母豚600頭・1母豚22頭出荷の農場なら、年間約369万6,000円もの差になります。</p></div>
+
+  <h2 class="sec">フェーズフィーディング（段階的な飼料切替）</h2>
+  <table class="tbl">
+    <thead><tr><th>飼料</th><th>体重</th><th>ねらい</th></tr></thead>
+    <tbody>
+      <tr><td>肥育前期飼料</td><td>35〜60kg</td><td>骨や筋肉がつくられる時期。質が重要。</td></tr>
+      <tr><td>肥育後期飼料</td><td>60〜115kg</td><td>骨格に肉と脂肪がつく時期。</td></tr>
+    </tbody>
+  </table>
+  <p class="note">豚の第一制限アミノ酸はリジン。桶の一番低い板が水位を決めるように、最も不足するアミノ酸（リジン）が成長を左右します。発育段階に合わせ栄養を切り替えるのがフェーズフィーディングです。</p>
+  <div class="box"><span class="tag">用語</span>飼料ラベルの<b>「CP」＝粗タンパク質（Crude Protein）</b>。CP22・CP19などの数字は粗タンパク質の含量（％）。発育が進むほどCPを下げていきます。</div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>「記憶より記録、そして分析」。やりっぱなしはダメ。経営の指標は <b>1母豚当たり枝肉重量＝1頭の枝肉重量×1母豚当たりの年間出荷頭数</b>。同じ設備・同じ母豚数でこの数字を上げることが、生産効率の向上そのものです。</p></div>
+ </div>
+ <div class="pfoot"><span>第16章 肥育と飼料要求率</span><span class="pg">18</span></div>
+</section>
+
+<!-- ============ CH17 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.17</span><span class="ptitle serif">ふん尿処理① たい肥化</span><span class="psub">微生物が主役</span></div>
+  <div class="lead">適切なふん尿処理なしに、おいしい豚肉はつくれません。豚舎のスノコ床（スラット床）から落ちたふん尿は、まず<b>固形物（→たい肥化）と液体（→排水処理）に分ける</b>ことから処理が始まります。</div>
+
+  <div class="box"><h3>たい肥化の主役は「微生物」</h3><p>微生物の力でふん尿中の有機物を分解し、作物に使える資源に変えます。目的は ①悪臭をなくす ②扱いやすくする ③作物・土壌に無害にする ④資源としてリサイクルする、の4つです。</p></div>
+  <div class="box" style="background:var(--tint);"><h3>🌡 たい肥化の5つのポイント</h3><p>① 水量調節　② 空気（酸素）の供給　③ 好気性菌の導入　④ 温度の維持　⑤ 技術と期間 ― 微生物が働きやすい状態をつくることが鍵です。</p></div>
+
+  <h2 class="sec">水分管理が決め手</h2>
+  <table class="tbl">
+    <thead><tr><th>対象</th><th>水分</th></tr></thead>
+    <tbody>
+      <tr><td>生ふん</td><td>75〜80％</td></tr>
+      <tr><td>戻したい肥</td><td>約40％</td></tr>
+      <tr><td>混合後（発酵に適した状態）</td><td>約50％</td></tr>
+    </tbody>
+  </table>
+  <p class="note">生ふんと戻したい肥を混ぜて水分を調整します。混合割合は夏は1：3、冬は1：4。水分50％は「ぎゅっと握ると崩れてパラパラ」が目安です。</p>
+  <div class="stats">
+    <div class="stat"><div class="num">70〜75℃</div><div class="cap">発酵温度</div></div>
+    <div class="stat"><div class="num">約1週間</div><div class="cap">発酵期間</div></div>
+    <div class="stat"><div class="num">切り返し</div><div class="cap">空気を入れ再発酵→温度が下がれば完成</div></div>
+  </div>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>たい肥化は、豚の飼養とよく似ています。微生物という「生きもの」に、空気・水分・温度という快適な環境を与える ― 毎日の観察と五感が、ここでも生きるのです。</p></div>
+ </div>
+ <div class="pfoot"><span>第17章 ふん尿処理① たい肥化</span><span class="pg">19</span></div>
+</section>
+
+<!-- ============ CH18 ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.18</span><span class="ptitle serif">ふん尿処理② 排水処理</span><span class="psub">活性汚泥法</span></div>
+  <div class="lead">豚のふんは牛と比べてBODがとても高く、規制も厳しい分野です。内臓1頭分のBODは人間の5〜6倍にもなります。だから排水処理は手を抜けません。</div>
+
+  <div class="grid2">
+    <div class="card"><h3>💨 BOD</h3><p>微生物が水中の有機物を分解する時に必要な酸素量。高いほど「汚れ（有機物）が多い」という意味です。</p></div>
+    <div class="card"><h3>🦠 活性汚泥</h3><p>有機物を食べる微生物のかたまり。酸素を送り撹拌して活性化させ、汚れを分解させます。</p></div>
+  </div>
+
+  <h2 class="sec">処理の流れ</h2>
+  <div class="box center"><b>原水 → スクリーン → スクリュープレス（固液分離）→ ラグーン式曝気槽 → 余剰汚泥の除去 → 放流</b></div>
+  <p class="note">スクリュープレスは脱水機の一種。SSを除去してBODを下げられる長所がありますが、電気代がかかります。BOD容積負荷は0.2〜0.3kg/㎥・日で運転します。</p>
+
+  <div class="box"><h3>SV30 ― 毎日の健康診断</h3><p>曝気槽の活性汚泥1Lを30分静置し、沈んだ汚泥の量で状態を見ます。SV30＝沈殿汚泥量÷1000×100（％）、目標30〜50％。30％以下は微生物不足、50％超は汚泥過多のサインです。</p></div>
+  <table class="tbl">
+    <thead><tr><th>項目</th><th>排水基準（生活環境）</th><th>優良農場の実績</th></tr></thead>
+    <tbody>
+      <tr><td>BOD</td><td>160mg/L以下</td><td>約10mg/L</td></tr>
+      <tr><td>SS</td><td>200mg/L以下</td><td>約10mg/L</td></tr>
+      <tr><td>pH</td><td>5.8〜8.6</td><td>―</td></tr>
+    </tbody>
+  </table>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>停電は待ったなし。自家発電を備え、停電時は全ブレーカーをOFF→復旧後に1つずつONして機器の破損を防ぎます。法律は農業環境三法と水質汚濁防止法。環境を守ることも、私たちの大切な仕事です。</p></div>
+ </div>
+ <div class="pfoot"><span>第18章 ふん尿処理② 排水処理</span><span class="pg">20</span></div>
+</section>
+
+<!-- ============ CH19 (NEW) ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">CH.19</span><span class="ptitle serif">経営理念・行動規範</span><span class="psub">人としての姿勢</span></div>
+  <div class="lead">技術と同じくらい大切なのが「人としての姿勢」です。私たちヒラノが大切にしている<b>経営理念</b>と<b>行動規範</b>を、現場の行動に落とし込んで理解しましょう。迷ったら、いつでもここに立ち返ります。</div>
+
+  <div class="box" style="background:var(--tint);border-left:5px solid var(--terra);">
+    <h3>経営理念 ― 幸せの連鎖</h3>
+    <p><b>「豚が幸せに育ち、育てた人が誇りを持ち、食べる人が喜ぶ」</b> ― この幸せの連鎖をつくることが、私たちの使命です。</p>
+  </div>
+
+  <h2 class="sec">行動規範 ― 推奨すること／厳に慎むこと</h2>
+  <table class="tbl">
+    <thead><tr><th style="width:30%;">テーマ</th><th>○ 推奨</th><th>✕ 厳に慎む</th></tr></thead>
+    <tbody>
+      <tr><td>リレー産業の精神</td><td>「食べてもらうまでが養豚企業」。次工程への確実な引継ぎと"おかげ様"の精神。</td><td>片付けをせず次に使う人に迷惑をかける（やりっぱなし）。不具合を報告せず次工程に丸投げする。</td></tr>
+      <tr><td>経済豚と幸せの創造</td><td>豚の行動・状態を日々観察し、ストレス低減を意識して管理する。夏場・冬場対策は「暑くなる前・寒くなる前」に行う。</td><td>異常を把握していながら「様子見」で対応を先送りする。</td></tr>
+      <tr><td>責任感とチームの絆</td><td>トラブルは他責を排除し、チームで原因分析・情報共有・再発防止を行う。</td><td>悪評・陰口を言って他人を貶める。事実無根の話を連発する。</td></tr>
+      <tr><td>素直で誠実、探求心旺盛</td><td>知っていることは周囲に教え、後継を育てることで自分も成長する。</td><td>自分だけが良ければ良い、周囲のことを考えない。</td></tr>
+      <tr><td>地域との共生</td><td>汚水処理・堆肥管理の重要性を理解し、地域環境に配慮する。</td><td>糞尿トラブルを劣後（後回し）にし、地域環境への影響を軽視する。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="keypoint"><div class="kt">この章のキーポイント</div><p>共通して戒められるのは<b>「自分だけ良ければよい」という自己中心的な姿勢</b>です。豚にも、仲間にも、次工程にも、地域にも誠実であること。理念は飾りではなく、毎日の判断のものさしです。</p></div>
+ </div>
+ <div class="pfoot"><span>第19章 経営理念・行動規範</span><span class="pg">21</span></div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="page">
+ <div class="body">
+  <div class="ph"><span class="badge">FINAL</span><span class="ptitle serif">まとめ ― 現場で活きる10カ条</span><span class="psub">めざせ、現場の星</span></div>
+  <div class="lead">一年を通して、交配・分娩から離乳・肥育・出荷、そしてふん尿処理まで学んできました。最後に、毎日の現場で思い出してほしい<b>10のこと</b>をまとめます。</div>
+
+  <div class="ol">
+    <div class="it"><span class="n">1</span><div><b>食卓まで考える。</b>豚肉は喜んで食べてもらって初めて収入になる。</div></div>
+    <div class="it"><span class="n">2</span><div><b>まず良いヒトになる。</b>5Sはすべての仕事の土台。</div></div>
+    <div class="it"><span class="n">3</span><div><b>病気を入れない。</b>予防に徹して「闘わずに勝つ」。</div></div>
+    <div class="it"><span class="n">4</span><div><b>三大基本要素を毎日点検。</b>飼料・水・環境のどれも欠かさない。</div></div>
+    <div class="it"><span class="n">5</span><div><b>観察は「変化を見比べる」こと。</b>五感で豚の声を聞く。</div></div>
+    <div class="it"><span class="n">6</span><div><b>水を軽く見ない。</b>食欲が落ちたら、まず水を疑う。</div></div>
+    <div class="it"><span class="n">7</span><div><b>初乳は時間が勝負。</b>生まれたらできるだけ早く飲ませる。</div></div>
+    <div class="it"><span class="n">8</span><div><b>記憶より記録、そして分析。</b>やりっぱなしにしない。</div></div>
+    <div class="it"><span class="n">9</span><div><b>飼料要求率0.1にこだわる。</b>小さな差が大きな利益に。</div></div>
+    <div class="it"><span class="n">10</span><div><b>環境を守る。</b>適切なふん尿処理なしに良い豚肉はない。</div></div>
+  </div>
+
+  <div class="quote">「うちのやり方は本当に正しいか？」と問い続けてほしい。既存を疑い、改善する姿勢が、農場を強くする。</div>
+
+  <p class="center serif" style="font-size:17px;color:var(--terra);margin:18px 0 4px;font-weight:600;">マニュアルはゴールではなく、スタートです。</p>
+  <p class="center serif" style="font-size:17px;color:var(--terra);font-weight:600;">ここから、あなたの一年が始まります。</p>
+
+  <div class="keypoint center"><div class="kt">めざせ、現場の星 🌟</div><p>毎日の小さな観察と工夫の積み重ねが、健康な豚と、安全でおいしい豚肉を育てます。一緒に、誇りを持てる農場をつくりましょう。</p></div>
+ </div>
+ <div class="pfoot"><span>まとめ ― 現場で活きる10カ条</span><span class="pg">22</span></div>
+</section>
+
+</body>
+</html>
