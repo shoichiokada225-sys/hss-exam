@@ -2018,19 +2018,19 @@
     "question": "「リレー産業の精神」において、ヒラノが持つべき意識はどれでしょうか",
     "options": [
       "出荷が完了すれば養豚企業の責任は終わる",
-      "食べてもらうまでが養豚企業",
+      "仲間とともに助け合い、各部署と連携しながら成果を追求する",
       "自分の部署の仕事が終わればそれでよい",
       "次の部署のことは次の部署が責任を持って考えるべき"
     ],
-    "answer": "食べてもらうまでが養豚企業",
-    "explanation": "「『食べてもらうまでが養豚企業』、次工程への確実な引継ぎとおかげ様の精神」が行動規範2の基本です。",
+    "answer": "仲間とともに助け合い、各部署と連携しながら成果を追求する",
+    "explanation": "「リレー産業の精神」とは、各工程がバトンをつなぐように仲間と助け合い、各部署が連携しながら成果を追求する意識です。自分の担当だけで完結させず、次工程への確実な引継ぎとおかげ様の精神を持つことが行動規範の基本です。",
     "category": "経営理念・行動規範",
     "source": "honshiken-77.0",
     "vi": {
       "question": "Trong “Tinh thần của ngành tiếp sức”, ý thức mà Hirano cần có là gì?",
       "options": [
         "Khi xuất chuồng xong thì trách nhiệm của doanh nghiệp chăn nuôi heo kết thúc",
-        "Đến khi được người tiêu dùng ăn mới trọn vẹn là doanh nghiệp chăn nuôi heo",
+        "Cùng đồng đội giúp đỡ lẫn nhau, phối hợp với các bộ phận để theo đuổi thành quả",
         "Chỉ cần xong việc của bộ phận mình là được",
         "Việc của bộ phận sau thì bộ phận sau tự chịu trách nhiệm lo"
       ]
@@ -2039,7 +2039,7 @@
       "question": "Dalam “Semangat industri estafet”, kesadaran apa yang harus dimiliki Hirano?",
       "options": [
         "Begitu pengiriman selesai, tanggung jawab perusahaan peternakan babi berakhir",
-        "Peternakan babi baru tuntas setelah dagingnya dimakan konsumen",
+        "Saling membantu bersama rekan kerja dan berkoordinasi dengan tiap bagian untuk mengejar hasil",
         "Cukup asal pekerjaan bagian sendiri selesai",
         "Urusan bagian berikutnya biar bagian berikutnya yang bertanggung jawab memikirkannya"
       ]
