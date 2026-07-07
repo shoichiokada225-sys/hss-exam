@@ -28,6 +28,15 @@
         "Babi untuk merangsang berahi",
         "Bagian daging dari babi yang telah dikirim ke rumah potong"
       ]
+    },
+    "en": {
+      "question": "Which is the most accurate description of a \"meat pig (nikuton)\"?",
+      "options": [
+        "A pig fattened and shipped for the purpose of meat production",
+        "A pig that can be used for both breeding and meat production",
+        "A pig used to induce estrus",
+        "The meat portion of a pig shipped to the slaughterhouse"
+      ]
     }
   },
   {
@@ -58,6 +67,15 @@
         "Sekitar 115 kg",
         "Sekitar 30 kg",
         "Sekitar 80 kg"
+      ]
+    },
+    "en": {
+      "question": "About how much retail (lean) meat can be obtained from one carcass?",
+      "options": [
+        "About 54-55 kg",
+        "About 115 kg",
+        "About 30 kg",
+        "About 80 kg"
       ]
     }
   },
@@ -90,6 +108,15 @@
         "Vitamin A",
         "Kalsium"
       ]
+    },
+    "en": {
+      "question": "Which nutrient is especially abundant in pork and said to help recover from summer fatigue?",
+      "options": [
+        "Vitamin B1",
+        "Vitamin C",
+        "Vitamin A",
+        "Calcium"
+      ]
     }
   },
   {
@@ -120,6 +147,15 @@
         "Menjaga kualitas semen",
         "Membasmi hama",
         "Menjaga kualitas pakan"
+      ]
+    },
+    "en": {
+      "question": "What is the main purpose of \"disinfection\" in a pig barn?",
+      "options": [
+        "To kill pathogens and prevent the occurrence and spread of infectious diseases in pigs",
+        "To maintain the quality of semen",
+        "To exterminate pest animals",
+        "To maintain the quality of feed"
       ]
     }
   },
@@ -152,6 +188,15 @@
         "38 derajat ke atas",
         "41 derajat ke atas"
       ]
+    },
+    "en": {
+      "question": "At what body temperature or higher of a sow are you instructed to inject antibiotics?",
+      "options": [
+        "39.5 C or higher",
+        "37.5 C or higher",
+        "38 C or higher",
+        "41 C or higher"
+      ]
     }
   },
   {
@@ -182,6 +227,15 @@
         "Disinfeksi → Mencuci → Mengeringkan",
         "Mencuci → Disinfeksi → Mengeringkan",
         "Mengeringkan → Disinfeksi → Mencuci"
+      ]
+    },
+    "en": {
+      "question": "Which is the correct procedure for disinfecting a pig barn?",
+      "options": [
+        "Washing -> Drying -> Disinfection",
+        "Disinfection -> Washing -> Drying",
+        "Washing -> Disinfection -> Drying",
+        "Drying -> Disinfection -> Washing"
       ]
     }
   },
@@ -214,6 +268,15 @@
         "Membuat keadaan bebas dari kotoran dan kekacauan",
         "Membiasakan aturan dan ketentuan"
       ]
+    },
+    "en": {
+      "question": "Which is the most accurate description of \"(2) Set in order (Seiton)\" among the 5S?",
+      "options": [
+        "Keeping necessary items ready to use when needed; return them after use",
+        "Clearly classifying needed and unneeded items and disposing of the unneeded ones",
+        "Keeping things free of dirt and disorder",
+        "Making rules and procedures a habit"
+      ]
     }
   },
   {
@@ -244,6 +307,15 @@
         "Memilah dan membuang barang yang perlu dan tidak perlu",
         "Mempertahankan keadaan yang sudah bersih",
         "Mengembalikan barang yang diperlukan ke tempatnya"
+      ]
+    },
+    "en": {
+      "question": "Which is included in \"(5) Sustain / Discipline (Shitsuke)\" of the 5S?",
+      "options": [
+        "Making rules and procedures a habit and observing compliance with laws",
+        "Classifying and disposing of needed and unneeded items",
+        "Keeping things in a clean state once cleaned",
+        "Returning necessary items to their place"
       ]
     }
   },
@@ -276,6 +348,15 @@
         "Program pengobatan babi yang sakit dengan obat seminimal mungkin",
         "Program manajemen pemeliharaan untuk memaksimalkan kinerja reproduksi induk babi"
       ]
+    },
+    "en": {
+      "question": "Which is the most accurate meaning of \"MD (Minimal Disease)\"?",
+      "options": [
+        "A hygiene management program that minimizes disease, keeps pigs healthy, and maximizes profit",
+        "A disease-free, germ-free state that completely eliminates disease on the farm",
+        "A medication program that treats sick pigs with minimal drugs",
+        "A management program to maximize the reproductive performance of sows"
+      ]
     }
   },
   {
@@ -306,6 +387,15 @@
         "Anak babi makan pakan padat untuk pertama kalinya",
         "Air susu induk babi berhenti keluar",
         "Menitipkan anak babi kepada induk babi lain"
+      ]
+    },
+    "en": {
+      "question": "What is \"weaning (rinyu)\"?",
+      "options": [
+        "Separating piglets from the sow and getting them to eat feed independently",
+        "A piglet eating solid feed for the first time",
+        "The sow's milk production stopping",
+        "Entrusting piglets to another sow"
       ]
     }
   },
@@ -338,6 +428,15 @@
         "Melakukan perkawinan pada induk babi",
         "Induk babi menjadi bunting"
       ]
+    },
+    "en": {
+      "question": "What is \"farrowing (bunben)\"?",
+      "options": [
+        "A sow giving birth to piglets",
+        "A sow showing estrus",
+        "Mating a sow",
+        "A sow becoming pregnant"
+      ]
     }
   },
   {
@@ -368,6 +467,15 @@
         "Memberikan vaksinasi pada anak babi",
         "Memberi pakan pada babi",
         "Menyeleksi babi calon induk"
+      ]
+    },
+    "en": {
+      "question": "What is \"mating / service (tanetsuke)\"?",
+      "options": [
+        "Performing artificial insemination or natural mating on a female pig in heat",
+        "Vaccinating piglets",
+        "Feeding pigs",
+        "Selecting replacement gilts"
       ]
     }
   },
@@ -400,6 +508,15 @@
         "Masa menghangatkan anak babi yang baru lahir",
         "Masa menyeleksi dan membesarkan babi untuk pembiakan"
       ]
+    },
+    "en": {
+      "question": "What kind of rearing stage is \"fattening (hiiku)\"?",
+      "options": [
+        "The rearing stage of fattening weaned pigs up to market weight",
+        "The period when a sow raises piglets",
+        "The period of keeping newborn piglets warm",
+        "The period of selecting and raising breeding pigs"
+      ]
     }
   },
   {
@@ -430,6 +547,15 @@
         "Pakan / Air / Vaksin",
         "Pengamatan / Pencatatan / PDCA",
         "Pemilahan / Penataan / Pembersihan"
+      ]
+    },
+    "en": {
+      "question": "Which is the correct combination of the \"three basic essentials\" for a pig's growth?",
+      "options": [
+        "Clean fresh feed / clean fresh water / a warm, dry, draft-free living space",
+        "Feed / water / vaccine",
+        "Observation / recording / PDCA",
+        "Sort / Set in order / Shine"
       ]
     }
   },
@@ -462,6 +588,15 @@
         "Makan pakan sekitar 0,69%",
         "Berkelahi sekitar 0,35%"
       ]
+    },
+    "en": {
+      "question": "In \"Behavioral observation of weaned piglets\" (Keiichi Hashimoto, 1992), which behavior does a piglet 5 days after weaning spend the most time on?",
+      "options": [
+        "Sleeping, about 61.9%",
+        "Moving around, about 36.6%",
+        "Eating feed, about 0.69%",
+        "Fighting, about 0.35%"
+      ]
     }
   },
   {
@@ -492,6 +627,15 @@
         "Sekitar 1 hari",
         "Sekitar 1 bulan",
         "Sekitar 3 hari"
+      ]
+    },
+    "en": {
+      "question": "About how long is it said to take for a piglet just after weaning to get used to a new environment?",
+      "options": [
+        "About one week",
+        "About one day",
+        "About one month",
+        "About three days"
       ]
     }
   },
@@ -524,6 +668,15 @@
         "Sekitar setengahnya bahan impor",
         "Sekitar 30% bahan impor"
       ]
+    },
+    "en": {
+      "question": "How is the composition of pig feed ingredients used in Japan described?",
+      "options": [
+        "Almost 100% imported ingredients",
+        "Almost 100% domestic ingredients",
+        "About half imported ingredients",
+        "About 30% imported ingredients"
+      ]
     }
   },
   {
@@ -554,6 +707,15 @@
         "Penyapihan · Penggemukan · Pengiriman",
         "Berahi · Perkawinan · Diagnosis kebuntingan",
         "Kelahiran · Menyusui · Penyapihan"
+      ]
+    },
+    "en": {
+      "question": "Which is the combination of the three tasks that operate in linkage in the breeding department?",
+      "options": [
+        "Mating, pregnancy, farrowing",
+        "Weaning, fattening, shipping",
+        "Estrus, mating, pregnancy diagnosis",
+        "Farrowing, nursing, weaning"
       ]
     }
   },
@@ -586,6 +748,15 @@
         "Kecelakaan peralatan kandang roboh dan menimpa babi",
         "Kecelakaan babi pingsan karena panas"
       ]
+    },
+    "en": {
+      "question": "What kind of accident is \"crushing death (asshi)\" in pig farming?",
+      "options": [
+        "An accident in which a sow crushes a piglet to death by rolling over, etc.",
+        "An accident in which pigs suffocate from overcrowding",
+        "An accident in which barn equipment collapses and crushes pigs",
+        "An accident in which a pig collapses from the heat"
+      ]
     }
   },
   {
@@ -616,6 +787,15 @@
         "Babi dengan kinerja reproduksi unggul yang terdaftar sebagai babi bibit generasi berikutnya",
         "Babi jantan sebelum perkawinan pertama",
         "Babi muda calon babi potong yang diimpor dari luar"
+      ]
+    },
+    "en": {
+      "question": "Which is the most accurate description of a \"replacement gilt (kohoton)\"?",
+      "options": [
+        "A young pig being selected and raised as a future breeding pig",
+        "A pig with excellent breeding performance registered as a next-generation breeding pig",
+        "A boar before its first mating",
+        "A young meat-pig candidate introduced from outside"
       ]
     }
   },
@@ -648,6 +828,15 @@
         "Babi betina muda yang pertama kali berahi",
         "Anak babi yang lahir pada kelahiran pertama"
       ]
+    },
+    "en": {
+      "question": "Which is the most accurate description of \"first farrowing (shosan) / primiparous sow\"?",
+      "options": [
+        "A sow giving birth to piglets for the first time, or that sow itself",
+        "The period from a sow's first mating to her first farrowing",
+        "A young female pig that has reached estrus for the first time",
+        "A piglet born from the first (parity-1) farrowing"
+      ]
     }
   },
   {
@@ -678,6 +867,15 @@
         "Sekitar 70%",
         "Sekitar 80%",
         "Sekitar 50%"
+      ]
+    },
+    "en": {
+      "question": "Approximately what farrowing rate (ratio of farrowings to matings) is considered on-plan?",
+      "options": [
+        "About 90%",
+        "About 70%",
+        "About 80%",
+        "About 50%"
       ]
     }
   },
@@ -710,6 +908,15 @@
         "Mengukur bobot induk babi",
         "Pemeriksaan kesehatan rutin induk babi"
       ]
+    },
+    "en": {
+      "question": "What is \"pregnancy diagnosis (ninshin kantei)\"?",
+      "options": [
+        "An examination to confirm whether a sow is pregnant after mating",
+        "Calculating a sow's expected farrowing date",
+        "Measuring a sow's body weight",
+        "A regular checkup of a sow's health condition"
+      ]
     }
   },
   {
@@ -740,6 +947,15 @@
         "Angka yang mengukur kondisi kesehatan babi melalui tes darah",
         "Indikator suhu dan kelembapan di dalam kandang",
         "Indikator pertambahan bobot harian babi"
+      ]
+    },
+    "en": {
+      "question": "What is the \"Body Condition Score (BCS)\"?",
+      "options": [
+        "An index that scores the fleshiness and fat condition of a pig's body",
+        "A value measuring a pig's health condition by blood test",
+        "An index showing the temperature and humidity inside the barn",
+        "An index showing a pig's daily weight gain"
       ]
     }
   },
@@ -772,6 +988,15 @@
         "Memperbaiki kualitas daging babi",
         "Meningkatkan kemampuan reproduksi babi"
       ]
+    },
+    "en": {
+      "question": "What is the purpose of \"vaccination\" of pigs?",
+      "options": [
+        "To build immunity against specific infectious diseases and prevent disease",
+        "To promote pig growth",
+        "To improve pig meat quality",
+        "To enhance pig reproductive ability"
+      ]
     }
   },
   {
@@ -802,6 +1027,15 @@
         "Membesarkan anak babi dengan milky ween feeder",
         "Memberi zat besi pada anak babi, dan mengebiri jika jantan",
         "Seluruh masa pemeliharaan anak babi dari setelah lahir hingga pengiriman"
+      ]
+    },
+    "en": {
+      "question": "Which is the most accurate description of \"nursing / suckling (honyu)\"?",
+      "options": [
+        "A sow raising piglets by giving them her milk",
+        "Raising piglets with a milky-wean feeder",
+        "Administering iron to piglets and, for males, accompanying castration",
+        "The entire rearing period of piglets from just after farrowing to shipping"
       ]
     }
   },
@@ -834,6 +1068,15 @@
         "Dikurangi selama periode melahirkan hingga penyapihan",
         "Dikurangi sejak minggu ke-2 setelah melahirkan"
       ]
+    },
+    "en": {
+      "question": "When do you start reducing the feed amount for a sow before farrowing?",
+      "options": [
+        "From 3 days before the expected farrowing date",
+        "From 4 weeks before the expected farrowing date",
+        "Reduce it during the farrowing-to-weaning period",
+        "Reduce it from the 2nd week after farrowing"
+      ]
     }
   },
   {
@@ -864,6 +1107,15 @@
         "Tindakan memotong pendek ekor babi",
         "Tindakan memotong gigi taring babi",
         "Tindakan menyuntikkan zat besi pada babi"
+      ]
+    },
+    "en": {
+      "question": "What is \"castration (kyosei)\"?",
+      "options": [
+        "Surgically removing the testes of a boar",
+        "A procedure to shorten a pig's tail",
+        "A procedure to clip a pig's canine teeth",
+        "A procedure to inject iron into a pig"
       ]
     }
   },
@@ -896,6 +1148,15 @@
         "Tindakan menghilangkan ekor induk babi",
         "Tindakan menghilangkan seluruh ekor anak babi"
       ]
+    },
+    "en": {
+      "question": "What is \"tail docking (danbi)\"?",
+      "options": [
+        "A procedure to shorten a piglet's tail (to prevent tail biting)",
+        "A procedure to suppress a piglet's aggression",
+        "A procedure to remove a sow's tail",
+        "A procedure to remove a piglet's tail entirely"
+      ]
     }
   },
   {
@@ -926,6 +1187,15 @@
         "Untuk menguatkan tulang anak babi",
         "Untuk meningkatkan nafsu makan anak babi",
         "Untuk mencegah penyakit menular pada anak babi"
+      ]
+    },
+    "en": {
+      "question": "Why is \"iron administration (tetsuzai toyo)\" given to piglets?",
+      "options": [
+        "To prevent anemia",
+        "To strengthen the piglet's bones",
+        "To increase the piglet's appetite",
+        "To prevent infectious disease in piglets"
       ]
     }
   },
@@ -958,6 +1228,15 @@
         "Periode anak babi sedang menyusu",
         "Periode penyelesaian akhir sebelum pengiriman"
       ]
+    },
+    "en": {
+      "question": "What kind of period is the \"gestation period (ninshinki)\"?",
+      "options": [
+        "The period during which a sow carries piglets in her uterus",
+        "The growth period of piglets from weaning to the start of fattening",
+        "The period during which piglets are nursing",
+        "The final finishing period before shipping"
+      ]
     }
   },
   {
@@ -988,6 +1267,15 @@
         "Sekitar 90 hari (3 bulan)",
         "Sekitar 150 hari (5 bulan)",
         "Sekitar 280 hari (sekitar 9 bulan)"
+      ]
+    },
+    "en": {
+      "question": "About how many days is the gestation period of a sow?",
+      "options": [
+        "About 115 days (115 days after mating; individual variation 112-117 days)",
+        "About 90 days (3 months)",
+        "About 150 days (5 months)",
+        "About 280 days (about 9 months)"
       ]
     }
   },
@@ -1020,6 +1308,15 @@
         "Pencegahan infeksi bakteri akibat gigit ekor",
         "Pencegahan bau babi jantan"
       ]
+    },
+    "en": {
+      "question": "Which is the correct purpose of \"ear notching (jikoku)\" performed on newborn piglets?",
+      "options": [
+        "Individual identification",
+        "Prevention of anemia",
+        "Prevention of bacterial infection from tail biting",
+        "Prevention of boar odor"
+      ]
     }
   },
   {
@@ -1050,6 +1347,15 @@
         "Dari segera setelah kawin hingga hari ke-30 kebuntingan",
         "Hari ke-50–70 kebuntingan",
         "Selama masa menyusui setelah melahirkan"
+      ]
+    },
+    "en": {
+      "question": "From about when does the fetus grow large?",
+      "options": [
+        "From around day 98 of gestation until farrowing",
+        "From just after mating until day 30 of gestation",
+        "Days 50-70 of gestation",
+        "During the nursing period after farrowing"
       ]
     }
   },
@@ -1082,6 +1388,15 @@
         "Mulai melahirkan keesokan harinya",
         "Pertanda bahwa proses melahirkan sudah selesai"
       ]
+    },
+    "en": {
+      "question": "When \"milk let-down,\" in which milk squirts out vigorously as the sow's teat is squeezed, is confirmed, about how soon does farrowing begin?",
+      "options": [
+        "Farrowing begins within a few hours",
+        "Farrowing begins about a week later",
+        "Farrowing begins the next day",
+        "It is a sign that farrowing has already finished"
+      ]
     }
   },
   {
@@ -1112,6 +1427,15 @@
         "Mengawinkan babi dari ras yang berbeda",
         "Merotasi babi di beberapa kandang",
         "Membesarkan anak babi di peternakan lain"
+      ]
+    },
+    "en": {
+      "question": "What is \"fostering (satogo)\"?",
+      "options": [
+        "Entrusting piglets of a sow with many born to another sow that has capacity",
+        "Mating pigs of different breeds",
+        "Rotating pigs among multiple barns",
+        "Raising piglets on a different farm"
       ]
     }
   },
@@ -1144,6 +1468,15 @@
         "Mengisolasi induk babi dari babi lain",
         "Memudahkan pengukuran bobot induk babi"
       ]
+    },
+    "en": {
+      "question": "What is the main purpose of the \"anti-crushing bar (farrowing crate)\" in the farrowing pen?",
+      "options": [
+        "Restricting the sow's movement to prevent piglets from being crushed",
+        "Preventing piglets from escaping",
+        "Isolating the sow from other pigs",
+        "Making it easier to weigh the sow"
+      ]
     }
   },
   {
@@ -1174,6 +1507,15 @@
         "Untuk memberi pakan tambahan pada anak babi di tempat yang tak terjangkau induk",
         "Untuk meredakan stres induk babi saat melahirkan",
         "Untuk mengidentifikasi individu anak babi"
+      ]
+    },
+    "en": {
+      "question": "Which is the main purpose of installing a heat box or heater in the farrowing pen?",
+      "options": [
+        "To ensure all piglets can drink colostrum properly without losing their stamina",
+        "To give supplementary feed to piglets in a place the sow cannot enter",
+        "To relieve the sow's stress during farrowing",
+        "To identify individual piglets"
       ]
     }
   },
@@ -1206,6 +1548,15 @@
         "12 jam setelah lahir",
         "24 jam setelah lahir"
       ]
+    },
+    "en": {
+      "question": "In \"the absorption capacity of immune antibodies in the colostrum of newborn piglets,\" about how long can 100% absorption capacity be maintained?",
+      "options": [
+        "3 hours after birth",
+        "30 minutes after birth",
+        "12 hours after birth",
+        "24 hours after birth"
+      ]
     }
   },
   {
@@ -1236,6 +1587,15 @@
         "Dikawinkan 2 kali dengan jarak 24 jam",
         "Dikawinkan hanya 1 kali pada hari berahi",
         "Dikawinkan 4 kali dengan jarak 48 jam"
+      ]
+    },
+    "en": {
+      "question": "At about what interval and how many times is a gilt mated?",
+      "options": [
+        "Mated 3 times at intervals of about 12 hours after estrus",
+        "Mated 2 times at 24-hour intervals",
+        "Mated only once on the day of estrus",
+        "Mated 4 times at 48-hour intervals"
       ]
     }
   },
@@ -1268,6 +1628,15 @@
         "Sekitar 2,0–3,0 kg",
         "Sekitar 1,5–2,5 kg"
       ]
+    },
+    "en": {
+      "question": "Which is closest to the general birth weight of a pig?",
+      "options": [
+        "About 1.2-1.5 kg",
+        "About 0.5-0.8 kg",
+        "About 2.0-3.0 kg",
+        "About 1.5-2.5 kg"
+      ]
     }
   },
   {
@@ -1298,6 +1667,15 @@
         "Umur 7–10 hari",
         "Umur 40–50 hari",
         "Umur 60 hari"
+      ]
+    },
+    "en": {
+      "question": "On a typical farm, at about how many days of age are piglets weaned?",
+      "options": [
+        "25-26 days of age",
+        "7-10 days of age",
+        "40-50 days of age",
+        "60 days of age"
       ]
     }
   },
@@ -1330,6 +1708,15 @@
         "Penolakan kawin",
         "Refleks berbaring"
       ]
+    },
+    "en": {
+      "question": "Pressing on a sow's back and her standing still (immobilization) indicates which sign?",
+      "options": [
+        "Estrus",
+        "Poor physical condition",
+        "Refusal to mate",
+        "Lateral recumbency reflex"
+      ]
     }
   },
   {
@@ -1360,6 +1747,15 @@
         "Ketebalan lemak punggung 10 cm dari pangkal leher",
         "Ketebalan lemak punggung 3 cm dari pangkal ekor",
         "Ketebalan lemak bawah kulit di tengah bahu"
+      ]
+    },
+    "en": {
+      "question": "Where is the \"P2 point\" used to measure a sow's backfat thickness?",
+      "options": [
+        "Backfat thickness 5-6 cm from the dorsal side of the last rib (lateral to the midline)",
+        "Backfat thickness 10 cm from the base of the neck",
+        "Backfat thickness 3 cm from the base of the tail",
+        "Subcutaneous fat thickness at the center of the shoulder"
       ]
     }
   },
@@ -1392,6 +1788,15 @@
         "160 kg (sekitar 80%)",
         "190 kg (sekitar 95%)"
       ]
+    },
+    "en": {
+      "question": "In the example calculation of sow weight change, if the sow's weight around farrowing (including the fetuses' weight) is 200 kg, about how many kg (about what %) is the sow's weight after farrowing?",
+      "options": [
+        "177 kg (about 90%)",
+        "200 kg (about 100%)",
+        "160 kg (about 80%)",
+        "190 kg (about 95%)"
+      ]
     }
   },
   {
@@ -1422,6 +1827,15 @@
         "Keadaan induk babi yang mendekati hari melahirkan",
         "Keadaan babi yang stres karena panas",
         "Keadaan babi yang sedang sakit"
+      ]
+    },
+    "en": {
+      "question": "What is \"estrus (hatsujo)\"?",
+      "options": [
+        "A physiological phenomenon indicating that a female pig is ready to mate",
+        "A state in which a sow is close to giving birth",
+        "A state in which a pig feels stress from the heat",
+        "A state in which a pig is ill"
       ]
     }
   },
@@ -1454,6 +1868,15 @@
         "21 hari setelah disapih",
         "Pada hari penyapihan"
       ]
+    },
+    "en": {
+      "question": "In a properly managed weaned sow, in about how many days after weaning does estrus come?",
+      "options": [
+        "4-5 days after weaning",
+        "10-12 days after weaning",
+        "21 days after weaning",
+        "On the day of weaning"
+      ]
     }
   },
   {
@@ -1479,6 +1902,15 @@
     },
     "ind": {
       "question": "Manakah singkatan yang digunakan untuk “inseminasi buatan”?",
+      "options": [
+        "AI (Artificial Insemination)",
+        "PI (Pig Insemination)",
+        "SI (Swine Insemination)",
+        "NI (Natural Insemination)"
+      ]
+    },
+    "en": {
+      "question": "Which is used as the abbreviation for \"artificial insemination\"?",
       "options": [
         "AI (Artificial Insemination)",
         "PI (Pig Insemination)",
@@ -1516,6 +1948,15 @@
         "Sekitar 14 hari",
         "Sekitar 7 hari"
       ]
+    },
+    "en": {
+      "question": "How many days on average is the estrous cycle of a pig?",
+      "options": [
+        "About 21 days",
+        "About 28 days",
+        "About 14 days",
+        "About 7 days"
+      ]
     }
   },
   {
@@ -1546,6 +1987,15 @@
         "Total jumlah pakan yang diberikan pada babi",
         "Jumlah pakan yang dimakan babi dalam 1 hari",
         "Bobot babi saat pengiriman"
+      ]
+    },
+    "en": {
+      "question": "What is \"weight gain (zotai)\"?",
+      "options": [
+        "The amount of weight a pig gains within a certain period (daily gain = the increase per day)",
+        "The total amount of feed given to a pig",
+        "The amount of feed a pig eats in a day",
+        "A pig's weight at shipping"
       ]
     }
   },
@@ -1578,6 +2028,15 @@
         "1 minggu setelah melahirkan",
         "3 minggu setelah melahirkan"
       ]
+    },
+    "en": {
+      "question": "How soon after farrowing do the immunoglobulins (IgG, etc.) abundant in colostrum decrease markedly?",
+      "options": [
+        "36-48 hours after farrowing",
+        "3-6 hours after farrowing",
+        "One week after farrowing",
+        "Three weeks after farrowing"
+      ]
     }
   },
   {
@@ -1608,6 +2067,15 @@
         "Metode mengirim babi satu per satu secara berurutan",
         "Metode memelihara induk dan anak babi dalam kandang yang sama",
         "Metode membuka kandang 24 jam agar babi bebas keluar masuk"
+      ]
+    },
+    "en": {
+      "question": "What kind of rearing method is \"all-in all-out\"?",
+      "options": [
+        "A method of introducing pigs into a barn all at once and shipping them all out at once",
+        "A method of shipping pigs out one by one in order",
+        "A method of keeping sows and piglets in the same barn",
+        "A method of keeping the barn open 24 hours for free movement"
       ]
     }
   },
@@ -1640,6 +2108,15 @@
         "Rasio protein dalam pakan",
         "Rasio biaya pakan terhadap harga pengiriman"
       ]
+    },
+    "en": {
+      "question": "What is the \"feed conversion ratio (shiryo yokyu ritsu)\"?",
+      "options": [
+        "An index showing the amount of feed needed to gain 1 kg of body weight",
+        "The proportion of feed a pig eats in a day",
+        "The proportion of protein contained in feed",
+        "The proportion of feed cost in the shipping price"
+      ]
     }
   },
   {
@@ -1670,6 +2147,15 @@
         "Stres panas",
         "Naiknya konsentrasi karbon dioksida",
         "Pertambahan bobot menjelang pengiriman"
+      ]
+    },
+    "en": {
+      "question": "Which is NOT listed as a factor that temporarily lowers a pig's feed intake?",
+      "options": [
+        "A reaction from vaccination",
+        "Heat stress",
+        "A rise in carbon dioxide concentration",
+        "Weight gain just before shipping"
       ]
     }
   },
@@ -1702,6 +2188,15 @@
         "Sekitar 130–150 kg",
         "Sekitar 70–90 kg"
       ]
+    },
+    "en": {
+      "question": "Which is closest to the general market weight of a fattening pig in Japan?",
+      "options": [
+        "About 110-120 kg",
+        "About 90-100 kg",
+        "About 130-150 kg",
+        "About 70-90 kg"
+      ]
     }
   },
   {
@@ -1733,6 +2228,15 @@
         "Lemak kasar (Crude Lipid, notasi CP)",
         "Protein lengkap (Complete Protein)"
       ]
+    },
+    "en": {
+      "question": "Which component does \"CP (CP22, CP19, etc.)\" used in feed formulation indicate?",
+      "options": [
+        "Crude Protein",
+        "Convertible Protein (digestible protein)",
+        "Crude Lipid (written as CP)",
+        "Complete Protein"
+      ]
     }
   },
   {
@@ -1762,6 +2266,15 @@
         "3,0",
         "0,33",
         "1,0",
+        "30"
+      ]
+    },
+    "en": {
+      "question": "What is the feed conversion ratio (FCR) when a pig eats 3 kg and gains 1 kg?",
+      "options": [
+        "3.0",
+        "0.33",
+        "1.0",
         "30"
       ]
     }
@@ -1795,6 +2308,15 @@
         "Lemak bawah kulit tipis sehingga tubuh cenderung menyimpan panas",
         "Bulu tumbuh lebat sehingga sulit melepaskan panas"
       ]
+    },
+    "en": {
+      "question": "Which is the most accurate main reason pigs are weak against heat?",
+      "options": [
+        "Their sweat glands barely function, so they cannot regulate body temperature by sweating",
+        "They have no sweat glands at all, so they cannot sweat whatsoever",
+        "Their subcutaneous fat is thin, so they try to store heat in the body",
+        "Their coat is densely grown, making heat release difficult"
+      ]
     }
   },
   {
@@ -1825,6 +2347,15 @@
         "Mencegah kuku babi tumbuh terlalu panjang dan mengikisnya secukupnya",
         "Menaikkan suhu permukaan lantai untuk meningkatkan kehangatan",
         "Memisahkan kotoran/urin dengan pakan yang tercecer untuk dikumpulkan"
+      ]
+    },
+    "en": {
+      "question": "Which is the most accurate main purpose of a slatted floor?",
+      "options": [
+        "To let manure and urine fall through the gaps in the slats, keeping the floor surface clean",
+        "To prevent pigs' hooves from overgrowing and wear them down moderately",
+        "To raise the floor temperature and enhance the warming effect",
+        "To separate and collect manure/urine and spilled feed"
       ]
     }
   },
@@ -1857,6 +2388,15 @@
         "Total anak lahir × jumlah induk babi",
         "Bobot pengiriman × jumlah pengiriman"
       ]
+    },
+    "en": {
+      "question": "How is \"carcass weight per sow\" calculated?",
+      "options": [
+        "Carcass weight per fattening pig x annual number of pigs shipped per sow",
+        "Annual number of weaned piglets / number of sows",
+        "Total number born x number of sows",
+        "Shipping weight x number of pigs shipped"
+      ]
     }
   },
   {
@@ -1887,6 +2427,15 @@
         "Memasukkan seluruhnya langsung ke tangki aerasi",
         "Mensterilkan di tangki disinfeksi",
         "Mencampur dengan kompos yang ingin dikembalikan"
+      ]
+    },
+    "en": {
+      "question": "What do you do first in manure/slurry treatment?",
+      "options": [
+        "Separate solids from liquids",
+        "Put the entire volume directly into the aeration tank",
+        "Sterilize it in a disinfection tank",
+        "Mix it with the compost to be returned"
       ]
     }
   },
@@ -1919,6 +2468,15 @@
         "Babi tumbuh sehat, yang membesarkan untung, yang makan bertambah",
         "Babi dibesarkan dengan bahagia, orang yang membesarkannya merasa bangga, dan orang yang memakannya merasa senang"
       ]
+    },
+    "en": {
+      "question": "Which is the correct combination of the \"chain of happiness\" that Hirano makes its mission in its management philosophy?",
+      "options": [
+        "Pigs grow quickly, the people who raise them become comfortable, and consumers can buy cheaply",
+        "Pigs grow to standard, the people who raise them are recognized, and consumers are satisfied",
+        "Pigs grow healthy, the people who raise them profit, and consumers increase",
+        "Pigs are raised happily, the people who raise them take pride, and consumers are delighted"
+      ]
     }
   },
   {
@@ -1949,6 +2507,15 @@
         "Asal diri sendiri baik saja, tidak memikirkan sekitar",
         "Sadar akan optimalisasi menyeluruh",
         "Berupaya hidup berdampingan dan sama-sama sejahtera"
+      ]
+    },
+    "en": {
+      "question": "Which attitude is commonly said to be \"strictly avoided\" throughout the code of conduct?",
+      "options": [
+        "Acting as if it were one's own responsibility",
+        "Thinking only of oneself and not considering those around you",
+        "Being conscious of overall optimization",
+        "Aiming for coexistence and mutual prosperity"
       ]
     }
   },
@@ -1981,6 +2548,15 @@
         "Mengamati perilaku dan kondisi babi setiap hari serta mengelola dengan kesadaran mengurangi stres",
         "Memotong daging tanpa mempedulikan rendemen daging"
       ]
+    },
+    "en": {
+      "question": "In \"Creating economic pigs and happiness,\" which is the recommended action?",
+      "options": [
+        "Rearing that prioritizes efficiency only",
+        "Taking summer/winter measures only after the heat or cold becomes full-blown",
+        "Observing pigs' behavior and condition daily and managing with awareness of reducing stress",
+        "Cutting meat without concern for the yield of retail cuts"
+      ]
     }
   },
   {
@@ -2011,6 +2587,15 @@
         "Meski sudah mengetahui adanya kelainan, tetap “menunggu dan melihat” serta menunda penanganan",
         "Menemukan dini tanda kecelakaan atau penyakit dan menanganinya dengan cepat",
         "Menerapkan pengelolaan jumlah ekor dan lingkungan yang sesuai dengan tahap pertumbuhan"
+      ]
+    },
+    "en": {
+      "question": "In \"Creating economic pigs and happiness,\" which thinking/behavior should be strictly avoided?",
+      "options": [
+        "Not neglecting the checking, verification, and correction to create the best environment for pigs",
+        "Putting off action with a \"wait and see\" approach even while aware of an abnormality",
+        "Detecting signs of accidents or disease early and treating them promptly",
+        "Thoroughly managing appropriate numbers and environment according to the growth stage"
       ]
     }
   },
@@ -2043,6 +2628,15 @@
         "Cukup asal pekerjaan bagian sendiri selesai",
         "Urusan bagian berikutnya biar bagian berikutnya yang bertanggung jawab memikirkannya"
       ]
+    },
+    "en": {
+      "question": "In \"the spirit of the relay industry,\" which awareness should Hirano have?",
+      "options": [
+        "Once shipping is complete, the pig-farming company's responsibility ends",
+        "Helping one another with colleagues and pursuing results while coordinating with each department",
+        "As long as one's own department's work is done, that is enough",
+        "The next department should take responsibility for thinking about its own matters"
+      ]
     }
   },
   {
@@ -2073,6 +2667,15 @@
         "Membayangkan pekerjaan bagian/petugas berikutnya lalu menyiapkan dan merapikan",
         "Tidak membereskan sehingga menyusahkan orang yang memakai berikutnya (pekerjaan dibiarkan begitu saja)",
         "Serah terima pada dasarnya dilakukan sebelumnya"
+      ]
+    },
+    "en": {
+      "question": "In \"the spirit of the relay industry,\" which thinking/behavior should be strictly avoided?",
+      "options": [
+        "Actively conveying noticed points even if outside one's own responsibility",
+        "Anticipating the work of the next department or person and preparing and organizing",
+        "Not cleaning up and causing trouble for the next user (leaving work unfinished)",
+        "Handovers are basically done in advance"
       ]
     }
   },
@@ -2105,6 +2708,15 @@
         "Tim bersama-sama melakukan analisis penyebab, berbagi informasi, dan mencegah terulang",
         "Menyerahkan semuanya kepada petugas"
       ]
+    },
+    "en": {
+      "question": "What is the most desirable response when a problem occurs on site?",
+      "options": [
+        "Prioritizing identifying those involved and clarifying responsibility",
+        "Restricting information sharing and prioritizing internal handling",
+        "Conducting cause analysis, information sharing, and recurrence prevention as a team",
+        "Leaving everything to the person in charge"
+      ]
     }
   },
   {
@@ -2135,6 +2747,15 @@
         "Secara alami membantu rekan yang sibuk, sadar akan optimalisasi menyeluruh",
         "Sehari sebelum libur membuat catatan, mengoper ke penerus keesokan harinya",
         "Menjelek-jelekkan, bergunjing untuk merendahkan orang lain, dan terus melontarkan kabar tak berdasar"
+      ]
+    },
+    "en": {
+      "question": "In \"a sense of responsibility and team bonds,\" which thinking/behavior should be strictly avoided?",
+      "options": [
+        "Sharing problems across departments and responding as a team in emergencies",
+        "Naturally supporting busy colleagues and being conscious of overall optimization",
+        "Making notes the day before a day off and handing over to the next person",
+        "Spreading bad rumors and gossip to disparage others and repeatedly telling baseless stories"
       ]
     }
   },
@@ -2167,6 +2788,15 @@
         "Mengajarkan apa yang diketahui kepada sekitar, membina penerus, sehingga diri sendiri pun berkembang",
         "Hanya mengerjakan yang diperintahkan, tidak berinisiatif mencari pekerjaan sendiri"
       ]
+    },
+    "en": {
+      "question": "Which is the correct behavior for \"an honest, sincere, and inquisitive attitude\"?",
+      "options": [
+        "Sticking to one's own way and not listening to others' opinions",
+        "Hiding failures and not reporting them",
+        "Teaching what one knows to those around and growing oneself by developing successors",
+        "Doing only what one is told and not seeking out work oneself"
+      ]
     }
   },
   {
@@ -2197,6 +2827,15 @@
         "Tidak lupa menyapa dan berterima kasih kepada warga setempat dan mitra terkait",
         "Tidak memahami pentingnya pengolahan air limbah dan pengelolaan kompos sehingga mengabaikan masalah kotoran-urin",
         "Secara berkala mengumpulkan dan berbagi informasi dari perwakilan daerah"
+      ]
+    },
+    "en": {
+      "question": "In \"coexistence with the local community,\" which thinking/behavior should be strictly avoided?",
+      "options": [
+        "Thoroughly managing odor, noise, and hygiene, and being considerate to the community",
+        "Never failing to greet and thank local residents and related businesses",
+        "Not understanding the importance of wastewater treatment and compost management and deprioritizing manure troubles",
+        "Regularly gathering and sharing information from community representatives"
       ]
     }
   },
@@ -2229,6 +2868,15 @@
         "Sistem usaha bersama dua perusahaan yang membagi pembiakan dan penggemukan",
         "Sistem memelihara induk dan babi gemukan dalam satu kandang yang dibagi dua jalur"
       ]
+    },
+    "en": {
+      "question": "Which is the most accurate description of the \"two-site system\"?",
+      "options": [
+        "Dividing the farm into \"Site 1\" for breeding/farrowing and \"Site 2\" for weaning/fattening/shipping",
+        "A one-stop integrated method doing all processes on one farm",
+        "A joint-management method where two companies split breeding and fattening",
+        "Keeping sows and fattening pigs in two rows in the same barn"
+      ]
     }
   },
   {
@@ -2259,6 +2907,15 @@
         "Untuk mengurangi biaya pakan setengahnya",
         "Untuk memperbesar bobot pengiriman",
         "Untuk mengurangi jumlah karyawan"
+      ]
+    },
+    "en": {
+      "question": "What is the biggest aim of dividing a farm by the \"two-site system\"?",
+      "options": [
+        "To keep damage small even if disease enters one of the sites (biosecurity)",
+        "To cut feed costs in half",
+        "To increase shipping weight",
+        "To reduce the number of employees"
       ]
     }
   },
@@ -2291,6 +2948,15 @@
         "Sekitar 15 L",
         "Hampir tidak memerlukan air"
       ]
+    },
+    "en": {
+      "question": "Which is closest as a guideline for a sow's daily water intake?",
+      "options": [
+        "About 40 L or more (can exceed 60 L during lactation)",
+        "About 5 L",
+        "About 15 L",
+        "Almost no water is needed"
+      ]
     }
   },
   {
@@ -2321,6 +2987,15 @@
         "Sekitar 5 menit untuk keluar 500 mL",
         "Keluar 2 L dalam 1 detik",
         "Laju aliran tidak perlu diperiksa"
+      ]
+    },
+    "en": {
+      "question": "Which is the correct guideline for checking the flow rate of a sow's nipple drinker?",
+      "options": [
+        "A flow rate that fills 500 mL (one PET bottle) in about 20 seconds",
+        "About 500 mL comes out in about 5 minutes",
+        "2 L comes out in 1 second",
+        "There is no need to check the flow rate"
       ]
     }
   },
@@ -2353,6 +3028,15 @@
         "Sepanjang tahun sekitar 1 kali/jam",
         "Pada dasarnya tidak perlu ventilasi"
       ]
+    },
+    "en": {
+      "question": "Which is the correct guideline for the ventilation rate in a windowless barn?",
+      "options": [
+        "About 3 times/hour in the cold season, about 60 times/hour in the hot season",
+        "About 60 times/hour in the cold season, about 3 times/hour in the hot season",
+        "About 1 time/hour throughout the year",
+        "Ventilation is basically unnecessary"
+      ]
     }
   },
   {
@@ -2383,6 +3067,15 @@
         "Penyediaan oksigen",
         "Penghilangan gas, bau, dan kelembapan",
         "Pengaturan suhu di dalam kandang"
+      ]
+    },
+    "en": {
+      "question": "Which is NOT included in the \"four purposes\" of barn ventilation?",
+      "options": [
+        "Reducing feed cost",
+        "Supplying oxygen",
+        "Removing gas, odor, and moisture",
+        "Adjusting the temperature inside the barn"
       ]
     }
   },
@@ -2415,6 +3108,15 @@
         "Kadar garam dalam air",
         "Jumlah air minum harian babi"
       ]
+    },
+    "en": {
+      "question": "Which is the most accurate meaning of the indicator \"BOD\" used in wastewater treatment?",
+      "options": [
+        "The amount of oxygen needed when microorganisms decompose organic matter in water (an index of water pollution)",
+        "Water temperature",
+        "Salt concentration in water",
+        "A pig's daily water intake"
+      ]
     }
   },
   {
@@ -2444,6 +3146,15 @@
         "30–50%",
         "5–10%",
         "70–90%",
+        "100%"
+      ]
+    },
+    "en": {
+      "question": "Which is the correct target value for \"SV30,\" which shows the state of activated sludge?",
+      "options": [
+        "30-50%",
+        "5-10%",
+        "70-90%",
         "100%"
       ]
     }
