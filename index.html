@@ -421,7 +421,6 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
         <p id="confirm-q-name" style="font-size:0.9rem;color:var(--text-light);margin-bottom:24px"></p>
         <div class="confirm-buttons">
           <button class="confirm-btn yes" id="confirm-yes">はい</button>
-          <button class="confirm-btn no" id="confirm-no">いいえ</button>
         </div>
       </div>
     </div>
@@ -587,7 +586,7 @@ var TRANSLATIONS = {
     homeTitle: "HSS認定試験", homeSubtitle: "株式会社ヒラノ",
     badgeConfirm: "受験意志確認", badgeExam: "本試験",
     entryConfirmTitle: "受験意志を回答する",
-    entryConfirmDesc: "試験を受けるかどうかの意志確認です。氏名を入力し、「はい」または「いいえ」で回答してください。",
+    entryConfirmDesc: "試験を受ける意志の確認です。氏名を入力し、「はい」で回答してください。",
     entryExamTitle: "HSS認定 本試験を受験する",
     entryExamDesc: "HSS認定制度の本試験です。パスワードが必要です。全60問を出題します。",
     metaQ: "📝 60問", metaT: "⏱ 60分", metaP: "🎯 70%合格",
@@ -649,7 +648,7 @@ var TRANSLATIONS = {
     homeTitle: "HSS Certification Exam", homeSubtitle: "Hirano Co., Ltd.",
     badgeConfirm: "Intention Check", badgeExam: "Main Exam",
     entryConfirmTitle: "Respond to Exam Intention",
-    entryConfirmDesc: "Confirm whether you intend to take the exam. Enter your name and respond with Yes or No.",
+    entryConfirmDesc: "Confirm your intention to take the exam. Enter your name and respond with Yes.",
     entryExamTitle: "Take HSS Certification Exam",
     entryExamDesc: "HSS Certification main exam. Password required. 60 questions.",
     metaQ: "📝 60 Questions", metaT: "⏱ 60 min", metaP: "🎯 70% to pass",
@@ -711,7 +710,7 @@ var TRANSLATIONS = {
     homeTitle: "Ky thi Chung chi HSS", homeSubtitle: "Cong ty Hirano",
     badgeConfirm: "Xac nhan y dinh", badgeExam: "Thi chinh thuc",
     entryConfirmTitle: "Tra loi y dinh du thi",
-    entryConfirmDesc: "Xac nhan ban co du dinh thi hay khong. Nhap ho ten va tra loi Co hoac Khong.",
+    entryConfirmDesc: "Xac nhan ban du dinh tham gia thi. Nhap ho ten va tra loi Co.",
     entryExamTitle: "Thi chung chi HSS chinh thuc",
     entryExamDesc: "Ky thi chinh thuc chung chi HSS. Can mat khau. 60 cau.",
     metaQ: "📝 60 cau", metaT: "⏱ 60 phut", metaP: "🎯 70% dat",
@@ -773,7 +772,7 @@ var TRANSLATIONS = {
     homeTitle: "Ujian Sertifikasi HSS", homeSubtitle: "PT Hirano",
     badgeConfirm: "Konfirmasi Niat", badgeExam: "Ujian Utama",
     entryConfirmTitle: "Konfirmasi Niat Ujian",
-    entryConfirmDesc: "Konfirmasi apakah Anda berniat mengikuti ujian. Masukkan nama dan jawab Ya atau Tidak.",
+    entryConfirmDesc: "Konfirmasi niat Anda mengikuti ujian. Masukkan nama dan jawab Ya.",
     entryExamTitle: "Ikuti Ujian Sertifikasi HSS",
     entryExamDesc: "Ujian utama sertifikasi HSS. Memerlukan kata sandi. 60 soal.",
     metaQ: "📝 60 Soal", metaT: "⏱ 60 menit", metaP: "🎯 70% lulus",
@@ -940,7 +939,6 @@ function applyTranslations(){
   document.getElementById("confirm-q-title").textContent = t("confirmQTitle");
   document.getElementById("confirm-q-desc").textContent = t("confirmQuestion");
   document.getElementById("confirm-yes").textContent = t("yes");
-  document.getElementById("confirm-no").textContent = t("no");
   document.getElementById("confirm-result-home").textContent = t("homeBtn");
   document.getElementById("password-title").textContent = t("passwordTitle");
   document.getElementById("password-desc").textContent = t("passwordDesc");
@@ -1002,8 +1000,7 @@ document.getElementById("confirm-back-btn").addEventListener("click",function(){
 
 function sendConfirmResult(answer){
   var yesBtn = document.getElementById("confirm-yes");
-  var noBtn = document.getElementById("confirm-no");
-  yesBtn.disabled = true; noBtn.disabled = true;
+  yesBtn.disabled = true;
 
   var isYes = answer === "yes";
   var icon = isYes ? t("confirmResultYesIcon") : t("confirmResultNoIcon");
@@ -1031,7 +1028,6 @@ function sendConfirmResult(answer){
   reliableSubmit(resultData, { jitter: false });
 }
 document.getElementById("confirm-yes").addEventListener("click",function(){ sendConfirmResult("yes"); });
-document.getElementById("confirm-no").addEventListener("click",function(){ sendConfirmResult("no"); });
 document.getElementById("confirm-result-home").addEventListener("click",function(){ showScreen("home-screen"); });
 
 // ==================== PASSWORD FLOW ====================
