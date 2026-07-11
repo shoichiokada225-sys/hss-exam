@@ -1,0 +1,2451 @@
+[
+  {
+    "question": "「肉豚（にくとん）」の説明として最も正確なものはどれですか？",
+    "options": [
+      "食肉を目的として肥育・出荷される豚",
+      "繁殖にも食肉にも供することが出来る豚",
+      "発情を促す豚のこと",
+      "と畜場に出荷された豚の食肉部分のこと"
+    ],
+    "answer": "食肉を目的として肥育・出荷される豚",
+    "explanation": "参考ページ: 5, 27, 123",
+    "category": "肉豚・出荷・肉",
+    "source": "setA-1.0",
+    "vi": {
+      "question": "Mô tả chính xác nhất về “heo thịt (nikuton)” là gì?",
+      "options": [
+        "Heo được vỗ béo và xuất chuồng nhằm mục đích lấy thịt",
+        "Heo có thể dùng cho cả sinh sản lẫn lấy thịt",
+        "Heo dùng để kích thích động dục",
+        "Phần thịt của heo đã được đưa đến lò mổ"
+      ]
+    },
+    "ind": {
+      "question": "Manakah penjelasan paling tepat tentang “babi potong (nikuton)”?",
+      "options": [
+        "Babi yang digemukkan dan dikirim untuk tujuan diambil dagingnya",
+        "Babi yang bisa digunakan untuk pembiakan maupun konsumsi daging",
+        "Babi untuk merangsang berahi",
+        "Bagian daging dari babi yang telah dikirim ke rumah potong"
+      ]
+    }
+  },
+  {
+    "question": "1頭の枝肉からとれる正肉はだいたいどのくらいですか？",
+    "options": [
+      "約54〜55kg",
+      "約115kg",
+      "約30kg",
+      "約80kg"
+    ],
+    "answer": "約54〜55kg",
+    "explanation": "参考ページ: 7",
+    "category": "肉豚・出荷・肉",
+    "source": "setA-2.0",
+    "vi": {
+      "question": "Lượng thịt thành phẩm lấy được từ một thân thịt (carcass) khoảng bao nhiêu?",
+      "options": [
+        "Khoảng 54–55 kg",
+        "Khoảng 115 kg",
+        "Khoảng 30 kg",
+        "Khoảng 80 kg"
+      ]
+    },
+    "ind": {
+      "question": "Berapa kira-kira daging bersih (siap jual) yang diperoleh dari satu karkas?",
+      "options": [
+        "Sekitar 54–55 kg",
+        "Sekitar 115 kg",
+        "Sekitar 30 kg",
+        "Sekitar 80 kg"
+      ]
+    }
+  },
+  {
+    "question": "豚肉に特に多く含まれ、夏バテ（夏労）回復に効くとされる栄養素はどれですか？",
+    "options": [
+      "ビタミンB1",
+      "ビタミンC",
+      "ビタミンA",
+      "カルシウム"
+    ],
+    "answer": "ビタミンB1",
+    "explanation": "参考ページ: 7",
+    "category": "飼料・栄養",
+    "source": "setA-3.0",
+    "vi": {
+      "question": "Dưỡng chất nào có nhiều trong thịt heo và được cho là giúp phục hồi mệt mỏi do nóng (suy nhược mùa hè)?",
+      "options": [
+        "Vitamin B1",
+        "Vitamin C",
+        "Vitamin A",
+        "Canxi"
+      ]
+    },
+    "ind": {
+      "question": "Nutrisi apa yang banyak terkandung dalam daging babi dan dipercaya membantu memulihkan kelelahan akibat panas (kelelahan musim panas)?",
+      "options": [
+        "Vitamin B1",
+        "Vitamin C",
+        "Vitamin A",
+        "Kalsium"
+      ]
+    }
+  },
+  {
+    "question": "「消毒（しょうどく）」を豚舎で行う主な目的は何ですか？",
+    "options": [
+      "病原体を死滅させ、豚への感染症の発生・蔓延を防ぐため",
+      "精液の品質を保つため",
+      "害獣を駆除するため",
+      "飼料の品質を保つため"
+    ],
+    "answer": "病原体を死滅させ、豚への感染症の発生・蔓延を防ぐため",
+    "explanation": "参考ページ: 14, 18, 20",
+    "category": "衛生・防疫",
+    "source": "setA-4.0",
+    "vi": {
+      "question": "Mục đích chính của việc “khử trùng” trong chuồng heo là gì?",
+      "options": [
+        "Tiêu diệt mầm bệnh, ngăn ngừa phát sinh và lây lan bệnh truyền nhiễm cho heo",
+        "Giữ chất lượng tinh dịch",
+        "Diệt trừ thú gây hại",
+        "Giữ chất lượng thức ăn"
+      ]
+    },
+    "ind": {
+      "question": "Apa tujuan utama melakukan “disinfeksi” di kandang babi?",
+      "options": [
+        "Membunuh patogen serta mencegah munculnya dan menyebarnya penyakit menular pada babi",
+        "Menjaga kualitas semen",
+        "Membasmi hama",
+        "Menjaga kualitas pakan"
+      ]
+    }
+  },
+  {
+    "question": "母豚の体温が何℃以上のとき、抗菌薬を注射するよう指示していますか？",
+    "options": [
+      "39.5度以上",
+      "37.5度以上",
+      "38度以上",
+      "41度以上"
+    ],
+    "answer": "39.5度以上",
+    "explanation": "参考ページ: 18",
+    "category": "繁殖・分娩",
+    "source": "setA-5.0",
+    "vi": {
+      "question": "Khi thân nhiệt heo nái từ bao nhiêu độ trở lên thì có chỉ định tiêm kháng sinh?",
+      "options": [
+        "Từ 39,5 độ trở lên",
+        "Từ 37,5 độ trở lên",
+        "Từ 38 độ trở lên",
+        "Từ 41 độ trở lên"
+      ]
+    },
+    "ind": {
+      "question": "Pada suhu tubuh induk babi berapa derajat ke atas diinstruksikan untuk menyuntikkan antibiotik?",
+      "options": [
+        "39,5 derajat ke atas",
+        "37,5 derajat ke atas",
+        "38 derajat ke atas",
+        "41 derajat ke atas"
+      ]
+    }
+  },
+  {
+    "question": "豚舎の消毒において、正しい手順はどれですか？",
+    "options": [
+      "洗浄→乾燥→消毒",
+      "消毒→洗浄→乾燥",
+      "洗浄→消毒→乾燥",
+      "乾燥→消毒→洗浄"
+    ],
+    "answer": "洗浄→乾燥→消毒",
+    "explanation": "参考ページ: 18",
+    "category": "衛生・防疫",
+    "source": "setA-6.0",
+    "vi": {
+      "question": "Trình tự đúng khi khử trùng chuồng heo là gì?",
+      "options": [
+        "Rửa → Làm khô → Khử trùng",
+        "Khử trùng → Rửa → Làm khô",
+        "Rửa → Khử trùng → Làm khô",
+        "Làm khô → Khử trùng → Rửa"
+      ]
+    },
+    "ind": {
+      "question": "Manakah urutan yang benar dalam disinfeksi kandang babi?",
+      "options": [
+        "Mencuci → Mengeringkan → Disinfeksi",
+        "Disinfeksi → Mencuci → Mengeringkan",
+        "Mencuci → Disinfeksi → Mengeringkan",
+        "Mengeringkan → Disinfeksi → Mencuci"
+      ]
+    }
+  },
+  {
+    "question": "5Sのうち「②整頓」の説明として最も正確なものはどれですか？",
+    "options": [
+      "必要なものを必要なときに使える状態にすること。使ったら元に戻す",
+      "いるものといらないものを明確に分類し、いらないものは処分する",
+      "汚れや乱れがない状態にすること",
+      "ルールや決まり事を習慣化すること"
+    ],
+    "answer": "必要なものを必要なときに使える状態にすること。使ったら元に戻す",
+    "explanation": "参考ページ: 14",
+    "category": "衛生・防疫",
+    "source": "setA-7.0",
+    "vi": {
+      "question": "Mô tả chính xác nhất về “②Sắp xếp (Seiton)” trong 5S là gì?",
+      "options": [
+        "Làm cho thứ cần thiết có thể dùng được ngay khi cần; dùng xong trả về chỗ cũ",
+        "Phân loại rõ thứ cần và không cần, loại bỏ thứ không cần",
+        "Làm cho không còn bẩn hay lộn xộn",
+        "Biến quy tắc, quy định thành thói quen"
+      ]
+    },
+    "ind": {
+      "question": "Manakah penjelasan paling tepat tentang “②Penataan (Seiton)” dalam 5S?",
+      "options": [
+        "Membuat barang yang diperlukan siap dipakai saat dibutuhkan; setelah dipakai dikembalikan ke tempatnya",
+        "Memilah dengan jelas barang yang perlu dan tidak perlu, lalu membuang yang tidak perlu",
+        "Membuat keadaan bebas dari kotoran dan kekacauan",
+        "Membiasakan aturan dan ketentuan"
+      ]
+    }
+  },
+  {
+    "question": "5Sの「⑤しつけ」に含まれるものはどれですか？",
+    "options": [
+      "ルールや決まり事を習慣化し、コンプライアンス（法令順守）などを守ること",
+      "いるものといらないものを分類して処分すること",
+      "きれいになった状態を保つこと",
+      "必要なものを元に戻すこと"
+    ],
+    "answer": "ルールや決まり事を習慣化し、コンプライアンス（法令順守）などを守ること",
+    "explanation": "参考ページ: 14",
+    "category": "衛生・防疫",
+    "source": "setA-8.0",
+    "vi": {
+      "question": "Điều nào thuộc về “⑤Kỷ luật (Shitsuke)” trong 5S?",
+      "options": [
+        "Biến quy tắc, quy định thành thói quen và tuân thủ pháp luật (compliance)",
+        "Phân loại và loại bỏ thứ cần và không cần",
+        "Duy trì trạng thái đã sạch sẽ",
+        "Trả thứ cần thiết về chỗ cũ"
+      ]
+    },
+    "ind": {
+      "question": "Manakah yang termasuk dalam “⑤Pembiasaan (Shitsuke)” pada 5S?",
+      "options": [
+        "Membiasakan aturan dan ketentuan serta mematuhi hukum (compliance)",
+        "Memilah dan membuang barang yang perlu dan tidak perlu",
+        "Mempertahankan keadaan yang sudah bersih",
+        "Mengembalikan barang yang diperlukan ke tempatnya"
+      ]
+    }
+  },
+  {
+    "question": "「MD（Minimal Disease）」の意味として最も正確なものはどれですか？",
+    "options": [
+      "疾病を最小限に抑え、健康な豚体を維持して収益を最大にする衛生管理プログラム",
+      "農場の病気を完全にゼロにする無病・無菌の状態を指す",
+      "発病した豚を最小限の薬剤で治療する投薬プログラム",
+      "母豚の繁殖成績を最大化するための飼養管理プログラム"
+    ],
+    "answer": "疾病を最小限に抑え、健康な豚体を維持して収益を最大にする衛生管理プログラム",
+    "explanation": "参考ページ: 23",
+    "category": "衛生・防疫",
+    "source": "setA-9.0",
+    "vi": {
+      "question": "Ý nghĩa chính xác nhất của “MD (Minimal Disease)” là gì?",
+      "options": [
+        "Chương trình quản lý vệ sinh nhằm giảm thiểu bệnh tật, duy trì cơ thể heo khỏe mạnh và tối đa hóa lợi nhuận",
+        "Chỉ trạng thái không bệnh, vô trùng, loại bỏ hoàn toàn bệnh ở trang trại",
+        "Chương trình dùng thuốc điều trị heo phát bệnh với lượng thuốc tối thiểu",
+        "Chương trình quản lý nuôi dưỡng nhằm tối đa hóa thành tích sinh sản của heo nái"
+      ]
+    },
+    "ind": {
+      "question": "Apa makna paling tepat dari “MD (Minimal Disease)”?",
+      "options": [
+        "Program manajemen kebersihan yang menekan penyakit seminimal mungkin, menjaga tubuh babi tetap sehat, dan memaksimalkan keuntungan",
+        "Kondisi bebas penyakit dan steril yang menihilkan penyakit di peternakan",
+        "Program pengobatan babi yang sakit dengan obat seminimal mungkin",
+        "Program manajemen pemeliharaan untuk memaksimalkan kinerja reproduksi induk babi"
+      ]
+    }
+  },
+  {
+    "question": "「離乳（りにゅう）」とは何ですか？",
+    "options": [
+      "子豚を母豚から引き離し、独立して飼料を食べさせるようにすること",
+      "子豚が初めて固形飼料を食べること",
+      "母豚の乳の出が止まること",
+      "子豚を他の母豚に預けること"
+    ],
+    "answer": "子豚を母豚から引き離し、独立して飼料を食べさせるようにすること",
+    "explanation": "参考ページ: 30, 83, 93",
+    "category": "飼料・栄養",
+    "source": "setA-10.0",
+    "vi": {
+      "question": "“Cai sữa” là gì?",
+      "options": [
+        "Tách heo con khỏi heo nái và cho chúng tự ăn thức ăn độc lập",
+        "Lần đầu tiên heo con ăn thức ăn dạng rắn",
+        "Heo nái ngừng tiết sữa",
+        "Gửi heo con cho heo nái khác"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “penyapihan”?",
+      "options": [
+        "Memisahkan anak babi dari induknya dan membuatnya makan pakan secara mandiri",
+        "Anak babi makan pakan padat untuk pertama kalinya",
+        "Air susu induk babi berhenti keluar",
+        "Menitipkan anak babi kepada induk babi lain"
+      ]
+    }
+  },
+  {
+    "question": "「分娩（ぶんべん）」とは何ですか？",
+    "options": [
+      "母豚が子豚を出産すること",
+      "母豚が発情を示すこと",
+      "母豚に種付けを行うこと",
+      "母豚が妊娠すること"
+    ],
+    "answer": "母豚が子豚を出産すること",
+    "explanation": "参考ページ: 29, 70",
+    "category": "繁殖・分娩",
+    "source": "setA-11.0",
+    "vi": {
+      "question": "“Đẻ (bunben)” là gì?",
+      "options": [
+        "Heo nái sinh ra heo con",
+        "Heo nái biểu hiện động dục",
+        "Tiến hành phối giống cho heo nái",
+        "Heo nái mang thai"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “melahirkan/beranak (bunben)”?",
+      "options": [
+        "Induk babi melahirkan anak babi",
+        "Induk babi menunjukkan berahi",
+        "Melakukan perkawinan pada induk babi",
+        "Induk babi menjadi bunting"
+      ]
+    }
+  },
+  {
+    "question": "「種付け（たねつけ）」とは何ですか？",
+    "options": [
+      "発情した雌豚に人工授精または自然交配を行うこと",
+      "子豚にワクチンを接種すること",
+      "豚に飼料を与えること",
+      "候補豚を選抜すること"
+    ],
+    "answer": "発情した雌豚に人工授精または自然交配を行うこと",
+    "explanation": "参考ページ: 29, 90",
+    "category": "繁殖・分娩",
+    "source": "setA-12.0",
+    "vi": {
+      "question": "“Phối giống (tanetsuke)” là gì?",
+      "options": [
+        "Thực hiện thụ tinh nhân tạo hoặc giao phối tự nhiên cho heo nái đang động dục",
+        "Tiêm vắc-xin cho heo con",
+        "Cho heo ăn thức ăn",
+        "Tuyển chọn heo hậu bị"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “perkawinan (tanetsuke)”?",
+      "options": [
+        "Melakukan inseminasi buatan atau kawin alami pada babi betina yang sedang berahi",
+        "Memberikan vaksinasi pada anak babi",
+        "Memberi pakan pada babi",
+        "Menyeleksi babi calon induk"
+      ]
+    }
+  },
+  {
+    "question": "「肥育（ひいく）」とはどのような飼育段階ですか？",
+    "options": [
+      "離乳後の豚を出荷体重まで太らせる飼育段階",
+      "母豚に子豚を育てさせる期間",
+      "生まれたばかりの子豚を保温する期間",
+      "繁殖用の豚を選抜・育成する期間"
+    ],
+    "answer": "離乳後の豚を出荷体重まで太らせる飼育段階",
+    "explanation": "参考ページ: 30, 117, 126",
+    "category": "子豚・育成",
+    "source": "setA-13.0",
+    "vi": {
+      "question": "“Vỗ béo (hiiku)” là giai đoạn nuôi như thế nào?",
+      "options": [
+        "Giai đoạn nuôi vỗ béo heo sau cai sữa đến khi đạt trọng lượng xuất chuồng",
+        "Thời kỳ để heo nái nuôi heo con",
+        "Thời kỳ giữ ấm cho heo con mới sinh",
+        "Thời kỳ tuyển chọn, nuôi dưỡng heo làm giống"
+      ]
+    },
+    "ind": {
+      "question": "“Penggemukan (hiiku)” adalah tahap pemeliharaan seperti apa?",
+      "options": [
+        "Tahap menggemukkan babi setelah disapih hingga mencapai bobot pengiriman",
+        "Masa induk babi membesarkan anaknya",
+        "Masa menghangatkan anak babi yang baru lahir",
+        "Masa menyeleksi dan membesarkan babi untuk pembiakan"
+      ]
+    }
+  },
+  {
+    "question": "豚が発育するうえで必須の「三大基本要素」の組み合わせとして正しいものはどれですか？",
+    "options": [
+      "きれいで新鮮な飼料／きれいで新鮮な水／暖かく乾燥したすき間風のない生活場所",
+      "飼料／水／ワクチン",
+      "観察／記録／PDCA",
+      "整理／整頓／清掃"
+    ],
+    "answer": "きれいで新鮮な飼料／きれいで新鮮な水／暖かく乾燥したすき間風のない生活場所",
+    "explanation": "参考ページ: 33",
+    "category": "飼料・栄養",
+    "source": "setA-14.0",
+    "vi": {
+      "question": "Tổ hợp “ba yếu tố cơ bản” thiết yếu cho sự phát triển của heo là gì?",
+      "options": [
+        "Thức ăn sạch và tươi / Nước sạch và tươi / Nơi sống ấm áp, khô ráo, không có gió lùa",
+        "Thức ăn / Nước / Vắc-xin",
+        "Quan sát / Ghi chép / PDCA",
+        "Sàng lọc / Sắp xếp / Vệ sinh"
+      ]
+    },
+    "ind": {
+      "question": "Manakah kombinasi “tiga elemen dasar” yang penting bagi pertumbuhan babi?",
+      "options": [
+        "Pakan yang bersih dan segar / Air yang bersih dan segar / Tempat hidup yang hangat, kering, tanpa angin masuk",
+        "Pakan / Air / Vaksin",
+        "Pengamatan / Pencatatan / PDCA",
+        "Pemilahan / Penataan / Pembersihan"
+      ]
+    }
+  },
+  {
+    "question": "「離乳子豚の行動観察」（橋本啓一 1992）で、離乳5日の子豚が最も多くの時間を費やしている行動はどれですか？",
+    "options": [
+      "寝る（睡眠）約61.9%",
+      "動き回る 約36.6%",
+      "飼料を食べる 約0.69%",
+      "闘争 約0.35%"
+    ],
+    "answer": "寝る（睡眠）約61.9%",
+    "explanation": "参考ページ: 32",
+    "category": "子豚・育成",
+    "source": "setA-15.0",
+    "vi": {
+      "question": "Trong “Quan sát hành vi heo con cai sữa” (Hashimoto Keiichi, 1992), heo con cai sữa ngày thứ 5 dành nhiều thời gian nhất cho hành vi nào?",
+      "options": [
+        "Ngủ (giấc ngủ) khoảng 61,9%",
+        "Đi lại khoảng 36,6%",
+        "Ăn thức ăn khoảng 0,69%",
+        "Đánh nhau khoảng 0,35%"
+      ]
+    },
+    "ind": {
+      "question": "Dalam “Pengamatan perilaku anak babi sapihan” (Hashimoto Keiichi, 1992), perilaku apa yang paling banyak menyita waktu anak babi pada hari ke-5 setelah disapih?",
+      "options": [
+        "Tidur sekitar 61,9%",
+        "Bergerak ke sana ke mari sekitar 36,6%",
+        "Makan pakan sekitar 0,69%",
+        "Berkelahi sekitar 0,35%"
+      ]
+    }
+  },
+  {
+    "question": "離乳直後の子豚が新しい環境に慣れるまでにおよそどれくらいかかるとされていますか？",
+    "options": [
+      "1週間くらい",
+      "1日くらい",
+      "1ヵ月くらい",
+      "3日くらい"
+    ],
+    "answer": "1週間くらい",
+    "explanation": "参考ページ: 32",
+    "category": "子豚・育成",
+    "source": "setA-16.0",
+    "vi": {
+      "question": "Heo con ngay sau cai sữa cần khoảng bao lâu để quen với môi trường mới?",
+      "options": [
+        "Khoảng 1 tuần",
+        "Khoảng 1 ngày",
+        "Khoảng 1 tháng",
+        "Khoảng 3 ngày"
+      ]
+    },
+    "ind": {
+      "question": "Kira-kira berapa lama anak babi yang baru disapih membutuhkan waktu untuk terbiasa dengan lingkungan baru?",
+      "options": [
+        "Sekitar 1 minggu",
+        "Sekitar 1 hari",
+        "Sekitar 1 bulan",
+        "Sekitar 3 hari"
+      ]
+    }
+  },
+  {
+    "question": "日本で使われている豚の飼料の原料はどのような構成だと説明されていますか？",
+    "options": [
+      "ほぼ100%が輸入原料",
+      "ほぼ100%が国産原料",
+      "約半分が輸入原料",
+      "約3割が輸入原料"
+    ],
+    "answer": "ほぼ100%が輸入原料",
+    "explanation": "参考ページ: 33",
+    "category": "飼料・栄養",
+    "source": "setA-17.0",
+    "vi": {
+      "question": "Nguyên liệu thức ăn cho heo dùng ở Nhật được giải thích có cấu trúc như thế nào?",
+      "options": [
+        "Gần 100% là nguyên liệu nhập khẩu",
+        "Gần 100% là nguyên liệu trong nước",
+        "Khoảng một nửa là nguyên liệu nhập khẩu",
+        "Khoảng 30% là nguyên liệu nhập khẩu"
+      ]
+    },
+    "ind": {
+      "question": "Bahan baku pakan babi yang digunakan di Jepang dijelaskan memiliki komposisi seperti apa?",
+      "options": [
+        "Hampir 100% bahan impor",
+        "Hampir 100% bahan dalam negeri",
+        "Sekitar setengahnya bahan impor",
+        "Sekitar 30% bahan impor"
+      ]
+    }
+  },
+  {
+    "question": "繁殖部門で連動して動いている3つの作業の組み合わせはどれですか？",
+    "options": [
+      "交配・妊娠・分娩",
+      "離乳・肥育・出荷",
+      "発情・種付け・妊娠鑑定",
+      "分娩・哺乳・離乳"
+    ],
+    "answer": "交配・妊娠・分娩",
+    "explanation": "参考ページ: 49",
+    "category": "繁殖・分娩",
+    "source": "setA-18.0",
+    "vi": {
+      "question": "Tổ hợp ba công việc vận hành liên động trong bộ phận sinh sản là gì?",
+      "options": [
+        "Phối giống · Mang thai · Đẻ",
+        "Cai sữa · Vỗ béo · Xuất chuồng",
+        "Động dục · Phối giống · Chẩn đoán mang thai",
+        "Đẻ · Cho bú · Cai sữa"
+      ]
+    },
+    "ind": {
+      "question": "Manakah kombinasi tiga pekerjaan yang berjalan saling terkait di bagian reproduksi?",
+      "options": [
+        "Perkawinan · Kebuntingan · Kelahiran",
+        "Penyapihan · Penggemukan · Pengiriman",
+        "Berahi · Perkawinan · Diagnosis kebuntingan",
+        "Kelahiran · Menyusui · Penyapihan"
+      ]
+    }
+  },
+  {
+    "question": "「圧死（あっし）」とは養豚においてどのような事故ですか？",
+    "options": [
+      "母豚が寝返りなどで子豚を押しつぶして死亡させる事故",
+      "豚が密集しすぎて窒息する事故",
+      "豚舎の設備が倒れて豚が潰される事故",
+      "豚が暑さで倒れる事故"
+    ],
+    "answer": "母豚が寝返りなどで子豚を押しつぶして死亡させる事故",
+    "explanation": "参考ページ: 44, 61, 83",
+    "category": "繁殖・分娩",
+    "source": "setA-20.0",
+    "vi": {
+      "question": "“Đè chết (asshi)” là sự cố như thế nào trong chăn nuôi heo?",
+      "options": [
+        "Sự cố heo nái đè bẹp heo con đến chết khi trở mình",
+        "Sự cố heo bị ngạt do quá chen chúc",
+        "Sự cố thiết bị chuồng đổ làm đè bẹp heo",
+        "Sự cố heo ngã do nóng"
+      ]
+    },
+    "ind": {
+      "question": "“Tertindih mati (asshi)” adalah kecelakaan seperti apa dalam peternakan babi?",
+      "options": [
+        "Kecelakaan induk babi menindih anak babi hingga mati saat berbalik badan",
+        "Kecelakaan babi tercekik karena terlalu berdesakan",
+        "Kecelakaan peralatan kandang roboh dan menimpa babi",
+        "Kecelakaan babi pingsan karena panas"
+      ]
+    }
+  },
+  {
+    "question": "「候補豚（こうほとん）」の説明として最も正確なものはどれですか？",
+    "options": [
+      "将来の繁殖豚として選抜・育成されている若い豚",
+      "繁殖成績が優秀で、次世代の種豚として登録された豚",
+      "初回種付け前の雄豚のこと",
+      "外部から導入された肉豚候補の若い豚"
+    ],
+    "answer": "将来の繁殖豚として選抜・育成されている若い豚",
+    "explanation": "参考ページ: 50, 51, 20",
+    "category": "繁殖・分娩",
+    "source": "setA-21.0",
+    "vi": {
+      "question": "Mô tả chính xác nhất về “heo hậu bị (kohoton)” là gì?",
+      "options": [
+        "Heo non đang được tuyển chọn, nuôi dưỡng để làm heo sinh sản trong tương lai",
+        "Heo có thành tích sinh sản xuất sắc, đã đăng ký làm heo giống thế hệ sau",
+        "Heo đực trước lần phối giống đầu tiên",
+        "Heo non ứng viên heo thịt được nhập từ bên ngoài"
+      ]
+    },
+    "ind": {
+      "question": "Manakah penjelasan paling tepat tentang “babi calon induk (kohoton)”?",
+      "options": [
+        "Babi muda yang sedang diseleksi dan dibesarkan sebagai babi pembiak di masa depan",
+        "Babi dengan kinerja reproduksi unggul yang terdaftar sebagai babi bibit generasi berikutnya",
+        "Babi jantan sebelum perkawinan pertama",
+        "Babi muda calon babi potong yang diimpor dari luar"
+      ]
+    }
+  },
+  {
+    "question": "「初産（しょさん）／初産豚」の説明として最も正確なものはどれですか？",
+    "options": [
+      "母豚が初めて子豚を出産すること、またはその母豚",
+      "母豚が初めて種付けされてから最初の分娩までの期間",
+      "初めて発情を迎えた若い雌豚のこと",
+      "1産目の分娩で生まれた子豚のこと"
+    ],
+    "answer": "母豚が初めて子豚を出産すること、またはその母豚",
+    "explanation": "参考ページ: 50, 64",
+    "category": "繁殖・分娩",
+    "source": "setA-22.0",
+    "vi": {
+      "question": "Mô tả chính xác nhất về “đẻ lứa đầu / heo nái đẻ lứa đầu (shosan)” là gì?",
+      "options": [
+        "Việc heo nái lần đầu sinh heo con, hoặc chính heo nái đó",
+        "Khoảng thời gian từ lần phối giống đầu tiên đến lần đẻ đầu tiên của heo nái",
+        "Heo nái non lần đầu động dục",
+        "Heo con sinh ra ở lứa đẻ đầu tiên"
+      ]
+    },
+    "ind": {
+      "question": "Manakah penjelasan paling tepat tentang “kelahiran pertama / induk beranak pertama (shosan)”?",
+      "options": [
+        "Induk babi melahirkan anak untuk pertama kali, atau induk babi tersebut",
+        "Periode dari perkawinan pertama hingga kelahiran pertama induk babi",
+        "Babi betina muda yang pertama kali berahi",
+        "Anak babi yang lahir pada kelahiran pertama"
+      ]
+    }
+  },
+  {
+    "question": "計画通りとされる分娩率（種付け頭数に対する分娩の割合）はおよそ何％ですか？",
+    "options": [
+      "約90％",
+      "約70％",
+      "約80％",
+      "約50％"
+    ],
+    "answer": "約90％",
+    "explanation": "参考ページ: 48",
+    "category": "繁殖・分娩",
+    "source": "setA-23.0",
+    "vi": {
+      "question": "Tỷ lệ đẻ theo kế hoạch (tỷ lệ đẻ so với số con được phối giống) khoảng bao nhiêu %?",
+      "options": [
+        "Khoảng 90%",
+        "Khoảng 70%",
+        "Khoảng 80%",
+        "Khoảng 50%"
+      ]
+    },
+    "ind": {
+      "question": "Tingkat kelahiran sesuai rencana (rasio kelahiran terhadap jumlah yang dikawinkan) kira-kira berapa %?",
+      "options": [
+        "Sekitar 90%",
+        "Sekitar 70%",
+        "Sekitar 80%",
+        "Sekitar 50%"
+      ]
+    }
+  },
+  {
+    "question": "「妊娠鑑定（にんしんかんてい）」とは何ですか？",
+    "options": [
+      "種付け後に母豚が妊娠しているかどうかを確認する検査",
+      "母豚の出産予定日を計算すること",
+      "母豚の体重を測定すること",
+      "母豚の健康状態を調べる定期検診"
+    ],
+    "answer": "種付け後に母豚が妊娠しているかどうかを確認する検査",
+    "explanation": "参考ページ: 53, 93",
+    "category": "繁殖・分娩",
+    "source": "setA-24.0",
+    "vi": {
+      "question": "“Chẩn đoán mang thai (ninshin kantei)” là gì?",
+      "options": [
+        "Kiểm tra xác nhận heo nái có mang thai hay không sau khi phối giống",
+        "Tính ngày dự sinh của heo nái",
+        "Đo trọng lượng heo nái",
+        "Khám định kỳ tình trạng sức khỏe heo nái"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “diagnosis kebuntingan (ninshin kantei)”?",
+      "options": [
+        "Pemeriksaan untuk memastikan apakah induk babi bunting setelah dikawinkan",
+        "Menghitung perkiraan tanggal melahirkan induk babi",
+        "Mengukur bobot induk babi",
+        "Pemeriksaan kesehatan rutin induk babi"
+      ]
+    }
+  },
+  {
+    "question": "「ボディコンディションスコア（BCS）」とは何ですか？",
+    "options": [
+      "豚の体の肉付き・脂肪の状態を点数で評価する指標",
+      "豚の健康状態を血液検査で測定する数値",
+      "豚舎内の温度と湿度を示す指標",
+      "豚の1日あたりの増体量を示す指標"
+    ],
+    "answer": "豚の体の肉付き・脂肪の状態を点数で評価する指標",
+    "explanation": "参考ページ: 57, 81",
+    "category": "繁殖・分娩",
+    "source": "setA-27.0",
+    "vi": {
+      "question": "“Điểm thể trạng (BCS)” là gì?",
+      "options": [
+        "Chỉ số đánh giá tình trạng nạc và mỡ của cơ thể heo bằng điểm số",
+        "Trị số đo tình trạng sức khỏe heo bằng xét nghiệm máu",
+        "Chỉ số thể hiện nhiệt độ và độ ẩm trong chuồng",
+        "Chỉ số thể hiện mức tăng trọng mỗi ngày của heo"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “Skor Kondisi Tubuh (BCS)”?",
+      "options": [
+        "Indikator yang menilai kondisi perdagingan dan lemak tubuh babi dengan angka",
+        "Angka yang mengukur kondisi kesehatan babi melalui tes darah",
+        "Indikator suhu dan kelembapan di dalam kandang",
+        "Indikator pertambahan bobot harian babi"
+      ]
+    }
+  },
+  {
+    "question": "「ワクチン接種」を豚に行う目的は何ですか？",
+    "options": [
+      "特定の感染症に対する免疫をつけ、病気を予防するため",
+      "豚の成長を促進するため",
+      "豚の肉質を良くするため",
+      "豚の繁殖能力を高めるため"
+    ],
+    "answer": "特定の感染症に対する免疫をつけ、病気を予防するため",
+    "explanation": "参考ページ: 52, 121",
+    "category": "衛生・防疫",
+    "source": "setA-28.0",
+    "vi": {
+      "question": "Mục đích tiêm vắc-xin cho heo là gì?",
+      "options": [
+        "Tạo miễn dịch đối với bệnh truyền nhiễm nhất định để phòng bệnh",
+        "Thúc đẩy heo tăng trưởng",
+        "Cải thiện chất lượng thịt heo",
+        "Nâng cao khả năng sinh sản của heo"
+      ]
+    },
+    "ind": {
+      "question": "Apa tujuan melakukan “vaksinasi” pada babi?",
+      "options": [
+        "Membentuk kekebalan terhadap penyakit menular tertentu untuk mencegah penyakit",
+        "Mempercepat pertumbuhan babi",
+        "Memperbaiki kualitas daging babi",
+        "Meningkatkan kemampuan reproduksi babi"
+      ]
+    }
+  },
+  {
+    "question": "「哺乳（ほにゅう）」の説明として最も正確なものはどれですか？",
+    "options": [
+      "母豚が子豚に母乳を与えて育てること",
+      "子豚をミルキーウィーンフィーダーで育てること",
+      "子豚へ鉄剤を投与し、雄であれば去勢を伴うこと",
+      "分娩直後から出荷までの子豚の飼育期間全体"
+    ],
+    "answer": "母豚が子豚に母乳を与えて育てること",
+    "explanation": "参考ページ: 53, 80",
+    "category": "繁殖・分娩",
+    "source": "setA-30.0",
+    "vi": {
+      "question": "Mô tả chính xác nhất về “bú sữa / cho bú (honyu)” là gì?",
+      "options": [
+        "Việc heo nái cho heo con bú sữa mẹ để nuôi lớn",
+        "Nuôi heo con bằng máng tập ăn sữa (milky ween feeder)",
+        "Tiêm sắt cho heo con, và thiến nếu là con đực",
+        "Toàn bộ thời kỳ nuôi heo con từ ngay sau khi đẻ đến xuất chuồng"
+      ]
+    },
+    "ind": {
+      "question": "Manakah penjelasan paling tepat tentang “menyusui (honyu)”?",
+      "options": [
+        "Induk babi memberi air susu kepada anaknya untuk membesarkannya",
+        "Membesarkan anak babi dengan milky ween feeder",
+        "Memberi zat besi pada anak babi, dan mengebiri jika jantan",
+        "Seluruh masa pemeliharaan anak babi dari setelah lahir hingga pengiriman"
+      ]
+    }
+  },
+  {
+    "question": "分娩前の母豚の給餌量はいつから減らし始めますか？",
+    "options": [
+      "分娩予定日の3日前から",
+      "分娩予定日の4週間前から",
+      "分娩～離乳の期間で減らす",
+      "分娩後2週目から減らす"
+    ],
+    "answer": "分娩予定日の3日前から",
+    "explanation": "参考ページ: 59",
+    "category": "繁殖・分娩",
+    "source": "setA-32.0",
+    "vi": {
+      "question": "Lượng cho ăn của heo nái trước khi đẻ bắt đầu giảm từ khi nào?",
+      "options": [
+        "Từ 3 ngày trước ngày dự sinh",
+        "Từ 4 tuần trước ngày dự sinh",
+        "Giảm trong khoảng thời gian từ đẻ đến cai sữa",
+        "Giảm từ tuần thứ 2 sau khi đẻ"
+      ]
+    },
+    "ind": {
+      "question": "Sejak kapan jumlah pakan induk babi sebelum melahirkan mulai dikurangi?",
+      "options": [
+        "Sejak 3 hari sebelum perkiraan tanggal melahirkan",
+        "Sejak 4 minggu sebelum perkiraan tanggal melahirkan",
+        "Dikurangi selama periode melahirkan hingga penyapihan",
+        "Dikurangi sejak minggu ke-2 setelah melahirkan"
+      ]
+    }
+  },
+  {
+    "question": "「去勢（きょせい）」とは何ですか？",
+    "options": [
+      "雄豚の精巣を外科的に除去する処置",
+      "豚の尾を短く切る処置",
+      "豚の犬歯を切る処置",
+      "豚に鉄分を注射する処置"
+    ],
+    "answer": "雄豚の精巣を外科的に除去する処置",
+    "explanation": "参考ページ: 64, 66",
+    "category": "子豚・育成",
+    "source": "setA-34.0",
+    "vi": {
+      "question": "“Thiến (kyosei)” là gì?",
+      "options": [
+        "Thủ thuật cắt bỏ tinh hoàn của heo đực bằng phẫu thuật",
+        "Thủ thuật cắt ngắn đuôi heo",
+        "Thủ thuật cắt răng nanh của heo",
+        "Thủ thuật tiêm sắt cho heo"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “kastrasi (kyosei)”?",
+      "options": [
+        "Tindakan mengangkat testis babi jantan secara bedah",
+        "Tindakan memotong pendek ekor babi",
+        "Tindakan memotong gigi taring babi",
+        "Tindakan menyuntikkan zat besi pada babi"
+      ]
+    }
+  },
+  {
+    "question": "「断尾（だんび）」とは何ですか？",
+    "options": [
+      "子豚の尾を短くする処置（尾かじり防止のため）",
+      "子豚の攻撃性を抑制する処置",
+      "母豚の尾を除去する処置",
+      "子豚の尾を除去する処置"
+    ],
+    "answer": "子豚の尾を短くする処置（尾かじり防止のため）",
+    "explanation": "参考ページ: 64, 65",
+    "category": "子豚・育成",
+    "source": "setA-35.0",
+    "vi": {
+      "question": "“Cắt đuôi (danbi)” là gì?",
+      "options": [
+        "Thủ thuật cắt ngắn đuôi heo con (để phòng cắn đuôi)",
+        "Thủ thuật ức chế tính hung hăng của heo con",
+        "Thủ thuật cắt bỏ đuôi heo nái",
+        "Thủ thuật cắt bỏ hoàn toàn đuôi heo con"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “potong ekor (danbi)”?",
+      "options": [
+        "Tindakan memendekkan ekor anak babi (untuk mencegah gigit ekor)",
+        "Tindakan menekan agresivitas anak babi",
+        "Tindakan menghilangkan ekor induk babi",
+        "Tindakan menghilangkan seluruh ekor anak babi"
+      ]
+    }
+  },
+  {
+    "question": "「鉄剤投与（てつざいとうよ）」を子豚に行う理由は何ですか？",
+    "options": [
+      "貧血を予防するため",
+      "子豚の骨を丈夫にするため",
+      "子豚の食欲を増進させるため",
+      "子豚の感染症を予防するため"
+    ],
+    "answer": "貧血を予防するため",
+    "explanation": "参考ページ: 64, 65",
+    "category": "子豚・育成",
+    "source": "setA-36.0",
+    "vi": {
+      "question": "Lý do tiêm sắt cho heo con là gì?",
+      "options": [
+        "Để phòng thiếu máu",
+        "Để làm xương heo con chắc khỏe",
+        "Để tăng cảm giác thèm ăn của heo con",
+        "Để phòng bệnh truyền nhiễm cho heo con"
+      ]
+    },
+    "ind": {
+      "question": "Apa alasan memberikan “zat besi” pada anak babi?",
+      "options": [
+        "Untuk mencegah anemia",
+        "Untuk menguatkan tulang anak babi",
+        "Untuk meningkatkan nafsu makan anak babi",
+        "Untuk mencegah penyakit menular pada anak babi"
+      ]
+    }
+  },
+  {
+    "question": "「妊娠期（にんしんき）」とはどのような期間ですか？",
+    "options": [
+      "母豚が子宮内に子豚を宿している期間",
+      "離乳から肥育開始までの子豚の成長期間",
+      "子豚が母乳を飲んでいる期間",
+      "出荷前の最後の仕上げ期間"
+    ],
+    "answer": "母豚が子宮内に子豚を宿している期間",
+    "explanation": "参考ページ: 61, 58",
+    "category": "繁殖・分娩",
+    "source": "setA-37.0",
+    "vi": {
+      "question": "“Thời kỳ mang thai (ninshinki)” là khoảng thời gian như thế nào?",
+      "options": [
+        "Thời kỳ heo nái mang heo con trong tử cung",
+        "Thời kỳ heo con phát triển từ cai sữa đến bắt đầu vỗ béo",
+        "Thời kỳ heo con đang bú sữa mẹ",
+        "Thời kỳ hoàn thiện cuối cùng trước xuất chuồng"
+      ]
+    },
+    "ind": {
+      "question": "“Masa kebuntingan (ninshinki)” adalah periode seperti apa?",
+      "options": [
+        "Periode induk babi mengandung anak di dalam rahim",
+        "Periode pertumbuhan anak babi dari penyapihan hingga awal penggemukan",
+        "Periode anak babi sedang menyusu",
+        "Periode penyelesaian akhir sebelum pengiriman"
+      ]
+    }
+  },
+  {
+    "question": "豚（母豚）の妊娠期間はおよそ何日ですか？",
+    "options": [
+      "約115日（交配後115日。個体差112〜117日）",
+      "約90日（3ヶ月）",
+      "約150日（5ヶ月）",
+      "約280日（約9ヶ月）"
+    ],
+    "answer": "約115日（交配後115日。個体差112〜117日）",
+    "explanation": "参考ページ: 61",
+    "category": "繁殖・分娩",
+    "source": "setA-38.0",
+    "vi": {
+      "question": "Thời gian mang thai của heo (heo nái) khoảng bao nhiêu ngày?",
+      "options": [
+        "Khoảng 115 ngày (115 ngày sau phối giống; dao động cá thể 112–117 ngày)",
+        "Khoảng 90 ngày (3 tháng)",
+        "Khoảng 150 ngày (5 tháng)",
+        "Khoảng 280 ngày (khoảng 9 tháng)"
+      ]
+    },
+    "ind": {
+      "question": "Berapa kira-kira lama masa kebuntingan babi (induk babi)?",
+      "options": [
+        "Sekitar 115 hari (115 hari setelah kawin; variasi individu 112–117 hari)",
+        "Sekitar 90 hari (3 bulan)",
+        "Sekitar 150 hari (5 bulan)",
+        "Sekitar 280 hari (sekitar 9 bulan)"
+      ]
+    }
+  },
+  {
+    "question": "初生子豚に行う「耳刻（じこく）」の目的として正しいものはどれですか？",
+    "options": [
+      "個体識別",
+      "貧血の防止",
+      "尾かじりによる細菌感染の防止",
+      "雄豚臭の予防"
+    ],
+    "answer": "個体識別",
+    "explanation": "参考ページ: 62",
+    "category": "子豚・育成",
+    "source": "setA-39.0",
+    "vi": {
+      "question": "Mục đích đúng của việc “bấm tai (jikoku)” cho heo con sơ sinh là gì?",
+      "options": [
+        "Nhận dạng cá thể",
+        "Phòng thiếu máu",
+        "Phòng nhiễm khuẩn do cắn đuôi",
+        "Phòng mùi heo đực"
+      ]
+    },
+    "ind": {
+      "question": "Manakah tujuan yang benar dari “takik telinga (jikoku)” pada anak babi yang baru lahir?",
+      "options": [
+        "Identifikasi individu",
+        "Pencegahan anemia",
+        "Pencegahan infeksi bakteri akibat gigit ekor",
+        "Pencegahan bau babi jantan"
+      ]
+    }
+  },
+  {
+    "question": "胎子が大きく成長する時期はおおよそいつからですか？",
+    "options": [
+      "妊娠98日ごろから分娩まで",
+      "交配直後から妊娠30日まで",
+      "妊娠50〜70日",
+      "分娩後の授乳期間中"
+    ],
+    "answer": "妊娠98日ごろから分娩まで",
+    "explanation": "参考ページ: 67",
+    "category": "繁殖・分娩",
+    "source": "setA-40.0",
+    "vi": {
+      "question": "Thai heo bắt đầu phát triển lớn vào khoảng thời gian nào?",
+      "options": [
+        "Từ khoảng ngày mang thai thứ 98 đến khi đẻ",
+        "Ngay sau phối giống đến ngày mang thai thứ 30",
+        "Ngày mang thai thứ 50–70",
+        "Trong thời kỳ cho bú sau khi đẻ"
+      ]
+    },
+    "ind": {
+      "question": "Sejak kapan kira-kira janin babi tumbuh membesar?",
+      "options": [
+        "Sejak sekitar hari ke-98 kebuntingan hingga melahirkan",
+        "Dari segera setelah kawin hingga hari ke-30 kebuntingan",
+        "Hari ke-50–70 kebuntingan",
+        "Selama masa menyusui setelah melahirkan"
+      ]
+    }
+  },
+  {
+    "question": "母豚の乳を搾ると勢いよく出る「射乳」が確認できたとき、分娩はどのくらいで始まりますか？",
+    "options": [
+      "数時間以内に分娩開始",
+      "約1週間後に分娩開始",
+      "翌日に分娩開始",
+      "分娩はすでに終わっている合図"
+    ],
+    "answer": "数時間以内に分娩開始",
+    "explanation": "参考ページ: 69",
+    "category": "繁殖・分娩",
+    "source": "setA-42.0",
+    "vi": {
+      "question": "Khi vắt sữa heo nái thấy sữa phun ra mạnh (“xuống sữa”), thì sau bao lâu heo bắt đầu đẻ?",
+      "options": [
+        "Bắt đầu đẻ trong vòng vài giờ",
+        "Bắt đầu đẻ sau khoảng 1 tuần",
+        "Bắt đầu đẻ vào ngày hôm sau",
+        "Là dấu hiệu việc đẻ đã kết thúc"
+      ]
+    },
+    "ind": {
+      "question": "Ketika susu induk babi diperah dan keluar deras (“keluarnya susu/let-down”), kira-kira berapa lama lagi induk mulai melahirkan?",
+      "options": [
+        "Mulai melahirkan dalam beberapa jam",
+        "Mulai melahirkan sekitar 1 minggu kemudian",
+        "Mulai melahirkan keesokan harinya",
+        "Pertanda bahwa proses melahirkan sudah selesai"
+      ]
+    }
+  },
+  {
+    "question": "「里子（さとご）」とは何ですか？",
+    "options": [
+      "産子数が多い母豚の子豚を、余裕のある他の母豚に預けること",
+      "異なる品種の豚を交配させること",
+      "複数の豚舎で豚をローテーションさせること",
+      "子豚を別農場で育てること"
+    ],
+    "answer": "産子数が多い母豚の子豚を、余裕のある他の母豚に預けること",
+    "explanation": "参考ページ: 72",
+    "category": "繁殖・分娩",
+    "source": "setA-44.0",
+    "vi": {
+      "question": "“Ghép bầy / cho bú nhờ (satogo)” là gì?",
+      "options": [
+        "Gửi bớt heo con của heo nái đẻ nhiều con sang heo nái khác còn dư khả năng nuôi",
+        "Cho giao phối giữa các giống heo khác nhau",
+        "Luân chuyển heo qua nhiều chuồng",
+        "Nuôi heo con ở trang trại khác"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “titip anak / fostering (satogo)”?",
+      "options": [
+        "Menitipkan anak dari induk babi yang beranak banyak kepada induk lain yang masih mampu menyusui",
+        "Mengawinkan babi dari ras yang berbeda",
+        "Merotasi babi di beberapa kandang",
+        "Membesarkan anak babi di peternakan lain"
+      ]
+    }
+  },
+  {
+    "question": "分娩房の「圧死防止バー（分娩ストール）」の主な目的は何ですか？",
+    "options": [
+      "母豚の動きを制限して子豚の圧死を防止すること",
+      "子豚が逃げないようにすること",
+      "母豚を他の豚から隔離すること",
+      "母豚の体重を測定しやすくすること"
+    ],
+    "answer": "母豚の動きを制限して子豚の圧死を防止すること",
+    "explanation": "参考ページ: 不明",
+    "category": "繁殖・分娩",
+    "source": "setA-45.0",
+    "vi": {
+      "question": "Mục đích chính của “thanh chống đè chết (chuồng đẻ / farrowing stall)” trong ô đẻ là gì?",
+      "options": [
+        "Hạn chế cử động của heo nái để phòng heo con bị đè chết",
+        "Ngăn heo con chạy thoát",
+        "Cách ly heo nái khỏi heo khác",
+        "Giúp đo trọng lượng heo nái dễ hơn"
+      ]
+    },
+    "ind": {
+      "question": "Apa tujuan utama “palang pencegah tertindih (kandang melahirkan / farrowing stall)” di kandang beranak?",
+      "options": [
+        "Membatasi gerakan induk babi untuk mencegah anak tertindih mati",
+        "Mencegah anak babi melarikan diri",
+        "Mengisolasi induk babi dari babi lain",
+        "Memudahkan pengukuran bobot induk babi"
+      ]
+    }
+  },
+  {
+    "question": "分娩房に保温箱やヒーターを設置する主な目的はどれですか？",
+    "options": [
+      "すべての子豚が体力を奪われず、きちんと初乳を飲めるようにするため",
+      "母豚が入れない場所で子豚に補助飼料を与えるため",
+      "母豚の分娩時ストレスを緩和するため",
+      "子豚の個体を識別するため"
+    ],
+    "answer": "すべての子豚が体力を奪われず、きちんと初乳を飲めるようにするため",
+    "explanation": "参考ページ: 71",
+    "category": "繁殖・分娩",
+    "source": "setA-46.0",
+    "vi": {
+      "question": "Mục đích chính của việc đặt hộp giữ ấm hoặc đèn sưởi trong ô đẻ là gì?",
+      "options": [
+        "Để mọi heo con không bị mất sức và uống được sữa đầu đầy đủ",
+        "Để cho heo con ăn thức ăn bổ sung ở nơi heo nái không vào được",
+        "Để giảm stress khi đẻ của heo nái",
+        "Để nhận dạng cá thể heo con"
+      ]
+    },
+    "ind": {
+      "question": "Apa tujuan utama memasang kotak penghangat atau pemanas di kandang beranak?",
+      "options": [
+        "Agar semua anak babi tidak kehabisan tenaga dan dapat minum kolostrum dengan baik",
+        "Untuk memberi pakan tambahan pada anak babi di tempat yang tak terjangkau induk",
+        "Untuk meredakan stres induk babi saat melahirkan",
+        "Untuk mengidentifikasi individu anak babi"
+      ]
+    }
+  },
+  {
+    "question": "「新生子豚の初乳中の免疫抗体の吸収能力」で、吸収能力が100％を維持出来る時間はどのくらいですか？",
+    "options": [
+      "生後3時間",
+      "生後30分",
+      "生後12時間",
+      "生後24時間"
+    ],
+    "answer": "生後3時間",
+    "explanation": "参考ページ: 74",
+    "category": "子豚・育成",
+    "source": "setA-47.0",
+    "vi": {
+      "question": "Trong “khả năng hấp thu kháng thể miễn dịch trong sữa đầu của heo con sơ sinh”, khả năng hấp thu duy trì được 100% trong khoảng thời gian bao lâu?",
+      "options": [
+        "3 giờ sau sinh",
+        "30 phút sau sinh",
+        "12 giờ sau sinh",
+        "24 giờ sau sinh"
+      ]
+    },
+    "ind": {
+      "question": "Dalam “kemampuan menyerap antibodi dari kolostrum pada anak babi yang baru lahir”, berapa lama kemampuan serap dapat dipertahankan 100%?",
+      "options": [
+        "3 jam setelah lahir",
+        "30 menit setelah lahir",
+        "12 jam setelah lahir",
+        "24 jam setelah lahir"
+      ]
+    }
+  },
+  {
+    "question": "未経産豚はおよそ何時間間隔で何回交配しますか？",
+    "options": [
+      "発情後12時間程度の間隔で3回交配する",
+      "24時間間隔で2回交配する",
+      "発情当日に1回だけ交配する",
+      "48時間間隔で4回交配する"
+    ],
+    "answer": "発情後12時間程度の間隔で3回交配する",
+    "explanation": "参考ページ: 86",
+    "category": "繁殖・分娩",
+    "source": "setA-48.0",
+    "vi": {
+      "question": "Heo hậu bị (chưa đẻ) được phối giống mấy lần, cách nhau khoảng bao nhiêu giờ?",
+      "options": [
+        "Phối 3 lần, cách nhau khoảng 12 giờ sau khi động dục",
+        "Phối 2 lần, cách nhau 24 giờ",
+        "Chỉ phối 1 lần trong ngày động dục",
+        "Phối 4 lần, cách nhau 48 giờ"
+      ]
+    },
+    "ind": {
+      "question": "Babi dara (belum pernah beranak) dikawinkan berapa kali dengan jarak berapa jam?",
+      "options": [
+        "Dikawinkan 3 kali dengan jarak sekitar 12 jam setelah berahi",
+        "Dikawinkan 2 kali dengan jarak 24 jam",
+        "Dikawinkan hanya 1 kali pada hari berahi",
+        "Dikawinkan 4 kali dengan jarak 48 jam"
+      ]
+    }
+  },
+  {
+    "question": "豚の一般的な出生体重として最も近いものはどれですか？",
+    "options": [
+      "約1.2〜1.5kg",
+      "約0.5〜0.8kg",
+      "約2.0〜3.0kg",
+      "約1.5〜2.5kg"
+    ],
+    "answer": "約1.2〜1.5kg",
+    "explanation": "参考ページ: 81",
+    "category": "子豚・育成",
+    "source": "setA-49.0",
+    "vi": {
+      "question": "Trọng lượng sơ sinh thông thường của heo gần nhất với mức nào?",
+      "options": [
+        "Khoảng 1,2–1,5 kg",
+        "Khoảng 0,5–0,8 kg",
+        "Khoảng 2,0–3,0 kg",
+        "Khoảng 1,5–2,5 kg"
+      ]
+    },
+    "ind": {
+      "question": "Berapa bobot lahir umum anak babi yang paling mendekati?",
+      "options": [
+        "Sekitar 1,2–1,5 kg",
+        "Sekitar 0,5–0,8 kg",
+        "Sekitar 2,0–3,0 kg",
+        "Sekitar 1,5–2,5 kg"
+      ]
+    }
+  },
+  {
+    "question": "一般的な農場では、子豚を生後およそ何日齢で離乳しますか？",
+    "options": [
+      "生後25〜26日齢",
+      "生後7〜10日齢",
+      "生後40〜50日齢",
+      "生後60日齢"
+    ],
+    "answer": "生後25〜26日齢",
+    "explanation": "参考ページ: 80",
+    "category": "子豚・育成",
+    "source": "setA-50.0",
+    "vi": {
+      "question": "Ở trang trại thông thường, heo con được cai sữa vào khoảng bao nhiêu ngày tuổi?",
+      "options": [
+        "25–26 ngày tuổi",
+        "7–10 ngày tuổi",
+        "40–50 ngày tuổi",
+        "60 ngày tuổi"
+      ]
+    },
+    "ind": {
+      "question": "Di peternakan umum, pada umur berapa hari anak babi disapih?",
+      "options": [
+        "Umur 25–26 hari",
+        "Umur 7–10 hari",
+        "Umur 40–50 hari",
+        "Umur 60 hari"
+      ]
+    }
+  },
+  {
+    "question": "母豚の背中を押して不動化を示すのは、どのような兆候を示しているか？",
+    "options": [
+      "発情",
+      "体調不良",
+      "交尾拒否",
+      "横臥反射"
+    ],
+    "answer": "発情",
+    "explanation": "参考ページ: 86",
+    "category": "繁殖・分娩",
+    "source": "setA-51.0",
+    "vi": {
+      "question": "Việc ấn lên lưng heo nái thấy nó đứng yên (bất động) là biểu hiện của dấu hiệu nào?",
+      "options": [
+        "Động dục",
+        "Sức khỏe kém",
+        "Từ chối giao phối",
+        "Phản xạ nằm xuống"
+      ]
+    },
+    "ind": {
+      "question": "Menekan punggung induk babi lalu ia diam tak bergerak menunjukkan tanda apa?",
+      "options": [
+        "Berahi",
+        "Kondisi tubuh buruk",
+        "Penolakan kawin",
+        "Refleks berbaring"
+      ]
+    }
+  },
+  {
+    "question": "母豚の背脂肪厚を測定する「P2点」とは、どの部位ですか？",
+    "options": [
+      "最後肋骨の背側から5〜6cmの背脂肪厚（正中線から外側）",
+      "首の付け根から10cmの背脂肪厚",
+      "尾の付け根から3cmの背脂肪厚",
+      "肩の中央部の皮下脂肪厚"
+    ],
+    "answer": "最後肋骨の背側から5〜6cmの背脂肪厚（正中線から外側）",
+    "explanation": "参考ページ: 81",
+    "category": "繁殖・分娩",
+    "source": "setA-52.0",
+    "vi": {
+      "question": "“Điểm P2” dùng để đo độ dày mỡ lưng heo nái là vị trí nào?",
+      "options": [
+        "Độ dày mỡ lưng cách 5–6 cm về phía lưng tính từ xương sườn cuối (phía ngoài đường giữa lưng)",
+        "Độ dày mỡ lưng cách 10 cm từ gốc cổ",
+        "Độ dày mỡ lưng cách 3 cm từ gốc đuôi",
+        "Độ dày mỡ dưới da ở giữa vai"
+      ]
+    },
+    "ind": {
+      "question": "“Titik P2” untuk mengukur ketebalan lemak punggung induk babi berada di bagian mana?",
+      "options": [
+        "Ketebalan lemak punggung 5–6 cm ke arah punggung dari tulang rusuk terakhir (sisi luar dari garis tengah)",
+        "Ketebalan lemak punggung 10 cm dari pangkal leher",
+        "Ketebalan lemak punggung 3 cm dari pangkal ekor",
+        "Ketebalan lemak bawah kulit di tengah bahu"
+      ]
+    }
+  },
+  {
+    "question": "母豚体重変化の計算例で、分娩前後の母豚体重（胎子の体重を含む）を200kgとすると、分娩後の母豚体重は約何kg（約何%）になりますか？",
+    "options": [
+      "177kg（約90%）",
+      "200kg（約100%）",
+      "160kg（約80%）",
+      "190kg（約95%）"
+    ],
+    "answer": "177kg（約90%）",
+    "explanation": "参考ページ: 81",
+    "category": "繁殖・分娩",
+    "source": "setA-53.0",
+    "vi": {
+      "question": "Trong ví dụ tính thay đổi trọng lượng heo nái, nếu trọng lượng heo nái trước/sau khi đẻ (gồm cả trọng lượng thai) là 200 kg, thì trọng lượng heo nái sau khi đẻ khoảng bao nhiêu kg (khoảng bao nhiêu %)?",
+      "options": [
+        "177 kg (khoảng 90%)",
+        "200 kg (khoảng 100%)",
+        "160 kg (khoảng 80%)",
+        "190 kg (khoảng 95%)"
+      ]
+    },
+    "ind": {
+      "question": "Dalam contoh perhitungan perubahan bobot induk babi, jika bobot induk sebelum/sesudah melahirkan (termasuk bobot janin) adalah 200 kg, berapa kira-kira bobot induk setelah melahirkan (sekitar berapa %)?",
+      "options": [
+        "177 kg (sekitar 90%)",
+        "200 kg (sekitar 100%)",
+        "160 kg (sekitar 80%)",
+        "190 kg (sekitar 95%)"
+      ]
+    }
+  },
+  {
+    "question": "「発情（はつじょう）」とは何ですか？",
+    "options": [
+      "雌豚が交配可能な状態を示す生理的な現象",
+      "母豚が出産間近になった状態",
+      "豚が暑さでストレスを感じている状態",
+      "豚が病気にかかっている状態"
+    ],
+    "answer": "雌豚が交配可能な状態を示す生理的な現象",
+    "explanation": "参考ページ: 87, 89",
+    "category": "繁殖・分娩",
+    "source": "setA-54.0",
+    "vi": {
+      "question": "“Động dục (hatsujo)” là gì?",
+      "options": [
+        "Hiện tượng sinh lý cho thấy heo cái ở trạng thái có thể phối giống",
+        "Trạng thái heo nái sắp đến ngày đẻ",
+        "Trạng thái heo bị stress do nóng",
+        "Trạng thái heo đang mắc bệnh"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “berahi (hatsujo)”?",
+      "options": [
+        "Fenomena fisiologis yang menunjukkan babi betina dalam keadaan siap dikawinkan",
+        "Keadaan induk babi yang mendekati hari melahirkan",
+        "Keadaan babi yang stres karena panas",
+        "Keadaan babi yang sedang sakit"
+      ]
+    }
+  },
+  {
+    "question": "きちんと管理された離乳母豚は離乳後およそ何日で発情が来ますか？",
+    "options": [
+      "離乳後4〜5日",
+      "離乳後10〜12日",
+      "離乳後21日",
+      "離乳当日"
+    ],
+    "answer": "離乳後4〜5日",
+    "explanation": "参考ページ: 87",
+    "category": "繁殖・分娩",
+    "source": "setA-55.0",
+    "vi": {
+      "question": "Heo nái sau cai sữa được quản lý tốt thì sau khoảng bao nhiêu ngày sẽ động dục?",
+      "options": [
+        "4–5 ngày sau cai sữa",
+        "10–12 ngày sau cai sữa",
+        "21 ngày sau cai sữa",
+        "Ngay trong ngày cai sữa"
+      ]
+    },
+    "ind": {
+      "question": "Induk babi sapihan yang dikelola dengan baik akan berahi kira-kira berapa hari setelah disapih?",
+      "options": [
+        "4–5 hari setelah disapih",
+        "10–12 hari setelah disapih",
+        "21 hari setelah disapih",
+        "Pada hari penyapihan"
+      ]
+    }
+  },
+  {
+    "question": "「人工授精」の略称として用いられているものはどれですか？",
+    "options": [
+      "AI（Artificial Insemination）",
+      "PI（Pig Insemination）",
+      "SI（Swine Insemination）",
+      "NI（Natural Insemination）"
+    ],
+    "answer": "AI（Artificial Insemination）",
+    "explanation": "参考ページ: 92, 90",
+    "category": "繁殖・分娩",
+    "source": "setA-56.0",
+    "vi": {
+      "question": "Cách viết tắt được dùng cho “thụ tinh nhân tạo” là gì?",
+      "options": [
+        "AI (Artificial Insemination)",
+        "PI (Pig Insemination)",
+        "SI (Swine Insemination)",
+        "NI (Natural Insemination)"
+      ]
+    },
+    "ind": {
+      "question": "Manakah singkatan yang digunakan untuk “inseminasi buatan”?",
+      "options": [
+        "AI (Artificial Insemination)",
+        "PI (Pig Insemination)",
+        "SI (Swine Insemination)",
+        "NI (Natural Insemination)"
+      ]
+    }
+  },
+  {
+    "question": "豚の発情周期（はつじょうしゅうき）は平均何日ですか？",
+    "options": [
+      "約21日",
+      "約28日",
+      "約14日",
+      "約7日"
+    ],
+    "answer": "約21日",
+    "explanation": "参考ページ: 91",
+    "category": "繁殖・分娩",
+    "source": "setA-57.0",
+    "vi": {
+      "question": "Chu kỳ động dục của heo trung bình bao nhiêu ngày?",
+      "options": [
+        "Khoảng 21 ngày",
+        "Khoảng 28 ngày",
+        "Khoảng 14 ngày",
+        "Khoảng 7 ngày"
+      ]
+    },
+    "ind": {
+      "question": "Berapa rata-rata siklus berahi babi?",
+      "options": [
+        "Sekitar 21 hari",
+        "Sekitar 28 hari",
+        "Sekitar 14 hari",
+        "Sekitar 7 hari"
+      ]
+    }
+  },
+  {
+    "question": "「増体（ぞうたい）」とは何ですか？",
+    "options": [
+      "一定期間内に豚の体重が増加した量（日増体量＝1日あたりの増加量）",
+      "豚に与えた飼料の総量",
+      "豚が1日に食べる飼料の量",
+      "豚の出荷時の体重"
+    ],
+    "answer": "一定期間内に豚の体重が増加した量（日増体量＝1日あたりの増加量）",
+    "explanation": "参考ページ: 110, 118, 120",
+    "category": "肉豚・出荷・肉",
+    "source": "setA-58.0",
+    "vi": {
+      "question": "“Tăng trọng (zotai)” là gì?",
+      "options": [
+        "Lượng trọng lượng heo tăng trong một khoảng thời gian nhất định (tăng trọng/ngày = lượng tăng mỗi ngày)",
+        "Tổng lượng thức ăn đã cho heo",
+        "Lượng thức ăn heo ăn trong 1 ngày",
+        "Trọng lượng heo lúc xuất chuồng"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “pertambahan bobot (zotai)”?",
+      "options": [
+        "Jumlah pertambahan bobot babi dalam periode tertentu (pertambahan bobot harian = jumlah tambahan per hari)",
+        "Total jumlah pakan yang diberikan pada babi",
+        "Jumlah pakan yang dimakan babi dalam 1 hari",
+        "Bobot babi saat pengiriman"
+      ]
+    }
+  },
+  {
+    "question": "初乳に多く含まれる免疫グロブリン（IgG等）は、分娩後どのくらいで著しく減ってしまいますか？",
+    "options": [
+      "分娩後36〜48時間",
+      "分娩後3〜6時間",
+      "分娩後1週間",
+      "分娩後3週間"
+    ],
+    "answer": "分娩後36〜48時間",
+    "explanation": "参考ページ: 105",
+    "category": "繁殖・分娩",
+    "source": "setA-59.0",
+    "vi": {
+      "question": "Immunoglobulin (IgG v.v.) có nhiều trong sữa đầu sẽ giảm rõ rệt sau khi đẻ khoảng bao lâu?",
+      "options": [
+        "36–48 giờ sau khi đẻ",
+        "3–6 giờ sau khi đẻ",
+        "1 tuần sau khi đẻ",
+        "3 tuần sau khi đẻ"
+      ]
+    },
+    "ind": {
+      "question": "Imunoglobulin (IgG dll.) yang banyak terdapat dalam kolostrum akan menurun drastis kira-kira berapa lama setelah melahirkan?",
+      "options": [
+        "36–48 jam setelah melahirkan",
+        "3–6 jam setelah melahirkan",
+        "1 minggu setelah melahirkan",
+        "3 minggu setelah melahirkan"
+      ]
+    }
+  },
+  {
+    "question": "「オールイン・オールアウト」とはどのような飼養方式ですか？",
+    "options": [
+      "豚舎に同時期に一斉に導入し、同時期に一斉に搬出する方式",
+      "豚を1頭ずつ順番に出荷していく方式",
+      "母豚と子豚を同じ豚舎で飼う方式",
+      "豚舎を24時間開放して自由に出入りさせる方式"
+    ],
+    "answer": "豚舎に同時期に一斉に導入し、同時期に一斉に搬出する方式",
+    "explanation": "参考ページ: 116, 23",
+    "category": "衛生・防疫",
+    "source": "setA-60.0",
+    "vi": {
+      "question": "“All-in/All-out (cùng vào cùng ra)” là phương thức nuôi như thế nào?",
+      "options": [
+        "Phương thức đưa heo vào chuồng đồng loạt cùng thời điểm và chuyển ra đồng loạt cùng thời điểm",
+        "Phương thức xuất chuồng từng con một theo thứ tự",
+        "Phương thức nuôi heo nái và heo con trong cùng một chuồng",
+        "Phương thức mở chuồng 24 giờ cho heo tự do ra vào"
+      ]
+    },
+    "ind": {
+      "question": "“All-in/All-out” adalah metode pemeliharaan seperti apa?",
+      "options": [
+        "Metode memasukkan babi ke kandang serentak pada waktu yang sama dan mengeluarkannya serentak pada waktu yang sama",
+        "Metode mengirim babi satu per satu secara berurutan",
+        "Metode memelihara induk dan anak babi dalam kandang yang sama",
+        "Metode membuka kandang 24 jam agar babi bebas keluar masuk"
+      ]
+    }
+  },
+  {
+    "question": "「飼料要求率（しりょうようきゅうりつ）」とは何ですか？",
+    "options": [
+      "体重を1kg増やすのに必要な飼料の量を示す指標",
+      "豚が1日に食べる飼料の割合",
+      "飼料に含まれるタンパク質の割合",
+      "飼料費が出荷価格に占める割合"
+    ],
+    "answer": "体重を1kg増やすのに必要な飼料の量を示す指標",
+    "explanation": "参考ページ: 118",
+    "category": "飼料・栄養",
+    "source": "setA-62.0",
+    "vi": {
+      "question": "“Hệ số chuyển hóa thức ăn (FCR)” là gì?",
+      "options": [
+        "Chỉ số thể hiện lượng thức ăn cần thiết để tăng 1 kg trọng lượng cơ thể",
+        "Tỷ lệ thức ăn heo ăn trong 1 ngày",
+        "Tỷ lệ protein chứa trong thức ăn",
+        "Tỷ lệ chi phí thức ăn trong giá xuất chuồng"
+      ]
+    },
+    "ind": {
+      "question": "Apa itu “konversi pakan (FCR)”?",
+      "options": [
+        "Indikator jumlah pakan yang diperlukan untuk menambah 1 kg bobot tubuh",
+        "Rasio pakan yang dimakan babi dalam 1 hari",
+        "Rasio protein dalam pakan",
+        "Rasio biaya pakan terhadap harga pengiriman"
+      ]
+    }
+  },
+  {
+    "question": "豚の食下量（飼料摂取量）が一時的に落ちる要因として挙げられていていないものはどれですか？",
+    "options": [
+      "ワクチン接種によるリアクション",
+      "暑熱ストレス",
+      "二酸化炭素濃度の上昇",
+      "出荷直前の体重増加"
+    ],
+    "answer": "出荷直前の体重増加",
+    "explanation": "参考ページ: 118",
+    "category": "飼料・栄養",
+    "source": "setA-64.0",
+    "vi": {
+      "question": "Điều nào KHÔNG được nêu là yếu tố làm lượng ăn (lượng thức ăn thu nhận) của heo tạm thời giảm?",
+      "options": [
+        "Phản ứng do tiêm vắc-xin",
+        "Stress nhiệt (nóng)",
+        "Nồng độ CO2 tăng cao",
+        "Tăng trọng ngay trước khi xuất chuồng"
+      ]
+    },
+    "ind": {
+      "question": "Manakah yang TIDAK disebutkan sebagai faktor yang membuat jumlah makan (asupan pakan) babi turun sementara?",
+      "options": [
+        "Reaksi akibat vaksinasi",
+        "Stres panas",
+        "Naiknya konsentrasi karbon dioksida",
+        "Pertambahan bobot menjelang pengiriman"
+      ]
+    }
+  },
+  {
+    "question": "日本の一般的な肉豚の出荷体重として最も近いものはどれですか？",
+    "options": [
+      "約110〜120kg",
+      "約90〜100kg",
+      "約130〜150kg",
+      "約70〜90kg"
+    ],
+    "answer": "約110〜120kg",
+    "explanation": "参考ページ: 123, 27, 7",
+    "category": "肉豚・出荷・肉",
+    "source": "setA-66.0",
+    "vi": {
+      "question": "Trọng lượng xuất chuồng phổ biến của heo thịt ở Nhật gần nhất với mức nào?",
+      "options": [
+        "Khoảng 110–120 kg",
+        "Khoảng 90–100 kg",
+        "Khoảng 130–150 kg",
+        "Khoảng 70–90 kg"
+      ]
+    },
+    "ind": {
+      "question": "Berapa bobot pengiriman babi potong yang umum di Jepang yang paling mendekati?",
+      "options": [
+        "Sekitar 110–120 kg",
+        "Sekitar 90–100 kg",
+        "Sekitar 130–150 kg",
+        "Sekitar 70–90 kg"
+      ]
+    }
+  },
+  {
+    "question": "飼料設計で用いられる『CP（CP22・CP19等）』が示す成分はどれですか？",
+    "options": [
+      "粗タンパク質（Crude Protein）",
+      "可消化タンパク質（Convertible Protein）",
+      "粗脂肪（Crude Lipid、CP表記）",
+      "完全タンパク質（Complete Protein）"
+    ],
+    "answer": "粗タンパク質（Crude Protein）",
+    "explanation": "参考ページ: 121",
+    "category": "飼料・栄養",
+    "source": "setA-67.0",
+    "vi": {
+      "question": "Thành phần mà “CP (CP22, CP19 v.v.)” dùng trong thiết kế khẩu phần biểu thị là gì?",
+      "options": [
+        "Protein thô (Crude Protein)",
+        "Protein tiêu hóa được (Convertible Protein)",
+        "Mỡ thô (Crude Lipid, ký hiệu CP)",
+        "Protein hoàn chỉnh (Complete Protein)"
+      ]
+    },
+    "ind": {
+      "question": "Komponen apa yang ditunjukkan oleh “CP (CP22, CP19 dll.)” yang digunakan dalam formulasi pakan?",
+      "options": [
+        "Protein kasar (Crude Protein)",
+        "Protein tercerna (Convertible Protein)",
+        "Lemak kasar (Crude Lipid, notasi CP)",
+        "Protein lengkap (Complete Protein)"
+      ]
+    }
+  },
+  {
+    "question": "豚が3kg食べて1kg増体している場合の飼料要求率（FCR）はいくつですか？",
+    "options": [
+      "3.0",
+      "0.33",
+      "1.0",
+      "30"
+    ],
+    "answer": "3.0",
+    "explanation": "参考ページ: 115",
+    "category": "飼料・栄養",
+    "source": "setA-68.0",
+    "vi": {
+      "question": "Nếu heo ăn 3 kg và tăng 1 kg trọng lượng thì hệ số chuyển hóa thức ăn (FCR) là bao nhiêu?",
+      "options": [
+        "3,0",
+        "0,33",
+        "1,0",
+        "30"
+      ]
+    },
+    "ind": {
+      "question": "Jika babi makan 3 kg dan bertambah bobot 1 kg, berapa konversi pakan (FCR)-nya?",
+      "options": [
+        "3,0",
+        "0,33",
+        "1,0",
+        "30"
+      ]
+    }
+  },
+  {
+    "question": "豚が暑さに弱い主な理由として最も正確なものはどれですか？",
+    "options": [
+      "汗腺がほぼ機能せず発汗で体温調節できないため",
+      "汗腺が全くないため、一切発汗できないから",
+      "皮下脂肪が薄く体内に熱を蓄えようとするため",
+      "被毛が密生しており放熱が困難なため"
+    ],
+    "answer": "汗腺がほぼ機能せず発汗で体温調節できないため",
+    "explanation": "参考ページ: 125",
+    "category": "飼養環境・施設",
+    "source": "setA-69.0",
+    "vi": {
+      "question": "Lý do chính xác nhất khiến heo chịu nóng kém là gì?",
+      "options": [
+        "Tuyến mồ hôi gần như không hoạt động nên không thể điều hòa thân nhiệt bằng tiết mồ hôi",
+        "Hoàn toàn không có tuyến mồ hôi nên không thể tiết mồ hôi chút nào",
+        "Lớp mỡ dưới da mỏng nên cơ thể cố tích nhiệt",
+        "Lông mọc dày nên khó tản nhiệt"
+      ]
+    },
+    "ind": {
+      "question": "Apa alasan paling tepat babi lemah terhadap panas?",
+      "options": [
+        "Kelenjar keringat hampir tidak berfungsi sehingga tidak bisa mengatur suhu tubuh melalui keringat",
+        "Sama sekali tidak punya kelenjar keringat sehingga tidak bisa berkeringat sedikit pun",
+        "Lemak bawah kulit tipis sehingga tubuh cenderung menyimpan panas",
+        "Bulu tumbuh lebat sehingga sulit melepaskan panas"
+      ]
+    }
+  },
+  {
+    "question": "スノコ床（スラット床）の主な目的として最も正確なものはどれですか？",
+    "options": [
+      "糞尿をスノコの隙間から下に落とし、床面を清潔に保つ",
+      "豚の蹄（ひづめ）の伸びすぎを防止し、適度に削る",
+      "床面の温度を上げて保温効果を高める",
+      "糞尿と飼料の食べこぼしを分離して回収する"
+    ],
+    "answer": "糞尿をスノコの隙間から下に落とし、床面を清潔に保つ",
+    "explanation": "参考ページ: 129",
+    "category": "飼養環境・施設",
+    "source": "setA-70.0",
+    "vi": {
+      "question": "Mục đích chính xác nhất của sàn khe (sàn slat) là gì?",
+      "options": [
+        "Cho phân và nước tiểu lọt xuống dưới qua khe sàn, giữ mặt sàn sạch",
+        "Ngăn móng heo mọc quá dài và mài bớt vừa phải",
+        "Tăng nhiệt độ mặt sàn để giữ ấm tốt hơn",
+        "Tách riêng phân nước tiểu và thức ăn rơi vãi để thu gom"
+      ]
+    },
+    "ind": {
+      "question": "Apa tujuan paling tepat dari lantai celah (lantai slat)?",
+      "options": [
+        "Membuat kotoran dan urin jatuh ke bawah melalui celah lantai, menjaga permukaan lantai tetap bersih",
+        "Mencegah kuku babi tumbuh terlalu panjang dan mengikisnya secukupnya",
+        "Menaikkan suhu permukaan lantai untuk meningkatkan kehangatan",
+        "Memisahkan kotoran/urin dengan pakan yang tercecer untuk dikumpulkan"
+      ]
+    }
+  },
+  {
+    "question": "「1母豚当たり枝肉重量」はどのように求めますか？",
+    "options": [
+      "肉豚1頭当たりの枝肉重量×1母豚当たりの年間出荷頭数",
+      "年間離乳子豚数÷母豚頭数",
+      "総産子数×母豚頭数",
+      "出荷体重×出荷頭数"
+    ],
+    "answer": "肉豚1頭当たりの枝肉重量×1母豚当たりの年間出荷頭数",
+    "explanation": "参考ページ: 128",
+    "category": "繁殖・分娩",
+    "source": "setA-71.0",
+    "vi": {
+      "question": "“Trọng lượng thân thịt trên một heo nái” được tính như thế nào?",
+      "options": [
+        "Trọng lượng thân thịt của 1 heo thịt × số con xuất chuồng/năm trên một heo nái",
+        "Số heo con cai sữa/năm ÷ số heo nái",
+        "Tổng số con sinh ra × số heo nái",
+        "Trọng lượng xuất chuồng × số con xuất chuồng"
+      ]
+    },
+    "ind": {
+      "question": "Bagaimana cara menghitung “bobot karkas per induk babi”?",
+      "options": [
+        "Bobot karkas per 1 babi potong × jumlah pengiriman per tahun per induk babi",
+        "Jumlah anak sapihan per tahun ÷ jumlah induk babi",
+        "Total anak lahir × jumlah induk babi",
+        "Bobot pengiriman × jumlah pengiriman"
+      ]
+    }
+  },
+  {
+    "question": "ふん尿処理ではまず何を行いますか？",
+    "options": [
+      "固形物と液体を分離する",
+      "全量をそのまま曝気槽に投入する",
+      "消毒槽で殺菌する",
+      "戻したい肥と混合する"
+    ],
+    "answer": "固形物と液体を分離する",
+    "explanation": "参考ページ: 132",
+    "category": "飼養環境・施設",
+    "source": "setA-72.0",
+    "vi": {
+      "question": "Trong xử lý phân và nước tiểu, trước tiên cần làm gì?",
+      "options": [
+        "Tách chất rắn và chất lỏng",
+        "Đưa toàn bộ thẳng vào bể sục khí",
+        "Khử trùng ở bể khử trùng",
+        "Trộn với phân ủ muốn hoàn lại"
+      ]
+    },
+    "ind": {
+      "question": "Dalam pengolahan kotoran dan urin, apa yang pertama dilakukan?",
+      "options": [
+        "Memisahkan zat padat dan cair",
+        "Memasukkan seluruhnya langsung ke tangki aerasi",
+        "Mensterilkan di tangki disinfeksi",
+        "Mencampur dengan kompos yang ingin dikembalikan"
+      ]
+    }
+  },
+  {
+    "question": "ヒラノが経営理念において使命とする「幸せの連鎖」として正しい組み合わせはどれでしょうか",
+    "options": [
+      "豚が早く育ち、育てた人が楽になり、食べる人が安く買える",
+      "豚が規格通りに育ち、育てた人が評価され、食べる人が満足する",
+      "豚が健康に育ち、育てた人が儲かり、食べる人が増える",
+      "豚が幸せに育ち、育てた人が誇りを持ち、食べる人が喜ぶ"
+    ],
+    "answer": "豚が幸せに育ち、育てた人が誇りを持ち、食べる人が喜ぶ",
+    "explanation": "「豚が幸せに育ち、育てた人が誇りを持ち、食べる人が喜ぶ」という幸せの連鎖を作ることが使命とされています。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-73.0",
+    "vi": {
+      "question": "Tổ hợp đúng về “chuỗi hạnh phúc” mà Hirano coi là sứ mệnh trong triết lý kinh doanh là gì?",
+      "options": [
+        "Heo lớn nhanh, người nuôi đỡ vất vả, người ăn mua được rẻ",
+        "Heo lớn đúng quy cách, người nuôi được đánh giá cao, người ăn hài lòng",
+        "Heo lớn khỏe mạnh, người nuôi có lãi, người ăn tăng lên",
+        "Heo được nuôi lớn hạnh phúc, người nuôi tự hào, người ăn cảm thấy vui"
+      ]
+    },
+    "ind": {
+      "question": "Manakah kombinasi yang benar tentang “rantai kebahagiaan” yang dijadikan misi oleh Hirano dalam filosofi manajemennya?",
+      "options": [
+        "Babi cepat besar, yang membesarkan jadi lebih ringan bebannya, yang makan bisa membeli murah",
+        "Babi besar sesuai standar, yang membesarkan dihargai, yang makan puas",
+        "Babi tumbuh sehat, yang membesarkan untung, yang makan bertambah",
+        "Babi dibesarkan dengan bahagia, orang yang membesarkannya merasa bangga, dan orang yang memakannya merasa senang"
+      ]
+    }
+  },
+  {
+    "question": "行動規範全般において共通して「厳に慎むべき」とされている姿勢はどれでしょうか",
+    "options": [
+      "自分事として行動する",
+      "自分だけが良ければ良い、周囲の事を考えない",
+      "全体最適を意識する",
+      "共存共栄を目指す"
+    ],
+    "answer": "自分だけが良ければ良い、周囲の事を考えない",
+    "explanation": "「自分だけ良ければ良い、知っていても協力しない」（行動規範2）や、「自分だけが良ければ良い、周囲の事を考えない」（行動規範5）など、自己中心的な姿勢は厳しく戒められています。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-74.0",
+    "vi": {
+      "question": "Thái độ nào bị coi là “phải nghiêm khắc tránh” chung trong toàn bộ quy tắc hành động?",
+      "options": [
+        "Hành động với tinh thần coi đó là việc của mình",
+        "Chỉ cần bản thân tốt là được, không nghĩ đến xung quanh",
+        "Ý thức về tối ưu tổng thể",
+        "Hướng tới cùng tồn tại và cùng thịnh vượng"
+      ]
+    },
+    "ind": {
+      "question": "Sikap apa yang secara umum dianggap “harus dihindari dengan tegas” dalam seluruh pedoman perilaku?",
+      "options": [
+        "Bertindak dengan menganggapnya urusan sendiri",
+        "Asal diri sendiri baik saja, tidak memikirkan sekitar",
+        "Sadar akan optimalisasi menyeluruh",
+        "Berupaya hidup berdampingan dan sama-sama sejahtera"
+      ]
+    }
+  },
+  {
+    "question": "「経済豚と幸せの創造」において、推奨されている行動はどれでしょうか",
+    "options": [
+      "効率のみを優先した飼育を行う",
+      "夏場・冬場対策を、暑さや寒さが本格化してから行う",
+      "豚の行動や状態を日々観察し、ストレス低減を意識した管理を行う",
+      "精肉の歩留まりを気にせずカットを実施する"
+    ],
+    "answer": "豚の行動や状態を日々観察し、ストレス低減を意識した管理を行う",
+    "explanation": "豚の行動や状態を日々観察し、ストレス低減を意識した管理を行うことが推奨されています。夏場・冬場対策は暑くなる前、寒くなる前に行う必要があります。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-75.0",
+    "vi": {
+      "question": "Trong “Heo kinh tế và tạo dựng hạnh phúc”, hành động nào được khuyến khích?",
+      "options": [
+        "Nuôi chỉ ưu tiên hiệu suất",
+        "Thực hiện biện pháp chống nóng/lạnh sau khi nóng hoặc lạnh đã thực sự đến",
+        "Quan sát hành vi và trạng thái của heo hằng ngày, quản lý có ý thức giảm stress",
+        "Pha lóc thịt mà không quan tâm đến tỷ lệ thịt thành phẩm"
+      ]
+    },
+    "ind": {
+      "question": "Dalam “Babi bernilai ekonomi dan penciptaan kebahagiaan”, tindakan mana yang dianjurkan?",
+      "options": [
+        "Memelihara dengan hanya mengutamakan efisiensi",
+        "Melakukan tindakan menghadapi musim panas/dingin setelah panas atau dingin benar-benar memuncak",
+        "Mengamati perilaku dan kondisi babi setiap hari serta mengelola dengan kesadaran mengurangi stres",
+        "Memotong daging tanpa mempedulikan rendemen daging"
+      ]
+    }
+  },
+  {
+    "question": "「経済豚と幸せの創造」において、厳に慎むべき思考・行動はどれでしょうか",
+    "options": [
+      "豚にとって最善の環境を作るための確認・検証・修正を怠らない",
+      "異常を把握していながら「様子見」で対応を先送りする",
+      "事故や疾病の兆候を早期に発見し迅速に処置する",
+      "発育段階に応じた適正頭数・環境管理を徹底する"
+    ],
+    "answer": "異常を把握していながら「様子見」で対応を先送りする",
+    "explanation": "異常を把握していながら「様子見」で対応を先送りすることは、厳に慎むべき行動に指定されています。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-76.0",
+    "vi": {
+      "question": "Trong “Heo kinh tế và tạo dựng hạnh phúc”, suy nghĩ/hành động nào phải nghiêm khắc tránh?",
+      "options": [
+        "Không lơ là việc kiểm tra, thẩm định, sửa đổi để tạo môi trường tốt nhất cho heo",
+        "Dù đã nắm được bất thường vẫn “chờ xem” và trì hoãn xử lý",
+        "Phát hiện sớm dấu hiệu tai nạn hay bệnh tật và xử lý nhanh",
+        "Quản lý số đầu con và môi trường phù hợp theo từng giai đoạn phát triển"
+      ]
+    },
+    "ind": {
+      "question": "Dalam “Babi bernilai ekonomi dan penciptaan kebahagiaan”, pemikiran/tindakan mana yang harus dihindari dengan tegas?",
+      "options": [
+        "Tidak lalai melakukan pengecekan, verifikasi, dan perbaikan demi menciptakan lingkungan terbaik bagi babi",
+        "Meski sudah mengetahui adanya kelainan, tetap “menunggu dan melihat” serta menunda penanganan",
+        "Menemukan dini tanda kecelakaan atau penyakit dan menanganinya dengan cepat",
+        "Menerapkan pengelolaan jumlah ekor dan lingkungan yang sesuai dengan tahap pertumbuhan"
+      ]
+    }
+  },
+  {
+    "question": "「リレー産業の精神」において、ヒラノが持つべき意識はどれでしょうか",
+    "options": [
+      "出荷が完了すれば養豚企業の責任は終わる",
+      "仲間とともに助け合い、各部署と連携しながら成果を追求する",
+      "自分の部署の仕事が終わればそれでよい",
+      "次の部署のことは次の部署が責任を持って考えるべき"
+    ],
+    "answer": "仲間とともに助け合い、各部署と連携しながら成果を追求する",
+    "explanation": "「リレー産業の精神」とは、各工程がバトンをつなぐように仲間と助け合い、各部署が連携しながら成果を追求する意識です。自分の担当だけで完結させず、次工程への確実な引継ぎとおかげ様の精神を持つことが行動規範の基本です。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-77.0",
+    "vi": {
+      "question": "Trong “Tinh thần của ngành tiếp sức”, ý thức mà Hirano cần có là gì?",
+      "options": [
+        "Khi xuất chuồng xong thì trách nhiệm của doanh nghiệp chăn nuôi heo kết thúc",
+        "Cùng đồng đội giúp đỡ lẫn nhau, phối hợp với các bộ phận để theo đuổi thành quả",
+        "Chỉ cần xong việc của bộ phận mình là được",
+        "Việc của bộ phận sau thì bộ phận sau tự chịu trách nhiệm lo"
+      ]
+    },
+    "ind": {
+      "question": "Dalam “Semangat industri estafet”, kesadaran apa yang harus dimiliki Hirano?",
+      "options": [
+        "Begitu pengiriman selesai, tanggung jawab perusahaan peternakan babi berakhir",
+        "Saling membantu bersama rekan kerja dan berkoordinasi dengan tiap bagian untuk mengejar hasil",
+        "Cukup asal pekerjaan bagian sendiri selesai",
+        "Urusan bagian berikutnya biar bagian berikutnya yang bertanggung jawab memikirkannya"
+      ]
+    }
+  },
+  {
+    "question": "「リレー産業の精神」において、厳に慎むべき思考・行動はどれでしょうか",
+    "options": [
+      "自分の担当外であっても、気づいた点を積極的に伝える",
+      "次の部署や担当者の作業を想定し、準備や整理を行う",
+      "片付けを行わず、次に使う人に迷惑をかける（業務をやりっぱなし）",
+      "引継ぎは、基本的に事前に行う"
+    ],
+    "answer": "片付けを行わず、次に使う人に迷惑をかける（業務をやりっぱなし）",
+    "explanation": "片付けを行わず、次に使う人に迷惑をかける（業務をやりっぱなし）ことや、不具合を報告せず次工程に丸投げすることは厳に慎むべき行動です。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-78.0",
+    "vi": {
+      "question": "Trong “Tinh thần của ngành tiếp sức”, suy nghĩ/hành động nào phải nghiêm khắc tránh?",
+      "options": [
+        "Dù không thuộc phần phụ trách của mình, vẫn chủ động báo điểm nhận thấy",
+        "Hình dung công việc của bộ phận/người phụ trách kế tiếp để chuẩn bị, sắp xếp",
+        "Không dọn dẹp, gây phiền cho người dùng sau (làm việc bỏ dở giữa chừng)",
+        "Việc bàn giao về cơ bản được làm trước"
+      ]
+    },
+    "ind": {
+      "question": "Dalam “Semangat industri estafet”, pemikiran/tindakan mana yang harus dihindari dengan tegas?",
+      "options": [
+        "Meski di luar tanggung jawabnya, tetap aktif menyampaikan hal yang ia sadari",
+        "Membayangkan pekerjaan bagian/petugas berikutnya lalu menyiapkan dan merapikan",
+        "Tidak membereskan sehingga menyusahkan orang yang memakai berikutnya (pekerjaan dibiarkan begitu saja)",
+        "Serah terima pada dasarnya dilakukan sebelumnya"
+      ]
+    }
+  },
+  {
+    "question": "現場でトラブルが発生した際の最も望ましい対応はどれでしょうか",
+    "options": [
+      "関係者を特定し責任を明確にすることを優先する",
+      "情報共有を制限し内部処理を優先する",
+      "原因分析・情報共有・再発防止をチームで実施する",
+      "担当者に全て委ねる"
+    ],
+    "answer": "原因分析・情報共有・再発防止をチームで実施する",
+    "explanation": "他責を排除し、チームで現状や解決策を共有し組織で対応することが求められています。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-79.0",
+    "vi": {
+      "question": "Khi xảy ra sự cố tại hiện trường, cách xử lý đáng mong muốn nhất là gì?",
+      "options": [
+        "Ưu tiên xác định người liên quan và làm rõ trách nhiệm",
+        "Hạn chế chia sẻ thông tin và ưu tiên xử lý nội bộ",
+        "Cả nhóm cùng thực hiện phân tích nguyên nhân, chia sẻ thông tin, phòng ngừa tái diễn",
+        "Giao phó toàn bộ cho người phụ trách"
+      ]
+    },
+    "ind": {
+      "question": "Saat terjadi masalah di lapangan, penanganan yang paling diharapkan adalah?",
+      "options": [
+        "Mengutamakan mengidentifikasi pihak terkait dan memperjelas tanggung jawab",
+        "Membatasi berbagi informasi dan mengutamakan penanganan internal",
+        "Tim bersama-sama melakukan analisis penyebab, berbagi informasi, dan mencegah terulang",
+        "Menyerahkan semuanya kepada petugas"
+      ]
+    }
+  },
+  {
+    "question": "「責任感とチームの絆」において、厳に慎むべき思考・行動はどれでしょうか",
+    "options": [
+      "トラブルを部署横断で共有し、緊急時はチームで対応する",
+      "忙しい仲間を自然にフォローし、全体最適を意識する",
+      "休日の前日はメモを作成し、翌日の後任に申し送る",
+      "悪評、陰口を言って他人を貶めたり、事実無根の話を連発する"
+    ],
+    "answer": "悪評、陰口を言って他人を貶めたり、事実無根の話を連発する",
+    "explanation": "悪評や陰口を言って他人を貶めることや、事実無根の話を連発することは厳に慎むべき行動です。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-80.0",
+    "vi": {
+      "question": "Trong “Trách nhiệm và gắn kết đội nhóm”, suy nghĩ/hành động nào phải nghiêm khắc tránh?",
+      "options": [
+        "Chia sẻ sự cố xuyên bộ phận, khi khẩn cấp thì cả nhóm cùng xử lý",
+        "Tự nhiên hỗ trợ đồng nghiệp đang bận, ý thức tối ưu tổng thể",
+        "Ngày trước ngày nghỉ thì làm ghi chú, bàn giao cho người kế nhiệm hôm sau",
+        "Nói xấu, đặt điều sau lưng để hạ thấp người khác, liên tục tung tin vô căn cứ"
+      ]
+    },
+    "ind": {
+      "question": "Dalam “Tanggung jawab dan ikatan tim”, pemikiran/tindakan mana yang harus dihindari dengan tegas?",
+      "options": [
+        "Berbagi masalah lintas bagian, dan saat darurat ditangani bersama tim",
+        "Secara alami membantu rekan yang sibuk, sadar akan optimalisasi menyeluruh",
+        "Sehari sebelum libur membuat catatan, mengoper ke penerus keesokan harinya",
+        "Menjelek-jelekkan, bergunjing untuk merendahkan orang lain, dan terus melontarkan kabar tak berdasar"
+      ]
+    }
+  },
+  {
+    "question": "「素直で誠実、そして探求心旺盛な姿勢」として正しい行動はどれでしょうか",
+    "options": [
+      "自分のやり方に固執し、他人の意見を聞かない",
+      "失敗を隠して報告しない",
+      "周囲に知っていることは教え、後継を育てることで自身も成長する",
+      "指示されたことだけをやり、自ら仕事を得ようとしない"
+    ],
+    "answer": "周囲に知っていることは教え、後継を育てることで自身も成長する",
+    "explanation": "周囲に知っていることは教え、後継を育てることで自身も成長するという姿勢が推奨されています。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-81.0",
+    "vi": {
+      "question": "Hành động nào là đúng với “thái độ chân thành, trung thực và ham học hỏi”?",
+      "options": [
+        "Cố chấp với cách của mình, không nghe ý kiến người khác",
+        "Giấu thất bại và không báo cáo",
+        "Chỉ dạy điều mình biết cho xung quanh, nuôi dưỡng người kế nhiệm và qua đó bản thân cũng trưởng thành",
+        "Chỉ làm việc được chỉ thị, không tự tìm việc để làm"
+      ]
+    },
+    "ind": {
+      "question": "Tindakan mana yang sesuai dengan “sikap tulus, jujur, dan penuh rasa ingin tahu”?",
+      "options": [
+        "Bersikukuh pada caranya sendiri dan tidak mendengar pendapat orang lain",
+        "Menyembunyikan kegagalan dan tidak melaporkannya",
+        "Mengajarkan apa yang diketahui kepada sekitar, membina penerus, sehingga diri sendiri pun berkembang",
+        "Hanya mengerjakan yang diperintahkan, tidak berinisiatif mencari pekerjaan sendiri"
+      ]
+    }
+  },
+  {
+    "question": "「地域との共生」において、厳に慎むべき思考・行動はどれでしょうか",
+    "options": [
+      "臭気・騒音・衛生管理を徹底し、地域への配慮を行う",
+      "地域住民や関係業者への挨拶・感謝を欠かさない",
+      "汚水処理・堆肥管理の重要性を理解せず糞尿トラブルを劣後する",
+      "定期的に地域代表者から情報収集、共有を行う"
+    ],
+    "answer": "汚水処理・堆肥管理の重要性を理解せず糞尿トラブルを劣後する",
+    "explanation": "汚水処理・堆肥管理の重要性を理解せず糞尿トラブルを劣後することや、地域環境への影響を軽視することは厳に慎むべき行動です。",
+    "category": "経営理念・行動規範",
+    "source": "honshiken-82.0",
+    "vi": {
+      "question": "Trong “Cùng phát triển với địa phương”, suy nghĩ/hành động nào phải nghiêm khắc tránh?",
+      "options": [
+        "Quản lý triệt để mùi hôi, tiếng ồn, vệ sinh và quan tâm đến địa phương",
+        "Không quên chào hỏi, cảm ơn cư dân địa phương và các đối tác liên quan",
+        "Không hiểu tầm quan trọng của xử lý nước thải và quản lý phân ủ, xem nhẹ vấn đề phân nước tiểu",
+        "Định kỳ thu thập và chia sẻ thông tin từ đại diện địa phương"
+      ]
+    },
+    "ind": {
+      "question": "Dalam “Hidup berdampingan dengan masyarakat setempat”, pemikiran/tindakan mana yang harus dihindari dengan tegas?",
+      "options": [
+        "Mengelola bau, kebisingan, dan kebersihan secara menyeluruh serta memperhatikan masyarakat sekitar",
+        "Tidak lupa menyapa dan berterima kasih kepada warga setempat dan mitra terkait",
+        "Tidak memahami pentingnya pengolahan air limbah dan pengelolaan kompos sehingga mengabaikan masalah kotoran-urin",
+        "Secara berkala mengumpulkan dan berbagi informasi dari perwakilan daerah"
+      ]
+    }
+  },
+  {
+    "question": "「ツーサイト方式」の説明として最も正確なものはどれですか？",
+    "options": [
+      "繁殖・分娩の「サイト1」と、離乳・肥育・出荷の「サイト2」に農場を分けて管理する方式",
+      "1つの農場ですべての工程を行う一貫経営の方式",
+      "2社で繁殖と肥育を分担して行う共同経営の方式",
+      "母豚と肥育豚を同じ豚舎で2列に分けて飼う方式"
+    ],
+    "answer": "繁殖・分娩の「サイト1」と、離乳・肥育・出荷の「サイト2」に農場を分けて管理する方式",
+    "explanation": "参考ページ: 24",
+    "category": "衛生・防疫",
+    "source": "setA-83.0",
+    "vi": {
+      "question": "Mô tả chính xác nhất về “phương thức hai địa điểm (two-site)” là gì?",
+      "options": [
+        "Phương thức chia trang trại thành “Địa điểm 1” cho sinh sản–đẻ và “Địa điểm 2” cho cai sữa–vỗ béo–xuất chuồng để quản lý",
+        "Phương thức kinh doanh khép kín thực hiện mọi công đoạn tại một trang trại",
+        "Phương thức hợp doanh chia nhau sinh sản và vỗ béo giữa hai công ty",
+        "Phương thức nuôi heo nái và heo vỗ béo trong cùng một chuồng chia làm hai dãy"
+      ]
+    },
+    "ind": {
+      "question": "Manakah penjelasan paling tepat tentang “sistem dua lokasi (two-site)”?",
+      "options": [
+        "Sistem yang membagi peternakan menjadi “Lokasi 1” untuk pembiakan–kelahiran dan “Lokasi 2” untuk penyapihan–penggemukan–pengiriman",
+        "Sistem usaha terpadu yang melakukan semua proses di satu peternakan",
+        "Sistem usaha bersama dua perusahaan yang membagi pembiakan dan penggemukan",
+        "Sistem memelihara induk dan babi gemukan dalam satu kandang yang dibagi dua jalur"
+      ]
+    }
+  },
+  {
+    "question": "農場を「ツーサイト方式」で分ける最大のねらいは何ですか？",
+    "options": [
+      "万一どちらかに病気が入っても、被害を小規模に食い止めるため（防疫）",
+      "飼料代を半分に減らすため",
+      "出荷体重を大きくするため",
+      "従業員の人数を減らすため"
+    ],
+    "answer": "万一どちらかに病気が入っても、被害を小規模に食い止めるため（防疫）",
+    "explanation": "参考ページ: 24",
+    "category": "衛生・防疫",
+    "source": "setA-84.0",
+    "vi": {
+      "question": "Mục đích lớn nhất khi chia trang trại theo “phương thức hai địa điểm” là gì?",
+      "options": [
+        "Để nếu chẳng may bệnh xâm nhập một bên thì khống chế thiệt hại ở quy mô nhỏ (phòng dịch)",
+        "Để giảm một nửa chi phí thức ăn",
+        "Để tăng trọng lượng xuất chuồng",
+        "Để giảm số lượng nhân viên"
+      ]
+    },
+    "ind": {
+      "question": "Apa tujuan terbesar membagi peternakan dengan “sistem dua lokasi”?",
+      "options": [
+        "Agar bila penyakit masuk ke salah satu lokasi, kerugian dapat dibatasi dalam skala kecil (biosekuriti)",
+        "Untuk mengurangi biaya pakan setengahnya",
+        "Untuk memperbesar bobot pengiriman",
+        "Untuk mengurangi jumlah karyawan"
+      ]
+    }
+  },
+  {
+    "question": "母豚の1日あたりの飲水量のめやすとして最も近いものはどれですか？",
+    "options": [
+      "約40L以上（授乳期は60Lを超えることもある）",
+      "約5L程度",
+      "約15L程度",
+      "水はほとんど必要としない"
+    ],
+    "answer": "約40L以上（授乳期は60Lを超えることもある）",
+    "explanation": "参考ページ: 36, 53",
+    "category": "飼料・栄養",
+    "source": "setA-85.0",
+    "vi": {
+      "question": "Lượng nước uống mỗi ngày của heo nái gần nhất với mức nào?",
+      "options": [
+        "Khoảng 40 L trở lên (thời kỳ cho bú có thể vượt 60 L)",
+        "Khoảng 5 L",
+        "Khoảng 15 L",
+        "Hầu như không cần nước"
+      ]
+    },
+    "ind": {
+      "question": "Berapa jumlah air minum harian induk babi yang paling mendekati?",
+      "options": [
+        "Sekitar 40 L ke atas (saat menyusui bisa lebih dari 60 L)",
+        "Sekitar 5 L",
+        "Sekitar 15 L",
+        "Hampir tidak memerlukan air"
+      ]
+    }
+  },
+  {
+    "question": "母豚用の給水器（ニップル）の流速点検のめやすとして正しいものはどれですか？",
+    "options": [
+      "約20秒で500mL（ペットボトル1本）が満タンになる程度の流量",
+      "約5分で500mLが出る程度",
+      "1秒で2Lが出る程度",
+      "流速は点検する必要がない"
+    ],
+    "answer": "約20秒で500mL（ペットボトル1本）が満タンになる程度の流量",
+    "explanation": "参考ページ: 36, 53",
+    "category": "飼料・栄養",
+    "source": "setA-86.0",
+    "vi": {
+      "question": "Mức chuẩn để kiểm tra lưu tốc của núm uống nước (nipple) cho heo nái đúng là gì?",
+      "options": [
+        "Lưu lượng đủ làm đầy 500 mL (1 chai nước) trong khoảng 20 giây",
+        "Khoảng 5 phút mới ra được 500 mL",
+        "Ra 2 L trong 1 giây",
+        "Không cần kiểm tra lưu tốc"
+      ]
+    },
+    "ind": {
+      "question": "Manakah patokan yang benar untuk memeriksa laju aliran nipel air minum induk babi?",
+      "options": [
+        "Laju yang memenuhi 500 mL (1 botol) dalam sekitar 20 detik",
+        "Sekitar 5 menit untuk keluar 500 mL",
+        "Keluar 2 L dalam 1 detik",
+        "Laju aliran tidak perlu diperiksa"
+      ]
+    }
+  },
+  {
+    "question": "ウィンドウレス豚舎での換気回数のめやすとして正しいものはどれですか？",
+    "options": [
+      "寒い時期は約3回/時、暑い時期は約60回/時",
+      "寒い時期は約60回/時、暑い時期は約3回/時",
+      "一年を通して約1回/時",
+      "換気は基本的に不要"
+    ],
+    "answer": "寒い時期は約3回/時、暑い時期は約60回/時",
+    "explanation": "参考ページ: 108",
+    "category": "飼養環境・施設",
+    "source": "setA-87.0",
+    "vi": {
+      "question": "Mức chuẩn về số lần thông gió trong chuồng kín (windowless) đúng là gì?",
+      "options": [
+        "Mùa lạnh khoảng 3 lần/giờ, mùa nóng khoảng 60 lần/giờ",
+        "Mùa lạnh khoảng 60 lần/giờ, mùa nóng khoảng 3 lần/giờ",
+        "Quanh năm khoảng 1 lần/giờ",
+        "Về cơ bản không cần thông gió"
+      ]
+    },
+    "ind": {
+      "question": "Manakah patokan jumlah ventilasi yang benar pada kandang tertutup (windowless)?",
+      "options": [
+        "Musim dingin sekitar 3 kali/jam, musim panas sekitar 60 kali/jam",
+        "Musim dingin sekitar 60 kali/jam, musim panas sekitar 3 kali/jam",
+        "Sepanjang tahun sekitar 1 kali/jam",
+        "Pada dasarnya tidak perlu ventilasi"
+      ]
+    }
+  },
+  {
+    "question": "豚舎の換気の「4つの目的」に含まれないものはどれですか？",
+    "options": [
+      "飼料コストの削減",
+      "酸素の供給",
+      "ガス・においや湿気の除去",
+      "舎内の温度調整"
+    ],
+    "answer": "飼料コストの削減",
+    "explanation": "参考ページ: 108。換気の4目的は①酸素供給②ガス・におい除去③湿気除去④温度調整。",
+    "category": "飼養環境・施設",
+    "source": "setA-88.0",
+    "vi": {
+      "question": "Điều nào KHÔNG nằm trong “4 mục đích” của việc thông gió chuồng heo?",
+      "options": [
+        "Cắt giảm chi phí thức ăn",
+        "Cung cấp oxy",
+        "Loại bỏ khí, mùi và hơi ẩm",
+        "Điều chỉnh nhiệt độ trong chuồng"
+      ]
+    },
+    "ind": {
+      "question": "Manakah yang TIDAK termasuk dalam “4 tujuan” ventilasi kandang babi?",
+      "options": [
+        "Pengurangan biaya pakan",
+        "Penyediaan oksigen",
+        "Penghilangan gas, bau, dan kelembapan",
+        "Pengaturan suhu di dalam kandang"
+      ]
+    }
+  },
+  {
+    "question": "排水処理で用いる指標「BOD」が示すものとして最も正確なものはどれですか？",
+    "options": [
+      "微生物が水中の有機物を分解する際に必要な酸素量（水の汚れの指標）",
+      "水の温度",
+      "水中の塩分濃度",
+      "豚の1日の飲水量"
+    ],
+    "answer": "微生物が水中の有機物を分解する際に必要な酸素量（水の汚れの指標）",
+    "explanation": "参考ページ: 139, 142。値が高いほど有機物（汚れ）が多い。",
+    "category": "飼養環境・施設",
+    "source": "setA-89.0",
+    "vi": {
+      "question": "Điều nào mô tả chính xác nhất chỉ số “BOD” dùng trong xử lý nước thải?",
+      "options": [
+        "Lượng oxy cần thiết khi vi sinh vật phân hủy chất hữu cơ trong nước (chỉ số mức độ ô nhiễm của nước)",
+        "Nhiệt độ của nước",
+        "Nồng độ muối trong nước",
+        "Lượng nước uống mỗi ngày của heo"
+      ]
+    },
+    "ind": {
+      "question": "Manakah yang paling tepat menggambarkan indikator “BOD” yang digunakan dalam pengolahan air limbah?",
+      "options": [
+        "Jumlah oksigen yang diperlukan mikroorganisme untuk menguraikan zat organik dalam air (indikator tingkat pencemaran air)",
+        "Suhu air",
+        "Kadar garam dalam air",
+        "Jumlah air minum harian babi"
+      ]
+    }
+  },
+  {
+    "question": "活性汚泥の状態を見る「SV30」の目標値として正しいものはどれですか？",
+    "options": [
+      "30〜50%",
+      "5〜10%",
+      "70〜90%",
+      "100%"
+    ],
+    "answer": "30〜50%",
+    "explanation": "参考ページ: 144。曝気槽の汚泥1Lを30分静置し沈殿量で判断。30%以下は微生物不足、50%超は汚泥過多。",
+    "category": "飼養環境・施設",
+    "source": "setA-90.0",
+    "vi": {
+      "question": "Giá trị mục tiêu đúng của “SV30” dùng để xem trạng thái bùn hoạt tính là bao nhiêu?",
+      "options": [
+        "30–50%",
+        "5–10%",
+        "70–90%",
+        "100%"
+      ]
+    },
+    "ind": {
+      "question": "Berapa nilai target yang benar dari “SV30” untuk melihat kondisi lumpur aktif?",
+      "options": [
+        "30–50%",
+        "5–10%",
+        "70–90%",
+        "100%"
+      ]
+    }
+  }
+]
