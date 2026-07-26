@@ -60,7 +60,7 @@ for(const q of all){
     if((shOpts[k]===q.answer)!==false){ gradeBug++; console.log("  ✗ 誤答がcorrectになる:",q.question); }
   }
 }
-console.log("  採点バグ:", gradeBug===0?"✓ なし(全80問の全選択肢で正しく判定)":`✗ ${gradeBug}件`);
+console.log("  採点バグ:", gradeBug===0?`✓ なし(全${all.length}問の全選択肢で正しく判定)`:`✗ ${gradeBug}件`);
 
 // 3. データ健全性
 console.log("\n[データ健全性]");

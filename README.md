@@ -6,12 +6,15 @@
 
 ### 1. 受験意志確認
 - パスワード不要
-- 氏名入力 → 「はい／いいえ」で回答
+- 氏名入力 → 「はい」で回答
 - 結果を管理者へ自動メール送信
 
 ### 2. 本試験
 - パスワード認証（SHA-256ハッシュ）
-- 80問から60問をランダム出題（四択形式）
+- 問題プール79問から60問を出題（四択形式）
+  - Word（本試験）由来の10問は毎回必ず全問出題
+  - Excel（セットA）由来の69問から50問をランダム出題
+  - 出題順・選択肢の並びは受験ごとにシャッフル
 - 制限時間60分（タイマー表示、時間超過で強制終了）
 - 未回答は不正解扱い
 - 結果を自動メール送信（改ざん防止）
@@ -71,11 +74,18 @@ hash('新しいパスワード').then(console.log);
   "options": ["選択肢1", "選択肢2", "選択肢3", "選択肢4"],
   "category": "カテゴリ名",
   "explanation": "解説",
-  "en": { "question": "...", "answer": "...", "options": [...], "explanation": "..." },
-  "vi": { "question": "...", "answer": "...", "options": [...], "explanation": "..." },
-  "ind": { "question": "...", "answer": "...", "options": [...], "explanation": "..." }
+  "source": "setA-1.0",
+  "en":  { "question": "...", "options": [...] },
+  "vi":  { "question": "...", "options": [...] },
+  "ind": { "question": "...", "options": [...] }
 }
 ```
+
+- `source` が `honshiken` で始まる問題は Word（本試験）由来として毎回必出。それ以外は Excel（セットA）プール扱い
+- 各言語ブロックは `question` と `options` のみを持つ。`answer` / `explanation` は翻訳せず日本語にフォールバックする（`index.html` の `getQ()`）
+- 各言語の `options` は**日本語 `options` と同じ順序・同じ要素数**であること。表示はインデックス対応（`q[lang].options[origIdx]`）のため、順序がずれると別の選択肢が表示される
+- ベトナム語は声調記号を必ず付ける（ASCII化しない）
+- カテゴリは次の7種: 繁殖・分娩／子豚・育成／衛生・防疫／飼料・栄養／飼養環境・施設／肉豚・出荷・肉／経営理念・行動規範
 
 #### その他の設定
 `config.js` で以下を変更可能:
@@ -94,16 +104,36 @@ hss-exam/
 ├── sw.js               # Service Worker
 ├── qr.html             # QRコード配布ページ
 ├── data/
-│   └── questions.json  # 問題データ（80問、4言語）
+│   ├── questions.json  # 問題データ（79問、4言語）
+│   └── questions_backup_*.json  # 過去バージョンのバックアップ
 ├── icons/
 │   ├── icon.svg        # SVGアイコン
 │   ├── icon-192.png    # PWAアイコン 192x192
 │   ├── icon-512.png    # PWAアイコン 512x512
 │   └── generate-icons.html  # アイコン生成ツール
 ├── gas/
-│   └── Code.gs         # Google Apps Script webhook
+│   ├── Code.gs         # Google Apps Script webhook
+│   └── DEPLOY.md       # GASデプロイ手順
+├── handbook/           # 養豚基礎ハンドブック（PDF閲覧ページ）
+├── validate_questions.py  # 問題データの検証（データ整合性）
+├── verify_logic.js        # 出題・採点ロジックのシミュレーション検証
+├── build_questions.py     # 問題データ生成スクリプト
+├── build_from_edited.py   # 編集済みデータからの再ビルド
+├── add_en.py              # 英語訳の付与スクリプト
 └── README.md
 ```
+
+## 検証
+
+問題データやロジックを変更したら、コミット前に両方を実行する（ビルド工程・依存パッケージは不要）。
+
+```bash
+python validate_questions.py   # データ整合性（終了コード 0=PASS / 1=FAIL）
+node verify_logic.js           # 出題ルール1000回試行 + 全問の採点ロジック
+```
+
+`validate_questions.py` は出題数・カテゴリ・多言語フィールド・選択肢の対応・ベトナム語の声調記号などを検査する。
+出題数の期待値は `config.js` の `questionsPerTest` / `excelRandomCount` から読み取るため、設定を変えれば検証もそれに追随する。
 
 ## 技術仕様
 
