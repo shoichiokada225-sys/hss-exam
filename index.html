@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="HSS認定試験">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#667eea">
+<meta name="theme-color" content="#0e1a2e">
 <meta name="format-detection" content="telephone=no">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
@@ -16,14 +16,17 @@
 <style>
 *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --primary: #1a5276; --primary-light: #2980b9; --primary-dark: #0e2f44;
+  /* 新パレット: ダークネイビー×スチールブルー（エンブレムと統一・UXレビュー承認値）
+     --primary #1b3a5c は白地で約11.5:1(AAA)のため本文・見出し両用可 */
+  --primary: #1b3a5c; --primary-light: #4a7fa8; --primary-dark: #0d2038;
   --accent: #27ae60; --accent-light: #2ecc71;
   --danger: #c0392b; --danger-light: #e74c3c;
   --warning: #f39c12; --warning-light: #f1c40f;
-  --bg: #f0f4f8; --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --card: #ffffff; --card-hover: #fafbfc;
-  --text: #2c3e50; --text-light: #7f8c8d; --text-muted: #95a5a6;
-  --border: #dce4ec;
+  --warning-bg: #fef9e7; --warning-text: #7d6608;
+  --bg: #eef1f5; --bg-gradient: linear-gradient(160deg, #16263f 0%, #0d1a2e 55%, #080f1c 100%);
+  --card: #ffffff; --card-hover: #f5f8fb;
+  --text: #1c2b3a; --text-light: #5c7185; --text-muted: #8a9bab;
+  --border: #d5dee6;
   --shadow: 0 4px 20px rgba(0,0,0,0.08); --shadow-lg: 0 8px 32px rgba(0,0,0,0.12); --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
   --radius: 16px; --radius-sm: 10px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -33,12 +36,13 @@
   --cat-facility: #e67e22; --cat-disease: #8e44ad; --cat-motto: #2c3e50;
 }
 [data-theme="dark"] {
-  --bg: #1a1a2e; --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  --card: #16213e; --card-hover: #1a2742;
-  --text: #e0e0e0; --text-light: #a0a0a0; --text-muted: #707070;
-  --border: #2a3a5c;
+  --bg: #0a1420; --bg-gradient: linear-gradient(160deg, #101c30 0%, #0a1322 55%, #060b14 100%);
+  --card: #101d2e; --card-hover: #16253a;
+  --text: #e4eaf0; --text-light: #94a7b8; --text-muted: #64798c;
+  --border: #22334a;
   --shadow: 0 4px 20px rgba(0,0,0,0.3); --shadow-lg: 0 8px 32px rgba(0,0,0,0.4); --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
-  --primary: #4a9eda; --primary-light: #5dade2; --primary-dark: #2e86c1;
+  --primary: #6fa3d1; --primary-light: #8fbbe0; --primary-dark: #3a6690;
+  --warning-bg: rgba(243,156,18,0.08); --warning-text: #f0b555;
 }
 body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.7; transition: background var(--transition), color var(--transition); }
 .app-bg { min-height: 100vh; background: var(--bg-gradient); padding-bottom: max(40px, env(safe-area-inset-bottom)); }
@@ -52,9 +56,10 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 
 /* Header */
 .header { text-align: center; padding: 24px 0 16px; }
-.header .logo { font-size: 2.5rem; margin-bottom: 8px; }
-.header h1 { font-size: 1.2rem; color: var(--primary); font-weight: 700; letter-spacing: 0.05em; }
-.header .subtitle { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+.header .logo { margin-bottom: 10px; }
+.header .logo svg { width: 88px; height: 88px; filter: drop-shadow(0 6px 18px rgba(46,111,184,0.5)); }
+.header h1 { font-size: 1.3rem; color: #e8f1fa; font-weight: 700; letter-spacing: 0.12em; text-shadow: 0 2px 10px rgba(0,0,0,0.4); }
+.header .subtitle { font-size: 0.85rem; color: #9db8d4; margin-top: 5px; letter-spacing: 0.08em; }
 .header .badge { display: inline-block; background: var(--primary); color: #fff; font-size: 0.7rem; padding: 3px 14px; border-radius: 20px; margin-top: 8px; letter-spacing: 0.08em; }
 
 /* Cards */
@@ -102,7 +107,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .password-inner h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 8px; }
 .password-inner p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px; }
 .password-input { width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 1.1rem; font-family: inherit; color: var(--text); background: var(--card); transition: border-color var(--transition), box-shadow var(--transition); text-align: center; letter-spacing: 0.1em; }
-.password-input:focus { outline: none; border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(41,128,185,0.2); }
+.password-input:focus { outline: none; border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(74,127,168,0.25); }
 .password-input.error { border-color: var(--danger); }
 .password-error { color: var(--danger); font-size: 0.8rem; margin-top: 4px; display: none; }
 .password-error.show { display: block; }
@@ -114,7 +119,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .name-input-group { margin-bottom: 24px; text-align: left; }
 .name-label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 .name-input { width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 1.1rem; font-family: inherit; color: var(--text); background: var(--card); transition: border-color var(--transition), box-shadow var(--transition); }
-.name-input:focus { outline: none; border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(41,128,185,0.2); }
+.name-input:focus { outline: none; border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(74,127,168,0.25); }
 .name-input.error { border-color: var(--danger); }
 .name-error { color: var(--danger); font-size: 0.8rem; margin-top: 4px; display: none; }
 .name-error.show { display: block; }
@@ -126,7 +131,10 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .test-info { background: var(--card-hover); border-radius: var(--radius-sm); padding: 16px 18px; margin-bottom: 24px; font-size: 0.85rem; color: var(--text-light); text-align: left; border: 1px solid var(--border); }
 .test-info div { margin-bottom: 4px; }
 .test-info strong { color: var(--text); }
-.notice-box { background: #fef9e7; border: 2px solid var(--warning); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 20px; font-size: 0.85rem; color: #7d6608; text-align: left; }
+.notice-box { background: var(--warning-bg); border: 2px solid var(--warning); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 20px; font-size: 0.85rem; color: var(--warning-text); text-align: left; }
+.notice-box ul { list-style: none; margin: 0; padding: 0; }
+.notice-box li { display: flex; gap: 8px; align-items: flex-start; padding: 3px 0; }
+.notice-box li .ni { flex-shrink: 0; }
 [data-theme="dark"] .notice-box { background: rgba(243,156,18,0.08); color: var(--warning); }
 
 /* Timer */
@@ -155,7 +163,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .step-dots { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; max-width: 500px; margin: 0 auto; }
 .step-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); transition: all var(--transition); flex-shrink: 0; cursor: pointer; }
 .step-dot.answered { background: var(--primary-light); }
-.step-dot.current { background: var(--primary-light); transform: scale(1.3); box-shadow: 0 0 6px rgba(41,128,185,0.4); }
+.step-dot.current { background: var(--primary-light); transform: scale(1.3); box-shadow: 0 0 6px rgba(74,127,168,0.5); }
 
 .progress-bar-wrap { margin-top: 8px; }
 .progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
@@ -175,11 +183,11 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .question-section-title { font-size: 0.85rem; color: var(--primary-light); font-weight: 700; margin-bottom: 12px; }
 .question-label { font-weight: 700; font-size: 1.05rem; margin-bottom: 18px; color: var(--text); line-height: 1.8; }
 .options { display: flex; flex-direction: column; gap: 10px; }
-.option-btn { display: flex; align-items: center; width: 100%; background: var(--card); border: 2px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 0.95rem; font-family: inherit; cursor: pointer; transition: all var(--transition); text-align: left; color: var(--text); line-height: 1.5; min-height: 48px; user-select: none; -webkit-tap-highlight-color: transparent; }
+.option-btn { display: flex; align-items: center; width: 100%; background: var(--card); border: 2px solid var(--border); border-radius: var(--radius-sm); padding: 16px; font-size: 0.95rem; font-family: inherit; cursor: pointer; transition: all var(--transition); text-align: left; color: var(--text); line-height: 1.5; min-height: 54px; user-select: none; -webkit-tap-highlight-color: transparent; }
 .option-btn:hover:not(:disabled) { border-color: var(--primary-light); background: var(--card-hover); transform: translateX(4px); }
 .option-btn:active:not(:disabled) { transform: scale(0.99); }
 .option-btn .option-letter { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--bg); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; margin-right: 14px; color: var(--primary); transition: all var(--transition); }
-.option-btn.selected { border-color: var(--primary-light); background: rgba(41,128,185,0.08); }
+.option-btn.selected { border-color: var(--primary-light); background: rgba(74,127,168,0.1); }
 .option-btn.selected .option-letter { background: var(--primary-light); color: #fff; }
 .option-btn:disabled { cursor: default; opacity: 0.6; }
 
@@ -203,8 +211,12 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .finish-card .finish-unanswered { color: var(--danger); font-weight: 700; }
 .finish-card .finish-warn { color: var(--text-light); font-size: 0.88rem; margin-top: 10px; }
 .finish-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
+.btn-review-back { padding: 14px; background: var(--primary); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); min-height: 52px; }
+.btn-review-back:hover { background: var(--primary-dark); }
+.btn-finish-quiet { padding: 12px; background: var(--card); color: var(--danger); border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 0.95rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); min-height: 48px; }
+.btn-finish-quiet:hover { border-color: var(--danger-light); }
 /* 離脱警告バナー */
-.away-warning { display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 120; background: var(--danger); color: #fff; padding: 14px 18px; font-size: 0.9rem; font-weight: 700; text-align: center; line-height: 1.5; box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.away-warning { display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 120; background: #f5b041; color: #4a3305; padding: 14px 18px; font-size: 0.9rem; font-weight: 700; text-align: center; line-height: 1.5; box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
 .away-warning.show { display: block; animation: fadeIn 0.25s ease; }
 
 /* Results */
@@ -383,7 +395,42 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
   <!-- HOME SCREEN -->
   <div id="home-screen" class="screen active" role="region" aria-label="ホーム">
     <div class="header fade-in">
-      <div class="logo">🐷</div>
+      <div class="logo" aria-hidden="true"><svg viewBox="76 76 360 360" role="img" aria-label="HSS認定エンブレム">
+        <defs>
+          <linearGradient id="emb-steel" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#9fc4e8"/><stop offset="30%" stop-color="#4a7fb5"/><stop offset="55%" stop-color="#2b4f7d"/><stop offset="80%" stop-color="#6fa3d4"/><stop offset="100%" stop-color="#35608f"/>
+          </linearGradient>
+          <linearGradient id="emb-steelDark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3a5f8c"/><stop offset="50%" stop-color="#1c3557"/><stop offset="100%" stop-color="#2c4d78"/>
+          </linearGradient>
+          <linearGradient id="emb-letter" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#eaf4ff"/><stop offset="45%" stop-color="#bcd8f2"/><stop offset="70%" stop-color="#7fb0dd"/><stop offset="100%" stop-color="#5b8fc4"/>
+          </linearGradient>
+          <radialGradient id="emb-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#5eb2ff" stop-opacity="0.5"/><stop offset="60%" stop-color="#2f6fb8" stop-opacity="0.15"/><stop offset="100%" stop-color="#2f6fb8" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="emb-page" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#dcebfa"/><stop offset="100%" stop-color="#8fb6dd"/>
+          </linearGradient>
+        </defs>
+        <circle cx="256" cy="256" r="172" fill="#0c1830"/>
+        <circle cx="256" cy="256" r="172" fill="none" stroke="url(#emb-steel)" stroke-width="9"/>
+        <circle cx="256" cy="256" r="158" fill="none" stroke="url(#emb-steelDark)" stroke-width="3" opacity="0.9"/>
+        <circle cx="256" cy="236" r="120" fill="url(#emb-glow)"/>
+        <polygon points="256,116 378,186 378,326 256,396 134,326 134,186" fill="#0c1830" stroke="url(#emb-steel)" stroke-width="10" stroke-linejoin="round"/>
+        <polygon points="256,136 361,196 361,316 256,376 151,316 151,196" fill="none" stroke="url(#emb-steelDark)" stroke-width="3.5" stroke-linejoin="round" opacity="0.95"/>
+        <path d="M 222 168 L 256 142 L 290 168" fill="none" stroke="url(#emb-steel)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="url(#emb-letter)" stroke="#0c1830" stroke-width="3" paint-order="stroke" transform="translate(256 240) scale(0.76) translate(-256 -238)">
+          <path transform="translate(-16 0)" d="M 143 186 h 24 v 40 h 32 v -40 h 24 v 104 h -24 v -42 h -32 v 42 h -24 Z"/>
+          <path transform="translate(-34 0)" d="M 293 186 q -20 0 -31 10 q -11 10 -11 26 q 0 14 8.5 21.5 q 8.5 7.5 26.5 12 q 12 3 16 6 q 4 3 4 8 q 0 6 -5 9 q -5 3 -14 3 q -10 0 -16.5 -4 q -6.5 -4 -8 -11 l -23 7 q 3 14 15 22 q 12 8 31.5 8 q 21 0 32.5 -9.5 q 11.5 -9.5 11.5 -25.5 q 0 -14 -9 -21.5 q -9 -7.5 -27 -12 q -12 -3 -16 -6 q -4 -3 -4 -8 q 0 -5.5 4.5 -8.5 q 4.5 -3 12.5 -3 q 8.5 0 14 3.5 q 5.5 3.5 7.5 10 l 23 -6.5 q -4 -14.5 -15.5 -22 q -11.5 -7.5 -26.5 -7.5 Z"/>
+          <path transform="translate(55 0)" d="M 293 186 q -20 0 -31 10 q -11 10 -11 26 q 0 14 8.5 21.5 q 8.5 7.5 26.5 12 q 12 3 16 6 q 4 3 4 8 q 0 6 -5 9 q -5 3 -14 3 q -10 0 -16.5 -4 q -6.5 -4 -8 -11 l -23 7 q 3 14 15 22 q 12 8 31.5 8 q 21 0 32.5 -9.5 q 11.5 -9.5 11.5 -25.5 q 0 -14 -9 -21.5 q -9 -7.5 -27 -12 q -12 -3 -16 -6 q -4 -3 -4 -8 q 0 -5.5 4.5 -8.5 q 4.5 -3 12.5 -3 q 8.5 0 14 3.5 q 5.5 3.5 7.5 10 l 23 -6.5 q -4 -14.5 -15.5 -22 q -11.5 -7.5 -26.5 -7.5 Z"/>
+        </g>
+        <g>
+          <path d="M 256 314 q -30 -16 -60 -9 v 50 q 30 -7 60 9 Z" fill="url(#emb-page)" stroke="#2b4f7d" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M 256 314 q 30 -16 60 -9 v 50 q -30 -7 -60 9 Z" fill="url(#emb-page)" stroke="#2b4f7d" stroke-width="4" stroke-linejoin="round"/>
+          <line x1="256" y1="314" x2="256" y2="364" stroke="#2b4f7d" stroke-width="4"/>
+        </g>
+      </svg></div>
       <h1 id="home-title">HSS認定試験</h1>
       <div class="subtitle" id="home-subtitle">株式会社ヒラノ</div>
     </div>
@@ -392,8 +439,8 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
       <h2 id="entry-confirm-title">受験意志を回答する</h2>
       <div class="card-desc" id="entry-confirm-desc">試験を受ける意志の確認です。氏名を入力し、「はい」で回答してください。</div>
       <div class="card-meta">
-        <span>📋 意志確認</span>
-        <span>🔓 パスワード不要</span>
+        <span id="meta-confirm-a">📋 意志確認</span>
+        <span id="meta-confirm-b">🔓 パスワード不要</span>
       </div>
       <span class="card-arrow">→</span>
     </div>
@@ -569,8 +616,9 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
     <p class="finish-summary" id="finish-summary"></p>
     <p class="finish-warn" id="finish-warn"></p>
     <div class="finish-actions">
-      <button class="btn-submit" id="finish-yes" type="button">試験を終了する</button>
-      <button class="btn-home" id="finish-no" type="button">戻って見直す</button>
+      <!-- 安全な選択肢(見直す)を上・強調に、不可逆操作(終了)を下・控えめに配置（誤タップ防止） -->
+      <button class="btn-review-back" id="finish-no" type="button">戻って見直す</button>
+      <button class="btn-finish-quiet" id="finish-yes" type="button">試験を終了する</button>
     </div>
   </div>
 </div>
@@ -585,7 +633,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 <!-- Install Banner (Android) -->
 <div class="install-banner" id="install-banner" role="banner">
   <div class="install-banner-inner">
-    <div class="install-banner-icon">🐷</div>
+    <div class="install-banner-icon"><img src="icons/icon-192.png" alt="" width="44" height="44" style="border-radius:10px;display:block"></div>
     <div class="install-banner-text">
       <div class="install-banner-title" id="install-title">ホーム画面に追加</div>
       <div class="install-banner-desc" id="install-desc">アプリとしてインストールすると、すぐに起動できます。</div>
@@ -667,6 +715,7 @@ var TRANSLATIONS = {
     awayLabel: "離脱：", awayTimes: "回",
     correctAnswerLabel: "正解：", explanationLabel: "解説：",
     // --- デモ問題（練習用）---
+    metaConfirmA: "📋 意志確認", metaConfirmB: "🔓 パスワード不要",
     badgeDemo: "デモ問題",
     entryDemoTitle: "デモ問題を受験する（練習用）",
     entryDemoDesc: "本試験の流れを体験できる練習用のデモです。全5問。終了後に正解と解説が表示されます。結果はどこにも送信されません。",
@@ -755,6 +804,7 @@ var TRANSLATIONS = {
     awayWarn: "⚠ Leaving the app during the exam has been recorded (time {n}, {sec} sec). This record is sent to the administrator.",
     awayLabel: "Left the app: ", awayTimes: " time(s)",
     correctAnswerLabel: "Correct answer: ", explanationLabel: "Explanation: ",
+    metaConfirmA: "📋 Intention check", metaConfirmB: "🔓 No password needed",
     badgeDemo: "Demo Quiz",
     entryDemoTitle: "Try the demo quiz (practice)",
     entryDemoDesc: "A practice demo so you can experience the flow of the real exam. 5 questions. Correct answers and explanations are shown at the end. Nothing is sent anywhere.",
@@ -843,6 +893,7 @@ var TRANSLATIONS = {
     awayWarn: "⚠ Viec roi khoi ung dung da duoc ghi lai (lan thu {n}, {sec} giay). Ghi nhan nay se duoc gui cho quan tri vien.",
     awayLabel: "Roi khoi ung dung: ", awayTimes: " lan",
     correctAnswerLabel: "Dap an dung: ", explanationLabel: "Giai thich: ",
+    metaConfirmA: "📋 Xac nhan y dinh", metaConfirmB: "🔓 Khong can mat khau",
     badgeDemo: "Ban demo",
     entryDemoTitle: "Lam bai demo (luyen tap)",
     entryDemoDesc: "Ban demo de trai nghiem quy trinh thi that. 5 cau. Sau khi ket thuc se hien dap an va giai thich. Ket qua khong duoc gui di dau.",
@@ -931,6 +982,7 @@ var TRANSLATIONS = {
     awayWarn: "⚠ Meninggalkan aplikasi selama ujian telah dicatat (ke-{n}, {sec} detik). Catatan ini dikirim ke administrator.",
     awayLabel: "Meninggalkan aplikasi: ", awayTimes: " kali",
     correctAnswerLabel: "Jawaban benar: ", explanationLabel: "Penjelasan: ",
+    metaConfirmA: "📋 Konfirmasi niat", metaConfirmB: "🔓 Tanpa kata sandi",
     badgeDemo: "Demo Ujian",
     entryDemoTitle: "Coba demo ujian (latihan)",
     entryDemoDesc: "Demo latihan untuk merasakan alur ujian sebenarnya. 5 soal. Jawaban benar dan penjelasan ditampilkan di akhir. Hasil tidak dikirim ke mana pun.",
@@ -1091,6 +1143,19 @@ document.getElementById("lang-selector").addEventListener("change",function(){
   }
 });
 
+// 注意書きをアイコンつきリストとして構築（<br>連結より視覚的に区切れて実習生に読みやすい）
+function noticeHtml(){
+  var icons = ["🔒","✏️","📤","⏱","📵"];
+  var keys = ["notice1","notice2","notice3","notice4","notice5"];
+  var html = '<ul>';
+  keys.forEach(function(k,i){
+    var txt = (k === "notice3" || k === "notice5") ? tm(k) : t(k);
+    txt = String(txt).replace(/^[※*]\s*/, "");
+    html += '<li><span class="ni">'+icons[i]+'</span><span>'+escHtml(txt)+'</span></li>';
+  });
+  return html + '</ul>';
+}
+
 function applyTranslations(){
   document.getElementById("home-title").textContent = t("homeTitle");
   document.getElementById("home-subtitle").textContent = t("homeSubtitle");
@@ -1103,6 +1168,8 @@ function applyTranslations(){
   document.getElementById("meta-q").textContent = t("metaQ");
   document.getElementById("meta-t").textContent = t("metaT");
   document.getElementById("meta-p").textContent = t("metaP");
+  document.getElementById("meta-confirm-a").textContent = t("metaConfirmA");
+  document.getElementById("meta-confirm-b").textContent = t("metaConfirmB");
   document.getElementById("badge-demo").textContent = t("badgeDemo");
   document.getElementById("entry-demo-title").textContent = t("entryDemoTitle");
   document.getElementById("entry-demo-desc").textContent = t("entryDemoDesc");
@@ -1144,7 +1211,7 @@ function applyTranslations(){
   document.getElementById("ti-time-value").textContent = tm("timeLimitValue");
   document.getElementById("ti-pass-label").textContent = t("passCriteria");
   document.getElementById("ti-pass-value").textContent = t("passCriteriaValue");
-  document.getElementById("notice-box").innerHTML = t("notice1")+"<br>"+t("notice2")+"<br>"+tm("notice3")+"<br>"+t("notice4")+"<br>"+tm("notice5");
+  document.getElementById("notice-box").innerHTML = noticeHtml();
   document.getElementById("exam-start-btn").textContent = t("startBtn");
   document.getElementById("timer-label").textContent = t("remainingTime");
   document.getElementById("progress-label").textContent = tm("progressLabel");
@@ -1773,17 +1840,16 @@ function manualSendResults(pct, passOrFail, dateStr, timedOut, elapsedMin, elaps
   btn.disabled = true; btn.textContent = t("processing");
   var total = selectedQuestions.length;
   var subject = CONFIG.email.subjectExam.replace("{name}", playerName);
-  var body = "HSS認定 本試験 結果報告\n================================\n\n";
+  // 受験者の端末に残るため、得点・合否・正解・正誤は一切含めない（管理者側で採点する）
+  var body = "HSS認定 本試験 受験記録（未採点・管理者採点用）\n================================\n\n";
   body += "受験者名："+playerName+"\n受験日時："+dateStr+"\n";
-  body += "所要時間："+elapsedMin+"分"+String(elapsedSec).padStart(2,"0")+"秒"+(timedOut?"（時間切れ）":"")+"\n\n";
-  body += "得点："+score+" / "+total+"（"+pct+"%）\n合否："+passOrFail+"（合格基準："+CONFIG.test.passRate+"%以上）\n";
+  body += "所要時間："+elapsedMin+"分"+String(elapsedSec).padStart(2,"0")+"秒"+(timedOut?"（時間切れ）":"")+"\n";
   body += "離脱："+awayCount+"回 / 計"+awaySeconds+"秒"+(awayLogText()?"（"+awayLogText()+"）":"")+"\n\n";
-  body += "--- 回答詳細 ---\n";
+  body += "--- 回答内容 ---\n";
   answers.forEach(function(a,i){
-    var r = a.userAnswer==="（未回答）" ? "[未回答]" : (a.correct ? "[○]" : "[×]");
-    body += r+" 問"+(i+1)+"（"+a.category+"）：「"+a.userAnswer+"」正解「"+a.correctAnswer+"」\n";
+    body += "問"+(i+1)+"（"+a.category+"）："+a.question+"\n  回答：「"+a.userAnswer+"」\n";
   });
-  body += "================================\n";
+  body += "================================\n※ 自動送信に失敗したため未採点の記録です。問題マスタと照合して採点してください。\n";
 
   // Excel generation + mailto fallback
   generateExcelAndSend(subject, body, pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec, btn);
@@ -1795,29 +1861,23 @@ function generateExcelAndSend(subject, body, pct, passOrFail, dateStr, timedOut,
 
   if(typeof XLSX !== "undefined"){
     try {
+      // 受験者の端末に保存されるファイルのため、得点・合否・正解・正誤は含めない（管理者採点用の記録のみ）
       var wb = XLSX.utils.book_new();
-      var s1 = [["HSS認定 本試験 結果報告書"],["株式会社ヒラノ HSS認定制度"],[],
+      var s1 = [["HSS認定 本試験 受験記録（未採点・管理者採点用）"],["株式会社ヒラノ HSS認定制度"],[],
         ["受験者名",playerName],["受験日時",dateStr],
         ["制限時間",CONFIG.test.timeLimit+"分"],["所要時間",elapsedMin+"分"+String(elapsedSec).padStart(2,"0")+"秒"],
         ["時間切れ",timedOut?"はい":"いいえ"],[],
-        ["得点",score+" / "+total],["正答率",pct+"%"],["合格基準",CONFIG.test.passRate+"%以上"],["合否",passOrFail],[],
-        ["離脱回数",awayCount+"回"],["離脱時間合計",awaySeconds+"秒"],["離脱の内訳",awayLogText()||"なし"]];
-      var ws1 = XLSX.utils.aoa_to_sheet(s1);ws1["!cols"]=[{wch:18},{wch:40}];
-      XLSX.utils.book_append_sheet(wb,ws1,"結果概要");
+        ["離脱回数",awayCount+"回"],["離脱時間合計",awaySeconds+"秒"],["離脱の内訳",awayLogText()||"なし"],[],
+        ["備考","自動送信に失敗したため未採点の記録です。問題マスタと照合して採点してください。"]];
+      var ws1 = XLSX.utils.aoa_to_sheet(s1);ws1["!cols"]=[{wch:18},{wch:50}];
+      XLSX.utils.book_append_sheet(wb,ws1,"受験記録");
 
-      var s2 = [["問番号","カテゴリ","問題","受験者の回答","正解","正誤"]];
+      var s2 = [["問番号","カテゴリ","問題","受験者の回答"]];
       answers.forEach(function(a,i){
-        var r = a.userAnswer==="（未回答）"?"未回答":(a.correct?"○":"×");
-        s2.push([i+1,a.category,a.question,a.userAnswer,a.correctAnswer,r]);
+        s2.push([i+1,a.category,a.question,a.userAnswer]);
       });
-      var ws2 = XLSX.utils.aoa_to_sheet(s2);ws2["!cols"]=[{wch:8},{wch:12},{wch:40},{wch:35},{wch:35},{wch:8}];
-      XLSX.utils.book_append_sheet(wb,ws2,"回答詳細");
-
-      var s3 = [["カテゴリ","正解数","出題数","正答率"]];
-      var cs = {};answers.forEach(function(a){if(!cs[a.category])cs[a.category]={c:0,t:0};cs[a.category].t++;if(a.correct)cs[a.category].c++;});
-      Object.keys(cs).forEach(function(c){s3.push([c,cs[c].c,cs[c].t,Math.round((cs[c].c/cs[c].t)*100)+"%"]);});
-      var ws3 = XLSX.utils.aoa_to_sheet(s3);ws3["!cols"]=[{wch:15},{wch:10},{wch:10},{wch:10}];
-      XLSX.utils.book_append_sheet(wb,ws3,"カテゴリ別");
+      var ws2 = XLSX.utils.aoa_to_sheet(s2);ws2["!cols"]=[{wch:8},{wch:12},{wch:50},{wch:35}];
+      XLSX.utils.book_append_sheet(wb,ws2,"回答内容");
 
       var wbOut = XLSX.write(wb,{bookType:"xlsx",type:"array"});
       var blob = new Blob([wbOut],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
@@ -1872,7 +1932,15 @@ function _randInt(maxMs){ return Math.floor(Math.random()*maxMs); }
 
 function _loadPending(){ try{ return JSON.parse(localStorage.getItem(PENDING_KEY)||"[]"); }catch(e){ return []; } }
 function _savePending(list){ try{ localStorage.setItem(PENDING_KEY, JSON.stringify(list)); }catch(e){} }
-function _addPending(p){ var l=_loadPending(); if(!l.some(function(x){return x.submissionId===p.submissionId;})){ l.push(p); _savePending(l); } }
+// localStorageに正解テキストを残さない（受験者がDevTools等で読めるため）。
+// 再送時は正解なしで送られ、GAS側の正解列は空になるが許容（採点フラグと検算は保持される）。
+function _stripAnswerKey(p){
+  if(!p || !Array.isArray(p.answers)) return p;
+  var c = JSON.parse(JSON.stringify(p));
+  c.answers.forEach(function(a){ delete a.correctAnswer; });
+  return c;
+}
+function _addPending(p){ var l=_loadPending(); if(!l.some(function(x){return x.submissionId===p.submissionId;})){ l.push(_stripAnswerKey(p)); _savePending(l); } }
 function _removePending(id){ _savePending(_loadPending().filter(function(x){return x.submissionId!==id;})); }
 
 function _postNoCors(payload){

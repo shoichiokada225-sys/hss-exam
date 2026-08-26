@@ -26,8 +26,11 @@ var SHEET_ID = ""; // 任意: 既存スプレッドシートID。空なら自動
 
 // ---- 入力サニタイズ ----
 function sanitize(val) {
-  if (typeof val !== "string") return String(val == null ? "" : val);
-  return val.replace(/[\r\n]/g, " ").substring(0, 500);
+  if (typeof val !== "string") val = String(val == null ? "" : val);
+  var s = val.replace(/[\r\n\t]/g, " ").substring(0, 500);
+  // 数式インジェクション対策(CWE-1236): =,+,-,@ で始まるセル値はシングルクォートを前置して無害化
+  if (/^[=+\-@]/.test(s)) s = "'" + s;
+  return s;
 }
 
 // ---- 記録用スプレッドシートを取得（standaloneでも動くようID永続化） ----
@@ -48,7 +51,23 @@ function getSpreadsheet_() {
   return ss;
 }
 
-var EXAM_HEADER = ["氏名", "受験者日時", "得点", "正答率", "合否", "所要時間", "時間切れ", "言語", "ID", "サーバー受信時刻", "離脱回数", "離脱秒数", "離脱内訳"];
+var EXAM_HEADER = ["氏名", "受験者日時", "得点", "正答率", "合否", "所要時間", "時間切れ", "言語", "ID", "サーバー受信時刻", "離脱回数", "離脱秒数", "離脱内訳", "検算"];
+
+// クライアント申告の得点を answers[].correct から独立に再集計して照合する。
+// 完全な改ざん検知ではない(フラグ自体も偽装可能)が、score だけを書き換える素朴な改ざんを検出できる。
+function verifyScore_(data) {
+  try {
+    if (!Array.isArray(data.answers)) return "検算不能";
+    var recount = 0;
+    data.answers.forEach(function (a) { if (a && a.correct === true) recount++; });
+    var claimed = Number(data.score);
+    var total = Number(data.total);
+    var claimedPct = Number(data.percentage);
+    var recountPct = total > 0 ? Math.round((recount / total) * 100) : 0;
+    if (claimed === recount && claimedPct === recountPct && data.answers.length === total) return "OK";
+    return "不一致(申告" + claimed + "/" + claimedPct + "% 再計算" + recount + "/" + recountPct + "% 件数" + data.answers.length + ")";
+  } catch (e) { return "検算エラー"; }
+}
 
 function getSheet_(ss, sheetName) {
   var sheet = ss.getSheetByName(sheetName);
@@ -114,7 +133,8 @@ function doPost(e) {
           sanitize(String(data.percentage)) + "%", sanitize(data.result),
           sanitize(data.elapsed), data.timedOut ? "はい" : "いいえ", sanitize(data.lang),
           id, serverTime,
-          Number(data.awayCount) || 0, Number(data.awaySeconds) || 0, sanitize(data.awayDetail)
+          Number(data.awayCount) || 0, Number(data.awaySeconds) || 0, sanitize(data.awayDetail),
+          verifyScore_(data)
         ]);
         // 詳細回答は別シートに（任意・分析用）
         try {

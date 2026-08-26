@@ -5,8 +5,8 @@
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#667eea",
-  "theme_color": "#667eea",
+  "background_color": "#0e1a2e",
+  "theme_color": "#0e1a2e",
   "icons": [
     {
       "src": "icons/icon-192.png",
