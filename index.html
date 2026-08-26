@@ -386,7 +386,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 /* Print */
 @media print {
   body, .app-bg { background: #fff !important; }
-  .theme-toggle, .lang-selector, .timer-section, .nav-buttons, .results-actions, .submit-notice, .notice-box, .keyboard-hint, .btn-submit, .btn-retry, .btn-home, .timeout-overlay, .loading-overlay { display: none !important; }
+  .theme-toggle, .lang-selector, .timer-section, .nav-buttons, .results-actions, .submit-notice, .notice-box, .keyboard-hint, .btn-submit, .btn-retry, .btn-home, .timeout-overlay, .loading-overlay, .away-warning, .swipe-hint, .ios-guide-overlay, .skip-link, .install-banner { display: none !important; }
   .app { max-width: 100%; padding: 0; }
   .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
 }
@@ -399,6 +399,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
   <option value="en">EN</option>
   <option value="vi">VI</option>
   <option value="id">ID</option>
+  <option value="es">ES</option>
 </select>
 <button class="theme-toggle" id="theme-toggle" aria-label="ダークモード切替" title="ダークモード切替">☾</button>
 
@@ -700,9 +701,9 @@ var TRANSLATIONS = {
     entryConfirmTitle: "受験意志を回答する",
     entryConfirmDesc: "試験を受ける意志の確認です。氏名を入力し、「はい」で回答してください。",
     entryExamTitle: "HSS認定 本試験を受験する",
-    entryExamDesc: "HSS認定制度の本試験です。パスワードが必要です。全60問を出題します。",
-    metaQ: "📝 60問", metaT: "⏱ 60分", metaP: "🎯 70%合格",
-    langNote: "🌐 日本語・English・Tiếng Việt・Bahasa Indonesia 対応",
+    entryExamDesc: "HSS認定制度の本試験です。パスワードが必要です。全{n}問を出題します。",
+    metaQ: "📝 {n}問", metaT: "⏱ {m}分", metaP: "🎯 {r}%合格",
+    langNote: "🌐 日本語・English・Tiếng Việt・Bahasa Indonesia・Español 対応",
     footer: "© 株式会社ヒラノ HSS認定制度",
     confirmNameTitle: "受験意志確認", confirmNameDesc: "氏名を入力してください。",
     nameLabel: "氏名（フルネーム）", namePlaceholder: "例：山田 太郎",
@@ -721,10 +722,10 @@ var TRANSLATIONS = {
     welcomeTitle: "ようこそ",
     welcomeDesc: "HSS認定制度の本試験を行います。<br>氏名を入力してテストを開始してください。",
     testName: "テスト名：", testNameValue: "HSS認定 本試験",
-    questionCount: "問題数：", questionCountValue: "全60問出題",
+    questionCount: "問題数：", questionCountValue: "全{n}問出題",
     format: "形式：", formatValue: "四択形式",
-    timeLimit: "制限時間：", timeLimitValue: "60分",
-    passCriteria: "合格基準：", passCriteriaValue: "正答率70%以上",
+    timeLimit: "制限時間：", timeLimitValue: "{m}分",
+    passCriteria: "合格基準：", passCriteriaValue: "正答率{r}%以上",
     notice1: "※ 回答中は正解・不正解の表示はされません。",
     notice2: "※ 前の問題に戻って回答を変更できます。",
     notice3: "※ 結果は自動的に管理者へ送信されます。",
@@ -742,13 +743,13 @@ var TRANSLATIONS = {
     metaConfirmA: "📋 意志確認", metaConfirmB: "🔓 パスワード不要",
     badgeDemo: "デモ問題",
     entryDemoTitle: "デモ問題を受験する（練習用）",
-    entryDemoDesc: "本試験の流れを体験できる練習用のデモです。全5問。終了後に正解と解説が表示されます。結果はどこにも送信されません。",
-    metaDemoQ: "📝 5問", metaDemoT: "⏱ 5分", metaDemoP: "📖 解説つき",
+    entryDemoDesc: "本試験の流れを体験できる練習用のデモです。全{n}問。終了後に正解と解説が表示されます。結果はどこにも送信されません。",
+    metaDemoQ: "📝 {n}問", metaDemoT: "⏱ {m}分", metaDemoP: "📖 解説つき",
     demoPasswordTitle: "デモ問題",
     demoWelcomeDesc: "HSS認定試験のデモ問題を行います。<br>氏名を入力してテストを開始してください。",
     demoTestNameValue: "HSS認定試験 デモ問題",
-    demoQuestionCountValue: "全5問出題",
-    demoTimeLimitValue: "5分",
+    demoQuestionCountValue: "全{n}問出題",
+    demoTimeLimitValue: "{m}分",
     demoProgressLabel: "HSS認定試験 デモ問題",
     demoResultTitle: "HSS認定試験 デモ問題｜結果",
     demoNotice3: "※ デモ問題のため、結果はどこにも送信されません。",
@@ -757,6 +758,8 @@ var TRANSLATIONS = {
     demoFail: "今回は基準に届きませんでした。解説を読んで、もう一度挑戦しましょう。",
     demoAutoSent: "📄 デモ問題のため、結果は送信されません。この画面で確認してください。",
     demoFinishWarn: "デモ問題のため、結果はどこにも送信されません。終了すると正解と解説が表示されます。",
+    demoPass: "基準クリアです。本試験でもこの調子で！", demoPerfect: "全問正解です。本試験でもこの調子で！",
+    demoPasswordDesc: "デモ問題を開始するにはパスワードを入力してください。",
     resumeTitle: "試験を再開します",
     resumeDesc: "{name}さんの試験のつづきから再開します（残り {time}）。ボタンを押すと再開します。",
     resumeExpiredDesc: "{name}さんの中断していた試験は、制限時間を過ぎました。ここまでの回答を送信して終了します。",
@@ -786,7 +789,9 @@ var TRANSLATIONS = {
     shared: "結果を共有しました。", sendTo: "送信先：",
     autoSent: "✅ 送信されました",
     autoSentFail: "⚠ 送信をまだ確認できていません。電波の良い場所でこのアプリをもう一度開くと自動で再送されます。急ぐ場合は下のボタンで手動送信もできます。",
-    excelDownloaded: "Excelファイルがダウンロードされました。<br>メールアプリが開きますので、結果を送信してください。",
+    excelDownloaded: "Excelファイルを保存しました。下の「メールを開く」を押し、保存されたExcelファイルを添付して送信してください。メールが開かない場合は、ダウンロードフォルダのファイルを手動で添付してください。",
+    openMailBtn: "メールを開く",
+    mailFallbackNote: "メールを開きました。送信できない場合も、電波の良い場所でこのアプリを開き直せば自動で再送されます。",
     sentProcess: "送信処理を実行しました",
     skipLink: "本文にスキップ", darkModeToggle: "ダークモード切替",
     minutes: "分", seconds: "秒",
@@ -799,9 +804,9 @@ var TRANSLATIONS = {
     entryConfirmTitle: "Respond to Exam Intention",
     entryConfirmDesc: "Confirm your intention to take the exam. Enter your name and respond with Yes.",
     entryExamTitle: "Take HSS Certification Exam",
-    entryExamDesc: "HSS Certification main exam. Password required. 60 questions.",
-    metaQ: "📝 60 Questions", metaT: "⏱ 60 min", metaP: "🎯 70% to pass",
-    langNote: "🌐 Japanese, English, Vietnamese, Indonesian",
+    entryExamDesc: "HSS Certification main exam. Password required. {n} questions.",
+    metaQ: "📝 {n} Questions", metaT: "⏱ {m} min", metaP: "🎯 {r}% to pass",
+    langNote: "🌐 Japanese, English, Vietnamese, Indonesian, Spanish",
     footer: "© Hirano Co., Ltd. HSS Certification",
     confirmNameTitle: "Exam Intention Check", confirmNameDesc: "Please enter your name.",
     nameLabel: "Full Name", namePlaceholder: "e.g. Taro Yamada",
@@ -820,10 +825,10 @@ var TRANSLATIONS = {
     welcomeTitle: "Welcome",
     welcomeDesc: "This is the HSS Certification main exam.<br>Enter your name and start the test.",
     testName: "Test Name:", testNameValue: "HSS Certification Main Exam",
-    questionCount: "Questions:", questionCountValue: "60 questions",
+    questionCount: "Questions:", questionCountValue: "{n} questions",
     format: "Format:", formatValue: "Multiple choice (4 options)",
-    timeLimit: "Time Limit:", timeLimitValue: "60 minutes",
-    passCriteria: "Pass Criteria:", passCriteriaValue: "70% or higher",
+    timeLimit: "Time Limit:", timeLimitValue: "{m} minutes",
+    passCriteria: "Pass Criteria:", passCriteriaValue: "{r}% or higher",
     notice1: "* Correct/incorrect answers are not shown during the test.",
     notice2: "* You can go back to change your answers.",
     notice3: "* Results are automatically sent to the administrator.",
@@ -834,27 +839,29 @@ var TRANSLATIONS = {
     finishUnanswered: "{n} question(s) left unanswered.",
     finishWarn: "Once you finish, your answers are submitted and cannot be changed.",
     finishYes: "Finish the exam", finishNo: "Go back and review",
-    awayWarn: "⚠ Leaving the app during the exam has been recorded (time {n}, {sec} sec). This record is sent to the administrator.",
+    awayWarn: "⚠ Leaving the app during the exam was recorded ({n} time(s) so far, {sec} seconds). This record is sent to the administrator.",
     awayLabel: "Left the app: ", awayTimes: " time(s)",
     correctAnswerLabel: "Correct answer: ", explanationLabel: "Explanation: ",
     metaConfirmA: "📋 Intention check", metaConfirmB: "🔓 No password needed",
     badgeDemo: "Demo Quiz",
     entryDemoTitle: "Try the demo quiz (practice)",
-    entryDemoDesc: "A practice demo so you can experience the flow of the real exam. 5 questions. Correct answers and explanations are shown at the end. Nothing is sent anywhere.",
-    metaDemoQ: "📝 5 Questions", metaDemoT: "⏱ 5 min", metaDemoP: "📖 With explanations",
+    entryDemoDesc: "A practice demo so you can experience the flow of the real exam. {n} questions. Correct answers and explanations are shown at the end. Nothing is sent anywhere.",
+    metaDemoQ: "📝 {n} Questions", metaDemoT: "⏱ {m} min", metaDemoP: "📖 With explanations",
     demoPasswordTitle: "Demo Quiz",
     demoWelcomeDesc: "This is the HSS Certification demo quiz.<br>Enter your name and start the test.",
     demoTestNameValue: "HSS Certification Demo Quiz",
-    demoQuestionCountValue: "5 questions",
-    demoTimeLimitValue: "5 minutes",
+    demoQuestionCountValue: "{n} questions",
+    demoTimeLimitValue: "{m} minutes",
     demoProgressLabel: "HSS Certification Demo Quiz",
     demoResultTitle: "HSS Certification Demo Quiz | Results",
     demoNotice3: "* This is a demo: results are not sent anywhere.",
     demoNotice5: "* If you leave the app during the demo, it is counted and shown on this screen (nothing is sent).",
-    demoAwayWarn: "⚠ Leaving the app has been recorded (time {n}, {sec} sec). In the real exam this record is sent to the administrator.",
+    demoAwayWarn: "⚠ Leaving the app was recorded ({n} time(s) so far, {sec} seconds). In the real exam this record is sent to the administrator.",
     demoFail: "Not quite this time. Read the explanations and try again.",
     demoAutoSent: "📄 Demo quiz: results are not sent. Please review them on this screen.",
     demoFinishWarn: "This is a demo, so nothing is sent anywhere. After finishing, correct answers and explanations are shown.",
+    demoPass: "You cleared the passing line. Keep it up in the real exam!", demoPerfect: "All answers correct. Keep it up in the real exam!",
+    demoPasswordDesc: "Enter the password to start the demo quiz.",
     resumeTitle: "Resume the exam",
     resumeDesc: "Resuming {name}'s exam from where it stopped ({time} remaining). Press the button to continue.",
     resumeExpiredDesc: "{name}'s interrupted exam has passed the time limit. The answers so far will be submitted.",
@@ -866,7 +873,7 @@ var TRANSLATIONS = {
     remainingTime: "Time Remaining", prev: "Previous", next: "Next", submit: "Submit",
     question: "Q", progressLabel: "HSS Certification Exam",
     timeoutTitle: "⏰ Time's Up", timeoutMsg: "Time limit exceeded.<br>Ending the exam...",
-    doneTitle: "The exam is complete.", doneMsg: "Thank you for your effort.",
+    doneTitle: "The exam is complete.", doneMsg: "You have completed the exam. Thank you.",
     doneKeepOpen: "Please keep the app open until \"✅ Sent\" appears below.",
     resultTitle: "HSS Certification Exam | Results", correctRate: "Score",
     scoreDetail: "{score} correct out of {total}",
@@ -884,7 +891,9 @@ var TRANSLATIONS = {
     shared: "Results shared.", sendTo: "Sent to:",
     autoSent: "✅ Sent",
     autoSentFail: "⚠ Sending is not confirmed yet. Open this app again where the signal is good and it will resend automatically. You can also send manually with the button below.",
-    excelDownloaded: "Excel file downloaded. Mail app will open - please send.",
+    excelDownloaded: "Excel file saved. Tap \"Open Mail\" below and attach the saved Excel file. If mail does not open, attach the file from your Downloads folder manually.",
+    openMailBtn: "Open Mail",
+    mailFallbackNote: "Mail opened. Even if you cannot send it, the result will be resent automatically when you reopen this app with a good signal.",
     sentProcess: "Send process completed",
     skipLink: "Skip to content", darkModeToggle: "Toggle dark mode",
     minutes: "min", seconds: "sec",
@@ -897,9 +906,9 @@ var TRANSLATIONS = {
     entryConfirmTitle: "Trả lời ý định dự thi",
     entryConfirmDesc: "Xác nhận bạn dự định tham gia thi. Nhập họ tên và trả lời Có.",
     entryExamTitle: "Thi chứng chỉ HSS chính thức",
-    entryExamDesc: "Kỳ thi chính thức chứng chỉ HSS. Cần mật khẩu. 60 câu.",
-    metaQ: "📝 60 câu", metaT: "⏱ 60 phút", metaP: "🎯 Đạt 70%",
-    langNote: "🌐 Tiếng Nhật, Tiếng Anh, Tiếng Việt, Tiếng Indonesia",
+    entryExamDesc: "Kỳ thi chính thức chứng chỉ HSS. Cần mật khẩu. {n} câu.",
+    metaQ: "📝 {n} câu", metaT: "⏱ {m} phút", metaP: "🎯 Đạt {r}%",
+    langNote: "🌐 Tiếng Nhật, Tiếng Anh, Tiếng Việt, Tiếng Indonesia, Tiếng Tây Ban Nha",
     footer: "© Công ty Hirano - Chứng chỉ HSS",
     confirmNameTitle: "Xác nhận ý định thi", confirmNameDesc: "Vui lòng nhập họ tên.",
     nameLabel: "Họ và tên", namePlaceholder: "Ví dụ: Nguyễn Văn A",
@@ -918,10 +927,10 @@ var TRANSLATIONS = {
     welcomeTitle: "Chào mừng",
     welcomeDesc: "Đây là kỳ thi chính thức chứng chỉ HSS.<br>Nhập họ tên và bắt đầu làm bài.",
     testName: "Tên bài thi:", testNameValue: "Thi chính thức chứng chỉ HSS",
-    questionCount: "Số câu:", questionCountValue: "60 câu",
+    questionCount: "Số câu:", questionCountValue: "{n} câu",
     format: "Hình thức:", formatValue: "Trắc nghiệm 4 đáp án",
-    timeLimit: "Thời gian:", timeLimitValue: "60 phút",
-    passCriteria: "Tiêu chuẩn đạt:", passCriteriaValue: "Từ 70% trở lên",
+    timeLimit: "Thời gian:", timeLimitValue: "{m} phút",
+    passCriteria: "Tiêu chuẩn đạt:", passCriteriaValue: "Từ {r}% trở lên",
     notice1: "※ Đáp án không hiển thị trong khi làm bài.",
     notice2: "※ Bạn có thể quay lại để thay đổi câu trả lời.",
     notice3: "※ Kết quả tự động gửi cho quản lý.",
@@ -938,13 +947,13 @@ var TRANSLATIONS = {
     metaConfirmA: "📋 Xác nhận ý định", metaConfirmB: "🔓 Không cần mật khẩu",
     badgeDemo: "Bản demo",
     entryDemoTitle: "Làm bài demo (luyện tập)",
-    entryDemoDesc: "Bản demo để trải nghiệm quy trình thi thật. 5 câu. Sau khi kết thúc sẽ hiện đáp án và giải thích. Kết quả không được gửi đi đâu.",
-    metaDemoQ: "📝 5 câu", metaDemoT: "⏱ 5 phút", metaDemoP: "📖 Có giải thích",
+    entryDemoDesc: "Bản demo để trải nghiệm quy trình thi thật. {n} câu. Sau khi kết thúc sẽ hiện đáp án và giải thích. Kết quả không được gửi đi đâu.",
+    metaDemoQ: "📝 {n} câu", metaDemoT: "⏱ {m} phút", metaDemoP: "📖 Có giải thích",
     demoPasswordTitle: "Bản demo",
     demoWelcomeDesc: "Đây là bản demo của kỳ thi chứng chỉ HSS.<br>Nhập họ tên để bắt đầu.",
     demoTestNameValue: "Demo chứng chỉ HSS",
-    demoQuestionCountValue: "5 câu",
-    demoTimeLimitValue: "5 phút",
+    demoQuestionCountValue: "{n} câu",
+    demoTimeLimitValue: "{m} phút",
     demoProgressLabel: "Demo chứng chỉ HSS",
     demoResultTitle: "Kết quả bản demo HSS",
     demoNotice3: "※ Bản demo: kết quả không được gửi đi đâu.",
@@ -953,6 +962,8 @@ var TRANSLATIONS = {
     demoFail: "Lần này chưa đạt. Hãy đọc phần giải thích và thử lại.",
     demoAutoSent: "📄 Bản demo: kết quả không được gửi. Vui lòng xem trên màn hình này.",
     demoFinishWarn: "Đây là bản demo nên kết quả không được gửi đi đâu. Sau khi kết thúc sẽ hiện đáp án và giải thích.",
+    demoPass: "Bạn đã đạt tiêu chuẩn. Hãy giữ phong độ này trong kỳ thi thật!", demoPerfect: "Đúng tất cả các câu. Hãy giữ phong độ này trong kỳ thi thật!",
+    demoPasswordDesc: "Nhập mật khẩu để bắt đầu bài demo.",
     resumeTitle: "Tiếp tục bài thi",
     resumeDesc: "Tiếp tục bài thi của {name} từ chỗ đã dừng (còn {time}). Nhấn nút để tiếp tục.",
     resumeExpiredDesc: "Bài thi bị gián đoạn của {name} đã quá thời gian. Các câu trả lời sẽ được gửi đi.",
@@ -982,7 +993,9 @@ var TRANSLATIONS = {
     shared: "Đã chia sẻ kết quả.", sendTo: "Gửi đến:",
     autoSent: "✅ Đã gửi",
     autoSentFail: "⚠ Chưa xác nhận được việc gửi. Hãy mở lại ứng dụng này ở nơi sóng tốt, kết quả sẽ tự động gửi lại. Nếu gấp, bạn cũng có thể gửi thủ công bằng nút bên dưới.",
-    excelDownloaded: "Tệp Excel đã tải xuống. Ứng dụng email sẽ mở.",
+    excelDownloaded: "Đã lưu tệp Excel. Nhấn \"Mở email\" bên dưới và đính kèm tệp Excel đã lưu để gửi. Nếu email không mở, hãy đính kèm tệp từ thư mục Tải xuống theo cách thủ công.",
+    openMailBtn: "Mở email",
+    mailFallbackNote: "Đã mở email. Nếu không gửi được, kết quả cũng sẽ tự động gửi lại khi bạn mở lại ứng dụng ở nơi sóng tốt.",
     sentProcess: "Đã thực hiện gửi",
     skipLink: "Chuyển đến nội dung", darkModeToggle: "Chế độ tối",
     minutes: "phút", seconds: "giây",
@@ -995,9 +1008,9 @@ var TRANSLATIONS = {
     entryConfirmTitle: "Konfirmasi Niat Ujian",
     entryConfirmDesc: "Konfirmasi niat Anda mengikuti ujian. Masukkan nama dan jawab Ya.",
     entryExamTitle: "Ikuti Ujian Sertifikasi HSS",
-    entryExamDesc: "Ujian utama sertifikasi HSS. Memerlukan kata sandi. 60 soal.",
-    metaQ: "📝 60 Soal", metaT: "⏱ 60 menit", metaP: "🎯 70% lulus",
-    langNote: "🌐 Jepang, Inggris, Vietnam, Indonesia",
+    entryExamDesc: "Ujian utama sertifikasi HSS. Memerlukan kata sandi. {n} soal.",
+    metaQ: "📝 {n} Soal", metaT: "⏱ {m} menit", metaP: "🎯 {r}% lulus",
+    langNote: "🌐 Jepang, Inggris, Vietnam, Indonesia, Spanyol",
     footer: "© PT Hirano Sertifikasi HSS",
     confirmNameTitle: "Konfirmasi Niat Ujian", confirmNameDesc: "Silakan masukkan nama Anda.",
     nameLabel: "Nama Lengkap", namePlaceholder: "Contoh: Budi Santoso",
@@ -1016,10 +1029,10 @@ var TRANSLATIONS = {
     welcomeTitle: "Selamat Datang",
     welcomeDesc: "Ini adalah ujian utama sertifikasi HSS.<br>Masukkan nama dan mulai ujian.",
     testName: "Nama Ujian:", testNameValue: "Ujian Utama Sertifikasi HSS",
-    questionCount: "Jumlah Soal:", questionCountValue: "60 soal",
+    questionCount: "Jumlah Soal:", questionCountValue: "{n} soal",
     format: "Format:", formatValue: "Pilihan ganda (4 opsi)",
-    timeLimit: "Batas Waktu:", timeLimitValue: "60 menit",
-    passCriteria: "Kriteria Lulus:", passCriteriaValue: "70% atau lebih",
+    timeLimit: "Batas Waktu:", timeLimitValue: "{m} menit",
+    passCriteria: "Kriteria Lulus:", passCriteriaValue: "{r}% atau lebih",
     notice1: "※ Jawaban benar/salah tidak ditampilkan selama ujian.",
     notice2: "※ Anda dapat kembali mengubah jawaban.",
     notice3: "※ Hasil otomatis dikirim ke administrator.",
@@ -1036,13 +1049,13 @@ var TRANSLATIONS = {
     metaConfirmA: "📋 Konfirmasi niat", metaConfirmB: "🔓 Tanpa kata sandi",
     badgeDemo: "Demo Ujian",
     entryDemoTitle: "Coba demo ujian (latihan)",
-    entryDemoDesc: "Demo latihan untuk merasakan alur ujian sebenarnya. 5 soal. Jawaban benar dan penjelasan ditampilkan di akhir. Hasil tidak dikirim ke mana pun.",
-    metaDemoQ: "📝 5 Soal", metaDemoT: "⏱ 5 menit", metaDemoP: "📖 Dengan penjelasan",
+    entryDemoDesc: "Demo latihan untuk merasakan alur ujian sebenarnya. {n} soal. Jawaban benar dan penjelasan ditampilkan di akhir. Hasil tidak dikirim ke mana pun.",
+    metaDemoQ: "📝 {n} Soal", metaDemoT: "⏱ {m} menit", metaDemoP: "📖 Dengan penjelasan",
     demoPasswordTitle: "Demo Ujian",
     demoWelcomeDesc: "Ini adalah demo ujian sertifikasi HSS.<br>Masukkan nama Anda dan mulai tes.",
     demoTestNameValue: "Demo Ujian Sertifikasi HSS",
-    demoQuestionCountValue: "5 soal",
-    demoTimeLimitValue: "5 menit",
+    demoQuestionCountValue: "{n} soal",
+    demoTimeLimitValue: "{m} menit",
     demoProgressLabel: "Demo Ujian Sertifikasi HSS",
     demoResultTitle: "Hasil Demo Ujian HSS",
     demoNotice3: "※ Versi demo: hasil tidak dikirim ke mana pun.",
@@ -1051,6 +1064,8 @@ var TRANSLATIONS = {
     demoFail: "Kali ini belum lulus. Baca penjelasannya dan coba lagi.",
     demoAutoSent: "📄 Versi demo: hasil tidak dikirim. Silakan lihat di layar ini.",
     demoFinishWarn: "Ini demo, jadi hasil tidak dikirim ke mana pun. Setelah selesai, jawaban benar dan penjelasan ditampilkan.",
+    demoPass: "Anda mencapai batas lulus. Pertahankan di ujian sebenarnya!", demoPerfect: "Semua jawaban benar. Pertahankan di ujian sebenarnya!",
+    demoPasswordDesc: "Masukkan kata sandi untuk memulai demo.",
     resumeTitle: "Lanjutkan ujian",
     resumeDesc: "Melanjutkan ujian {name} dari posisi terakhir (sisa {time}). Tekan tombol untuk melanjutkan.",
     resumeExpiredDesc: "Ujian {name} yang terputus telah melewati batas waktu. Jawaban sejauh ini akan dikirim.",
@@ -1080,12 +1095,116 @@ var TRANSLATIONS = {
     shared: "Hasil dibagikan.", sendTo: "Dikirim ke:",
     autoSent: "✅ Terkirim",
     autoSentFail: "⚠ Pengiriman belum terkonfirmasi. Buka kembali aplikasi ini di tempat dengan sinyal bagus, hasil akan dikirim ulang otomatis. Jika mendesak, Anda juga bisa kirim manual dengan tombol di bawah.",
-    excelDownloaded: "File Excel terunduh. Aplikasi email akan terbuka.",
+    excelDownloaded: "File Excel tersimpan. Tekan \"Buka Email\" di bawah dan lampirkan file Excel yang tersimpan. Jika email tidak terbuka, lampirkan file dari folder Unduhan secara manual.",
+    openMailBtn: "Buka Email",
+    mailFallbackNote: "Email terbuka. Jika tidak bisa mengirim, hasil juga akan dikirim ulang otomatis saat Anda membuka kembali aplikasi ini di tempat bersinyal bagus.",
     sentProcess: "Proses pengiriman selesai",
     skipLink: "Langsung ke konten", darkModeToggle: "Mode gelap",
     minutes: "menit", seconds: "detik",
     swipeHint: "← Geser untuk navigasi →",
     sending: "Mengirim...", loadingQuestions: "Memuat soal..."
+  },
+  es: {
+    homeTitle: "Examen de Certificación HSS", homeSubtitle: "Compañía Hirano",
+    badgeConfirm: "Confirmación de intención", badgeExam: "Examen oficial",
+    entryConfirmTitle: "Responder intención de examen",
+    entryConfirmDesc: "Confirmación de su intención de presentar el examen. Escriba su nombre y responda Sí.",
+    entryExamTitle: "Presentar el examen oficial HSS",
+    entryExamDesc: "Examen oficial de certificación HSS. Requiere contraseña. {n} preguntas.",
+    metaQ: "📝 {n} preguntas", metaT: "⏱ {m} min", metaP: "🎯 {r}% para aprobar",
+    langNote: "🌐 日本語・English・Tiếng Việt・Bahasa Indonesia・Español",
+    footer: "© Compañía Hirano - Certificación HSS",
+    confirmNameTitle: "Confirmación de intención", confirmNameDesc: "Escriba su nombre, por favor.",
+    nameLabel: "Nombre completo", namePlaceholder: "Ejemplo: Juan Pérez",
+    nameError: "Escriba su nombre, por favor", nextBtn: "Siguiente", backBtn: "Volver",
+    confirmQTitle: "Confirmación de intención", confirmQuestion: "¿Va a presentar el examen?",
+    yes: "Sí", no: "No",
+    confirmResultYesIcon: "✅", confirmResultYesTitle: "Respuesta enviada",
+    confirmResultYesMsg: "La respuesta \"Sí\" de {name} fue enviada al administrador.",
+    confirmResultNoIcon: "📋", confirmResultNoTitle: "Respuesta enviada",
+    confirmResultNoMsg: "La respuesta \"No\" de {name} fue enviada al administrador.",
+    confirmSending: "Enviando...", confirmSendError: "No se pudo enviar. Intente de nuevo.",
+    homeBtn: "Volver al inicio",
+    passwordTitle: "Examen oficial", passwordDesc: "Ingrese la contraseña para comenzar el examen.",
+    passwordLabel: "Contraseña", passwordPlaceholder: "Ingrese la contraseña",
+    passwordError: "Contraseña incorrecta", authBtn: "Verificar",
+    welcomeTitle: "Bienvenido",
+    welcomeDesc: "Este es el examen oficial de certificación HSS.<br>Escriba su nombre y comience la prueba.",
+    testName: "Nombre del examen:", testNameValue: "Examen oficial de certificación HSS",
+    questionCount: "Preguntas:", questionCountValue: "{n} preguntas",
+    format: "Formato:", formatValue: "Opción múltiple (4 opciones)",
+    timeLimit: "Tiempo límite:", timeLimitValue: "{m} minutos",
+    passCriteria: "Criterio de aprobación:", passCriteriaValue: "{r}% o más",
+    notice1: "※ Las respuestas correctas no se muestran durante el examen.",
+    notice2: "※ Puede volver a preguntas anteriores y cambiar su respuesta.",
+    notice3: "※ Los resultados se envían automáticamente al administrador.",
+    notice4: "※ El examen termina automáticamente cuando se acaba el tiempo.",
+    notice5: "※ Si sale de la aplicación durante el examen, la cantidad de veces y el tiempo se registran y se informan al administrador.",
+    finishTitle: "¿Terminar el examen?",
+    finishSummary: "Ha respondido {answered} de {total} preguntas.",
+    finishUnanswered: "Quedan {n} preguntas sin responder.",
+    finishWarn: "Al terminar, sus respuestas se enviarán y no podrán cambiarse.",
+    finishYes: "Terminar el examen", finishNo: "Volver a revisar",
+    awayWarn: "⚠ Se registró que salió de la aplicación durante el examen (vez n.º {n}, {sec} segundos). Este registro se envía al administrador.",
+    awayLabel: "Salidas de la app: ", awayTimes: " veces",
+    correctAnswerLabel: "Respuesta correcta: ", explanationLabel: "Explicación: ",
+    metaConfirmA: "📋 Confirmación de intención", metaConfirmB: "🔓 Sin contraseña",
+    badgeDemo: "Demo",
+    entryDemoTitle: "Hacer la demo (práctica)",
+    entryDemoDesc: "Demo de práctica para conocer el flujo del examen real. {n} preguntas. Al final se muestran las respuestas correctas y explicaciones. No se envía nada.",
+    metaDemoQ: "📝 {n} preguntas", metaDemoT: "⏱ {m} min", metaDemoP: "📖 Con explicaciones",
+    demoPasswordTitle: "Demo",
+    demoWelcomeDesc: "Esta es la demo del examen de certificación HSS.<br>Escriba su nombre y comience.",
+    demoTestNameValue: "Demo de certificación HSS",
+    demoQuestionCountValue: "{n} preguntas",
+    demoTimeLimitValue: "{m} minutos",
+    demoProgressLabel: "Demo de certificación HSS",
+    demoResultTitle: "Resultado de la demo HSS",
+    demoNotice3: "※ Versión demo: los resultados no se envían a ningún lado.",
+    demoNotice5: "※ Si sale de la aplicación durante la demo, la cantidad se registra y se muestra en esta pantalla (no se envía).",
+    demoAwayWarn: "⚠ Se registró que salió de la aplicación (vez n.º {n}, {sec} segundos). En el examen real este registro se envía al administrador.",
+    demoFail: "Esta vez no alcanzó el criterio. Lea las explicaciones e intente de nuevo.",
+    demoAutoSent: "📄 Versión demo: los resultados no se envían. Revíselos en esta pantalla.",
+    demoFinishWarn: "Como es una demo, los resultados no se envían a ningún lado. Al terminar se muestran las respuestas correctas y explicaciones.",
+    demoPass: "Superó el criterio. ¡Siga así en el examen real!", demoPerfect: "Todas las respuestas correctas. ¡Siga así en el examen real!",
+    demoPasswordDesc: "Ingrese la contraseña para comenzar la demo.",
+    resumeTitle: "Reanudar el examen",
+    resumeDesc: "Se reanuda el examen de {name} desde donde quedó (quedan {time}). Presione el botón para continuar.",
+    resumeExpiredDesc: "El examen interrumpido de {name} superó el tiempo límite. Se enviarán las respuestas registradas hasta ahora.",
+    resumeBtn: "Reanudar", resumeSendBtn: "Enviar respuestas y terminar",
+    resumeLaterBtn: "Después (volver al inicio)",
+    resumeWaiting: "⏸ Hay un examen esperando reanudarse: {name}",
+    resumeClockNote: "El tiempo del examen sigue corriendo mientras esta pantalla está abierta.",
+    startBtn: "Comenzar la prueba",
+    remainingTime: "Tiempo restante", prev: "Anterior", next: "Siguiente", submit: "Entregar",
+    question: "Pregunta ", progressLabel: "Examen oficial HSS",
+    timeoutTitle: "⏰ Tiempo agotado", timeoutMsg: "Se acabó el tiempo.<br>Terminando el examen...",
+    doneTitle: "El examen ha terminado.", doneMsg: "Ha completado el examen. Gracias.",
+    doneKeepOpen: "Mantenga la aplicación abierta hasta que aparezca \"✅ Enviado\" abajo.",
+    resultTitle: "Resultado del examen HSS", correctRate: "Aciertos",
+    scoreDetail: "{score} correctas de {total}",
+    pass: "Aprobado. Felicitaciones.", fail: "",
+    perfect: "¡Puntaje perfecto! Excelente.",
+    examinee: "Examinado:", examDate: "Fecha del examen:",
+    timeLimitLabel: "Tiempo límite:", elapsed: "Tiempo empleado:", timedOut: "(Tiempo agotado)",
+    passCriteriaLabel: "Criterio de aprobación:", passCriteriaDetail: "{rate}% o más",
+    categoryStats: "Resultados por categoría", reviewTitle: "Revisión de respuestas",
+    correct: "○ Correcta", incorrect: "× Incorrecta", unanswered: "Sin responder", unansweredLabel: "(Sin responder)",
+    submitNotice: "Los resultados se enviaron automáticamente al administrador.",
+    submitNoticeManual: "Puede enviar los resultados al administrador.",
+    submitBtn: "Enviar resultados", retryBtn: "Intentar de nuevo",
+    processing: "Procesando...", sent: "Enviado", sendFailed: "Error al enviar",
+    shared: "Resultados compartidos.", sendTo: "Enviar a: ",
+    autoSent: "✅ Enviado",
+    autoSentFail: "⚠ Aún no se pudo confirmar el envío. Abra esta aplicación de nuevo en un lugar con buena señal y se reenviará automáticamente. Si es urgente, también puede enviarlo manualmente con el botón de abajo.",
+    excelDownloaded: "Archivo Excel guardado. Presione \"Abrir correo\" abajo y adjunte el archivo Excel guardado. Si el correo no se abre, adjunte el archivo desde su carpeta de Descargas manualmente.",
+    openMailBtn: "Abrir correo",
+    mailFallbackNote: "Se abrió el correo. Si no puede enviarlo, el resultado también se reenviará automáticamente cuando vuelva a abrir esta aplicación con buena señal.",
+    sentProcess: "Envío ejecutado",
+    skipLink: "Ir al contenido", darkModeToggle: "Modo oscuro",
+    minutes: " min ", seconds: " seg",
+    swipeHint: "← Deslice para cambiar de pregunta →",
+    sending: "Enviando...", loadingQuestions: "Cargando preguntas..."
   }
 };
 
@@ -1097,6 +1216,8 @@ var CATEGORY_NAMES = {
        "繁殖関連":"Breeding","子豚管理":"Piglet Care","衛生管理":"Hygiene","飼養管理":"Feed Mgmt","飼育段階":"Growth Stage","豚の分類":"Classification","施設管理":"Facility","疾病管理":"Disease","社訓":"Company Motto"},
   vi: {"繁殖・分娩":"Sinh sản / Đẻ","子豚・育成":"Heo con / Nuôi dưỡng","衛生・防疫":"Vệ sinh / Phòng dịch","飼料・栄養":"Thức ăn / Dinh dưỡng","飼養環境・施設":"Môi trường / Chuồng trại","肉豚・出荷・肉":"Heo thịt / Xuất chuồng","経営理念・行動規範":"Triết lý / Quy tắc",
        "繁殖関連":"Sinh sản","子豚管理":"Heo con","衛生管理":"Vệ sinh","飼養管理":"Thức ăn","飼育段階":"Giai đoạn","豚の分類":"Phân loại","施設管理":"Chuồng trại","疾病管理":"Bệnh","社訓":"Phương châm"},
+  es: {"繁殖・分娩":"Reproducción y parto","子豚・育成":"Lechones y cría","衛生・防疫":"Higiene y bioseguridad","飼料・栄養":"Alimento y nutrición","飼養環境・施設":"Ambiente e instalaciones","肉豚・出荷・肉":"Engorde y envío","経営理念・行動規範":"Filosofía y conducta",
+       "繁殖関連":"Reproducción","子豚管理":"Lechones","衛生管理":"Higiene","飼養管理":"Alimento","飼育段階":"Etapas","豚の分類":"Clasificación","施設管理":"Instalaciones","疾病管理":"Enfermedades","社訓":"Lema de la empresa"},
   id: {"繁殖・分娩":"Reproduksi & Kelahiran","子豚・育成":"Anak Babi & Pembesaran","衛生・防疫":"Kebersihan & Biosekuriti","飼料・栄養":"Pakan & Nutrisi","飼養環境・施設":"Lingkungan & Fasilitas","肉豚・出荷・肉":"Babi Potong & Pengiriman","経営理念・行動規範":"Filosofi & Perilaku",
        "繁殖関連":"Pembiakan","子豚管理":"Anak Babi","衛生管理":"Kebersihan","飼養管理":"Pakan","飼育段階":"Tahap","豚の分類":"Klasifikasi","施設管理":"Fasilitas","疾病管理":"Penyakit","社訓":"Moto Perusahaan"}
 };
@@ -1159,6 +1280,13 @@ function tm(key) {
     if(v !== undefined) return v;
   }
   return t(key);
+}
+// 設定値({n}問/{m}分/{r}%)を翻訳文字列へ差し込む。UIとCONFIGの乖離を構造的に防ぐ
+function fillNums(str, demoCtx){
+  var n = demoCtx ? (CONFIG.demo.questionCount || 5) : CONFIG.test.questionsPerTest;
+  var m = demoCtx ? CONFIG.demo.timeLimit : CONFIG.test.timeLimit;
+  var r = demoCtx ? CONFIG.demo.passRate : CONFIG.test.passRate;
+  return String(str).replace(/\{n\}/g, n).replace(/\{m\}/g, m).replace(/\{r\}/g, r);
 }
 function getCatName(cat) { return (CATEGORY_NAMES[currentLang] && CATEGORY_NAMES[currentLang][cat]) || cat; }
 function getCategoryClass(cat) { return CATEGORY_CLASSES[cat] || "cat-breeding"; }
@@ -1241,17 +1369,17 @@ function applyTranslations(){
   document.getElementById("entry-confirm-title").textContent = t("entryConfirmTitle");
   document.getElementById("entry-confirm-desc").textContent = t("entryConfirmDesc");
   document.getElementById("entry-exam-title").textContent = t("entryExamTitle");
-  document.getElementById("entry-exam-desc").textContent = t("entryExamDesc");
-  document.getElementById("meta-q").textContent = t("metaQ");
-  document.getElementById("meta-t").textContent = t("metaT");
-  document.getElementById("meta-p").textContent = t("metaP");
+  document.getElementById("entry-exam-desc").textContent = fillNums(t("entryExamDesc"), false);
+  document.getElementById("meta-q").textContent = fillNums(t("metaQ"), false);
+  document.getElementById("meta-t").textContent = fillNums(t("metaT"), false);
+  document.getElementById("meta-p").textContent = fillNums(t("metaP"), false);
   document.getElementById("meta-confirm-a").textContent = t("metaConfirmA");
   document.getElementById("meta-confirm-b").textContent = t("metaConfirmB");
   document.getElementById("badge-demo").textContent = t("badgeDemo");
   document.getElementById("entry-demo-title").textContent = t("entryDemoTitle");
-  document.getElementById("entry-demo-desc").textContent = t("entryDemoDesc");
-  document.getElementById("meta-demo-q").textContent = t("metaDemoQ");
-  document.getElementById("meta-demo-t").textContent = t("metaDemoT");
+  document.getElementById("entry-demo-desc").textContent = fillNums(t("entryDemoDesc"), true);
+  document.getElementById("meta-demo-q").textContent = fillNums(t("metaDemoQ"), true);
+  document.getElementById("meta-demo-t").textContent = fillNums(t("metaDemoT"), true);
   document.getElementById("meta-demo-p").textContent = t("metaDemoP");
   document.getElementById("lang-note").textContent = t("langNote");
   document.getElementById("footer-text").textContent = t("footer");
@@ -1267,7 +1395,7 @@ function applyTranslations(){
   document.getElementById("confirm-yes").textContent = t("yes");
   document.getElementById("confirm-result-home").textContent = t("homeBtn");
   document.getElementById("password-title").textContent = tm("passwordTitle");
-  document.getElementById("password-desc").textContent = t("passwordDesc");
+  document.getElementById("password-desc").textContent = tm("passwordDesc");
   document.getElementById("password-label").textContent = t("passwordLabel");
   document.getElementById("exam-password").placeholder = t("passwordPlaceholder");
   document.getElementById("password-error-msg").textContent = t("passwordError");
@@ -1281,13 +1409,13 @@ function applyTranslations(){
   document.getElementById("ti-testname-label").textContent = t("testName");
   document.getElementById("ti-testname-value").textContent = tm("testNameValue");
   document.getElementById("ti-qcount-label").textContent = t("questionCount");
-  document.getElementById("ti-qcount-value").textContent = tm("questionCountValue");
+  document.getElementById("ti-qcount-value").textContent = fillNums(tm("questionCountValue"), isDemo());
   document.getElementById("ti-format-label").textContent = t("format");
   document.getElementById("ti-format-value").textContent = t("formatValue");
   document.getElementById("ti-time-label").textContent = t("timeLimit");
-  document.getElementById("ti-time-value").textContent = tm("timeLimitValue");
+  document.getElementById("ti-time-value").textContent = fillNums(tm("timeLimitValue"), isDemo());
   document.getElementById("ti-pass-label").textContent = t("passCriteria");
-  document.getElementById("ti-pass-value").textContent = t("passCriteriaValue");
+  document.getElementById("ti-pass-value").textContent = fillNums(t("passCriteriaValue"), isDemo());
   document.getElementById("notice-box").innerHTML = noticeHtml();
   document.getElementById("exam-start-btn").textContent = t("startBtn");
   document.getElementById("timer-label").textContent = t("remainingTime");
@@ -1997,8 +2125,8 @@ function finishQuiz(){
 function buildDemoResultHtml(total, pct, elapsedMin, elapsedSec, timedOut){
   var passRate = modeConf().passRate;
   var passed = pct >= passRate;
-  var msg = passed ? t("pass") : tm("fail");
-  if(pct === 100) msg = t("perfect");
+  var msg = passed ? tm("pass") : tm("fail");
+  if(pct === 100) msg = tm("perfect");
 
   var html = '<div class="question-section-title">'+escHtml(tm("resultTitle"))+'</div>';
   html += '<div class="score-circle '+(passed ? "score-pass" : "score-fail")+'"><div class="score-pct">'+pct+'%</div><div class="score-label">'+escHtml(t("correctRate"))+'</div></div>';
@@ -2105,7 +2233,8 @@ function showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, el
   document.getElementById("submit-notice").innerHTML = escHtml(t("autoSentFail"));
   var btn = document.getElementById("submit-btn");
   btn.style.display = "block";
-  btn.addEventListener("click",function(){ manualSendResults(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec); });
+  // onclick方式: downloadAndMailtoが後からハンドラを差し替える（addEventListenerだと二重登録になる）
+  btn.onclick = function(){ manualSendResults(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec); };
 }
 
 function manualSendResults(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec){
@@ -2114,16 +2243,16 @@ function manualSendResults(pct, passOrFail, dateStr, timedOut, elapsedMin, elaps
   btn.disabled = true; btn.textContent = t("processing");
   var total = selectedQuestions.length;
   var subject = CONFIG.email.subjectExam.replace("{name}", playerName);
-  // 受験者の端末に残るため、得点・合否・正解・正誤は一切含めない（管理者側で採点する）
-  var body = "HSS認定 本試験 受験記録（未採点・管理者採点用）\n================================\n\n";
+  // メール本文は要約のみ（mailto URLの実用上限≈2KBを超えないため。全回答はExcel側にのみ載せる）
+  // 得点・合否・正解・正誤は受験者の端末に残るため一切含めない（管理者側で採点する）
+  var body = "HSS認定 本試験 受験記録（未採点・管理者採点用）\n================================\n";
   body += "受験者名："+playerName+"\n受験日時："+dateStr+"\n";
   body += "所要時間："+elapsedMin+"分"+String(elapsedSec).padStart(2,"0")+"秒"+(timedOut?"（時間切れ）":"")+"\n";
-  body += "離脱："+awayCount+"回 / 計"+awaySeconds+"秒"+(awayLogText()?"（"+awayLogText()+"）":"")+"\n\n";
-  body += "--- 回答内容 ---\n";
-  answers.forEach(function(a,i){
-    body += "問"+(i+1)+"（"+a.category+"）："+a.question+"\n  回答：「"+a.userAnswer+"」\n";
-  });
-  body += "================================\n※ 自動送信に失敗したため未採点の記録です。問題マスタと照合して採点してください。\n";
+  body += "離脱："+awayCount+"回 / 計"+awaySeconds+"秒"+(awayLogText()?"（"+awayLogText()+"）":"")+"\n";
+  body += "================================\n";
+  body += "※ 自動送信に失敗した受験記録です。回答内容は、端末にダウンロードされた\n";
+  body += "  Excelファイルをこのメールに添付して送ってください。\n";
+  body += "※ 添付が難しい場合も、受験者が電波の良い場所でアプリを開き直せば自動再送されます。\n";
 
   // Excel generation + mailto fallback
   generateExcelAndSend(subject, body, pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec, btn);
@@ -2157,7 +2286,7 @@ function generateExcelAndSend(subject, body, pct, passOrFail, dateStr, timedOut,
       var blob = new Blob([wbOut],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
       var file = new File([blob], fileName, {type:blob.type});
 
-      if(navigator.share && file){
+      if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){
         navigator.share({title:subject,text:body,files:[file]}).then(function(){
           btn.textContent = t("sent");
           document.getElementById("submit-notice").innerHTML = escHtml(t("shared"))+"<br>"+escHtml(t("sendTo"))+escHtml(CONFIG.email.adminEmail);
@@ -2179,14 +2308,22 @@ function downloadAndMailto(blob, fileName, subject, body, btn){
     if(isIOS){var r=new FileReader();r.onload=function(){var l=document.createElement("a");l.href=r.result;l.download=fileName;l.style.display="none";document.body.appendChild(l);l.click();setTimeout(function(){document.body.removeChild(l);},1000);};r.readAsDataURL(blob);}
     else{var u=URL.createObjectURL(blob);var l=document.createElement("a");l.href=u;l.download=fileName;l.style.display="none";document.body.appendChild(l);l.click();setTimeout(function(){document.body.removeChild(l);URL.revokeObjectURL(u);},1000);}
   }catch(e){console.error("Download error:",e);}
-  setTimeout(function(){window.location.href="mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);},800);
-  btn.disabled=true;btn.textContent=t("sentProcess");
-  document.getElementById("submit-notice").innerHTML=escHtml(t("excelDownloaded"))+"<br>"+escHtml(t("sendTo"))+escHtml(CONFIG.email.adminEmail);
+  // 自動でmailtoへ遷移しない（ダウンロード直後の遷移はDL中断の定番。成功と断定もしない）。
+  // ボタンを「メールを開く」に変え、受験者の手動タップで開かせる
+  btn.disabled = false;
+  btn.textContent = t("openMailBtn");
+  btn.onclick = function(){
+    window.location.href = "mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  };
+  document.getElementById("submit-notice").innerHTML = escHtml(t("excelDownloaded"))+"<br>"+escHtml(t("sendTo"))+escHtml(CONFIG.email.adminEmail);
 }
 
 function fallbackMailto(subject, body, btn){
-  window.location.href="mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
-  btn.disabled=true;btn.textContent=t("sentProcess");
+  // XLSX未ロード時: 要約メールのみ（回答全文はpendingが次回起動時に自動再送する）
+  window.location.href = "mailto:"+CONFIG.email.adminEmail+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  btn.disabled = true;
+  btn.textContent = t("sent");
+  document.getElementById("submit-notice").innerHTML = escHtml(t("mailFallbackNote"));
 }
 
 // ==================== WEBHOOK (Google Apps Script) ====================
@@ -2373,17 +2510,18 @@ if("serviceWorker" in navigator){
     var dismissBtn = document.getElementById("install-dismiss");
 
     // Translate
-    var titles = {ja:"ホーム画面に追加",en:"Add to Home Screen",vi:"Thêm vào Màn hình chính",id:"Tambahkan ke Layar Utama"};
+    var titles = {ja:"ホーム画面に追加",en:"Add to Home Screen",vi:"Thêm vào Màn hình chính",id:"Tambahkan ke Layar Utama",es:"Agregar a la pantalla de inicio"};
     var descs = {
       ja:"アプリとしてインストールすると、すぐに起動できます。",
       en:"Install as an app for quick access.",
       vi:"Cài đặt như ứng dụng để truy cập nhanh.",
-      id:"Pasang sebagai aplikasi untuk akses cepat."
+      id:"Pasang sebagai aplikasi untuk akses cepat.",
+      es:"Instálela como aplicación para acceso rápido."
     };
     document.getElementById("install-title").textContent = titles[currentLang] || titles.ja;
     document.getElementById("install-desc").textContent = descs[currentLang] || descs.ja;
 
-    var btnTexts = {ja:"追加",en:"Install",vi:"Cài đặt",id:"Pasang"};
+    var btnTexts = {ja:"追加",en:"Install",vi:"Cài đặt",id:"Pasang",es:"Instalar"};
     installBtn.textContent = btnTexts[currentLang] || btnTexts.ja;
 
     installBannerWanted = true;
@@ -2411,15 +2549,16 @@ if("serviceWorker" in navigator){
   function showIOSGuide(){
     var guide = document.getElementById("ios-guide");
     // Translate iOS guide
-    var guideTitles = {ja:"📱 ホーム画面に追加",en:"📱 Add to Home Screen",vi:"📱 Them vao Man hinh chinh",id:"📱 Tambahkan ke Layar Utama"};
+    var guideTitles = {ja:"📱 ホーム画面に追加",en:"📱 Add to Home Screen",vi:"📱 Thêm vào Màn hình chính",id:"📱 Tambahkan ke Layar Utama",es:"📱 Agregar a la pantalla de inicio"};
     document.getElementById("ios-guide-title").textContent = guideTitles[currentLang] || guideTitles.ja;
 
     var steps = document.getElementById("ios-guide-steps");
     var stepsData = {
       ja:['画面下の <strong>共有ボタン</strong> <span style="font-size:1.2em">□↑</span> をタップ','<strong>「ホーム画面に追加」</strong> をタップ','右上の <strong>「追加」</strong> をタップ'],
       en:['Tap the <strong>Share</strong> button <span style="font-size:1.2em">□↑</span> at the bottom','Tap <strong>"Add to Home Screen"</strong>','Tap <strong>"Add"</strong> in the top right'],
-      vi:['Nhan nut <strong>Chia se</strong> <span style="font-size:1.2em">□↑</span> o phia duoi','Nhan <strong>"Them vao Man hinh chinh"</strong>','Nhan <strong>"Them"</strong> o goc tren ben phai'],
-      id:['Ketuk tombol <strong>Bagikan</strong> <span style="font-size:1.2em">□↑</span> di bawah','Ketuk <strong>"Tambahkan ke Layar Utama"</strong>','Ketuk <strong>"Tambahkan"</strong> di kanan atas']
+      vi:['Nhấn nút <strong>Chia sẻ</strong> <span style="font-size:1.2em">□↑</span> ở phía dưới','Nhấn <strong>"Thêm vào Màn hình chính"</strong>','Nhấn <strong>"Thêm"</strong> ở góc trên bên phải'],
+      id:['Ketuk tombol <strong>Bagikan</strong> <span style="font-size:1.2em">□↑</span> di bawah','Ketuk <strong>"Tambahkan ke Layar Utama"</strong>','Ketuk <strong>"Tambahkan"</strong> di kanan atas'],
+      es:['Toque el botón <strong>Compartir</strong> <span style="font-size:1.2em">□↑</span> en la parte inferior','Toque <strong>"Agregar a pantalla de inicio"</strong>','Toque <strong>"Agregar"</strong> arriba a la derecha']
     };
     var lang = stepsData[currentLang] ? currentLang : "ja";
     var stepsHtml = "";

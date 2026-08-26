@@ -49,6 +49,7 @@ var CONFIG = {
     requirePassword: true,
     passwordHash: "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
     questionsFile: "data/demo-questions.json",
+    questionCount: 5,       // 問題数（UI表示用。demo-questions.jsonの問題数と一致させる）
     timeLimit: 5,           // 制限時間（分）
     passRate: 70,           // 合格基準（%）
   },

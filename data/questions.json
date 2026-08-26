@@ -37,6 +37,15 @@
         "A pig used to induce estrus",
         "The meat portion of a pig shipped to the slaughterhouse"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la descripción más precisa de un \"cerdo de engorde (nikuton)\"?",
+      "options": [
+        "Un cerdo engordado y enviado con el fin de producir carne",
+        "Un cerdo que puede usarse tanto para reproducción como para producción de carne",
+        "Un cerdo utilizado para inducir el celo",
+        "La parte de carne de un cerdo enviado al matadero"
+      ]
     }
   },
   {
@@ -76,6 +85,15 @@
         "About 115 kg",
         "About 30 kg",
         "About 80 kg"
+      ]
+    },
+    "es": {
+      "question": "¿Aproximadamente cuánta carne comercializable se obtiene de una canal?",
+      "options": [
+        "Aproximadamente 54-55 kg",
+        "Aproximadamente 115 kg",
+        "Aproximadamente 30 kg",
+        "Aproximadamente 80 kg"
       ]
     }
   },
@@ -117,6 +135,15 @@
         "Vitamin A",
         "Calcium"
       ]
+    },
+    "es": {
+      "question": "¿Qué nutriente está especialmente presente en la carne de cerdo y se considera útil para recuperarse del cansancio del verano?",
+      "options": [
+        "Vitamina B1",
+        "Vitamina C",
+        "Vitamina A",
+        "Calcio"
+      ]
     }
   },
   {
@@ -156,6 +183,15 @@
         "To maintain the quality of semen",
         "To exterminate pest animals",
         "To maintain the quality of feed"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el objetivo principal de realizar la \"desinfección\" en la nave porcina?",
+      "options": [
+        "Eliminar los patógenos y prevenir la aparición y propagación de enfermedades infecciosas en los cerdos",
+        "Mantener la calidad del semen",
+        "Eliminar animales dañinos (plagas)",
+        "Mantener la calidad del alimento"
       ]
     }
   },
@@ -197,6 +233,15 @@
         "38 C or higher",
         "41 C or higher"
       ]
+    },
+    "es": {
+      "question": "¿A partir de qué temperatura corporal de la cerda se indica inyectar antibióticos?",
+      "options": [
+        "39,5 °C o más",
+        "37,5 °C o más",
+        "38 °C o más",
+        "41 °C o más"
+      ]
     }
   },
   {
@@ -236,6 +281,15 @@
         "Disinfection -> Washing -> Drying",
         "Washing -> Disinfection -> Drying",
         "Drying -> Disinfection -> Washing"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el procedimiento correcto para desinfectar la nave porcina?",
+      "options": [
+        "Lavado → Secado → Desinfección",
+        "Desinfección → Lavado → Secado",
+        "Lavado → Desinfección → Secado",
+        "Secado → Desinfección → Lavado"
       ]
     }
   },
@@ -277,6 +331,15 @@
         "Keeping things free of dirt and disorder",
         "Making rules and procedures a habit"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la descripción más precisa de \"②Orden (Seiton)\" dentro de las 5S?",
+      "options": [
+        "Tener lo necesario listo para usarse cuando se necesite; devolverlo a su lugar después de usarlo",
+        "Clasificar claramente lo necesario y lo innecesario, y desechar lo innecesario",
+        "Mantener las cosas libres de suciedad y desorden",
+        "Convertir en hábito las reglas y normas establecidas"
+      ]
     }
   },
   {
@@ -316,6 +379,15 @@
         "Classifying and disposing of needed and unneeded items",
         "Keeping things in a clean state once cleaned",
         "Returning necessary items to their place"
+      ]
+    },
+    "es": {
+      "question": "¿Qué se incluye en \"⑤Disciplina (Shitsuke)\" dentro de las 5S?",
+      "options": [
+        "Convertir en hábito las reglas y normas, y cumplir con el compliance (cumplimiento normativo)",
+        "Clasificar y desechar lo necesario y lo innecesario",
+        "Mantener el estado de limpieza ya logrado",
+        "Devolver lo necesario a su lugar"
       ]
     }
   },
@@ -357,6 +429,15 @@
         "A medication program that treats sick pigs with minimal drugs",
         "A management program to maximize the reproductive performance of sows"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el significado más preciso de \"MD (Minimal Disease)\"?",
+      "options": [
+        "Un programa de manejo higiénico que minimiza las enfermedades, mantiene a los cerdos sanos y maximiza la rentabilidad",
+        "Un estado libre de enfermedad y gérmenes que elimina por completo las enfermedades en la granja",
+        "Un programa de medicación que trata a los cerdos enfermos con la menor cantidad de fármacos posible",
+        "Un programa de manejo alimenticio para maximizar el desempeño reproductivo de las cerdas"
+      ]
     }
   },
   {
@@ -396,6 +477,15 @@
         "A piglet eating solid feed for the first time",
         "The sow's milk production stopping",
         "Entrusting piglets to another sow"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es el \"destete (rinyu)\"?",
+      "options": [
+        "Separar a los lechones de la cerda y hacer que coman alimento de forma independiente",
+        "Que el lechón coma alimento sólido por primera vez",
+        "Que la cerda deje de producir leche",
+        "Confiar los lechones a otra cerda"
       ]
     }
   },
@@ -437,6 +527,15 @@
         "Mating a sow",
         "A sow becoming pregnant"
       ]
+    },
+    "es": {
+      "question": "¿Qué es el \"parto (bunben)\"?",
+      "options": [
+        "Que la cerda dé a luz a los lechones",
+        "Que la cerda muestre celo",
+        "Realizar la cubrición de la cerda",
+        "Que la cerda quede gestante"
+      ]
     }
   },
   {
@@ -476,6 +575,15 @@
         "Vaccinating piglets",
         "Feeding pigs",
         "Selecting replacement gilts"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es la \"cubrición (tanetsuke)\"?",
+      "options": [
+        "Realizar inseminación artificial o monta natural en una cerda en celo",
+        "Vacunar a los lechones",
+        "Dar alimento a los cerdos",
+        "Seleccionar cerdas de reemplazo"
       ]
     }
   },
@@ -517,6 +625,15 @@
         "The period of keeping newborn piglets warm",
         "The period of selecting and raising breeding pigs"
       ]
+    },
+    "es": {
+      "question": "¿Qué etapa de crianza es el \"engorde (hiiku)\"?",
+      "options": [
+        "La etapa de crianza en la que se engordan los cerdos destetados hasta el peso de envío",
+        "El período en que la cerda cría a sus lechones",
+        "El período en que se mantiene el calor a los lechones recién nacidos",
+        "El período de selección y crianza de cerdos para reproducción"
+      ]
     }
   },
   {
@@ -556,6 +673,15 @@
         "Feed / water / vaccine",
         "Observation / recording / PDCA",
         "Sort / Set in order / Shine"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la combinación correcta de los \"tres elementos básicos\" esenciales para el crecimiento del cerdo?",
+      "options": [
+        "Alimento limpio y fresco / agua limpia y fresca / un lugar de vida cálido, seco y sin corrientes de aire",
+        "Alimento / agua / vacuna",
+        "Observación / registro / PDCA",
+        "Clasificar / ordenar / limpiar"
       ]
     }
   },
@@ -597,6 +723,15 @@
         "Eating feed, about 0.69%",
         "Fighting, about 0.35%"
       ]
+    },
+    "es": {
+      "question": "En \"Observación del comportamiento de lechones destetados\" (Keiichi Hashimoto, 1992), ¿en qué comportamiento invierte más tiempo un lechón al quinto día tras el destete?",
+      "options": [
+        "Dormir, aproximadamente 61,9%",
+        "Moverse de un lado a otro, aproximadamente 36,6%",
+        "Comer alimento, aproximadamente 0,69%",
+        "Pelear, aproximadamente 0,35%"
+      ]
     }
   },
   {
@@ -636,6 +771,15 @@
         "About one day",
         "About one month",
         "About three days"
+      ]
+    },
+    "es": {
+      "question": "¿Aproximadamente cuánto tiempo se considera que tarda un lechón recién destetado en acostumbrarse al nuevo entorno?",
+      "options": [
+        "Alrededor de 1 semana",
+        "Alrededor de 1 día",
+        "Alrededor de 1 mes",
+        "Alrededor de 3 días"
       ]
     }
   },
@@ -677,6 +821,15 @@
         "About half imported ingredients",
         "About 30% imported ingredients"
       ]
+    },
+    "es": {
+      "question": "¿Cómo se describe la composición de los ingredientes del alimento para cerdos utilizado en Japón?",
+      "options": [
+        "Casi el 100% son ingredientes importados",
+        "Casi el 100% son ingredientes nacionales",
+        "Aproximadamente la mitad son ingredientes importados",
+        "Aproximadamente el 30% son ingredientes importados"
+      ]
     }
   },
   {
@@ -716,6 +869,15 @@
         "Weaning, fattening, shipping",
         "Estrus, mating, pregnancy diagnosis",
         "Farrowing, nursing, weaning"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la combinación de las tres tareas que funcionan de forma interconectada en el área de reproducción?",
+      "options": [
+        "Cubrición, gestación, parto",
+        "Destete, engorde, envío",
+        "Celo, cubrición, diagnóstico de gestación",
+        "Parto, lactancia, destete"
       ]
     }
   },
@@ -757,6 +919,15 @@
         "An accident in which barn equipment collapses and crushes pigs",
         "An accident in which a pig collapses from the heat"
       ]
+    },
+    "es": {
+      "question": "¿Qué tipo de accidente es el \"aplastamiento (asshi)\" en la producción porcina?",
+      "options": [
+        "Un accidente en el que la cerda aplasta y mata a un lechón al girarse, entre otros movimientos",
+        "Un accidente en el que los cerdos se asfixian por hacinamiento excesivo",
+        "Un accidente en el que el equipo de la nave porcina se derrumba y aplasta a los cerdos",
+        "Un accidente en el que un cerdo colapsa por el calor"
+      ]
     }
   },
   {
@@ -796,6 +967,15 @@
         "A pig with excellent breeding performance registered as a next-generation breeding pig",
         "A boar before its first mating",
         "A young meat-pig candidate introduced from outside"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la descripción más precisa de una \"cerda de reemplazo (kohoton)\"?",
+      "options": [
+        "Un cerdo joven que está siendo seleccionado y criado para ser una futura cerda reproductora",
+        "Un cerdo con un desempeño reproductivo excelente, registrado como reproductor de la siguiente generación",
+        "Un verraco antes de su primera cubrición",
+        "Un cerdo joven candidato a cerdo de engorde, introducido desde el exterior"
       ]
     }
   },
@@ -837,6 +1017,15 @@
         "A young female pig that has reached estrus for the first time",
         "A piglet born from the first (parity-1) farrowing"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la descripción más precisa del \"primer parto (shosan) / cerda de primer parto\"?",
+      "options": [
+        "Que la cerda dé a luz a lechones por primera vez, o dicha cerda misma",
+        "El período desde la primera cubrición de la cerda hasta su primer parto",
+        "Una cerda joven que ha llegado al celo por primera vez",
+        "Los lechones nacidos en el primer parto"
+      ]
     }
   },
   {
@@ -876,6 +1065,15 @@
         "About 70%",
         "About 80%",
         "About 50%"
+      ]
+    },
+    "es": {
+      "question": "¿Aproximadamente qué porcentaje de tasa de parto (proporción de partos respecto al número de cubriciones) se considera conforme al plan?",
+      "options": [
+        "Aproximadamente 90%",
+        "Aproximadamente 70%",
+        "Aproximadamente 80%",
+        "Aproximadamente 50%"
       ]
     }
   },
@@ -917,6 +1115,15 @@
         "Measuring a sow's body weight",
         "A regular checkup of a sow's health condition"
       ]
+    },
+    "es": {
+      "question": "¿Qué es el \"diagnóstico de gestación (ninshin kantei)\"?",
+      "options": [
+        "Un examen para confirmar si la cerda está gestante después de la cubrición",
+        "Calcular la fecha probable de parto de la cerda",
+        "Medir el peso de la cerda",
+        "Un chequeo periódico del estado de salud de la cerda"
+      ]
     }
   },
   {
@@ -956,6 +1163,15 @@
         "A value measuring a pig's health condition by blood test",
         "An index showing the temperature and humidity inside the barn",
         "An index showing a pig's daily weight gain"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es la \"puntuación de condición corporal (BCS)\"?",
+      "options": [
+        "Un indicador que evalúa mediante una puntuación el estado de musculatura y grasa del cuerpo del cerdo",
+        "Un valor que mide el estado de salud del cerdo mediante análisis de sangre",
+        "Un indicador de la temperatura y humedad dentro de la nave porcina",
+        "Un indicador de la ganancia de peso diaria del cerdo"
       ]
     }
   },
@@ -997,6 +1213,15 @@
         "To improve pig meat quality",
         "To enhance pig reproductive ability"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el objetivo de aplicar la \"vacunación\" a los cerdos?",
+      "options": [
+        "Generar inmunidad contra enfermedades infecciosas específicas y prevenir enfermedades",
+        "Acelerar el crecimiento del cerdo",
+        "Mejorar la calidad de la carne del cerdo",
+        "Aumentar la capacidad reproductiva del cerdo"
+      ]
     }
   },
   {
@@ -1036,6 +1261,15 @@
         "Raising piglets with a milky-wean feeder",
         "Administering iron to piglets and, for males, accompanying castration",
         "The entire rearing period of piglets from just after farrowing to shipping"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la descripción más precisa de la \"lactancia (honyu)\"?",
+      "options": [
+        "Que la cerda alimente y críe a sus lechones dándoles leche materna",
+        "Criar a los lechones con un comedero de destete tipo \"milky wean\"",
+        "Administrar hierro a los lechones y, en el caso de los machos, castrarlos",
+        "Todo el período de crianza de los lechones desde inmediatamente después del parto hasta el envío"
       ]
     }
   },
@@ -1077,6 +1311,15 @@
         "Reduce it during the farrowing-to-weaning period",
         "Reduce it from the 2nd week after farrowing"
       ]
+    },
+    "es": {
+      "question": "¿A partir de cuándo se empieza a reducir la cantidad de alimento de la cerda antes del parto?",
+      "options": [
+        "Desde 3 días antes de la fecha probable de parto",
+        "Desde 4 semanas antes de la fecha probable de parto",
+        "Se reduce durante el período entre el parto y el destete",
+        "Se reduce a partir de la segunda semana después del parto"
+      ]
     }
   },
   {
@@ -1116,6 +1359,15 @@
         "A procedure to shorten a pig's tail",
         "A procedure to clip a pig's canine teeth",
         "A procedure to inject iron into a pig"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es la \"castración (kyosei)\"?",
+      "options": [
+        "Un procedimiento para extirpar quirúrgicamente los testículos del verraco",
+        "Un procedimiento para acortar la cola del cerdo",
+        "Un procedimiento para cortar los colmillos del cerdo",
+        "Un procedimiento para inyectar hierro al cerdo"
       ]
     }
   },
@@ -1157,6 +1409,15 @@
         "A procedure to remove a sow's tail",
         "A procedure to remove a piglet's tail entirely"
       ]
+    },
+    "es": {
+      "question": "¿Qué es el \"corte de cola (danbi)\"?",
+      "options": [
+        "Un procedimiento para acortar la cola del lechón (para prevenir la mordedura de cola)",
+        "Un procedimiento para suprimir la agresividad del lechón",
+        "Un procedimiento para eliminar la cola de la cerda",
+        "Un procedimiento para eliminar por completo la cola del lechón"
+      ]
     }
   },
   {
@@ -1196,6 +1457,15 @@
         "To strengthen the piglet's bones",
         "To increase the piglet's appetite",
         "To prevent infectious disease in piglets"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la razón para administrar \"hierro\" a los lechones?",
+      "options": [
+        "Para prevenir la anemia",
+        "Para fortalecer los huesos del lechón",
+        "Para aumentar el apetito del lechón",
+        "Para prevenir enfermedades infecciosas en el lechón"
       ]
     }
   },
@@ -1237,6 +1507,15 @@
         "The period during which piglets are nursing",
         "The final finishing period before shipping"
       ]
+    },
+    "es": {
+      "question": "¿Qué tipo de período es la \"etapa de gestación (ninshinki)\"?",
+      "options": [
+        "El período en que la cerda lleva a los lechones en el útero",
+        "El período de crecimiento de los lechones desde el destete hasta el inicio del engorde",
+        "El período en que los lechones están mamando leche materna",
+        "El período final de acabado antes del envío"
+      ]
     }
   },
   {
@@ -1276,6 +1555,15 @@
         "About 90 days (3 months)",
         "About 150 days (5 months)",
         "About 280 days (about 9 months)"
+      ]
+    },
+    "es": {
+      "question": "¿Aproximadamente cuántos días dura el período de gestación del cerdo (cerda)?",
+      "options": [
+        "Aproximadamente 115 días (115 días después de la cubrición; variación individual de 112 a 117 días)",
+        "Aproximadamente 90 días (3 meses)",
+        "Aproximadamente 150 días (5 meses)",
+        "Aproximadamente 280 días (aproximadamente 9 meses)"
       ]
     }
   },
@@ -1317,6 +1605,15 @@
         "Prevention of bacterial infection from tail biting",
         "Prevention of boar odor"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el objetivo correcto de la \"muesca en la oreja (jikoku)\" que se realiza a los lechones recién nacidos?",
+      "options": [
+        "Identificación individual",
+        "Prevención de la anemia",
+        "Prevención de infecciones bacterianas por mordedura de cola",
+        "Prevención del olor a verraco"
+      ]
     }
   },
   {
@@ -1356,6 +1653,15 @@
         "From just after mating until day 30 of gestation",
         "Days 50-70 of gestation",
         "During the nursing period after farrowing"
+      ]
+    },
+    "es": {
+      "question": "¿Aproximadamente desde cuándo el feto crece de manera considerable?",
+      "options": [
+        "Desde alrededor del día 98 de gestación hasta el parto",
+        "Desde justo después de la cubrición hasta el día 30 de gestación",
+        "Días 50 a 70 de gestación",
+        "Durante el período de lactancia después del parto"
       ]
     }
   },
@@ -1397,6 +1703,15 @@
         "Farrowing begins the next day",
         "It is a sign that farrowing has already finished"
       ]
+    },
+    "es": {
+      "question": "Cuando se confirma la \"bajada de leche\" (el chorro de leche sale con fuerza al ordeñar a la cerda), ¿en cuánto tiempo comienza el parto?",
+      "options": [
+        "El parto comienza dentro de unas horas",
+        "El parto comienza aproximadamente una semana después",
+        "El parto comienza al día siguiente",
+        "Es una señal de que el parto ya ha terminado"
+      ]
     }
   },
   {
@@ -1436,6 +1751,15 @@
         "Mating pigs of different breeds",
         "Rotating pigs among multiple barns",
         "Raising piglets on a different farm"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es la \"adopción de lechones (satogo)\"?",
+      "options": [
+        "Confiar los lechones de una cerda con una camada numerosa a otra cerda que tiene capacidad disponible",
+        "Cruzar cerdos de razas diferentes",
+        "Rotar a los cerdos entre varias naves porcinas",
+        "Criar a los lechones en otra granja"
       ]
     }
   },
@@ -1477,6 +1801,15 @@
         "Isolating the sow from other pigs",
         "Making it easier to weigh the sow"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el objetivo principal de la \"barra antiaplastamiento (jaula de parto)\" en la sala de partos?",
+      "options": [
+        "Restringir el movimiento de la cerda para evitar que aplaste a los lechones",
+        "Evitar que los lechones escapen",
+        "Aislar a la cerda de los demás cerdos",
+        "Facilitar la medición del peso de la cerda"
+      ]
     }
   },
   {
@@ -1516,6 +1849,15 @@
         "To give supplementary feed to piglets in a place the sow cannot enter",
         "To relieve the sow's stress during farrowing",
         "To identify individual piglets"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el objetivo principal de instalar una caja de calor o un calefactor en la sala de partos?",
+      "options": [
+        "Para que todos los lechones no pierdan fuerzas y puedan tomar el calostro adecuadamente",
+        "Para dar alimento suplementario a los lechones en un lugar al que la cerda no pueda entrar",
+        "Para aliviar el estrés de la cerda durante el parto",
+        "Para identificar a cada lechón individualmente"
       ]
     }
   },
@@ -1557,6 +1899,15 @@
         "12 hours after birth",
         "24 hours after birth"
       ]
+    },
+    "es": {
+      "question": "En la \"capacidad de absorción de anticuerpos inmunológicos del calostro en lechones recién nacidos\", ¿durante cuánto tiempo se puede mantener una capacidad de absorción del 100%?",
+      "options": [
+        "3 horas después del nacimiento",
+        "30 minutos después del nacimiento",
+        "12 horas después del nacimiento",
+        "24 horas después del nacimiento"
+      ]
     }
   },
   {
@@ -1596,6 +1947,15 @@
         "Mated 2 times at 24-hour intervals",
         "Mated only once on the day of estrus",
         "Mated 4 times at 48-hour intervals"
+      ]
+    },
+    "es": {
+      "question": "¿Con qué intervalo aproximado y cuántas veces se cubre a una cerda de reemplazo nulípara (sin partos previos)?",
+      "options": [
+        "Se cubre 3 veces con un intervalo de aproximadamente 12 horas después del celo",
+        "Se cubre 2 veces con un intervalo de 24 horas",
+        "Se cubre solo 1 vez el mismo día del celo",
+        "Se cubre 4 veces con un intervalo de 48 horas"
       ]
     }
   },
@@ -1637,6 +1997,15 @@
         "About 2.0-3.0 kg",
         "About 1.5-2.5 kg"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el peso al nacer más aproximado en general para los cerdos?",
+      "options": [
+        "Aproximadamente 1.2-1.5 kg",
+        "Aproximadamente 0.5-0.8 kg",
+        "Aproximadamente 2.0-3.0 kg",
+        "Aproximadamente 1.5-2.5 kg"
+      ]
     }
   },
   {
@@ -1676,6 +2045,15 @@
         "7-10 days of age",
         "40-50 days of age",
         "60 days of age"
+      ]
+    },
+    "es": {
+      "question": "En una granja típica, ¿a qué edad aproximada (en días) se desteta a los lechones?",
+      "options": [
+        "Aproximadamente 25-26 días de edad",
+        "Aproximadamente 7-10 días de edad",
+        "Aproximadamente 40-50 días de edad",
+        "Aproximadamente 60 días de edad"
       ]
     }
   },
@@ -1717,6 +2095,15 @@
         "Refusal to mate",
         "Lateral recumbency reflex"
       ]
+    },
+    "es": {
+      "question": "Cuando se presiona el lomo de la cerda y esta permanece inmóvil, ¿qué señal indica esto?",
+      "options": [
+        "Celo",
+        "Mal estado de salud",
+        "Rechazo a la monta",
+        "Reflejo de decúbito lateral"
+      ]
     }
   },
   {
@@ -1756,6 +2143,15 @@
         "Backfat thickness 10 cm from the base of the neck",
         "Backfat thickness 3 cm from the base of the tail",
         "Subcutaneous fat thickness at the center of the shoulder"
+      ]
+    },
+    "es": {
+      "question": "¿En qué parte del cuerpo se mide el \"punto P2\" para determinar el grosor de la grasa dorsal de la cerda?",
+      "options": [
+        "Grosor de la grasa dorsal a 5-6 cm del lado dorsal de la última costilla (lateral a la línea media)",
+        "Grosor de la grasa dorsal a 10 cm de la base del cuello",
+        "Grosor de la grasa dorsal a 3 cm de la base de la cola",
+        "Grosor de la grasa subcutánea en el centro del hombro"
       ]
     }
   },
@@ -1797,6 +2193,15 @@
         "160 kg (about 80%)",
         "190 kg (about 95%)"
       ]
+    },
+    "es": {
+      "question": "En un ejemplo de cálculo del cambio de peso de la cerda, si el peso de la cerda antes/después del parto (incluyendo el peso de los fetos) es de 200 kg, ¿cuál es aproximadamente el peso de la cerda después del parto (en kg y en %)?",
+      "options": [
+        "177 kg (aproximadamente 90%)",
+        "200 kg (aproximadamente 100%)",
+        "160 kg (aproximadamente 80%)",
+        "190 kg (aproximadamente 95%)"
+      ]
     }
   },
   {
@@ -1836,6 +2241,15 @@
         "A state in which a sow is close to giving birth",
         "A state in which a pig feels stress from the heat",
         "A state in which a pig is ill"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es el \"celo\"?",
+      "options": [
+        "Un fenómeno fisiológico que indica que la cerda está en condiciones de ser cubierta",
+        "Un estado en el que la cerda está próxima a parir",
+        "Un estado en el que el cerdo siente estrés por calor",
+        "Un estado en el que el cerdo está enfermo"
       ]
     }
   },
@@ -1877,6 +2291,15 @@
         "21 days after weaning",
         "On the day of weaning"
       ]
+    },
+    "es": {
+      "question": "En una cerda destetada correctamente manejada, ¿en aproximadamente cuántos días después del destete llega el celo?",
+      "options": [
+        "4-5 días después del destete",
+        "10-12 días después del destete",
+        "21 días después del destete",
+        "El mismo día del destete"
+      ]
     }
   },
   {
@@ -1913,6 +2336,15 @@
       "question": "Which is used as the abbreviation for \"artificial insemination\"?",
       "options": [
         "AI (Artificial Insemination)",
+        "PI (Pig Insemination)",
+        "SI (Swine Insemination)",
+        "NI (Natural Insemination)"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la abreviatura utilizada para la \"inseminación artificial\"?",
+      "options": [
+        "IA (Inseminación Artificial)",
         "PI (Pig Insemination)",
         "SI (Swine Insemination)",
         "NI (Natural Insemination)"
@@ -1957,6 +2389,15 @@
         "About 14 days",
         "About 7 days"
       ]
+    },
+    "es": {
+      "question": "¿Cuántos días dura en promedio el ciclo estral de la cerda?",
+      "options": [
+        "Aproximadamente 21 días",
+        "Aproximadamente 28 días",
+        "Aproximadamente 14 días",
+        "Aproximadamente 7 días"
+      ]
     }
   },
   {
@@ -1996,6 +2437,15 @@
         "The total amount of feed given to a pig",
         "The amount of feed a pig eats in a day",
         "A pig's weight at shipping"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es la \"ganancia de peso\"?",
+      "options": [
+        "La cantidad de peso que gana el cerdo en un período determinado (ganancia diaria = el aumento por día)",
+        "La cantidad total de alimento suministrado al cerdo",
+        "La cantidad de alimento que come el cerdo en un día",
+        "El peso del cerdo al momento del envío"
       ]
     }
   },
@@ -2037,6 +2487,15 @@
         "One week after farrowing",
         "Three weeks after farrowing"
       ]
+    },
+    "es": {
+      "question": "Las inmunoglobulinas (IgG, etc.) abundantes en el calostro, ¿en cuánto tiempo después del parto disminuyen notablemente?",
+      "options": [
+        "36-48 horas después del parto",
+        "3-6 horas después del parto",
+        "Una semana después del parto",
+        "Tres semanas después del parto"
+      ]
     }
   },
   {
@@ -2076,6 +2535,15 @@
         "A method of shipping pigs out one by one in order",
         "A method of keeping sows and piglets in the same barn",
         "A method of keeping the barn open 24 hours for free movement"
+      ]
+    },
+    "es": {
+      "question": "¿Qué tipo de sistema de manejo es \"todo dentro, todo fuera\" (all-in/all-out)?",
+      "options": [
+        "Un sistema en el que los cerdos ingresan a la nave porcina todos al mismo tiempo y salen todos al mismo tiempo",
+        "Un sistema en el que los cerdos se envían uno por uno en orden",
+        "Un sistema en el que la cerda y los lechones se crían en la misma nave",
+        "Un sistema en el que la nave permanece abierta las 24 horas para que los cerdos entren y salgan libremente"
       ]
     }
   },
@@ -2117,6 +2585,15 @@
         "The proportion of protein contained in feed",
         "The proportion of feed cost in the shipping price"
       ]
+    },
+    "es": {
+      "question": "¿Qué es el \"índice de conversión alimenticia\"?",
+      "options": [
+        "Un indicador que muestra la cantidad de alimento necesaria para aumentar 1 kg de peso corporal",
+        "La proporción de alimento que come el cerdo en un día",
+        "La proporción de proteína contenida en el alimento",
+        "La proporción del costo del alimento en el precio de envío"
+      ]
     }
   },
   {
@@ -2156,6 +2633,15 @@
         "Heat stress",
         "A rise in carbon dioxide concentration",
         "Weight gain just before shipping"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál NO se menciona como un factor que reduce temporalmente el consumo de alimento del cerdo?",
+      "options": [
+        "Reacción por la vacunación",
+        "Estrés por calor",
+        "Aumento de la concentración de dióxido de carbono",
+        "Aumento de peso justo antes del envío"
       ]
     }
   },
@@ -2197,6 +2683,15 @@
         "About 130-150 kg",
         "About 70-90 kg"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el peso de envío más aproximado del cerdo de engorde común en Japón?",
+      "options": [
+        "Aproximadamente 110-120 kg",
+        "Aproximadamente 90-100 kg",
+        "Aproximadamente 130-150 kg",
+        "Aproximadamente 70-90 kg"
+      ]
     }
   },
   {
@@ -2237,6 +2732,15 @@
         "Crude Lipid (written as CP)",
         "Complete Protein"
       ]
+    },
+    "es": {
+      "question": "¿Qué componente indica el \"CP\" (como en CP22, CP19, etc.) utilizado en la formulación de alimentos?",
+      "options": [
+        "Proteína cruda (Crude Protein)",
+        "Proteína convertible (Convertible Protein, proteína digestible)",
+        "Grasa cruda (Crude Lipid, notación CP)",
+        "Proteína completa (Complete Protein)"
+      ]
     }
   },
   {
@@ -2271,6 +2775,15 @@
     },
     "en": {
       "question": "What is the feed conversion ratio (FCR) when a pig eats 3 kg and gains 1 kg?",
+      "options": [
+        "3.0",
+        "0.33",
+        "1.0",
+        "30"
+      ]
+    },
+    "es": {
+      "question": "Si un cerdo come 3 kg y gana 1 kg de peso, ¿cuál es su índice de conversión alimenticia (FCR)?",
       "options": [
         "3.0",
         "0.33",
@@ -2317,6 +2830,15 @@
         "Their subcutaneous fat is thin, so they try to store heat in the body",
         "Their coat is densely grown, making heat release difficult"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la razón principal más precisa por la que los cerdos son sensibles al calor?",
+      "options": [
+        "Sus glándulas sudoríparas apenas funcionan, por lo que no pueden regular la temperatura corporal mediante el sudor",
+        "No tienen glándulas sudoríparas en absoluto, por lo que no pueden sudar en lo más mínimo",
+        "Su grasa subcutánea es delgada, por lo que el cuerpo tiende a almacenar calor",
+        "Su pelaje es muy denso, lo que dificulta la disipación del calor"
+      ]
     }
   },
   {
@@ -2356,6 +2878,15 @@
         "To prevent pigs' hooves from overgrowing and wear them down moderately",
         "To raise the floor temperature and enhance the warming effect",
         "To separate and collect manure/urine and spilled feed"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el propósito principal más preciso del piso de rejilla (piso tipo slat)?",
+      "options": [
+        "Dejar que el estiércol y la orina caigan por las ranuras de la rejilla, manteniendo limpia la superficie del piso",
+        "Evitar que las pezuñas del cerdo crezcan demasiado y desgastarlas moderadamente",
+        "Elevar la temperatura de la superficie del piso para mejorar el efecto de calefacción",
+        "Separar y recolectar el estiércol/orina de los restos de alimento derramados"
       ]
     }
   },
@@ -2397,6 +2928,15 @@
         "Total number born x number of sows",
         "Shipping weight x number of pigs shipped"
       ]
+    },
+    "es": {
+      "question": "¿Cómo se calcula el \"peso de la canal por cerda\"?",
+      "options": [
+        "Peso de la canal por cerdo de engorde × número de cerdos enviados al año por cerda",
+        "Número de lechones destetados al año ÷ número de cerdas",
+        "Número total de nacidos × número de cerdas",
+        "Peso de envío × número de cerdos enviados"
+      ]
     }
   },
   {
@@ -2436,6 +2976,15 @@
         "Put the entire volume directly into the aeration tank",
         "Sterilize it in a disinfection tank",
         "Mix it with the compost to be returned"
+      ]
+    },
+    "es": {
+      "question": "¿Qué se hace primero en el tratamiento de estiércol y orina?",
+      "options": [
+        "Separar los sólidos de los líquidos",
+        "Verter todo directamente en el tanque de aireación",
+        "Desinfectar en un tanque de desinfección",
+        "Mezclar con el compost que se desea devolver al campo"
       ]
     }
   },
@@ -2477,6 +3026,15 @@
         "Pigs grow healthy, the people who raise them profit, and consumers increase",
         "Pigs are raised happily, the people who raise them take pride, and consumers are delighted"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la combinación correcta de la \"cadena de felicidad\" que Hirano considera su misión en su filosofía empresarial?",
+      "options": [
+        "Los cerdos crecen rápido, quienes los crían se alivian, y quienes los comen pueden comprarlos barato",
+        "Los cerdos crecen conforme al estándar, quienes los crían son reconocidos, y quienes los comen quedan satisfechos",
+        "Los cerdos crecen sanos, quienes los crían obtienen ganancias, y quienes los comen aumentan en número",
+        "Los cerdos crecen felices, quienes los crían sienten orgullo, y quienes los comen se alegran"
+      ]
     }
   },
   {
@@ -2516,6 +3074,15 @@
         "Thinking only of oneself and not considering those around you",
         "Being conscious of overall optimization",
         "Aiming for coexistence and mutual prosperity"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la actitud que, en general, se considera que \"debe evitarse estrictamente\" en todo el código de conducta?",
+      "options": [
+        "Actuar como si fuera un asunto propio",
+        "Pensar que basta con que uno mismo esté bien, sin considerar a los demás",
+        "Ser consciente de la optimización integral",
+        "Buscar la coexistencia y la prosperidad mutua"
       ]
     }
   },
@@ -2557,6 +3124,15 @@
         "Observing pigs' behavior and condition daily and managing with awareness of reducing stress",
         "Cutting meat without concern for the yield of retail cuts"
       ]
+    },
+    "es": {
+      "question": "En \"creación de cerdos económicos y felicidad\", ¿cuál es la acción recomendada?",
+      "options": [
+        "Realizar la crianza priorizando únicamente la eficiencia",
+        "Tomar medidas contra el calor y el frío solo después de que el calor o el frío se vuelvan intensos",
+        "Observar diariamente el comportamiento y el estado de los cerdos, y manejarlos con conciencia de reducir el estrés",
+        "Realizar los cortes de carne sin preocuparse por el rendimiento de la carne"
+      ]
     }
   },
   {
@@ -2596,6 +3172,15 @@
         "Putting off action with a \"wait and see\" approach even while aware of an abnormality",
         "Detecting signs of accidents or disease early and treating them promptly",
         "Thoroughly managing appropriate numbers and environment according to the growth stage"
+      ]
+    },
+    "es": {
+      "question": "En \"creación de cerdos económicos y felicidad\", ¿qué pensamiento/acción debe evitarse estrictamente?",
+      "options": [
+        "No descuidar la verificación, comprobación y corrección para crear el mejor entorno posible para los cerdos",
+        "Postergar la respuesta con una actitud de \"esperar y ver\" aun sabiendo que hay una anomalía",
+        "Detectar tempranamente signos de accidentes o enfermedades y tratarlos con rapidez",
+        "Aplicar rigurosamente el número adecuado de animales y el manejo del entorno según la etapa de crecimiento"
       ]
     }
   },
@@ -2637,6 +3222,15 @@
         "As long as one's own department's work is done, that is enough",
         "The next department should take responsibility for thinking about its own matters"
       ]
+    },
+    "es": {
+      "question": "En \"el espíritu de la industria de relevos\", ¿cuál es la conciencia que debe tener Hirano?",
+      "options": [
+        "Una vez completado el envío, termina la responsabilidad de la empresa porcina",
+        "Ayudarse mutuamente con los compañeros y coordinar con cada departamento para perseguir resultados",
+        "Basta con que termine el trabajo del propio departamento",
+        "El siguiente departamento debe responsabilizarse de pensar en sus propios asuntos"
+      ]
     }
   },
   {
@@ -2676,6 +3270,15 @@
         "Anticipating the work of the next department or person and preparing and organizing",
         "Not cleaning up and causing trouble for the next user (leaving work unfinished)",
         "Handovers are basically done in advance"
+      ]
+    },
+    "es": {
+      "question": "En \"el espíritu de la industria de relevos\", ¿qué pensamiento/acción debe evitarse estrictamente?",
+      "options": [
+        "Comunicar activamente lo que se nota, aunque no sea de la propia responsabilidad",
+        "Anticipar el trabajo del siguiente departamento o encargado y preparar y organizar en consecuencia",
+        "No ordenar y causar molestias a la siguiente persona que use el lugar (dejar el trabajo sin terminar)",
+        "Realizar la entrega de turno básicamente con anticipación"
       ]
     }
   },
@@ -2717,6 +3320,15 @@
         "Conducting cause analysis, information sharing, and recurrence prevention as a team",
         "Leaving everything to the person in charge"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la respuesta más deseable cuando ocurre un problema en el campo?",
+      "options": [
+        "Priorizar identificar a los involucrados y aclarar responsabilidades",
+        "Limitar el intercambio de información y priorizar el manejo interno",
+        "Realizar en equipo el análisis de causas, el intercambio de información y la prevención de recurrencia",
+        "Dejar todo en manos del encargado"
+      ]
     }
   },
   {
@@ -2756,6 +3368,15 @@
         "Naturally supporting busy colleagues and being conscious of overall optimization",
         "Making notes the day before a day off and handing over to the next person",
         "Spreading bad rumors and gossip to disparage others and repeatedly telling baseless stories"
+      ]
+    },
+    "es": {
+      "question": "En \"sentido de responsabilidad y unión del equipo\", ¿qué pensamiento/acción debe evitarse estrictamente?",
+      "options": [
+        "Compartir los problemas entre departamentos y responder en equipo en casos de emergencia",
+        "Apoyar de manera natural a los compañeros ocupados, siendo consciente de la optimización integral",
+        "Elaborar una nota el día anterior a un día libre y hacer la entrega al sucesor al día siguiente",
+        "Hablar mal de otros, difundir chismes para menospreciarlos y contar repetidamente historias sin fundamento"
       ]
     }
   },
@@ -2797,6 +3418,15 @@
         "Teaching what one knows to those around and growing oneself by developing successors",
         "Doing only what one is told and not seeking out work oneself"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la acción correcta para una \"actitud sincera, honesta y con gran espíritu de investigación\"?",
+      "options": [
+        "Aferrarse a la propia manera de hacer las cosas y no escuchar la opinión de los demás",
+        "Ocultar los fracasos y no informarlos",
+        "Enseñar a los demás lo que uno sabe y formar sucesores, creciendo así uno mismo",
+        "Hacer solo lo que se le indica, sin buscar trabajo por iniciativa propia"
+      ]
     }
   },
   {
@@ -2836,6 +3466,15 @@
         "Never failing to greet and thank local residents and related businesses",
         "Not understanding the importance of wastewater treatment and compost management and deprioritizing manure troubles",
         "Regularly gathering and sharing information from community representatives"
+      ]
+    },
+    "es": {
+      "question": "En \"convivencia con la comunidad\", ¿qué pensamiento/acción debe evitarse estrictamente?",
+      "options": [
+        "Manejar rigurosamente el olor, el ruido y la higiene, mostrando consideración hacia la comunidad",
+        "No dejar de saludar y agradecer a los residentes locales y a las empresas relacionadas",
+        "No comprender la importancia del tratamiento de aguas residuales y del manejo del compost, y postergar los problemas de estiércol y orina",
+        "Recopilar y compartir periódicamente información con los representantes de la comunidad"
       ]
     }
   },
@@ -2877,6 +3516,15 @@
         "A joint-management method where two companies split breeding and fattening",
         "Keeping sows and fattening pigs in two rows in the same barn"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la descripción más precisa del \"sistema de dos sitios\"?",
+      "options": [
+        "Un sistema que divide la granja en el \"Sitio 1\" para reproducción/parto y el \"Sitio 2\" para destete/engorde/envío",
+        "Un sistema integrado de un solo paso que realiza todos los procesos en una sola granja",
+        "Un sistema de manejo conjunto en el que dos empresas se reparten la reproducción y el engorde",
+        "Un sistema en el que la cerda y los cerdos de engorde se crían en la misma nave, divididos en dos filas"
+      ]
     }
   },
   {
@@ -2916,6 +3564,15 @@
         "To cut feed costs in half",
         "To increase shipping weight",
         "To reduce the number of employees"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el objetivo principal de dividir la granja mediante el \"sistema de dos sitios\"?",
+      "options": [
+        "Para que, en caso de que una enfermedad entre en alguno de los dos sitios, el daño se limite a una escala pequeña (bioseguridad)",
+        "Para reducir a la mitad el costo del alimento",
+        "Para aumentar el peso de envío",
+        "Para reducir el número de empleados"
       ]
     }
   },
@@ -2957,6 +3614,15 @@
         "About 15 L",
         "Almost no water is needed"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el valor más aproximado como referencia del consumo diario de agua de la cerda?",
+      "options": [
+        "Aproximadamente 40 L o más (durante la lactancia puede superar los 60 L)",
+        "Aproximadamente 5 L",
+        "Aproximadamente 15 L",
+        "Casi no necesita agua"
+      ]
     }
   },
   {
@@ -2996,6 +3662,15 @@
         "About 500 mL comes out in about 5 minutes",
         "2 L comes out in 1 second",
         "There is no need to check the flow rate"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la referencia correcta para verificar el caudal del bebedero de chupón (nipple) para cerdas?",
+      "options": [
+        "Un caudal que llena aproximadamente 500 mL (una botella de agua) en unos 20 segundos",
+        "Un caudal de aproximadamente 500 mL en unos 5 minutos",
+        "Un caudal de 2 L por segundo",
+        "No es necesario verificar el caudal"
       ]
     }
   },
@@ -3037,6 +3712,15 @@
         "About 1 time/hour throughout the year",
         "Ventilation is basically unnecessary"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es la referencia correcta para la tasa de ventilación en una nave porcina de tipo cerrado (windowless)?",
+      "options": [
+        "Aproximadamente 3 veces/hora en época fría y aproximadamente 60 veces/hora en época calurosa",
+        "Aproximadamente 60 veces/hora en época fría y aproximadamente 3 veces/hora en época calurosa",
+        "Aproximadamente 1 vez/hora durante todo el año",
+        "Básicamente no es necesaria la ventilación"
+      ]
     }
   },
   {
@@ -3076,6 +3760,15 @@
         "Supplying oxygen",
         "Removing gas, odor, and moisture",
         "Adjusting the temperature inside the barn"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál NO está incluido en los \"cuatro propósitos\" de la ventilación de la nave porcina?",
+      "options": [
+        "Reducción del costo del alimento",
+        "Suministro de oxígeno",
+        "Eliminación de gases, olores y humedad",
+        "Ajuste de la temperatura dentro de la nave"
       ]
     }
   },
@@ -3117,6 +3810,15 @@
         "Salt concentration in water",
         "A pig's daily water intake"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el significado más preciso del indicador \"DBO\" (demanda bioquímica de oxígeno) utilizado en el tratamiento de aguas residuales?",
+      "options": [
+        "La cantidad de oxígeno necesaria para que los microorganismos descompongan la materia orgánica en el agua (un indicador del grado de contaminación del agua)",
+        "La temperatura del agua",
+        "La concentración de sal en el agua",
+        "El consumo diario de agua del cerdo"
+      ]
     }
   },
   {
@@ -3151,6 +3853,15 @@
     },
     "en": {
       "question": "Which is the correct target value for \"SV30,\" which shows the state of activated sludge?",
+      "options": [
+        "30-50%",
+        "5-10%",
+        "70-90%",
+        "100%"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el valor objetivo correcto del \"SV30\", utilizado para observar el estado del lodo activado?",
       "options": [
         "30-50%",
         "5-10%",

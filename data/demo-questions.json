@@ -40,6 +40,15 @@
         "Age does not matter; mate as soon as estrus occurs"
       ],
       "explanation": "A replacement gilt is first mated at 7-8 months of age and 130-150 kg. Overgrown or over-fat gilts risk dystocia and lower conception rates. (Swine Basics Handbook, Ch.8)"
+    },
+    "es": {
+      "question": "¿Cuál es la referencia correcta para la primera monta de la cerda de reemplazo (cerda joven seleccionada como futura reproductora)?",
+      "options": [
+        "7-8 meses de edad, peso corporal de 130-150 kg",
+        "4-5 meses de edad, peso corporal de 70-90 kg",
+        "10-12 meses de edad, peso corporal de 180-200 kg",
+        "La edad no importa; se debe cubrir en cuanto aparezca el celo"
+      ]
     }
   },
   {
@@ -83,6 +92,15 @@
         "The same as outdoor temperature; no control needed"
       ],
       "explanation": "Newborn piglets must be kept at 30 C or above (then lowered gradually as they grow). The sow's comfort zone is 16-18 C: within the same farrowing crate, sow and piglets need different temperatures. (Ch.5)"
+    },
+    "es": {
+      "question": "¿Cuál es la temperatura ambiental más adecuada para los lechones recién nacidos?",
+      "options": [
+        "Mantener 30 °C o más",
+        "Aproximadamente 16-18 °C (ajustada a la cerda)",
+        "Mantener constantemente alrededor de 22 °C desde el parto hasta el envío",
+        "Igual a la temperatura exterior; no se requiere control de temperatura"
+      ]
     }
   },
   {
@@ -126,6 +144,15 @@
         "3.0-4.1 kg"
       ],
       "explanation": "Standard birth weight is about 1.2-1.5 kg. Under 900 g the piglet is a \"weak piglet\", nursed last and supplemented with milk replacer. (Ch.11)"
+    },
+    "es": {
+      "question": "¿Cuál es el peso estándar al nacer que se considera?",
+      "options": [
+        "1.2-1.5 kg",
+        "0.7-1.0 kg",
+        "1.8-2.5 kg",
+        "3.0-4.1 kg"
+      ]
     }
   },
   {
@@ -169,6 +196,15 @@
         "Feed dissolved in water and fed as a liquid"
       ],
       "explanation": "Mash = powder, pellet = steam-processed and high-pressure formed into cylinders, crumble = those pellets coarsely broken into uniform granules. (Ch.5)"
+    },
+    "es": {
+      "question": "¿Cuál es la descripción correcta del alimento en \"crumble\" (migaja) del alimento balanceado?",
+      "options": [
+        "Alimento sólido en gránulos uniformes, obtenido al triturar groseramente los pellets",
+        "El alimento balanceado en forma de polvo más común",
+        "Alimento sólido procesado con vapor y moldeado en forma cilíndrica a alta presión",
+        "Alimento disuelto en agua y suministrado en forma líquida"
+      ]
     }
   },
   {
@@ -212,6 +248,15 @@
         "Replace it once a week, only when visibly dirty"
       ],
       "explanation": "A foot dip loses its effect once manure, urine or bedding gets in, so it is replaced daily. \"Dirty means zero effect\" - the most dangerous state is only appearing to do it. (Ch.3)"
+    },
+    "es": {
+      "question": "¿Cuál es el manejo correcto del pediluvio (bandeja de desinfección para el calzado) en la entrada de la nave porcina?",
+      "options": [
+        "Se debe reemplazar diariamente, ya que el estiércol, la orina y la cama reducen su eficacia",
+        "Basta con agregar la cantidad de desinfectante que se ha evaporado, sin necesidad de reemplazarlo",
+        "Si las botas quedan mojadas ya es eficaz, por lo que también se puede usar solo agua",
+        "Se reemplaza una vez por semana, solo cuando se ve visiblemente sucio"
+      ]
     }
   }
 ]

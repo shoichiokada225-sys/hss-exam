@@ -32,7 +32,7 @@
 
 ### 4. 共通機能
 - PWA（ホーム画面に追加可能）
-- 4言語対応（日本語・英語・ベトナム語・インドネシア語）
+- 5言語対応（日本語・英語・ベトナム語・インドネシア語・スペイン語）
 - ダークモード
 - レスポンシブデザイン
 - QRコード配布ページ
@@ -87,7 +87,8 @@ hash('新しいパスワード').then(console.log);
   "source": "setA-1.0",
   "en":  { "question": "...", "options": [...] },
   "vi":  { "question": "...", "options": [...] },
-  "ind": { "question": "...", "options": [...] }
+  "ind": { "question": "...", "options": [...] },
+  "es":  { "question": "...", "options": [...] }
 }
 ```
 
@@ -124,8 +125,8 @@ hss-exam/
 ├── sw.js               # Service Worker
 ├── qr.html             # QRコード配布ページ
 ├── data/
-│   ├── questions.json  # 本試験の問題データ（79問、4言語）
-│   ├── demo-questions.json  # デモ問題の問題データ（固定5問、4言語、解説つき）
+│   ├── questions.json  # 本試験の問題データ（79問、5言語）
+│   ├── demo-questions.json  # デモ問題の問題データ（固定5問、5言語、解説つき）
 │   └── questions_backup_*.json  # 過去バージョンのバックアップ
 ├── icons/
 │   ├── icon.svg        # SVGアイコン
