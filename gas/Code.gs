@@ -48,6 +48,8 @@ function getSpreadsheet_() {
   return ss;
 }
 
+var EXAM_HEADER = ["氏名", "受験者日時", "得点", "正答率", "合否", "所要時間", "時間切れ", "言語", "ID", "サーバー受信時刻", "離脱回数", "離脱秒数", "離脱内訳"];
+
 function getSheet_(ss, sheetName) {
   var sheet = ss.getSheetByName(sheetName);
   if (!sheet) {
@@ -55,10 +57,18 @@ function getSheet_(ss, sheetName) {
     if (sheetName === "受験意志確認") {
       sheet.appendRow(["氏名", "回答", "受験者日時", "言語", "ID", "サーバー受信時刻"]);
     } else {
-      sheet.appendRow(["氏名", "受験者日時", "得点", "正答率", "合否", "所要時間", "時間切れ", "言語", "ID", "サーバー受信時刻"]);
+      sheet.appendRow(EXAM_HEADER);
     }
   }
   return sheet;
+}
+
+// 既存シートに離脱記録の列見出しを後付けする（既存行は空欄のまま・並びは不変）
+function ensureExamHeader_(sheet) {
+  var lastCol = sheet.getLastColumn();
+  if (lastCol >= EXAM_HEADER.length) return;
+  var missing = EXAM_HEADER.slice(lastCol);
+  sheet.getRange(1, lastCol + 1, 1, missing.length).setValues([missing]);
 }
 
 // ---- POST: 記録（メールは送らない） ----
@@ -96,12 +106,15 @@ function doPost(e) {
         if (!Array.isArray(data.answers)) {
           return jsonOut_({ status: "error", message: "Invalid answers" });
         }
-        getSheet_(ss, "本試験結果").appendRow([
+        var examSheet = getSheet_(ss, "本試験結果");
+        ensureExamHeader_(examSheet);
+        examSheet.appendRow([
           sanitize(data.name), sanitize(data.date),
           sanitize(String(data.score)) + "/" + sanitize(String(data.total)),
           sanitize(String(data.percentage)) + "%", sanitize(data.result),
           sanitize(data.elapsed), data.timedOut ? "はい" : "いいえ", sanitize(data.lang),
-          id, serverTime
+          id, serverTime,
+          Number(data.awayCount) || 0, Number(data.awaySeconds) || 0, sanitize(data.awayDetail)
         ]);
         // 詳細回答は別シートに（任意・分析用）
         try {
@@ -214,7 +227,18 @@ function purgeTestRows() {
   Logger.log("削除したテスト行数: " + removed);
 }
 
-// ---- 日次サマリーの自動実行トリガーを設置（エディタで1回だけ実行すればOK） ----
+// ---- 日次サマリーを停止（トリガー削除・エディタで1回実行） ----
+// 2026-08-03 社長判断: 日次サマリーメールは不要のため配信停止。
+// 再開したい場合のみ installDailyTrigger() を実行すること。
+function uninstallDailyTrigger() {
+  var removed = 0;
+  ScriptApp.getProjectTriggers().forEach(function (t) {
+    if (t.getHandlerFunction() === "sendDailySummary") { ScriptApp.deleteTrigger(t); removed++; }
+  });
+  Logger.log("削除したトリガー数: " + removed + "（0なら既に停止済み）");
+}
+
+// ---- 日次サマリーの自動実行トリガーを設置（※現在は停止中。再開時のみ実行） ----
 function installDailyTrigger() {
   ScriptApp.getProjectTriggers().forEach(function (t) {
     if (t.getHandlerFunction() === "sendDailySummary") ScriptApp.deleteTrigger(t);
