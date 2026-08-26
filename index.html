@@ -796,7 +796,7 @@ var TRANSLATIONS = {
     skipLink: "本文にスキップ", darkModeToggle: "ダークモード切替",
     minutes: "分", seconds: "秒",
     swipeHint: "← スワイプで前後の問題に移動 →",
-    sending: "送信中...", loadingQuestions: "問題を読み込み中..."
+    sending: "送信中...", sendingSlow: "順番に送信しています。最大3分ほどかかることがあります。画面はこのままお待ちください。", loadingQuestions: "問題を読み込み中..."
   },
   en: {
     homeTitle: "HSS Certification Exam", homeSubtitle: "Hirano Co., Ltd.",
@@ -898,7 +898,7 @@ var TRANSLATIONS = {
     skipLink: "Skip to content", darkModeToggle: "Toggle dark mode",
     minutes: "min", seconds: "sec",
     swipeHint: "← Swipe to navigate →",
-    sending: "Sending...", loadingQuestions: "Loading questions..."
+    sending: "Sending...", sendingSlow: "Sending in turn. This may take up to 3 minutes. Please keep this screen open.", loadingQuestions: "Loading questions..."
   },
   vi: {
     homeTitle: "Kỳ thi Chứng chỉ HSS", homeSubtitle: "Công ty Hirano",
@@ -1000,7 +1000,7 @@ var TRANSLATIONS = {
     skipLink: "Chuyển đến nội dung", darkModeToggle: "Chế độ tối",
     minutes: "phút", seconds: "giây",
     swipeHint: "← Vuốt để chuyển câu →",
-    sending: "Đang gửi...", loadingQuestions: "Đang tải câu hỏi..."
+    sending: "Đang gửi...", sendingSlow: "Đang gửi theo thứ tự. Có thể mất tối đa 3 phút. Vui lòng giữ nguyên màn hình này.", loadingQuestions: "Đang tải câu hỏi..."
   },
   id: {
     homeTitle: "Ujian Sertifikasi HSS", homeSubtitle: "PT Hirano",
@@ -1102,7 +1102,7 @@ var TRANSLATIONS = {
     skipLink: "Langsung ke konten", darkModeToggle: "Mode gelap",
     minutes: "menit", seconds: "detik",
     swipeHint: "← Geser untuk navigasi →",
-    sending: "Mengirim...", loadingQuestions: "Memuat soal..."
+    sending: "Mengirim...", sendingSlow: "Mengirim secara bergiliran. Bisa memakan waktu hingga 3 menit. Mohon biarkan layar ini terbuka.", loadingQuestions: "Memuat soal..."
   },
   es: {
     homeTitle: "Examen de Certificación HSS", homeSubtitle: "Compañía Hirano",
@@ -1204,7 +1204,7 @@ var TRANSLATIONS = {
     skipLink: "Ir al contenido", darkModeToggle: "Modo oscuro",
     minutes: " min ", seconds: " seg",
     swipeHint: "← Deslice para cambiar de pregunta →",
-    sending: "Enviando...", loadingQuestions: "Cargando preguntas..."
+    sending: "Enviando...", sendingSlow: "Enviando por turnos. Puede tardar hasta 3 minutos. Mantenga esta pantalla abierta.", loadingQuestions: "Cargando preguntas..."
   }
 };
 
@@ -2214,8 +2214,11 @@ function autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec){
   resultData.submissionId = genSubmissionId("exam");
   var notice = document.getElementById("submit-notice");
   sendInFlight = true;
+  // 時間切れ組は最大180秒のジッターで分散送信されるため、無言の「送信中...」で
+  // 固まったと誤認されないよう、待ち時間の目安を明示する
+  notice.textContent = timedOut ? t("sendingSlow") : t("sending");
   reliableSubmit(resultData, { jitterMax: timedOut ? 180000 : SUBMIT_JITTER_MS, onStatus: function(state){
-    if(state === "sending") notice.textContent = t("sending");
+    if(state === "sending") notice.textContent = timedOut ? t("sendingSlow") : t("sending");
     else if(state === "done") notice.textContent = t("autoSent");
   }}).then(function(success){
     sendInFlight = false;

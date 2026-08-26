@@ -130,7 +130,9 @@ function doPost(e) {
           if (csheet.getLastColumn() < 7) csheet.getRange(1, 7).setValue("重複");
           var lastRow = csheet.getLastRow();
           if (lastRow > 1) {
-            var vals = csheet.getRange(2, 1, lastRow - 1, 3).getValues(); // 氏名/回答/受験者日時
+            // getDisplayValues必須: getValues()は日付型セルをDateオブジェクトで返し文字列照合が常に不一致になる
+            // （sendDailySummaryの受験者0名バグと同じ轍。Code.gs下方の教訓コメント参照）
+            var vals = csheet.getRange(2, 1, lastRow - 1, 3).getDisplayValues(); // 氏名/回答/受験者日時
             var name = sanitize(data.name);
             var day = String(sanitize(data.date)).split(" ")[0]; // "YYYY/MM/DD"部分
             var hits = vals.filter(function (r) { return String(r[0]) === name && String(r[2]).indexOf(day) === 0; }).length;
