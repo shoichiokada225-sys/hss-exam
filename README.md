@@ -155,8 +155,8 @@ PWAはcache-first方式のため、**デプロイ直後の1回目の起動では
 4. iOSではホーム画面の**アイコン画像だけはインストール時のまま固定**される（アプリの中身は更新される）。アイコンを最新にするには再インストールが必要だが、必須ではない
 5. **index.html を変更してデプロイしたら、sw.js の `CACHE_NAME` も必ずインクリメントする**。sw.jsのバイトが変わらないと新SWがインストールされず、自動リロード機構（controllerchange）も発火しない。push前に必ず次で機械検査する:
    ```bash
-   # index.htmlに差分があるのにsw.jsに差分がなければNG
-   git diff --name-only origin/master..HEAD | grep -q index.html && ! git diff --name-only origin/master..HEAD | grep -q sw.js && echo "NG: sw.jsのCACHE_NAME更新漏れ" || echo "OK"
+   # index.html/data に差分があるのに CACHE_NAME 行が変わっていなければNG
+   git diff origin/master..HEAD --name-only | grep -Eq "index.html|data/" && ! git diff origin/master..HEAD -- sw.js | grep -q CACHE_NAME && echo "NG: sw.jsのCACHE_NAME更新漏れ" || echo "OK"
    ```
 6. **端末運用を決めてから実施する**: 受験者個人のスマホで受験させる場合は現状の仕組みで足りる。**会場の共有タブレットを使い回す場合**、誰かが試験中に中断すると、その端末は本試験については最長で残り時間ぶん（=クラッシュ時点の残り時間）「再開待ち」になる（期限切れ後は「回答を送信して終了」で解放される。意志確認・デモは使用可能）。共有タブレット運用にするなら、試験官用の進行破棄導線（本試験パスワード+破棄確認の二重ゲート）の追加実装を事前に依頼すること
 7. 記録スプレッドシートの「回答詳細」シートは**不正解・未回答のみ**記録される（正解行は結果シートの得点と冗長なため省略。150人一斉時間切れ時のGAS負荷対策も兼ねる）
@@ -176,7 +176,7 @@ python validate_questions.py   # データ整合性（終了コード 0=PASS / 1
 node verify_logic.js           # 出題ルール1000回試行 + 全問の採点ロジック
 ```
 
-`validate_questions.py` は出題数・カテゴリ・多言語フィールド・選択肢の対応・ベトナム語の声調記号などを検査する。
+`validate_questions.py` は出題数・カテゴリ・多言語フィールド(en/vi/ind/es)・選択肢の対応・ベトナム語の声調記号・スペイン語の正書法マークなどを検査する。
 出題数の期待値は `config.js` の `questionsPerTest` / `excelRandomCount` から読み取るため、設定を変えれば検証もそれに追随する。
 
 ## 技術仕様

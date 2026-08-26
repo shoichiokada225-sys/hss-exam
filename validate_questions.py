@@ -35,7 +35,7 @@ VALID_CATEGORIES = {
 # Language blocks that every question is expected to carry. Each block holds
 # only `question` and `options`; index.html getQ() falls back to the Japanese
 # `answer` / `explanation` for every language, so those are not translated.
-LANGUAGES = ["en", "vi", "ind"]
+LANGUAGES = ["en", "vi", "ind", "es"]
 REQUIRED_LANG_FIELDS = ["question", "options"]
 
 failures = []
@@ -324,6 +324,23 @@ else:
     for e in missing_diacritics:
         fail(e)
     print(f"[FAIL] Vietnamese diacritics: {len(missing_diacritics)} field(s) look flattened to ASCII")
+
+# ── Check 8b: Spanish question text carries Spanish orthography ───────────────
+# A Spanish question with no accented chars / inverted marks at all is a sign the
+# translation is missing or machine-flattened. Only questions are checked strictly;
+# options may legitimately be ASCII (numbers, units, Latin terms).
+_ES_MARKS = set("áéíóúñü¿¡ÁÉÍÓÚÑÜ")
+es_missing = []
+for idx, q in enumerate(data):
+    es_q = (q.get("es") or {}).get("question", "")
+    if es_q.strip() and not any(c in _ES_MARKS for c in es_q):
+        es_missing.append(f"Q{idx+1} es.question: no Spanish orthography marks: {repr(es_q[:40])}")
+if not es_missing:
+    print("[PASS] Spanish questions: orthography marks present")
+else:
+    # 警告扱い（短文で正当にマーク無しのスペイン語もあり得るため、FAILにはしない）
+    for e in es_missing:
+        warn(e)
 
 # Options are only warned about: numbers ("0,33"), units ("100%") and Latin
 # technical terms ("Vitamin C", "AI") are legitimately ASCII.
