@@ -21,6 +21,10 @@
  * ============================================================
  */
 
+// 再デプロイが本当に反映されたかを外部から確認するための版マーカー。
+// Code.gsを更新したらこの日付も更新し、再デプロイ後に /exec を開いて version を照合する。
+var CODE_VERSION = "2026-08-27";
+
 var ADMIN_EMAIL = "so@oikk.co.jp";
 var SHEET_ID = ""; // 任意: 既存スプレッドシートID。空なら自動作成しIDを保存
 
@@ -206,7 +210,7 @@ function doGet(e) {
     var recorded = isRecorded_(id);
     return jsonpOut_(p.callback, { recorded: recorded, id: id });
   }
-  return jsonOut_({ status: "ok", service: "HSS Exam Webhook" });
+  return jsonOut_({ status: "ok", service: "HSS Exam Webhook", version: CODE_VERSION, columns: EXAM_HEADER.length });
 }
 
 function isRecorded_(id) {
