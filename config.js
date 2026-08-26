@@ -40,6 +40,19 @@ var CONFIG = {
     passRate: 70,           // 合格基準（%）
   },
 
+  // === デモ問題（練習用・旧hss-exam-demoを統合） ===
+  // 本試験とは別プールの固定5問。結果はどこにも送信せず、終了後に正解と解説を表示する。
+  demo: {
+    enabled: true,
+    // デモ用パスワード（SHA-256ハッシュ）: 123
+    // パスワード不要で開放したい場合は requirePassword を false にする
+    requirePassword: true,
+    passwordHash: "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    questionsFile: "data/demo-questions.json",
+    timeLimit: 5,           // 制限時間（分）
+    passRate: 70,           // 合格基準（%）
+  },
+
   // === 会社情報 ===
   company: {
     name: "株式会社ヒラノ",

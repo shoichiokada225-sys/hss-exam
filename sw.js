@@ -1,9 +1,10 @@
-var CACHE_NAME = "hss-exam-v1";
+var CACHE_NAME = "hss-exam-v2";
 var ASSETS = [
   "./",
   "./index.html",
   "./config.js",
   "./data/questions.json",
+  "./data/demo-questions.json",
   "./manifest.json",
   "./icons/icon.svg",
   "./icons/icon-192.png",

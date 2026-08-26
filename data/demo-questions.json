@@ -1,0 +1,217 @@
+[
+  {
+    "question": "候補豚（将来の繁殖豚）の初回種付けのめやすとして正しいものはどれですか？",
+    "options": [
+      "生後7〜8か月齢・体重130〜150kg",
+      "生後4〜5か月齢・体重70〜90kg",
+      "生後10〜12か月齢・体重180〜200kg",
+      "月齢は問わず、発情が来たらすぐ種付けする"
+    ],
+    "answer": "生後7〜8か月齢・体重130〜150kg",
+    "explanation": "候補豚の初回種付けは生後7〜8か月齢・130〜150kgがめやすです。育ちすぎ・脂肪過多は難産や受胎率低下の原因になります。（養豚基礎ハンドブック 第8章 母豚の管理とBCS）",
+    "category": "繁殖・分娩",
+    "source": "honshiken-demo-1",
+    "vi": {
+      "question": "Đâu là tiêu chuẩn cho lần phối giống đầu tiên của heo hậu bị (heo sẽ làm giống sau này)?",
+      "options": [
+        "7〜8 tháng tuổi, thể trọng 130〜150kg",
+        "4〜5 tháng tuổi, thể trọng 70〜90kg",
+        "10〜12 tháng tuổi, thể trọng 180〜200kg",
+        "Không quan trọng tháng tuổi, cứ lên giống là phối ngay"
+      ],
+      "explanation": "Lan phoi giong dau tien cua heo hau bi la 7-8 thang tuoi, 130-150kg. Qua map hoac qua nhieu mo se gay de kho va giam ty le thu thai. (So tay co ban chan nuoi heo, Chuong 8)"
+    },
+    "ind": {
+      "question": "Manakah patokan yang benar untuk perkawinan pertama babi calon induk (babi yang akan dijadikan induk)?",
+      "options": [
+        "Umur 7〜8 bulan, bobot 130〜150kg",
+        "Umur 4〜5 bulan, bobot 70〜90kg",
+        "Umur 10〜12 bulan, bobot 180〜200kg",
+        "Tidak peduli umur, langsung dikawinkan begitu berahi"
+      ],
+      "explanation": "Perkawinan pertama babi calon induk adalah umur 7-8 bulan, 130-150kg. Terlalu besar atau terlalu berlemak menyebabkan kesulitan melahirkan dan turunnya angka kebuntingan. (Buku Saku Dasar Peternakan Babi, Bab 8)"
+    },
+    "en": {
+      "question": "What is the guideline for the first mating of a replacement gilt (a young pig selected as a future breeding sow)?",
+      "options": [
+        "7-8 months of age, 130-150 kg body weight",
+        "4-5 months of age, 70-90 kg body weight",
+        "10-12 months of age, 180-200 kg body weight",
+        "Age does not matter; mate as soon as estrus occurs"
+      ],
+      "explanation": "A replacement gilt is first mated at 7-8 months of age and 130-150 kg. Overgrown or over-fat gilts risk dystocia and lower conception rates. (Swine Basics Handbook, Ch.8)"
+    }
+  },
+  {
+    "question": "生まれたばかりの子豚に必要な環境温度として最も適切なものはどれですか？",
+    "options": [
+      "30℃以上は確保する",
+      "約16〜18℃（母豚に合わせる）",
+      "約22℃で分娩から出荷まで一定に保つ",
+      "外気温と同じでよく、温度管理は不要"
+    ],
+    "answer": "30℃以上は確保する",
+    "explanation": "生まれてすぐの子豚は30℃以上を確保します（その後は成長に合わせて徐々に下げる）。母豚の適温は16〜18℃で、同じ分娩房でも母豚と子豚では必要な温度が違います。（養豚基礎ハンドブック 第5章 三大基本要素）",
+    "category": "飼養環境・施設",
+    "source": "honshiken-demo-2",
+    "vi": {
+      "question": "Nhiệt độ môi trường cần thiết cho heo con mới sinh là bao nhiêu?",
+      "options": [
+        "Bao dam tu 30℃ tro len",
+        "Khoảng 16〜18℃ (theo heo nái)",
+        "Giữ cố định khoảng 22℃ từ lúc đẻ đến khi xuất chuồng",
+        "Bằng nhiệt độ ngoài trời, không cần quản lý nhiệt độ"
+      ],
+      "explanation": "Heo con moi sinh phai bao dam tu 30 do C tro len (sau do ha dan theo do lon). Nhiet do thich hop cua heo nai la 16-18 do C: cung mot o de nhung nhu cau nhiet cua nai va con khac nhau. (Chuong 5)"
+    },
+    "ind": {
+      "question": "Berapa suhu lingkungan yang dibutuhkan anak babi yang baru lahir?",
+      "options": [
+        "Pastikan 30℃ ke atas",
+        "Sekitar 16〜18℃ (mengikuti induk)",
+        "Tetap sekitar 22℃ dari lahir sampai dikirim",
+        "Sama dengan suhu luar, tidak perlu diatur"
+      ],
+      "explanation": "Anak babi baru lahir harus dipastikan 30 derajat C ke atas (setelah itu diturunkan bertahap). Suhu ideal induk 16-18 derajat C: dalam satu kandang beranak, kebutuhan suhu induk dan anak berbeda. (Bab 5)"
+    },
+    "en": {
+      "question": "What is the appropriate ambient temperature for newborn piglets?",
+      "options": [
+        "Keep it at 30°C or above",
+        "About 16-18°C (matching the sow)",
+        "A constant 22°C from birth until shipment",
+        "The same as outdoor temperature; no control needed"
+      ],
+      "explanation": "Newborn piglets must be kept at 30 C or above (then lowered gradually as they grow). The sow's comfort zone is 16-18 C: within the same farrowing crate, sow and piglets need different temperatures. (Ch.5)"
+    }
+  },
+  {
+    "question": "標準的な生時体重は何kgだとされていますか？",
+    "options": [
+      "1.2〜1.5kg",
+      "0.7〜1.0kg",
+      "1.8〜2.5kg",
+      "3.0〜4.1kg"
+    ],
+    "answer": "1.2〜1.5kg",
+    "explanation": "標準的な生時体重は約1.2〜1.5kgです。900g未満は「弱子」として最後に授乳させ、人工乳で補助します。（養豚基礎ハンドブック 第11章 初乳と免疫）",
+    "category": "子豚・育成",
+    "source": "honshiken-demo-3",
+    "vi": {
+      "question": "Trong luong so sinh tieu chuan cua heo con la bao nhieu kg?",
+      "options": [
+        "1,2〜1,5kg",
+        "0,7〜1,0kg",
+        "1,8〜2,5kg",
+        "3,0〜4,1kg"
+      ],
+      "explanation": "Trong luong so sinh tieu chuan khoang 1,2-1,5kg. Duoi 900g duoc coi la 'heo yeu', cho bu sau cung va bo sung sua nhan tao. (Chuong 11)"
+    },
+    "ind": {
+      "question": "Berapa kg bobot lahir standar anak babi?",
+      "options": [
+        "1,2〜1,5kg",
+        "0,7〜1,0kg",
+        "1,8〜2,5kg",
+        "3,0〜4,1kg"
+      ],
+      "explanation": "Bobot lahir standar sekitar 1,2-1,5kg. Di bawah 900g disebut 'anak lemah', disusui paling akhir dan dibantu susu buatan. (Bab 11)"
+    },
+    "en": {
+      "question": "What is the standard birth weight of a piglet?",
+      "options": [
+        "1.2-1.5 kg",
+        "0.7-1.0 kg",
+        "1.8-2.5 kg",
+        "3.0-4.1 kg"
+      ],
+      "explanation": "Standard birth weight is about 1.2-1.5 kg. Under 900 g the piglet is a \"weak piglet\", nursed last and supplemented with milk replacer. (Ch.11)"
+    }
+  },
+  {
+    "question": "配合飼料の「クランブル」の説明として正しいものはどれですか？",
+    "options": [
+      "ペレットを粗く砕いた、粒のそろった固形飼料",
+      "最も普及している粉状の配合飼料",
+      "蒸気で加工し円柱状に高圧成形した固形飼料",
+      "水に溶かして液状にして給与する飼料"
+    ],
+    "answer": "ペレットを粗く砕いた、粒のそろった固形飼料",
+    "explanation": "マッシュ＝粉状、ペレット＝蒸気で加工し円柱状に高圧成形した固形、クランブル＝そのペレットを粗く砕いて粒をそろえたものです。（養豚基礎ハンドブック 第5章 三大基本要素）",
+    "category": "飼料・栄養",
+    "source": "honshiken-demo-4",
+    "vi": {
+      "question": "Mô tả đúng về thức ăn dạng “crumble” là gì?",
+      "options": [
+        "Thức ăn viên được nghiền thô, hạt đều nhau",
+        "Thức ăn hỗn hợp dạng bột, phổ biến nhất",
+        "Thức ăn rắn ép áp lực cao thành hình trụ bằng hơi nước",
+        "Thức ăn hòa với nước cho ăn ở dạng lỏng"
+      ],
+      "explanation": "Mash = dang bot, pellet = ep ap luc cao thanh hinh tru bang hoi nuoc, crumble = pellet duoc nghien tho cho hat deu nhau. (Chuong 5)"
+    },
+    "ind": {
+      "question": "Manakah penjelasan yang benar tentang pakan “crumble”?",
+      "options": [
+        "Pakan pelet yang dipecah kasar sehingga butirannya seragam",
+        "Pakan konsentrat berbentuk tepung yang paling umum",
+        "Pakan padat berbentuk silinder hasil tekanan tinggi dengan uap",
+        "Pakan yang dilarutkan dalam air dan diberikan dalam bentuk cair"
+      ],
+      "explanation": "Mash = bentuk tepung, pelet = dibentuk silinder dengan tekanan tinggi memakai uap, crumble = pelet yang dipecah kasar agar butirannya seragam. (Bab 5)"
+    },
+    "en": {
+      "question": "Which correctly describes \"crumble\" feed?",
+      "options": [
+        "Pellets coarsely broken into uniform granules",
+        "The most common powdered compound feed",
+        "Solid feed steam-processed and high-pressure formed into cylinders",
+        "Feed dissolved in water and fed as a liquid"
+      ],
+      "explanation": "Mash = powder, pellet = steam-processed and high-pressure formed into cylinders, crumble = those pellets coarsely broken into uniform granules. (Ch.5)"
+    }
+  },
+  {
+    "question": "豚舎入口の「踏み込み消毒槽」の管理として正しいものはどれですか？",
+    "options": [
+      "ふん・尿・敷料で効果が落ちるため、毎日交換する",
+      "消毒液が減った分だけつぎ足せば、交換は不要",
+      "長靴が濡れていれば効果があるので、水でもよい",
+      "週に1回、汚れが目立ったときだけ交換する"
+    ],
+    "answer": "ふん・尿・敷料で効果が落ちるため、毎日交換する",
+    "explanation": "踏み込み消毒槽はふん・尿・敷料が入ると消毒効果が落ちるため、毎日交換します。「汚れたら効果ゼロ」で、やっているつもりが一番危険です。（養豚基礎ハンドブック 第3章 バイオセキュリティとMD）",
+    "category": "衛生・防疫",
+    "source": "honshiken-demo-5",
+    "vi": {
+      "question": "Cách quản lý đúng đối với “bể sát trùng giẫm chân” ở cửa chuồng là gì?",
+      "options": [
+        "Thay mới mỗi ngày vì phân, nước tiểu, chất độn làm giảm hiệu quả",
+        "Chỉ cần châm thêm phần dung dịch bị hao, không cần thay",
+        "Ủng ướt là có hiệu quả nên dùng nước cũng được",
+        "Mỗi tuần một lần, chỉ thay khi thấy bẩn rõ"
+      ],
+      "explanation": "Be sat trung giam chan mat tac dung khi co phan, nuoc tieu, chat don nen phai thay moi ngay. 'Ban la het tac dung' - nguy hiem nhat la lam cho co le. (Chuong 3)"
+    },
+    "ind": {
+      "question": "Manakah pengelolaan yang benar untuk “bak celup sepatu (bak desinfeksi)” di pintu kandang?",
+      "options": [
+        "Diganti setiap hari karena feses, urin, dan alas mengurangi efeknya",
+        "Cukup ditambah sebanyak cairan yang berkurang, tanpa perlu diganti",
+        "Asal sepatu bot basah sudah efektif, jadi air biasa pun boleh",
+        "Diganti seminggu sekali, hanya bila terlihat kotor"
+      ],
+      "explanation": "Bak celup kehilangan daya bunuh kuman bila tercampur feses, urin, dan alas, jadi diganti setiap hari. 'Kotor berarti nol efek' - yang paling berbahaya adalah merasa sudah melakukannya. (Bab 3)"
+    },
+    "en": {
+      "question": "What is the correct management of the foot dip (disinfection bath) at the barn entrance?",
+      "options": [
+        "Replace it daily, since manure, urine and bedding reduce its effect",
+        "Just top up the amount that has evaporated; no replacement needed",
+        "Wet boots are enough, so plain water is acceptable",
+        "Replace it once a week, only when visibly dirty"
+      ],
+      "explanation": "A foot dip loses its effect once manure, urine or bedding gets in, so it is replaced daily. \"Dirty means zero effect\" - the most dangerous state is only appearing to do it. (Ch.3)"
+    }
+  }
+]
