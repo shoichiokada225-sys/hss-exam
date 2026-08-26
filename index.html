@@ -171,15 +171,25 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 
 /* Question */
 .category-badge { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 12px; border-radius: 20px; margin-bottom: 12px; letter-spacing: 0.03em; }
-.cat-breeding { background: rgba(231,76,60,0.12); color: var(--cat-breeding); }
-.cat-piglet { background: rgba(52,152,219,0.12); color: var(--cat-piglet); }
-.cat-hygiene { background: rgba(46,204,113,0.12); color: var(--cat-hygiene); }
-.cat-feeding { background: rgba(243,156,18,0.12); color: var(--cat-feeding); }
-.cat-stage { background: rgba(155,89,182,0.12); color: var(--cat-stage); }
-.cat-class { background: rgba(26,188,156,0.12); color: var(--cat-class); }
-.cat-facility { background: rgba(230,126,34,0.12); color: var(--cat-facility); }
-.cat-disease { background: rgba(142,68,173,0.12); color: var(--cat-disease); }
-.cat-motto { background: rgba(44,62,80,0.12); color: var(--cat-motto); }
+/* バッジ文字はライトでは暗色(淡色地でWCAG AA確保)、ダークでは明色に切替 */
+.cat-breeding { background: rgba(231,76,60,0.12); color: #a93226; }
+.cat-piglet { background: rgba(52,152,219,0.12); color: #21618c; }
+.cat-hygiene { background: rgba(46,204,113,0.12); color: #1e8449; }
+.cat-feeding { background: rgba(243,156,18,0.12); color: #9c640c; }
+.cat-stage { background: rgba(155,89,182,0.12); color: #6c3483; }
+.cat-class { background: rgba(26,188,156,0.12); color: #117864; }
+.cat-facility { background: rgba(230,126,34,0.12); color: #a04000; }
+.cat-disease { background: rgba(142,68,173,0.12); color: #5b2c6f; }
+.cat-motto { background: rgba(44,62,80,0.12); color: #2c3e50; }
+[data-theme="dark"] .cat-breeding { color: #e74c3c; }
+[data-theme="dark"] .cat-piglet { color: #3498db; }
+[data-theme="dark"] .cat-hygiene { color: #2ecc71; }
+[data-theme="dark"] .cat-feeding { color: #f39c12; }
+[data-theme="dark"] .cat-stage { color: #9b59b6; }
+[data-theme="dark"] .cat-class { color: #1abc9c; }
+[data-theme="dark"] .cat-facility { color: #e67e22; }
+[data-theme="dark"] .cat-disease { color: #a569bd; }
+[data-theme="dark"] .cat-motto { color: #aeb6bf; }
 .question-section-title { font-size: 0.85rem; color: var(--primary-light); font-weight: 700; margin-bottom: 12px; }
 .question-label { font-weight: 700; font-size: 1.05rem; margin-bottom: 18px; color: var(--text); line-height: 1.8; }
 .options { display: flex; flex-direction: column; gap: 10px; }
@@ -225,6 +235,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .exam-done-icon { font-size: 3.4rem; line-height: 1; margin-bottom: 20px; }
 .exam-done-title { font-size: 1.45rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
 .exam-done-msg { font-size: 1.05rem; color: var(--text-light); }
+.resume-waiting { display: inline-block; background: var(--warning-bg); color: var(--warning-text); border: 1px solid var(--warning); border-radius: 20px; padding: 4px 14px; font-size: 0.8rem; font-weight: 700; margin-bottom: 10px; }
 .exam-done-keep { font-size: 0.88rem; color: var(--warning-text); background: var(--warning-bg); border: 1px solid var(--warning); border-radius: var(--radius-sm); padding: 10px 14px; margin-top: 18px; display: inline-block; }
 .submit-notice.sent-ok { color: #1e8449; font-weight: 700; font-size: 1rem; }
 .score-circle { width: 170px; height: 170px; border-radius: 50%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; transition: transform 0.5s; }
@@ -450,6 +461,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
       <span class="card-badge badge-exam" id="badge-exam">本試験</span>
       <h2 id="entry-exam-title">HSS認定 本試験を受験する</h2>
       <div class="card-desc" id="entry-exam-desc">HSS認定制度の本試験です。パスワードが必要です。全60問を出題します。</div>
+      <div class="resume-waiting" id="resume-waiting" style="display:none"></div>
       <div class="card-meta">
         <span id="meta-q">📝 60問</span>
         <span id="meta-t">⏱ 60分</span>
@@ -630,6 +642,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
     <p class="finish-warn" id="resume-desc"></p>
     <div class="finish-actions">
       <button class="btn-review-back" id="resume-btn" type="button">再開する</button>
+      <button class="btn-home" id="resume-later-btn" type="button">あとで（ホームへ戻る）</button>
     </div>
   </div>
 </div>
@@ -748,6 +761,9 @@ var TRANSLATIONS = {
     resumeDesc: "{name}さんの試験のつづきから再開します（残り {time}）。ボタンを押すと再開します。",
     resumeExpiredDesc: "{name}さんの中断していた試験は、制限時間を過ぎました。ここまでの回答を送信して終了します。",
     resumeBtn: "再開する", resumeSendBtn: "回答を送信して終了する",
+    resumeLaterBtn: "あとで（ホームへ戻る）",
+    resumeWaiting: "⏸ 再開待ちの試験があります：{name}",
+    resumeClockNote: "この画面で待っている間も試験時間は進みます。",
     startBtn: "テストを開始する",
     remainingTime: "残り時間", prev: "前へ", next: "次へ", submit: "提出する",
     question: "問", progressLabel: "HSS認定 本試験",
@@ -843,6 +859,9 @@ var TRANSLATIONS = {
     resumeDesc: "Resuming {name}'s exam from where it stopped ({time} remaining). Press the button to continue.",
     resumeExpiredDesc: "{name}'s interrupted exam has passed the time limit. The answers so far will be submitted.",
     resumeBtn: "Resume", resumeSendBtn: "Submit answers and finish",
+    resumeLaterBtn: "Later (back to home)",
+    resumeWaiting: "⏸ Exam waiting to resume: {name}",
+    resumeClockNote: "The exam clock keeps running while this screen is open.",
     startBtn: "Start Test",
     remainingTime: "Time Remaining", prev: "Previous", next: "Next", submit: "Submit",
     question: "Q", progressLabel: "HSS Certification Exam",
@@ -938,6 +957,9 @@ var TRANSLATIONS = {
     resumeDesc: "Tiếp tục bài thi của {name} từ chỗ đã dừng (còn {time}). Nhấn nút để tiếp tục.",
     resumeExpiredDesc: "Bài thi bị gián đoạn của {name} đã quá thời gian. Các câu trả lời sẽ được gửi đi.",
     resumeBtn: "Tiếp tục", resumeSendBtn: "Gửi câu trả lời và kết thúc",
+    resumeLaterBtn: "Để sau (về trang chủ)",
+    resumeWaiting: "⏸ Có bài thi đang chờ tiếp tục: {name}",
+    resumeClockNote: "Thời gian thi vẫn chạy trong khi màn hình này mở.",
     startBtn: "Bắt đầu bài thi",
     remainingTime: "Thời gian còn lại", prev: "Trước", next: "Tiếp", submit: "Nộp bài",
     question: "Câu", progressLabel: "Thi chứng chỉ HSS",
@@ -1033,6 +1055,9 @@ var TRANSLATIONS = {
     resumeDesc: "Melanjutkan ujian {name} dari posisi terakhir (sisa {time}). Tekan tombol untuk melanjutkan.",
     resumeExpiredDesc: "Ujian {name} yang terputus telah melewati batas waktu. Jawaban sejauh ini akan dikirim.",
     resumeBtn: "Lanjutkan", resumeSendBtn: "Kirim jawaban dan selesai",
+    resumeLaterBtn: "Nanti (kembali ke beranda)",
+    resumeWaiting: "⏸ Ada ujian menunggu dilanjutkan: {name}",
+    resumeClockNote: "Waktu ujian terus berjalan selama layar ini terbuka.",
     startBtn: "Mulai Ujian",
     remainingTime: "Sisa Waktu", prev: "Sebelumnya", next: "Berikutnya", submit: "Kirim",
     question: "Soal", progressLabel: "Ujian Sertifikasi HSS",
@@ -1144,7 +1169,9 @@ function formatDate(d) { return d.getFullYear()+"/"+String(d.getMonth()+1).padSt
 function shuffle(arr) { var a = arr.slice(); for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=a[i];a[i]=a[j];a[j]=tmp;} return a; }
 
 var installBannerWanted = false;   // バナー表示条件を満たしているか（表示自体はホーム画面のみ）
+var swReloadPending = false;       // SW更新のリロードを安全な画面まで保留するフラグ
 function showScreen(id) {
+  if(id === "home-screen" && swReloadPending && !sendInFlight){ swReloadPending = false; location.reload(); return; }
   document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("active");});
   document.getElementById(id).classList.add("active");
   window.scrollTo(0,0);
@@ -1206,6 +1233,7 @@ function noticeHtml(){
 }
 
 function applyTranslations(){
+  document.documentElement.lang = currentLang;   // SR読み上げエンジンの言語切替(a11y)
   document.getElementById("home-title").textContent = t("homeTitle");
   document.getElementById("home-subtitle").textContent = t("homeSubtitle");
   document.getElementById("badge-confirm").textContent = t("badgeConfirm");
@@ -1270,6 +1298,7 @@ function applyTranslations(){
   document.getElementById("skip-link").textContent = t("skipLink");
   document.getElementById("theme-toggle").setAttribute("aria-label",t("darkModeToggle"));
   document.getElementById("theme-toggle").setAttribute("title",t("darkModeToggle"));
+  updateResumeBadge();
 }
 applyTranslations();
 
@@ -1277,6 +1306,7 @@ applyTranslations();
 document.getElementById("entry-confirm").addEventListener("click",function(){ showScreen("confirm-name-screen"); document.getElementById("confirm-player-name").focus(); });
 document.getElementById("entry-confirm").addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){e.preventDefault();this.click();}});
 document.getElementById("entry-exam").addEventListener("click",function(){
+  if(_resumeData){ showResumeConfirm(_resumeData); return; }   // 中断中の試験があれば必ず再開確認へ
   examMode = "exam";
   applyTranslations();
   showScreen("password-screen");
@@ -1557,20 +1587,45 @@ function tryResume(){
 }
 window.addEventListener("load", function(){ try{ tryResume(); }catch(e){} });
 
+// ホームの本試験カードに「再開待ち」を表示（共有端末で試験官・本人が気づけるように）
+function updateResumeBadge(){
+  var el = document.getElementById("resume-waiting");
+  if(!el) return;
+  if(_resumeData){
+    el.textContent = t("resumeWaiting").replace("{name}", _resumeData.name || "");
+    el.style.display = "inline-block";
+  } else {
+    el.style.display = "none";
+  }
+}
+
 // 復帰確認画面: 「再開する」を押すまでタイマーも送信も動かさない
 // （残り時間は開始時刻からの実時間で計算するため、この画面で待っても時間は稼げない）
+// 「あとで」でホームへ戻れる（進行は保持）。共有端末でも他の機能（意志確認・デモ）が使える。
+// 進行の破棄機能は意図的に置かない: 期限が切れれば「送信して終了」で必ず端末は解放され、
+// 無警告で答案を破棄できる導線のほうが事故になるため。
+var _resumeData = null;
 function showResumeConfirm(p){
+  _resumeData = p;
   var expired = (totalTime - Math.floor((Date.now() - p.startEpoch) / 1000)) <= 0;
   document.getElementById("resume-title").textContent = t("resumeTitle");
   var remain = Math.max(0, totalTime - Math.floor((Date.now() - p.startEpoch) / 1000));
   var mm = Math.floor(remain / 60), ss = remain % 60;
   var desc = expired
     ? t("resumeExpiredDesc").replace("{name}", playerName)
-    : t("resumeDesc").replace("{name}", playerName).replace("{time}", mm + ":" + String(ss).padStart(2, "0"));
+    : t("resumeDesc").replace("{name}", playerName).replace("{time}", mm + ":" + String(ss).padStart(2, "0")) + " " + t("resumeClockNote");
   document.getElementById("resume-desc").textContent = desc;
   var btn = document.getElementById("resume-btn");
   btn.textContent = expired ? t("resumeSendBtn") : t("resumeBtn");
+  var laterBtn = document.getElementById("resume-later-btn");
+  laterBtn.textContent = t("resumeLaterBtn");
+  laterBtn.onclick = function(){
+    document.getElementById("resume-overlay").classList.remove("show");
+    updateResumeBadge();
+    showScreen("home-screen");
+  };
   document.getElementById("resume-overlay").classList.add("show");
+  btn.focus();
   btn.onclick = function(){
     document.getElementById("resume-overlay").classList.remove("show");
     var elapsed = Math.floor((Date.now() - p.startEpoch) / 1000);
@@ -1804,6 +1859,10 @@ function goPrev(){ if(currentQuestion > 0){currentQuestion--;renderQuestion();} 
 document.addEventListener("keydown",function(e){
   if(!document.getElementById("quiz-screen").classList.contains("active")) return;
   if(quizLocked) return;
+  // オーバーレイ表示中はクイズへのキー入力を通さない（回答書換や開閉チャタリングを防ぐ）
+  if(["finish-overlay","timeout-overlay","resume-overlay"].some(function(id){
+    var el = document.getElementById(id); return el && el.classList.contains("show");
+  })) return;
   var btns = document.querySelectorAll(".option-btn");
   if(btns.length === 0) return;
   if(e.key>="1" && e.key<="9"){var idx=parseInt(e.key)-1;if(idx<btns.length){btns[idx].click();e.preventDefault();}}
@@ -1851,6 +1910,8 @@ function submitQuiz(){
   if(quizSubmitted) return;
   quizSubmitted = true;
   clearProgress();
+  _resumeData = null;
+  updateResumeBadge();
   settlePendingAway();
   quizLocked = true;
   clearInterval(timerInterval);
@@ -2013,7 +2074,7 @@ function autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec){
   resultData.submissionId = genSubmissionId("exam");
   var notice = document.getElementById("submit-notice");
   sendInFlight = true;
-  reliableSubmit(resultData, { onStatus: function(state){
+  reliableSubmit(resultData, { jitterMax: timedOut ? 60000 : SUBMIT_JITTER_MS, onStatus: function(state){
     if(state === "sending") notice.textContent = t("sending");
     else if(state === "done") notice.textContent = t("autoSent");
   }}).then(function(success){
@@ -2204,6 +2265,7 @@ function reliableSubmit(payload, opts){
   _addPending(payload);
   var onStatus = opts.onStatus || function(){};
   var jitter = (opts.jitter !== false);
+  var jitterMax = opts.jitterMax || SUBMIT_JITTER_MS;
   return (async function(){
     var supported = await serverSupportsVerify();
     if(!supported){
@@ -2214,7 +2276,7 @@ function reliableSubmit(payload, opts){
       onStatus("unverified", 1);
       return false;
     }
-    if(jitter){ await _delay(_randInt(SUBMIT_JITTER_MS)); }
+    if(jitter){ await _delay(_randInt(jitterMax)); }
     for(var attempt=1; attempt<=SUBMIT_ATTEMPTS; attempt++){
       onStatus("sending", attempt);
       await _postNoCors(payload);
@@ -2252,11 +2314,23 @@ if("serviceWorker" in navigator){
   // （cache-firstの「1版遅れ」対策。試験中・送信中は絶対にリロードしない）
   var _swReloaded = false;
   var _hadController = !!navigator.serviceWorker.controller;  // 初回インストール(制御開始)と更新を区別する
+  // リロードして安全なのは「ホーム画面・オーバーレイなし・入力中でない」時だけ。
+  // それ以外はフラグを立て、ホーム画面へ戻ったタイミングでリロードする（入力中の氏名・PWを消さない）
+  function _safeToReload(){
+    if(isExamActive() || sendInFlight) return false;
+    if(!document.getElementById("home-screen").classList.contains("active")) return false;
+    var overlayOpen = ["finish-overlay","timeout-overlay","resume-overlay"].some(function(id){
+      var el = document.getElementById(id); return el && el.classList.contains("show");
+    });
+    if(overlayOpen) return false;
+    var ae = document.activeElement;
+    if(ae && (ae.tagName === "INPUT" || ae.tagName === "TEXTAREA")) return false;
+    return true;
+  }
   navigator.serviceWorker.addEventListener("controllerchange", function(){
     if(_swReloaded || !_hadController) return;
-    if(isExamActive() || sendInFlight) return;
-    _swReloaded = true;
-    location.reload();
+    if(_safeToReload()){ _swReloaded = true; location.reload(); }
+    else { swReloadPending = true; }
   });
 }
 

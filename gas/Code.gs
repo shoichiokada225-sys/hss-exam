@@ -107,7 +107,12 @@ function doPost(e) {
     }
 
     var lock = LockService.getScriptLock();
-    lock.waitLock(30000); // 同時書込を直列化（最大30秒待つ）
+    // ロック待ち超過は例外にせずbusyとして安全に返す（クライアントはverify NGで自動リトライ/次回再送する）
+    try {
+      lock.waitLock(30000); // 同時書込を直列化（最大30秒待つ）
+    } catch (busyErr) {
+      return jsonOut_({ status: "busy" });
+    }
     try {
       // ロック取得後に再チェック（直前に他実行が記録した可能性）
       if (cache.get("rec_" + id)) {

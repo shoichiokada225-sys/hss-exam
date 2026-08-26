@@ -1,4 +1,4 @@
-var CACHE_NAME = "hss-exam-v3";
+var CACHE_NAME = "hss-exam-v4";
 var ASSETS = [
   "./",
   "./index.html",
@@ -14,7 +14,8 @@ var ASSETS = [
 self.addEventListener("install", function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
-      return cache.addAll(ASSETS);
+      // {cache:"reload"}: ブラウザHTTPキャッシュを迂回し、新キャッシュに旧ファイルが混入しないようにする
+      return cache.addAll(ASSETS.map(function(u) { return new Request(u, { cache: "reload" }); }));
     })
   );
   self.skipWaiting();
