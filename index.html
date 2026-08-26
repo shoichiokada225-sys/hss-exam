@@ -1908,6 +1908,16 @@ function startTimer(){
   updateTimerDisplay();
   timerInterval = setInterval(function(){
     var elapsed = Math.floor((Date.now() - timerStartedAt) / 1000);
+    if(elapsed < 0){
+      // 画面を前面に保ったままOS時計を巻き戻された(resume/hidden経路を通らない第3の経路)。
+      // 残り時間は増やさず、基準点を張り直して痕跡を残す
+      clockAnomaly = true;
+      awayCount++;
+      awayLog.push({ q: currentQuestion + 1, sec: 0, cb: true });
+      timerStartedAt = Date.now();
+      timerStartRemaining = timeRemaining;
+      elapsed = 0;
+    }
     timeRemaining = Math.max(0, timerStartRemaining - elapsed);
     updateTimerDisplay();
     if(timeRemaining <= 0){ clearInterval(timerInterval); onTimeout(); }
@@ -1922,7 +1932,7 @@ function updateTimerDisplay(){
   var circleText = document.getElementById("timer-circle-text");
   display.textContent = String(mins).padStart(2,"0")+":"+String(secs).padStart(2,"0");
   circleText.textContent = mins+"m";
-  var progress = timeRemaining / totalTime;
+  var progress = Math.min(1, timeRemaining / totalTime);
   circle.style.strokeDashoffset = TIMER_CIRCUMFERENCE * (1 - progress);
   display.className = "timer-display";
   circle.setAttribute("class","timer-circle-fg");
@@ -2111,7 +2121,7 @@ function finishQuiz(){
   var total = selectedQuestions.length;
   var pct = Math.round((score/total)*100);
   var endTime = new Date();
-  var elapsed = Math.round((endTime - startTime)/1000);
+  var elapsed = Math.max(0, Math.round((endTime - startTime)/1000));
   var elapsedMin = Math.floor(elapsed/60);
   var elapsedSec = elapsed%60;
   var timedOut = timeRemaining <= 0;
