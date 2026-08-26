@@ -1029,20 +1029,27 @@ var TRANSLATIONS = {
   }
 };
 
+// 現行7カテゴリ体系（questions.json 79問+デモ5問の正）。旧9カテゴリは過去データ互換のため残す
 var CATEGORY_NAMES = {
-  ja: {"繁殖関連":"繁殖関連","子豚管理":"子豚管理","衛生管理":"衛生管理","飼養管理":"飼養管理","飼育段階":"飼育段階","豚の分類":"豚の分類","施設管理":"施設管理","疾病管理":"疾病管理","社訓":"社訓"},
-  en: {"繁殖関連":"Breeding","子豚管理":"Piglet Care","衛生管理":"Hygiene","飼養管理":"Feed Mgmt","飼育段階":"Growth Stage","豚の分類":"Classification","施設管理":"Facility","疾病管理":"Disease","社訓":"Company Motto"},
-  vi: {"繁殖関連":"Sinh san","子豚管理":"Heo con","衛生管理":"Ve sinh","飼養管理":"Thuc an","飼育段階":"Giai doan","豚の分類":"Phan loai","施設管理":"Chuong trai","疾病管理":"Benh","社訓":"Phuong cham"},
-  id: {"繁殖関連":"Pembiakan","子豚管理":"Anak Babi","衛生管理":"Kebersihan","飼養管理":"Pakan","飼育段階":"Tahap","豚の分類":"Klasifikasi","施設管理":"Fasilitas","疾病管理":"Penyakit","社訓":"Moto Perusahaan"}
+  ja: {"繁殖・分娩":"繁殖・分娩","子豚・育成":"子豚・育成","衛生・防疫":"衛生・防疫","飼料・栄養":"飼料・栄養","飼養環境・施設":"飼養環境・施設","肉豚・出荷・肉":"肉豚・出荷・肉","経営理念・行動規範":"経営理念・行動規範",
+       "繁殖関連":"繁殖関連","子豚管理":"子豚管理","衛生管理":"衛生管理","飼養管理":"飼養管理","飼育段階":"飼育段階","豚の分類":"豚の分類","施設管理":"施設管理","疾病管理":"疾病管理","社訓":"社訓"},
+  en: {"繁殖・分娩":"Breeding & Farrowing","子豚・育成":"Piglets & Rearing","衛生・防疫":"Hygiene & Biosecurity","飼料・栄養":"Feed & Nutrition","飼養環境・施設":"Environment & Facilities","肉豚・出荷・肉":"Finishing & Shipping","経営理念・行動規範":"Philosophy & Conduct",
+       "繁殖関連":"Breeding","子豚管理":"Piglet Care","衛生管理":"Hygiene","飼養管理":"Feed Mgmt","飼育段階":"Growth Stage","豚の分類":"Classification","施設管理":"Facility","疾病管理":"Disease","社訓":"Company Motto"},
+  vi: {"繁殖・分娩":"Sinh san / De","子豚・育成":"Heo con / Nuoi duong","衛生・防疫":"Ve sinh / Phong dich","飼料・栄養":"Thuc an / Dinh duong","飼養環境・施設":"Moi truong / Chuong trai","肉豚・出荷・肉":"Heo thit / Xuat chuong","経営理念・行動規範":"Triet ly / Quy tac",
+       "繁殖関連":"Sinh san","子豚管理":"Heo con","衛生管理":"Ve sinh","飼養管理":"Thuc an","飼育段階":"Giai doan","豚の分類":"Phan loai","施設管理":"Chuong trai","疾病管理":"Benh","社訓":"Phuong cham"},
+  id: {"繁殖・分娩":"Reproduksi & Kelahiran","子豚・育成":"Anak Babi & Pembesaran","衛生・防疫":"Kebersihan & Biosekuriti","飼料・栄養":"Pakan & Nutrisi","飼養環境・施設":"Lingkungan & Fasilitas","肉豚・出荷・肉":"Babi Potong & Pengiriman","経営理念・行動規範":"Filosofi & Perilaku",
+       "繁殖関連":"Pembiakan","子豚管理":"Anak Babi","衛生管理":"Kebersihan","飼養管理":"Pakan","飼育段階":"Tahap","豚の分類":"Klasifikasi","施設管理":"Fasilitas","疾病管理":"Penyakit","社訓":"Moto Perusahaan"}
 };
 
 var CATEGORY_CLASSES = {
+  // 現行7カテゴリ
+  "繁殖・分娩":"cat-breeding","子豚・育成":"cat-piglet","衛生・防疫":"cat-hygiene",
+  "飼料・栄養":"cat-feeding","飼養環境・施設":"cat-facility",
+  "肉豚・出荷・肉":"cat-class","経営理念・行動規範":"cat-motto",
+  // 旧9カテゴリ（互換）
   "繁殖関連":"cat-breeding","子豚管理":"cat-piglet","衛生管理":"cat-hygiene",
   "飼養管理":"cat-feeding","飼育段階":"cat-stage","豚の分類":"cat-class",
-  "施設管理":"cat-facility","疾病管理":"cat-disease","社訓":"cat-motto",
-  // デモ問題のカテゴリ
-  "繁殖・分娩":"cat-breeding","子豚・育成":"cat-piglet","衛生・防疫":"cat-hygiene",
-  "飼料・栄養":"cat-feeding","飼養環境・施設":"cat-facility"
+  "施設管理":"cat-facility","疾病管理":"cat-disease","社訓":"cat-motto"
 };
 
 // ==================== STATE ====================
@@ -1460,7 +1467,7 @@ document.getElementById("finish-no").addEventListener("click", closeFinishConfir
 
 // ==================== QUIZ ENGINE ====================
 function startQuiz(){
-  currentQuestion = 0; score = 0; answers = []; quizLocked = false;
+  currentQuestion = 0; score = 0; answers = []; quizLocked = false; quizSubmitted = false;
   resetAwayTracking();
   if(isDemo()){
     // デモ: 固定5問を順序シャッフルのみ（ランダム抽出なし）
@@ -1656,7 +1663,10 @@ document.addEventListener("keydown",function(e){
 })();
 
 // ==================== SUBMIT QUIZ ====================
+var quizSubmitted = false;   // submitQuizの再入防止（終了確認クリックと時間切れの競合による二重送信を防ぐ）
 function submitQuiz(){
+  if(quizSubmitted) return;
+  quizSubmitted = true;
   quizLocked = true;
   clearInterval(timerInterval);
   releaseWakeLock();
