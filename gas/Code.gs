@@ -51,7 +51,7 @@ function getSpreadsheet_() {
   return ss;
 }
 
-var EXAM_HEADER = ["氏名", "受験者日時", "得点", "正答率", "合否", "所要時間", "時間切れ", "言語", "ID", "サーバー受信時刻", "離脱回数", "離脱秒数", "離脱内訳", "検算"];
+var EXAM_HEADER = ["氏名", "受験者日時", "得点", "正答率", "合否", "所要時間", "時間切れ", "言語", "ID", "サーバー受信時刻", "離脱回数", "離脱秒数", "離脱内訳", "検算", "重複"];
 
 // クライアント申告の得点を answers[].correct から独立に再集計して照合する。
 // 完全な改ざん検知ではない(フラグ自体も偽装可能)が、score だけを書き換える素朴な改ざんを検出できる。
@@ -148,6 +148,18 @@ function doPost(e) {
         }
         var examSheet = getSheet_(ss, "本試験結果");
         ensureExamHeader_(examSheet);
+        // 同名同日の再受験(端末故障→再受験等)をフラグ。行の上書きはしない
+        var examDup = "";
+        try {
+          var exLast = examSheet.getLastRow();
+          if (exLast > 1) {
+            var exVals = examSheet.getRange(2, 1, exLast - 1, 2).getDisplayValues(); // 氏名/受験者日時
+            var exName = sanitize(data.name);
+            var exDay = String(sanitize(data.date)).split(" ")[0];
+            var exHits = exVals.filter(function (r) { return String(r[0]) === exName && String(r[1]).indexOf(exDay) === 0; }).length;
+            if (exHits > 0) examDup = "同名同日" + (exHits + 1) + "回目";
+          }
+        } catch (exDupErr) { /* 検知失敗しても記録は続行 */ }
         examSheet.appendRow([
           sanitize(data.name), sanitize(data.date),
           sanitize(String(data.score)) + "/" + sanitize(String(data.total)),
@@ -155,7 +167,7 @@ function doPost(e) {
           sanitize(data.elapsed), data.timedOut ? "はい" : "いいえ", sanitize(data.lang),
           id, serverTime,
           Number(data.awayCount) || 0, Number(data.awaySeconds) || 0, sanitize(data.awayDetail),
-          verifyScore_(data)
+          verifyScore_(data), examDup
         ]);
         // 詳細回答は別シートに（任意・分析用）
         try {

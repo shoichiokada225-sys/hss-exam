@@ -121,6 +121,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .name-input { width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 1.1rem; font-family: inherit; color: var(--text); background: var(--card); transition: border-color var(--transition), box-shadow var(--transition); }
 .name-input:focus { outline: none; border-color: var(--primary-light); box-shadow: 0 0 0 3px rgba(74,127,168,0.25); }
 .name-input.error { border-color: var(--danger); }
+.name-note { font-size: 0.78rem; color: var(--text-light); margin-top: 6px; line-height: 1.6; }
 .name-error { color: var(--danger); font-size: 0.8rem; margin-top: 4px; display: none; }
 .name-error.show { display: block; }
 .start-btn { width: 100%; padding: 16px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 1.1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: all var(--transition); box-shadow: 0 4px 15px rgba(26,82,118,0.3); }
@@ -494,6 +495,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
         <div class="name-input-group">
           <label class="name-label" for="confirm-player-name" id="confirm-name-label">氏名（フルネーム）</label>
           <input class="name-input" type="text" id="confirm-player-name" placeholder="例：山田 太郎" autocomplete="name" aria-required="true" aria-describedby="confirm-name-error">
+          <div class="name-note" id="confirm-name-note">※ 社員証・名簿と同じ表記で入力してください（例：姓と名の間にスペース）。</div>
           <div class="name-error" id="confirm-name-error" role="alert">氏名を入力してください</div>
         </div>
         <button class="start-btn" id="confirm-name-btn">次へ</button>
@@ -551,6 +553,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
         <div class="name-input-group">
           <label class="name-label" for="exam-player-name" id="exam-name-label">氏名（フルネーム）</label>
           <input class="name-input" type="text" id="exam-player-name" placeholder="例：山田 太郎" autocomplete="name" aria-required="true" aria-describedby="exam-name-error">
+          <div class="name-note" id="exam-name-note">※ 社員証・名簿と同じ表記で入力してください（例：姓と名の間にスペース）。</div>
           <div class="name-error" id="exam-name-error" role="alert">氏名を入力してください</div>
         </div>
         <div class="test-info" id="test-info">
@@ -708,6 +711,7 @@ var TRANSLATIONS = {
     confirmNameTitle: "受験意志確認", confirmNameDesc: "氏名を入力してください。",
     nameLabel: "氏名（フルネーム）", namePlaceholder: "例：山田 太郎",
     nameError: "氏名を入力してください", nextBtn: "次へ", backBtn: "戻る",
+    nameNote: "※ 社員証・名簿と同じ表記で入力してください（例：姓と名の間にスペース）。",
     confirmQTitle: "受験意志確認", confirmQuestion: "試験を受けますか？",
     yes: "はい", no: "いいえ",
     confirmResultYesIcon: "✅", confirmResultYesTitle: "回答を送信しました",
@@ -811,6 +815,7 @@ var TRANSLATIONS = {
     confirmNameTitle: "Exam Intention Check", confirmNameDesc: "Please enter your name.",
     nameLabel: "Full Name", namePlaceholder: "e.g. Taro Yamada",
     nameError: "Please enter your name", nextBtn: "Next", backBtn: "Back",
+    nameNote: "* Enter your name exactly as it appears on your ID card / the roster.",
     confirmQTitle: "Exam Intention Check", confirmQuestion: "Will you take the exam?",
     yes: "Yes", no: "No",
     confirmResultYesIcon: "✅", confirmResultYesTitle: "Response Submitted",
@@ -913,6 +918,7 @@ var TRANSLATIONS = {
     confirmNameTitle: "Xác nhận ý định thi", confirmNameDesc: "Vui lòng nhập họ tên.",
     nameLabel: "Họ và tên", namePlaceholder: "Ví dụ: Nguyễn Văn A",
     nameError: "Vui lòng nhập họ tên", nextBtn: "Tiếp", backBtn: "Quay lại",
+    nameNote: "※ Nhập họ tên đúng như trên thẻ nhân viên / danh sách (kể cả dấu).",
     confirmQTitle: "Xác nhận ý định thi", confirmQuestion: "Bạn có dự thi không?",
     yes: "Có", no: "Không",
     confirmResultYesIcon: "✅", confirmResultYesTitle: "Đã gửi trả lời",
@@ -1015,6 +1021,7 @@ var TRANSLATIONS = {
     confirmNameTitle: "Konfirmasi Niat Ujian", confirmNameDesc: "Silakan masukkan nama Anda.",
     nameLabel: "Nama Lengkap", namePlaceholder: "Contoh: Budi Santoso",
     nameError: "Silakan masukkan nama", nextBtn: "Berikutnya", backBtn: "Kembali",
+    nameNote: "※ Masukkan nama persis seperti di kartu karyawan / daftar peserta.",
     confirmQTitle: "Konfirmasi Niat Ujian", confirmQuestion: "Apakah Anda akan mengikuti ujian?",
     yes: "Ya", no: "Tidak",
     confirmResultYesIcon: "✅", confirmResultYesTitle: "Jawaban Terkirim",
@@ -1117,6 +1124,7 @@ var TRANSLATIONS = {
     confirmNameTitle: "Confirmación de intención", confirmNameDesc: "Escriba su nombre, por favor.",
     nameLabel: "Nombre completo", namePlaceholder: "Ejemplo: Juan Pérez",
     nameError: "Escriba su nombre, por favor", nextBtn: "Siguiente", backBtn: "Volver",
+    nameNote: "※ Escriba su nombre exactamente como aparece en su credencial / la lista.",
     confirmQTitle: "Confirmación de intención", confirmQuestion: "¿Va a presentar el examen?",
     yes: "Sí", no: "No",
     confirmResultYesIcon: "✅", confirmResultYesTitle: "Respuesta enviada",
@@ -1264,6 +1272,7 @@ var awayCount = 0;
 var awaySeconds = 0;
 var awayLog = [];
 var awayStartedAt = null;
+var clockAnomaly = false;   // OS時計の巻き戻しを検知したら立てる(完全防止は不可だが「バレる」ようにする)
 var awayWarnTimer = null;
 var wakeLockObj = null;
 var TIMER_RADIUS = 24;
@@ -1388,6 +1397,8 @@ function applyTranslations(){
   document.getElementById("confirm-name-label").textContent = t("nameLabel");
   document.getElementById("confirm-player-name").placeholder = t("namePlaceholder");
   document.getElementById("confirm-name-error").textContent = t("nameError");
+  document.getElementById("confirm-name-note").textContent = t("nameNote");
+  document.getElementById("exam-name-note").textContent = t("nameNote");
   document.getElementById("confirm-name-btn").textContent = t("nextBtn");
   document.getElementById("confirm-back-btn").textContent = t("backBtn");
   document.getElementById("confirm-q-title").textContent = t("confirmQTitle");
@@ -1629,7 +1640,7 @@ document.addEventListener("visibilitychange", function(){
 
 function awayLogText(){
   if(awayLog.length === 0) return "";
-  var parts = awayLog.map(function(a){ return "問" + a.q + "(" + a.sec + "秒)"; });
+  var parts = awayLog.map(function(a){ return a.cb ? ("⚠時刻逆行(問" + a.q + ")") : ("問" + a.q + "(" + a.sec + "秒)"); });
   var out = "", used = 0;
   for(var i = 0; i < parts.length; i++){
     var piece = (i > 0 ? " / " : "") + parts[i];
@@ -1666,6 +1677,7 @@ function saveProgress(){
       ua: userAnswers,
       cur: currentQuestion,
       awayCount: awayCount, awaySeconds: awaySeconds, awayLog: awayLog,
+      clockAnomaly: clockAnomaly,
       lastSeen: Date.now()
     }));
   }catch(e){ /* 容量超過等は諦める（機能自体は継続） */ }
@@ -1706,11 +1718,18 @@ function tryResume(){
       awayLog = Array.isArray(p.awayLog) ? p.awayLog : [];
       // 中断していた時間を離脱として計上（3秒閾値は通常の離脱と同一基準）
       var gapMs = Date.now() - (p.lastSeen || p.startEpoch);
-      if(gapMs >= AWAY_THRESHOLD_MS){
+      if(gapMs < 0){
+        // 時計が過去に戻っている＝OS時計の巻き戻し(試験時間の延長工作)を検知。
+        // 完全防止は不可能だが、記録に残して管理者が判別できるようにする
+        clockAnomaly = true;
+        awayCount++;
+        awayLog.push({ q: currentQuestion + 1, sec: 0, cb: true });
+      } else if(gapMs >= AWAY_THRESHOLD_MS){
         var gapSec = Math.round(gapMs / 1000);
         awayCount++; awaySeconds += gapSec;
         awayLog.push({ q: currentQuestion + 1, sec: gapSec });
       }
+      if(p.clockAnomaly) clockAnomaly = true;   // 過去に検知済みなら引き継ぐ
       quizLocked = false; quizSubmitted = false; score = 0; answers = [];
       startTime = new Date(p.startEpoch);
       totalTime = p.totalTime | 0;
@@ -1826,6 +1845,7 @@ document.getElementById("finish-no").addEventListener("click", closeFinishConfir
 // ==================== QUIZ ENGINE ====================
 function startQuiz(){
   currentQuestion = 0; score = 0; answers = []; quizLocked = false; quizSubmitted = false;
+  clockAnomaly = false;
   resetAwayTracking();
   if(isDemo()){
     // デモ: 固定5問を順序シャッフルのみ（ランダム抽出なし）
@@ -2038,6 +2058,12 @@ function settlePendingAway(){
   if(awayStartedAt === null) return 0;
   var ms = Date.now() - awayStartedAt;
   awayStartedAt = null;
+  if(ms < 0){   // 離脱中に時計が巻き戻された
+    clockAnomaly = true;
+    awayCount++;
+    awayLog.push({ q: currentQuestion + 1, sec: 0, cb: true });
+    return 0;
+  }
   if(ms < AWAY_THRESHOLD_MS) return 0;
   var sec = Math.round(ms / 1000);
   awayCount++;
