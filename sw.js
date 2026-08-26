@@ -40,7 +40,7 @@ self.addEventListener("fetch", function(event) {
   if (event.request.url.includes("cdn.jsdelivr.net")) return;
 
   event.respondWith(
-    caches.match(event.request).then(function(cached) {
+    caches.match(event.request, { ignoreSearch: true }).then(function(cached) {
       if (cached) {
         // Return cached, but also update cache in background
         var fetchPromise = fetch(event.request).then(function(response) {

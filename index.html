@@ -225,6 +225,8 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .exam-done-icon { font-size: 3.4rem; line-height: 1; margin-bottom: 20px; }
 .exam-done-title { font-size: 1.45rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
 .exam-done-msg { font-size: 1.05rem; color: var(--text-light); }
+.exam-done-keep { font-size: 0.88rem; color: var(--warning-text); background: var(--warning-bg); border: 1px solid var(--warning); border-radius: var(--radius-sm); padding: 10px 14px; margin-top: 18px; display: inline-block; }
+.submit-notice.sent-ok { color: #1e8449; font-weight: 700; font-size: 1rem; }
 .score-circle { width: 170px; height: 170px; border-radius: 50%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; transition: transform 0.5s; }
 .score-circle:hover { transform: scale(1.05); }
 .score-circle .score-pct { font-size: 2.8rem; line-height: 1; }
@@ -737,6 +739,7 @@ var TRANSLATIONS = {
     question: "問", progressLabel: "HSS認定 本試験",
     timeoutTitle: "⏰ 時間切れ", timeoutMsg: "制限時間を超過しました。<br>試験を終了します...",
     doneTitle: "試験終了しました。", doneMsg: "お疲れ様でした。",
+    doneKeepOpen: "下に「✅ 送信されました」と表示されるまで、アプリを閉じずにお待ちください。",
     resultTitle: "HSS認定 本試験｜結果", correctRate: "正答率",
     scoreDetail: "{total}問中 {score}問正解",
     pass: "合格です。お疲れさまでした。", fail: "",
@@ -752,7 +755,7 @@ var TRANSLATIONS = {
     processing: "処理中...", sent: "送信完了", sendFailed: "送信失敗",
     shared: "結果を共有しました。", sendTo: "送信先：",
     autoSent: "✅ 結果は管理者に自動送信されました。",
-    autoSentFail: "⚠ 自動送信に失敗しました。手動で送信してください。",
+    autoSentFail: "⚠ 送信をまだ確認できていません。電波の良い場所でこのアプリをもう一度開くと自動で再送されます。急ぐ場合は下のボタンで手動送信もできます。",
     excelDownloaded: "Excelファイルがダウンロードされました。<br>メールアプリが開きますので、結果を送信してください。",
     sentProcess: "送信処理を実行しました",
     skipLink: "本文にスキップ", darkModeToggle: "ダークモード切替",
@@ -826,6 +829,7 @@ var TRANSLATIONS = {
     question: "Q", progressLabel: "HSS Certification Exam",
     timeoutTitle: "⏰ Time's Up", timeoutMsg: "Time limit exceeded.<br>Ending the exam...",
     doneTitle: "The exam is complete.", doneMsg: "Thank you for your effort.",
+    doneKeepOpen: "Please keep the app open until \"✅ Sent\" appears below.",
     resultTitle: "HSS Certification Exam | Results", correctRate: "Score",
     scoreDetail: "{score} correct out of {total}",
     pass: "Passed! Well done.", fail: "",
@@ -841,7 +845,7 @@ var TRANSLATIONS = {
     processing: "Processing...", sent: "Sent", sendFailed: "Send Failed",
     shared: "Results shared.", sendTo: "Sent to:",
     autoSent: "✅ Results automatically sent to the administrator.",
-    autoSentFail: "⚠ Auto-send failed. Please send manually.",
+    autoSentFail: "⚠ Sending is not confirmed yet. Open this app again where the signal is good and it will resend automatically. You can also send manually with the button below.",
     excelDownloaded: "Excel file downloaded. Mail app will open - please send.",
     sentProcess: "Send process completed",
     skipLink: "Skip to content", darkModeToggle: "Toggle dark mode",
@@ -850,93 +854,94 @@ var TRANSLATIONS = {
     sending: "Sending...", loadingQuestions: "Loading questions..."
   },
   vi: {
-    homeTitle: "Ky thi Chung chi HSS", homeSubtitle: "Cong ty Hirano",
-    badgeConfirm: "Xac nhan y dinh", badgeExam: "Thi chinh thuc",
-    entryConfirmTitle: "Tra loi y dinh du thi",
-    entryConfirmDesc: "Xac nhan ban du dinh tham gia thi. Nhap ho ten va tra loi Co.",
-    entryExamTitle: "Thi chung chi HSS chinh thuc",
-    entryExamDesc: "Ky thi chinh thuc chung chi HSS. Can mat khau. 60 cau.",
-    metaQ: "📝 60 cau", metaT: "⏱ 60 phut", metaP: "🎯 70% dat",
-    langNote: "🌐 Tieng Nhat, Tieng Anh, Tieng Viet, Tieng Indonesia",
-    footer: "© Cong ty Hirano Chung chi HSS",
-    confirmNameTitle: "Xac nhan y dinh thi", confirmNameDesc: "Vui long nhap ho ten.",
-    nameLabel: "Ho va ten", namePlaceholder: "Vi du: Nguyen Van A",
-    nameError: "Vui long nhap ho ten", nextBtn: "Tiep", backBtn: "Quay lai",
-    confirmQTitle: "Xac nhan y dinh thi", confirmQuestion: "Ban co du thi khong?",
-    yes: "Co", no: "Khong",
-    confirmResultYesIcon: "✅", confirmResultYesTitle: "Da gui tra loi",
-    confirmResultYesMsg: "Tra loi \"Co\" cua {name} da gui cho quan ly.",
-    confirmResultNoIcon: "📋", confirmResultNoTitle: "Da gui tra loi",
-    confirmResultNoMsg: "Tra loi \"Khong\" cua {name} da gui cho quan ly.",
-    confirmSending: "Dang gui...", confirmSendError: "Gui that bai. Vui long thu lai.",
-    homeBtn: "Ve trang chu",
-    passwordTitle: "Thi chinh thuc", passwordDesc: "Nhap mat khau de bat dau thi.",
-    passwordLabel: "Mat khau", passwordPlaceholder: "Nhap mat khau",
-    passwordError: "Mat khau khong dung", authBtn: "Xac thuc",
-    welcomeTitle: "Chao mung",
-    welcomeDesc: "Day la ky thi chinh thuc chung chi HSS.<br>Nhap ho ten va bat dau lam bai.",
-    testName: "Ten bai thi:", testNameValue: "Thi chinh thuc chung chi HSS",
-    questionCount: "So cau:", questionCountValue: "60 cau",
-    format: "Hinh thuc:", formatValue: "Trac nghiem 4 dap an",
-    timeLimit: "Thoi gian:", timeLimitValue: "60 phut",
-    passCriteria: "Tieu chuan dat:", passCriteriaValue: "Tu 70% tro len",
-    notice1: "※ Dap an khong hien thi trong khi lam bai.",
-    notice2: "※ Ban co the quay lai de thay doi cau tra loi.",
-    notice3: "※ Ket qua tu dong gui cho quan ly.",
-    notice4: "※ Bai thi tu dong ket thuc khi het gio.",
-    notice5: "※ Neu ban roi khoi ung dung trong khi thi, so lan va thoi gian se duoc ghi lai va bao cho quan tri vien.",
-    finishTitle: "Ket thuc bai thi?",
-    finishSummary: "Ban da tra loi {answered} trong {total} cau.",
-    finishUnanswered: "Con {n} cau chua tra loi.",
-    finishWarn: "Sau khi ket thuc, cau tra loi se duoc gui di va khong the thay doi.",
-    finishYes: "Ket thuc bai thi", finishNo: "Quay lai xem lai",
-    awayWarn: "⚠ Viec roi khoi ung dung da duoc ghi lai (lan thu {n}, {sec} giay). Ghi nhan nay se duoc gui cho quan tri vien.",
-    awayLabel: "Roi khoi ung dung: ", awayTimes: " lan",
-    correctAnswerLabel: "Dap an dung: ", explanationLabel: "Giai thich: ",
-    metaConfirmA: "📋 Xac nhan y dinh", metaConfirmB: "🔓 Khong can mat khau",
-    badgeDemo: "Ban demo",
-    entryDemoTitle: "Lam bai demo (luyen tap)",
-    entryDemoDesc: "Ban demo de trai nghiem quy trinh thi that. 5 cau. Sau khi ket thuc se hien dap an va giai thich. Ket qua khong duoc gui di dau.",
-    metaDemoQ: "📝 5 cau", metaDemoT: "⏱ 5 phut", metaDemoP: "📖 Co giai thich",
-    demoPasswordTitle: "Ban demo",
-    demoWelcomeDesc: "Day la ban demo cua ky thi chung chi HSS.<br>Nhap ho ten de bat dau.",
-    demoTestNameValue: "Demo chung chi HSS",
-    demoQuestionCountValue: "5 cau",
-    demoTimeLimitValue: "5 phut",
-    demoProgressLabel: "Demo chung chi HSS",
-    demoResultTitle: "Ket qua ban demo HSS",
-    demoNotice3: "※ Ban demo: ket qua khong duoc gui di dau.",
-    demoNotice5: "※ Neu ban roi khoi ung dung trong khi lam demo, so lan se duoc ghi va hien tren man hinh nay (khong gui di).",
-    demoAwayWarn: "⚠ Viec roi khoi ung dung da duoc ghi lai (lan thu {n}, {sec} giay). Trong ky thi that, ghi nhan nay se duoc gui cho quan tri vien.",
-    demoFail: "Lan nay chua dat. Hay doc phan giai thich va thu lai.",
-    demoAutoSent: "📄 Ban demo: ket qua khong duoc gui. Vui long xem tren man hinh nay.",
-    startBtn: "Bat dau bai thi",
-    remainingTime: "Thoi gian con lai", prev: "Truoc", next: "Tiep", submit: "Nop bai",
-    question: "Cau", progressLabel: "Thi chung chi HSS",
-    timeoutTitle: "⏰ Het gio", timeoutMsg: "Da het thoi gian.<br>Dang ket thuc bai thi...",
-    doneTitle: "Bai thi da ket thuc.", doneMsg: "Cam on ban da co gang.",
-    resultTitle: "Ket qua thi chung chi HSS", correctRate: "Ty le dung",
-    scoreDetail: "Dung {score}/{total} cau",
-    pass: "Dat! Xin chuc mung.", fail: "",
-    perfect: "Diem tuyet doi! Xuat sac!",
-    examinee: "Thi sinh:", examDate: "Ngay thi:",
-    timeLimitLabel: "Thoi gian gioi han:", elapsed: "Thoi gian lam bai:", timedOut: "(Het gio)",
-    passCriteriaLabel: "Tieu chuan dat:", passCriteriaDetail: "Tu {rate}% tro len",
-    categoryStats: "Ket qua theo danh muc", reviewTitle: "Xem lai cau tra loi",
-    correct: "○ Dung", incorrect: "× Sai", unanswered: "Chua tra loi", unansweredLabel: "(Chua tra loi)",
-    submitNotice: "Ket qua da tu dong gui cho quan ly.",
-    submitNoticeManual: "Ban co the gui ket qua cho quan ly.",
-    submitBtn: "Gui ket qua", retryBtn: "Lam lai",
-    processing: "Dang xu ly...", sent: "Da gui", sendFailed: "Gui that bai",
-    shared: "Da chia se ket qua.", sendTo: "Gui den:",
-    autoSent: "✅ Ket qua da tu dong gui cho quan ly.",
-    autoSentFail: "⚠ Tu dong gui that bai. Vui long gui thu cong.",
-    excelDownloaded: "Tep Excel da tai. Ung dung email se mo.",
-    sentProcess: "Da thuc hien gui",
-    skipLink: "Chuyen den noi dung", darkModeToggle: "Che do toi",
-    minutes: "phut", seconds: "giay",
-    swipeHint: "← Vuot de chuyen cau →",
-    sending: "Dang gui...", loadingQuestions: "Dang tai cau hoi..."
+    homeTitle: "Kỳ thi Chứng chỉ HSS", homeSubtitle: "Công ty Hirano",
+    badgeConfirm: "Xác nhận ý định", badgeExam: "Thi chính thức",
+    entryConfirmTitle: "Trả lời ý định dự thi",
+    entryConfirmDesc: "Xác nhận bạn dự định tham gia thi. Nhập họ tên và trả lời Có.",
+    entryExamTitle: "Thi chứng chỉ HSS chính thức",
+    entryExamDesc: "Kỳ thi chính thức chứng chỉ HSS. Cần mật khẩu. 60 câu.",
+    metaQ: "📝 60 câu", metaT: "⏱ 60 phút", metaP: "🎯 Đạt 70%",
+    langNote: "🌐 Tiếng Nhật, Tiếng Anh, Tiếng Việt, Tiếng Indonesia",
+    footer: "© Công ty Hirano - Chứng chỉ HSS",
+    confirmNameTitle: "Xác nhận ý định thi", confirmNameDesc: "Vui lòng nhập họ tên.",
+    nameLabel: "Họ và tên", namePlaceholder: "Ví dụ: Nguyễn Văn A",
+    nameError: "Vui lòng nhập họ tên", nextBtn: "Tiếp", backBtn: "Quay lại",
+    confirmQTitle: "Xác nhận ý định thi", confirmQuestion: "Bạn có dự thi không?",
+    yes: "Có", no: "Không",
+    confirmResultYesIcon: "✅", confirmResultYesTitle: "Đã gửi trả lời",
+    confirmResultYesMsg: "Trả lời \"Có\" của {name} đã gửi cho quản lý.",
+    confirmResultNoIcon: "📋", confirmResultNoTitle: "Đã gửi trả lời",
+    confirmResultNoMsg: "Trả lời \"Không\" của {name} đã gửi cho quản lý.",
+    confirmSending: "Đang gửi...", confirmSendError: "Gửi thất bại. Vui lòng thử lại.",
+    homeBtn: "Về trang chủ",
+    passwordTitle: "Thi chính thức", passwordDesc: "Nhập mật khẩu để bắt đầu thi.",
+    passwordLabel: "Mật khẩu", passwordPlaceholder: "Nhập mật khẩu",
+    passwordError: "Mật khẩu không đúng", authBtn: "Xác thực",
+    welcomeTitle: "Chào mừng",
+    welcomeDesc: "Đây là kỳ thi chính thức chứng chỉ HSS.<br>Nhập họ tên và bắt đầu làm bài.",
+    testName: "Tên bài thi:", testNameValue: "Thi chính thức chứng chỉ HSS",
+    questionCount: "Số câu:", questionCountValue: "60 câu",
+    format: "Hình thức:", formatValue: "Trắc nghiệm 4 đáp án",
+    timeLimit: "Thời gian:", timeLimitValue: "60 phút",
+    passCriteria: "Tiêu chuẩn đạt:", passCriteriaValue: "Từ 70% trở lên",
+    notice1: "※ Đáp án không hiển thị trong khi làm bài.",
+    notice2: "※ Bạn có thể quay lại để thay đổi câu trả lời.",
+    notice3: "※ Kết quả tự động gửi cho quản lý.",
+    notice4: "※ Bài thi tự động kết thúc khi hết giờ.",
+    notice5: "※ Nếu bạn rời khỏi ứng dụng trong khi thi, số lần và thời gian sẽ được ghi lại và báo cho quản trị viên.",
+    finishTitle: "Kết thúc bài thi?",
+    finishSummary: "Bạn đã trả lời {answered} trong {total} câu.",
+    finishUnanswered: "Còn {n} câu chưa trả lời.",
+    finishWarn: "Sau khi kết thúc, câu trả lời sẽ được gửi đi và không thể thay đổi.",
+    finishYes: "Kết thúc bài thi", finishNo: "Quay lại xem lại",
+    awayWarn: "⚠ Việc rời khỏi ứng dụng đã được ghi lại (lần thứ {n}, {sec} giây). Ghi nhận này sẽ được gửi cho quản trị viên.",
+    awayLabel: "Rời khỏi ứng dụng: ", awayTimes: " lần",
+    correctAnswerLabel: "Đáp án đúng: ", explanationLabel: "Giải thích: ",
+    metaConfirmA: "📋 Xác nhận ý định", metaConfirmB: "🔓 Không cần mật khẩu",
+    badgeDemo: "Bản demo",
+    entryDemoTitle: "Làm bài demo (luyện tập)",
+    entryDemoDesc: "Bản demo để trải nghiệm quy trình thi thật. 5 câu. Sau khi kết thúc sẽ hiện đáp án và giải thích. Kết quả không được gửi đi đâu.",
+    metaDemoQ: "📝 5 câu", metaDemoT: "⏱ 5 phút", metaDemoP: "📖 Có giải thích",
+    demoPasswordTitle: "Bản demo",
+    demoWelcomeDesc: "Đây là bản demo của kỳ thi chứng chỉ HSS.<br>Nhập họ tên để bắt đầu.",
+    demoTestNameValue: "Demo chứng chỉ HSS",
+    demoQuestionCountValue: "5 câu",
+    demoTimeLimitValue: "5 phút",
+    demoProgressLabel: "Demo chứng chỉ HSS",
+    demoResultTitle: "Kết quả bản demo HSS",
+    demoNotice3: "※ Bản demo: kết quả không được gửi đi đâu.",
+    demoNotice5: "※ Nếu bạn rời khỏi ứng dụng trong khi làm demo, số lần sẽ được ghi và hiện trên màn hình này (không gửi đi).",
+    demoAwayWarn: "⚠ Việc rời khỏi ứng dụng đã được ghi lại (lần thứ {n}, {sec} giây). Trong kỳ thi thật, ghi nhận này sẽ được gửi cho quản trị viên.",
+    demoFail: "Lần này chưa đạt. Hãy đọc phần giải thích và thử lại.",
+    demoAutoSent: "📄 Bản demo: kết quả không được gửi. Vui lòng xem trên màn hình này.",
+    startBtn: "Bắt đầu bài thi",
+    remainingTime: "Thời gian còn lại", prev: "Trước", next: "Tiếp", submit: "Nộp bài",
+    question: "Câu", progressLabel: "Thi chứng chỉ HSS",
+    timeoutTitle: "⏰ Hết giờ", timeoutMsg: "Đã hết thời gian.<br>Đang kết thúc bài thi...",
+    doneTitle: "Bài thi đã kết thúc.", doneMsg: "Cảm ơn bạn đã cố gắng.",
+    doneKeepOpen: "Vui lòng giữ ứng dụng mở cho đến khi dòng \"✅ Đã gửi\" hiện ra bên dưới.",
+    resultTitle: "Kết quả thi chứng chỉ HSS", correctRate: "Tỷ lệ đúng",
+    scoreDetail: "Đúng {score}/{total} câu",
+    pass: "Đạt! Xin chúc mừng.", fail: "",
+    perfect: "Điểm tuyệt đối! Xuất sắc!",
+    examinee: "Thí sinh:", examDate: "Ngày thi:",
+    timeLimitLabel: "Thời gian giới hạn:", elapsed: "Thời gian làm bài:", timedOut: "(Hết giờ)",
+    passCriteriaLabel: "Tiêu chuẩn đạt:", passCriteriaDetail: "Từ {rate}% trở lên",
+    categoryStats: "Kết quả theo danh mục", reviewTitle: "Xem lại câu trả lời",
+    correct: "○ Đúng", incorrect: "× Sai", unanswered: "Chưa trả lời", unansweredLabel: "(Chưa trả lời)",
+    submitNotice: "Kết quả đã tự động gửi cho quản lý.",
+    submitNoticeManual: "Bạn có thể gửi kết quả cho quản lý.",
+    submitBtn: "Gửi kết quả", retryBtn: "Làm lại",
+    processing: "Đang xử lý...", sent: "Đã gửi", sendFailed: "Gửi thất bại",
+    shared: "Đã chia sẻ kết quả.", sendTo: "Gửi đến:",
+    autoSent: "✅ Kết quả đã tự động gửi cho quản lý.",
+    autoSentFail: "⚠ Chưa xác nhận được việc gửi. Hãy mở lại ứng dụng này ở nơi sóng tốt, kết quả sẽ tự động gửi lại. Nếu gấp, bạn cũng có thể gửi thủ công bằng nút bên dưới.",
+    excelDownloaded: "Tệp Excel đã tải xuống. Ứng dụng email sẽ mở.",
+    sentProcess: "Đã thực hiện gửi",
+    skipLink: "Chuyển đến nội dung", darkModeToggle: "Chế độ tối",
+    minutes: "phút", seconds: "giây",
+    swipeHint: "← Vuốt để chuyển câu →",
+    sending: "Đang gửi...", loadingQuestions: "Đang tải câu hỏi..."
   },
   id: {
     homeTitle: "Ujian Sertifikasi HSS", homeSubtitle: "PT Hirano",
@@ -1004,6 +1009,7 @@ var TRANSLATIONS = {
     question: "Soal", progressLabel: "Ujian Sertifikasi HSS",
     timeoutTitle: "⏰ Waktu Habis", timeoutMsg: "Batas waktu terlampaui.<br>Mengakhiri ujian...",
     doneTitle: "Ujian telah selesai.", doneMsg: "Terima kasih atas kerja kerasnya.",
+    doneKeepOpen: "Mohon biarkan aplikasi tetap terbuka sampai tulisan \"✅ Terkirim\" muncul di bawah.",
     resultTitle: "Hasil Ujian Sertifikasi HSS", correctRate: "Nilai",
     scoreDetail: "{score} benar dari {total}",
     pass: "Lulus! Kerja bagus.", fail: "",
@@ -1019,7 +1025,7 @@ var TRANSLATIONS = {
     processing: "Memproses...", sent: "Terkirim", sendFailed: "Gagal Kirim",
     shared: "Hasil dibagikan.", sendTo: "Dikirim ke:",
     autoSent: "✅ Hasil otomatis dikirim ke administrator.",
-    autoSentFail: "⚠ Pengiriman otomatis gagal. Kirim manual.",
+    autoSentFail: "⚠ Pengiriman belum terkonfirmasi. Buka kembali aplikasi ini di tempat dengan sinyal bagus, hasil akan dikirim ulang otomatis. Jika mendesak, Anda juga bisa kirim manual dengan tombol di bawah.",
     excelDownloaded: "File Excel terunduh. Aplikasi email akan terbuka.",
     sentProcess: "Proses pengiriman selesai",
     skipLink: "Langsung ke konten", darkModeToggle: "Mode gelap",
@@ -1035,8 +1041,8 @@ var CATEGORY_NAMES = {
        "繁殖関連":"繁殖関連","子豚管理":"子豚管理","衛生管理":"衛生管理","飼養管理":"飼養管理","飼育段階":"飼育段階","豚の分類":"豚の分類","施設管理":"施設管理","疾病管理":"疾病管理","社訓":"社訓"},
   en: {"繁殖・分娩":"Breeding & Farrowing","子豚・育成":"Piglets & Rearing","衛生・防疫":"Hygiene & Biosecurity","飼料・栄養":"Feed & Nutrition","飼養環境・施設":"Environment & Facilities","肉豚・出荷・肉":"Finishing & Shipping","経営理念・行動規範":"Philosophy & Conduct",
        "繁殖関連":"Breeding","子豚管理":"Piglet Care","衛生管理":"Hygiene","飼養管理":"Feed Mgmt","飼育段階":"Growth Stage","豚の分類":"Classification","施設管理":"Facility","疾病管理":"Disease","社訓":"Company Motto"},
-  vi: {"繁殖・分娩":"Sinh san / De","子豚・育成":"Heo con / Nuoi duong","衛生・防疫":"Ve sinh / Phong dich","飼料・栄養":"Thuc an / Dinh duong","飼養環境・施設":"Moi truong / Chuong trai","肉豚・出荷・肉":"Heo thit / Xuat chuong","経営理念・行動規範":"Triet ly / Quy tac",
-       "繁殖関連":"Sinh san","子豚管理":"Heo con","衛生管理":"Ve sinh","飼養管理":"Thuc an","飼育段階":"Giai doan","豚の分類":"Phan loai","施設管理":"Chuong trai","疾病管理":"Benh","社訓":"Phuong cham"},
+  vi: {"繁殖・分娩":"Sinh sản / Đẻ","子豚・育成":"Heo con / Nuôi dưỡng","衛生・防疫":"Vệ sinh / Phòng dịch","飼料・栄養":"Thức ăn / Dinh dưỡng","飼養環境・施設":"Môi trường / Chuồng trại","肉豚・出荷・肉":"Heo thịt / Xuất chuồng","経営理念・行動規範":"Triết lý / Quy tắc",
+       "繁殖関連":"Sinh sản","子豚管理":"Heo con","衛生管理":"Vệ sinh","飼養管理":"Thức ăn","飼育段階":"Giai đoạn","豚の分類":"Phân loại","施設管理":"Chuồng trại","疾病管理":"Bệnh","社訓":"Phương châm"},
   id: {"繁殖・分娩":"Reproduksi & Kelahiran","子豚・育成":"Anak Babi & Pembesaran","衛生・防疫":"Kebersihan & Biosekuriti","飼料・栄養":"Pakan & Nutrisi","飼養環境・施設":"Lingkungan & Fasilitas","肉豚・出荷・肉":"Babi Potong & Pengiriman","経営理念・行動規範":"Filosofi & Perilaku",
        "繁殖関連":"Pembiakan","子豚管理":"Anak Babi","衛生管理":"Kebersihan","飼養管理":"Pakan","飼育段階":"Tahap","豚の分類":"Klasifikasi","施設管理":"Fasilitas","疾病管理":"Penyakit","社訓":"Moto Perusahaan"}
 };
@@ -1341,7 +1347,7 @@ function loadQuestions(){
   var file = isDemo() ? CONFIG.demo.questionsFile : "data/questions.json";
   document.getElementById("loading-msg").textContent = t("loadingQuestions");
   document.getElementById("loading-overlay").classList.add("show");
-  fetch(file+"?v="+Date.now())
+  fetch(file)   // キャッシュバスターは付けない（SWのプリキャッシュと整合させ、オフラインでも開始できるようにする。鮮度はSWの背景更新+CACHE_NAME更新で担保）
     .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
     .then(function(data){
       if(isDemo()) demoQuestions = data; else allQuestions = data;
@@ -1416,26 +1422,118 @@ document.addEventListener("visibilitychange", function(){
   if(document.hidden){
     if(!isExamActive()) return;
     awayStartedAt = Date.now();
+    saveProgress();   // アプリがこのままkillされても復帰できるよう直前状態を保存
     return;
   }
   // 復帰時：WakeLockはバックグラウンドで解除されるため取り直す
   if(isExamActive()) requestWakeLock();
-  if(awayStartedAt === null) return;
-  var ms = Date.now() - awayStartedAt;
-  awayStartedAt = null;
-  if(ms < AWAY_THRESHOLD_MS) return;   // 通知確認・誤タップ程度は記録しない
-  if(!isExamActive()) return;
-  var sec = Math.round(ms / 1000);
-  awayCount++;
-  awaySeconds += sec;
-  awayLog.push({ q: currentQuestion + 1, sec: sec });
-  showAwayWarning(sec);
+  // awayStartedAtがセットされるのは試験中のhiddenのみなので、ここでの精算は常に正当。
+  // 離脱中に時間切れ等で試験が終わっていた場合はsubmitQuiz側のsettleが先に精算している
+  var sec = settlePendingAway();
+  if(sec > 0 && isExamActive()) showAwayWarning(sec);
 });
 
 function awayLogText(){
   if(awayLog.length === 0) return "";
   return awayLog.map(function(a){ return "問" + a.q + "(" + a.sec + "秒)"; }).join(" / ");
 }
+
+// ==================== 進行保護（リロード/戻る/アプリ終了対策） ====================
+// 試験中の進行状態をlocalStorageへ保存し、リロード・誤スワイプ・クラッシュ後に自動復帰する。
+// 残り時間は開始時刻からの実時間で再計算するため、中断による時間稼ぎはできない。
+// 中断していた時間は離脱として計上する（アプリを閉じて調べる抜け道を塞ぐ）。
+var PROGRESS_KEY = "hss_progress_v1";
+
+function saveProgress(){
+  if(quizSubmitted || selectedQuestions.length === 0) return;
+  try{
+    var pool = isDemo() ? demoQuestions : allQuestions;
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify({
+      v: 1,
+      mode: examMode,
+      name: playerName,
+      startEpoch: startTime.getTime(),
+      totalTime: totalTime,
+      qIdx: selectedQuestions.map(function(q){ return pool.indexOf(q); }),
+      opt: shuffledOptions.map(function(opts, i){ return opts.map(function(o){ return selectedQuestions[i].options.indexOf(o); }); }),
+      ua: userAnswers,
+      cur: currentQuestion,
+      awayCount: awayCount, awaySeconds: awaySeconds, awayLog: awayLog,
+      lastSeen: Date.now()
+    }));
+  }catch(e){ /* 容量超過等は諦める（機能自体は継続） */ }
+}
+function clearProgress(){ try{ localStorage.removeItem(PROGRESS_KEY); }catch(e){} }
+
+function tryResume(){
+  var raw; try{ raw = localStorage.getItem(PROGRESS_KEY); }catch(e){ return; }
+  if(!raw) return;
+  var p; try{ p = JSON.parse(raw); }catch(e){ clearProgress(); return; }
+  if(!p || p.v !== 1 || !Array.isArray(p.qIdx) || !p.startEpoch){ clearProgress(); return; }
+  examMode = (p.mode === "demo") ? "demo" : "exam";
+  var file = isDemo() ? CONFIG.demo.questionsFile : "data/questions.json";
+  document.getElementById("loading-msg").textContent = t("loadingQuestions");
+  document.getElementById("loading-overlay").classList.add("show");
+  fetch(file)
+    .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+    .then(function(data){
+      if(isDemo()) demoQuestions = data; else allQuestions = data;
+      var pool = isDemo() ? demoQuestions : allQuestions;
+      selectedQuestions = p.qIdx.map(function(i){ return pool[i]; });
+      if(selectedQuestions.length === 0 || selectedQuestions.some(function(q){ return !q; })){
+        // 問題データが更新されて復元不能: 破棄してホームへ（採点不能な中途データを残さない）
+        clearProgress(); selectedQuestions = [];
+        document.getElementById("loading-overlay").classList.remove("show");
+        return;
+      }
+      shuffledOptions = selectedQuestions.map(function(q, i){
+        var order = (Array.isArray(p.opt) && Array.isArray(p.opt[i])) ? p.opt[i] : null;
+        if(order && order.every(function(oi){ return q.options[oi] !== undefined; })) return order.map(function(oi){ return q.options[oi]; });
+        return shuffle(q.options.slice());
+      });
+      userAnswers = (Array.isArray(p.ua) && p.ua.length === selectedQuestions.length) ? p.ua : new Array(selectedQuestions.length).fill(null);
+      currentQuestion = Math.min(Math.max(0, p.cur | 0), selectedQuestions.length - 1);
+      playerName = String(p.name || "");
+      awayCount = p.awayCount | 0; awaySeconds = p.awaySeconds | 0;
+      awayLog = Array.isArray(p.awayLog) ? p.awayLog : [];
+      // 中断していた時間を離脱として計上（3秒閾値は通常の離脱と同一基準）
+      var gapMs = Date.now() - (p.lastSeen || p.startEpoch);
+      if(gapMs >= AWAY_THRESHOLD_MS){
+        var gapSec = Math.round(gapMs / 1000);
+        awayCount++; awaySeconds += gapSec;
+        awayLog.push({ q: currentQuestion + 1, sec: gapSec });
+      }
+      quizLocked = false; quizSubmitted = false; score = 0; answers = [];
+      startTime = new Date(p.startEpoch);
+      totalTime = p.totalTime | 0;
+      var elapsed = Math.floor((Date.now() - p.startEpoch) / 1000);
+      timeRemaining = Math.max(0, totalTime - elapsed);
+      document.getElementById("loading-overlay").classList.remove("show");
+      applyTranslations();
+      buildStepDots();
+      showScreen("quiz-screen");
+      renderQuestion();
+      pushExamGuard();
+      if(timeRemaining <= 0){ onTimeout(); }
+      else { startTimer(); requestWakeLock(); }
+    })
+    .catch(function(){
+      // 読み込み失敗: progressは残す（次回オンライン時に再開できる）
+      document.getElementById("loading-overlay").classList.remove("show");
+    });
+}
+window.addEventListener("load", function(){ try{ tryResume(); }catch(e){} });
+
+// リロード・タブ閉じの直前警告（試験中/送信未完了中のみ）
+window.addEventListener("beforeunload", function(e){
+  if(isExamActive()){ saveProgress(); }   // lastSeenを最新化（リロード自体の数秒を離脱と誤計上しない）
+  if(isExamActive() || sendInFlight){ e.preventDefault(); e.returnValue = ""; }
+});
+// Android戻るジェスチャー対策: 試験中は履歴を1段積み、popstateで積み直して離脱を防ぐ
+function pushExamGuard(){ try{ history.pushState({ hssExam: true }, ""); }catch(e){} }
+window.addEventListener("popstate", function(){
+  if(isExamActive()){ pushExamGuard(); }
+});
 
 // ==================== 終了確認 ====================
 // 全問終えても、このダイアログで「試験を終了する」を押すまで採点・送信は行わない。
@@ -1493,6 +1591,8 @@ function startQuiz(){
   renderQuestion();
   startTimer();
   requestWakeLock();
+  pushExamGuard();
+  saveProgress();
 }
 
 function buildStepDots(){
@@ -1590,6 +1690,7 @@ function renderQuestion(){
   var card = document.getElementById("question-card");
   card.classList.remove("fade-in"); void card.offsetWidth; card.classList.add("fade-in");
   updateNavButtons();
+  saveProgress();
 }
 
 function selectAnswer(btn, selectedIndex){
@@ -1601,6 +1702,7 @@ function selectAnswer(btn, selectedIndex){
   var answeredCount = userAnswers.filter(function(a){return a!==null;}).length;
   document.getElementById("progress-fill").style.width = (answeredCount/selectedQuestions.length)*100+"%";
   updateNavButtons();
+  saveProgress();
 }
 
 function updateNavButtons(){
@@ -1664,9 +1766,27 @@ document.addEventListener("keydown",function(e){
 
 // ==================== SUBMIT QUIZ ====================
 var quizSubmitted = false;   // submitQuizの再入防止（終了確認クリックと時間切れの競合による二重送信を防ぐ）
+var sendInFlight = false;    // 結果送信中フラグ（送信完了前の離脱をbeforeunloadで警告する）
+
+// 離脱中のまま試験が終わるケース（時間切れをまたぐ離脱＝最も疑わしい長時間離脱）を
+// 取りこぼさないよう、未精算の離脱をロック前に計上する
+function settlePendingAway(){
+  if(awayStartedAt === null) return 0;
+  var ms = Date.now() - awayStartedAt;
+  awayStartedAt = null;
+  if(ms < AWAY_THRESHOLD_MS) return 0;
+  var sec = Math.round(ms / 1000);
+  awayCount++;
+  awaySeconds += sec;
+  awayLog.push({ q: currentQuestion + 1, sec: sec });
+  return sec;
+}
+
 function submitQuiz(){
   if(quizSubmitted) return;
   quizSubmitted = true;
+  clearProgress();
+  settlePendingAway();
   quizLocked = true;
   clearInterval(timerInterval);
   releaseWakeLock();
@@ -1712,7 +1832,8 @@ function finishQuiz(){
     // 本試験: 受験者には合否・正答率・振り返りを一切表示しない（採点結果は管理者へ送信のみ）
     html = '<div class="exam-done"><div class="exam-done-icon">✅</div>';
     html += '<h3 class="exam-done-title">'+escHtml(t("doneTitle"))+'</h3>';
-    html += '<p class="exam-done-msg">'+escHtml(t("doneMsg"))+'</p></div>';
+    html += '<p class="exam-done-msg">'+escHtml(t("doneMsg"))+'</p>';
+    html += '<p class="exam-done-keep">'+escHtml(t("doneKeepOpen"))+'</p></div>';
   }
 
   html += '<div class="submit-notice" id="submit-notice">'+escHtml(isDemo() ? tm("autoSent") : t("sending"))+'</div>';
@@ -1826,13 +1947,16 @@ function autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec){
 
   resultData.submissionId = genSubmissionId("exam");
   var notice = document.getElementById("submit-notice");
+  sendInFlight = true;
   reliableSubmit(resultData, { onStatus: function(state){
     if(state === "sending") notice.textContent = t("sending");
     else if(state === "done") notice.textContent = t("autoSent");
   }}).then(function(success){
-    if(success){ notice.textContent = t("autoSent"); }
+    sendInFlight = false;
+    if(success){ notice.textContent = t("autoSent"); notice.classList.add("sent-ok"); }
     else { showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec); }
   }).catch(function(){
+    sendInFlight = false;
     showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec);
   });
 }
@@ -1929,7 +2053,7 @@ function fallbackMailto(subject, body, btn){
 // ==================== 確実送信モジュール（150人同時対応） ====================
 // 方針: 送信前にジッターでバースト分散 → POST(no-cors)後にJSONPで記録確認 →
 //       未記録なら自動再送。結果はlocalStorageに保持し、再アクセス時に未達分を再送。
-var SUBMIT_JITTER_MS = 15000;  // 送信前ランダム遅延の最大(ms)。一斉終了のバーストを平準化
+var SUBMIT_JITTER_MS = 3000;   // 送信前ランダム遅延の最大(ms)。終了時刻は自然に分散するため短くてよい
 var SUBMIT_ATTEMPTS  = 6;      // 最大試行回数
 var PENDING_KEY      = "hss_pending_v1";
 
@@ -1994,7 +2118,17 @@ function _probeVerifySupport(){
   });
 }
 var _verifyCapPromise = null;
-function serverSupportsVerify(){ if(!_verifyCapPromise) _verifyCapPromise = _probeVerifySupport(); return _verifyCapPromise; }
+// false（=オフライン/弱電波/旧GAS）は永続キャッシュしない。一度の失敗が
+// セッション全体の送信経路を劣化させないよう、次回呼び出しで再probeする。
+function serverSupportsVerify(){
+  if(!_verifyCapPromise){
+    _verifyCapPromise = _probeVerifySupport().then(function(v){
+      if(!v) _verifyCapPromise = null;
+      return v;
+    });
+  }
+  return _verifyCapPromise;
+}
 
 // 確実送信: 新GAS→jitter+リトライ+記録確認。旧GAS→従来どおり1回送信(メール1通/再送なし)。
 function reliableSubmit(payload, opts){
@@ -2006,12 +2140,12 @@ function reliableSubmit(payload, opts){
   return (async function(){
     var supported = await serverSupportsVerify();
     if(!supported){
-      // 旧GAS（または応答不可）: 1回だけ送信。再送ループしない＝メール連発を防ぐ（旧挙動と同等で安全）
+      // 検証応答が得られない（オフライン/弱電波/旧GAS）: 1回だけ送信を試みるが、
+      // 成功と偽らない・pendingも消さない。結果は次回起動時のflushPendingが再送する。
       onStatus("sending", 1);
       await _postNoCors(payload);
-      _removePending(payload.submissionId);
-      onStatus("done", 1);
-      return true;
+      onStatus("unverified", 1);
+      return false;
     }
     if(jitter){ await _delay(_randInt(SUBMIT_JITTER_MS)); }
     for(var attempt=1; attempt<=SUBMIT_ATTEMPTS; attempt++){
@@ -2030,10 +2164,15 @@ function reliableSubmit(payload, opts){
   })();
 }
 
-// 起動時: 前回未達の結果を自動再送
+// 起動時: 前回未達の結果を自動再送。
+// verify対応GASが確認できた時だけ再送する（メール送信型の旧GASへ再送を連発しないための安全弁）
 function flushPending(){
   var list = _loadPending();
-  list.forEach(function(p){ reliableSubmit(p, {jitter:false}); });
+  if(list.length === 0) return;
+  serverSupportsVerify().then(function(supported){
+    if(!supported) return;
+    list.forEach(function(p){ reliableSubmit(p, {jitter:false}); });
+  });
 }
 window.addEventListener("load", function(){ try{ flushPending(); }catch(e){} });
 
@@ -2071,17 +2210,17 @@ if("serviceWorker" in navigator){
     var dismissBtn = document.getElementById("install-dismiss");
 
     // Translate
-    var titles = {ja:"ホーム画面に追加",en:"Add to Home Screen",vi:"Them vao Man hinh chinh",id:"Tambahkan ke Layar Utama"};
+    var titles = {ja:"ホーム画面に追加",en:"Add to Home Screen",vi:"Thêm vào Màn hình chính",id:"Tambahkan ke Layar Utama"};
     var descs = {
       ja:"アプリとしてインストールすると、すぐに起動できます。",
       en:"Install as an app for quick access.",
-      vi:"Cai dat nhu ung dung de truy cap nhanh.",
+      vi:"Cài đặt như ứng dụng để truy cập nhanh.",
       id:"Pasang sebagai aplikasi untuk akses cepat."
     };
     document.getElementById("install-title").textContent = titles[currentLang] || titles.ja;
     document.getElementById("install-desc").textContent = descs[currentLang] || descs.ja;
 
-    var btnTexts = {ja:"追加",en:"Install",vi:"Cai dat",id:"Pasang"};
+    var btnTexts = {ja:"追加",en:"Install",vi:"Cài đặt",id:"Pasang"};
     installBtn.textContent = btnTexts[currentLang] || btnTexts.ja;
 
     banner.classList.add("show");
