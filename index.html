@@ -1501,7 +1501,19 @@ document.addEventListener("visibilitychange", function(){
 
 function awayLogText(){
   if(awayLog.length === 0) return "";
-  return awayLog.map(function(a){ return "問" + a.q + "(" + a.sec + "秒)"; }).join(" / ");
+  var parts = awayLog.map(function(a){ return "問" + a.q + "(" + a.sec + "秒)"; });
+  var out = "", used = 0;
+  for(var i = 0; i < parts.length; i++){
+    var piece = (i > 0 ? " / " : "") + parts[i];
+    if(out.length + piece.length > 400){
+      var rest = awayLog.slice(i);
+      var restSec = rest.reduce(function(sum, a){ return sum + a.sec; }, 0);
+      out += " …他" + rest.length + "件(計" + restSec + "秒)";   // 無言切り捨てはしない
+      break;
+    }
+    out += piece;
+  }
+  return out;
 }
 
 // ==================== 進行保護（リロード/戻る/アプリ終了対策） ====================
@@ -2074,7 +2086,7 @@ function autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec){
   resultData.submissionId = genSubmissionId("exam");
   var notice = document.getElementById("submit-notice");
   sendInFlight = true;
-  reliableSubmit(resultData, { jitterMax: timedOut ? 60000 : SUBMIT_JITTER_MS, onStatus: function(state){
+  reliableSubmit(resultData, { jitterMax: timedOut ? 180000 : SUBMIT_JITTER_MS, onStatus: function(state){
     if(state === "sending") notice.textContent = t("sending");
     else if(state === "done") notice.textContent = t("autoSent");
   }}).then(function(success){

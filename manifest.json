@@ -4,7 +4,6 @@
   "description": "HSS認定制度の本試験アプリ。養豚基礎知識の理解度テスト。",
   "start_url": "./index.html",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#0e1a2e",
   "theme_color": "#0e1a2e",
   "icons": [
@@ -12,13 +11,25 @@
       "src": "icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "icons/icon.svg",
@@ -26,6 +37,8 @@
       "type": "image/svg+xml"
     }
   ],
-  "categories": ["education"],
+  "categories": [
+    "education"
+  ],
   "lang": "ja"
 }

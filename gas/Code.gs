@@ -123,8 +123,22 @@ function doPost(e) {
 
       if (data.type === "confirm") {
         var answerJa = data.answer === "yes" ? "はい" : "いいえ";
-        getSheet_(ss, "受験意志確認").appendRow([
-          sanitize(data.name), answerJa, sanitize(data.date), sanitize(data.lang), id, serverTime
+        var csheet = getSheet_(ss, "受験意志確認");
+        // 同一人物の重複送信を検知してフラグ列に記録（名簿突合の手作業を減らす。行の上書きはしない）
+        var dupNote = "";
+        try {
+          if (csheet.getLastColumn() < 7) csheet.getRange(1, 7).setValue("重複");
+          var lastRow = csheet.getLastRow();
+          if (lastRow > 1) {
+            var vals = csheet.getRange(2, 1, lastRow - 1, 3).getValues(); // 氏名/回答/受験者日時
+            var name = sanitize(data.name);
+            var day = String(sanitize(data.date)).split(" ")[0]; // "YYYY/MM/DD"部分
+            var hits = vals.filter(function (r) { return String(r[0]) === name && String(r[2]).indexOf(day) === 0; }).length;
+            if (hits > 0) dupNote = "同名同日" + (hits + 1) + "回目";
+          }
+        } catch (dupErr) { /* 検知失敗しても記録自体は続行 */ }
+        csheet.appendRow([
+          sanitize(data.name), answerJa, sanitize(data.date), sanitize(data.lang), id, serverTime, dupNote
         ]);
       } else if (data.type === "exam") {
         if (!Array.isArray(data.answers)) {
@@ -145,9 +159,12 @@ function doPost(e) {
         try {
           var dsheet = ss.getSheetByName("回答詳細");
           if (!dsheet) { dsheet = ss.insertSheet("回答詳細"); dsheet.appendRow(["ID", "氏名", "問番号", "カテゴリ", "問題", "回答", "正解", "正誤"]); }
+          // 不正解・未回答のみ記録する（正解行は得点列と冗長で、書込量を1/4程度に抑えて
+          // 時間切れ組の一斉送信時のロック保持時間を短縮するため）
           var rows = [];
           (data.answers || []).forEach(function(a) {
-            var mark = sanitize(a.userAnswer) === "（未回答）" ? "未回答" : (a.correct ? "○" : "×");
+            if (a.correct === true) return;
+            var mark = sanitize(a.userAnswer) === "（未回答）" ? "未回答" : "×";
             rows.push([id, sanitize(data.name), sanitize(String(a.num)), sanitize(a.category), sanitize(a.question), sanitize(a.userAnswer), sanitize(a.correctAnswer), mark]);
           });
           if (rows.length) dsheet.getRange(dsheet.getLastRow() + 1, 1, rows.length, 8).setValues(rows);
