@@ -624,6 +624,15 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
     </div>
   </div>
 </div>
+<div class="timeout-overlay" id="resume-overlay" role="alertdialog" aria-modal="true" aria-labelledby="resume-title">
+  <div class="timeout-card finish-card">
+    <h2 id="resume-title">試験を再開します</h2>
+    <p class="finish-warn" id="resume-desc"></p>
+    <div class="finish-actions">
+      <button class="btn-review-back" id="resume-btn" type="button">再開する</button>
+    </div>
+  </div>
+</div>
 <div class="away-warning" id="away-warning" role="alert" aria-live="assertive"></div>
 <div class="loading-overlay" id="loading-overlay" role="status" aria-live="polite">
   <div class="loading-card">
@@ -734,6 +743,11 @@ var TRANSLATIONS = {
     demoAwayWarn: "⚠ アプリを離れたことが記録されました（{n}回目・{sec}秒）。本試験ではこの記録が管理者へ送信されます。",
     demoFail: "今回は基準に届きませんでした。解説を読んで、もう一度挑戦しましょう。",
     demoAutoSent: "📄 デモ問題のため、結果は送信されません。この画面で確認してください。",
+    demoFinishWarn: "デモ問題のため、結果はどこにも送信されません。終了すると正解と解説が表示されます。",
+    resumeTitle: "試験を再開します",
+    resumeDesc: "{name}さんの試験のつづきから再開します（残り {time}）。ボタンを押すと再開します。",
+    resumeExpiredDesc: "{name}さんの中断していた試験は、制限時間を過ぎました。ここまでの回答を送信して終了します。",
+    resumeBtn: "再開する", resumeSendBtn: "回答を送信して終了する",
     startBtn: "テストを開始する",
     remainingTime: "残り時間", prev: "前へ", next: "次へ", submit: "提出する",
     question: "問", progressLabel: "HSS認定 本試験",
@@ -754,7 +768,7 @@ var TRANSLATIONS = {
     submitBtn: "結果を送信する", retryBtn: "もう一度挑戦する",
     processing: "処理中...", sent: "送信完了", sendFailed: "送信失敗",
     shared: "結果を共有しました。", sendTo: "送信先：",
-    autoSent: "✅ 結果は管理者に自動送信されました。",
+    autoSent: "✅ 送信されました",
     autoSentFail: "⚠ 送信をまだ確認できていません。電波の良い場所でこのアプリをもう一度開くと自動で再送されます。急ぐ場合は下のボタンで手動送信もできます。",
     excelDownloaded: "Excelファイルがダウンロードされました。<br>メールアプリが開きますので、結果を送信してください。",
     sentProcess: "送信処理を実行しました",
@@ -824,6 +838,11 @@ var TRANSLATIONS = {
     demoAwayWarn: "⚠ Leaving the app has been recorded (time {n}, {sec} sec). In the real exam this record is sent to the administrator.",
     demoFail: "Not quite this time. Read the explanations and try again.",
     demoAutoSent: "📄 Demo quiz: results are not sent. Please review them on this screen.",
+    demoFinishWarn: "This is a demo, so nothing is sent anywhere. After finishing, correct answers and explanations are shown.",
+    resumeTitle: "Resume the exam",
+    resumeDesc: "Resuming {name}'s exam from where it stopped ({time} remaining). Press the button to continue.",
+    resumeExpiredDesc: "{name}'s interrupted exam has passed the time limit. The answers so far will be submitted.",
+    resumeBtn: "Resume", resumeSendBtn: "Submit answers and finish",
     startBtn: "Start Test",
     remainingTime: "Time Remaining", prev: "Previous", next: "Next", submit: "Submit",
     question: "Q", progressLabel: "HSS Certification Exam",
@@ -844,7 +863,7 @@ var TRANSLATIONS = {
     submitBtn: "Send Results", retryBtn: "Try Again",
     processing: "Processing...", sent: "Sent", sendFailed: "Send Failed",
     shared: "Results shared.", sendTo: "Sent to:",
-    autoSent: "✅ Results automatically sent to the administrator.",
+    autoSent: "✅ Sent",
     autoSentFail: "⚠ Sending is not confirmed yet. Open this app again where the signal is good and it will resend automatically. You can also send manually with the button below.",
     excelDownloaded: "Excel file downloaded. Mail app will open - please send.",
     sentProcess: "Send process completed",
@@ -914,6 +933,11 @@ var TRANSLATIONS = {
     demoAwayWarn: "⚠ Việc rời khỏi ứng dụng đã được ghi lại (lần thứ {n}, {sec} giây). Trong kỳ thi thật, ghi nhận này sẽ được gửi cho quản trị viên.",
     demoFail: "Lần này chưa đạt. Hãy đọc phần giải thích và thử lại.",
     demoAutoSent: "📄 Bản demo: kết quả không được gửi. Vui lòng xem trên màn hình này.",
+    demoFinishWarn: "Đây là bản demo nên kết quả không được gửi đi đâu. Sau khi kết thúc sẽ hiện đáp án và giải thích.",
+    resumeTitle: "Tiếp tục bài thi",
+    resumeDesc: "Tiếp tục bài thi của {name} từ chỗ đã dừng (còn {time}). Nhấn nút để tiếp tục.",
+    resumeExpiredDesc: "Bài thi bị gián đoạn của {name} đã quá thời gian. Các câu trả lời sẽ được gửi đi.",
+    resumeBtn: "Tiếp tục", resumeSendBtn: "Gửi câu trả lời và kết thúc",
     startBtn: "Bắt đầu bài thi",
     remainingTime: "Thời gian còn lại", prev: "Trước", next: "Tiếp", submit: "Nộp bài",
     question: "Câu", progressLabel: "Thi chứng chỉ HSS",
@@ -934,7 +958,7 @@ var TRANSLATIONS = {
     submitBtn: "Gửi kết quả", retryBtn: "Làm lại",
     processing: "Đang xử lý...", sent: "Đã gửi", sendFailed: "Gửi thất bại",
     shared: "Đã chia sẻ kết quả.", sendTo: "Gửi đến:",
-    autoSent: "✅ Kết quả đã tự động gửi cho quản lý.",
+    autoSent: "✅ Đã gửi",
     autoSentFail: "⚠ Chưa xác nhận được việc gửi. Hãy mở lại ứng dụng này ở nơi sóng tốt, kết quả sẽ tự động gửi lại. Nếu gấp, bạn cũng có thể gửi thủ công bằng nút bên dưới.",
     excelDownloaded: "Tệp Excel đã tải xuống. Ứng dụng email sẽ mở.",
     sentProcess: "Đã thực hiện gửi",
@@ -1004,6 +1028,11 @@ var TRANSLATIONS = {
     demoAwayWarn: "⚠ Meninggalkan aplikasi telah dicatat (ke-{n}, {sec} detik). Pada ujian sebenarnya catatan ini dikirim ke administrator.",
     demoFail: "Kali ini belum lulus. Baca penjelasannya dan coba lagi.",
     demoAutoSent: "📄 Versi demo: hasil tidak dikirim. Silakan lihat di layar ini.",
+    demoFinishWarn: "Ini demo, jadi hasil tidak dikirim ke mana pun. Setelah selesai, jawaban benar dan penjelasan ditampilkan.",
+    resumeTitle: "Lanjutkan ujian",
+    resumeDesc: "Melanjutkan ujian {name} dari posisi terakhir (sisa {time}). Tekan tombol untuk melanjutkan.",
+    resumeExpiredDesc: "Ujian {name} yang terputus telah melewati batas waktu. Jawaban sejauh ini akan dikirim.",
+    resumeBtn: "Lanjutkan", resumeSendBtn: "Kirim jawaban dan selesai",
     startBtn: "Mulai Ujian",
     remainingTime: "Sisa Waktu", prev: "Sebelumnya", next: "Berikutnya", submit: "Kirim",
     question: "Soal", progressLabel: "Ujian Sertifikasi HSS",
@@ -1024,7 +1053,7 @@ var TRANSLATIONS = {
     submitBtn: "Kirim Hasil", retryBtn: "Coba Lagi",
     processing: "Memproses...", sent: "Terkirim", sendFailed: "Gagal Kirim",
     shared: "Hasil dibagikan.", sendTo: "Dikirim ke:",
-    autoSent: "✅ Hasil otomatis dikirim ke administrator.",
+    autoSent: "✅ Terkirim",
     autoSentFail: "⚠ Pengiriman belum terkonfirmasi. Buka kembali aplikasi ini di tempat dengan sinyal bagus, hasil akan dikirim ulang otomatis. Jika mendesak, Anda juga bisa kirim manual dengan tombol di bawah.",
     excelDownloaded: "File Excel terunduh. Aplikasi email akan terbuka.",
     sentProcess: "Proses pengiriman selesai",
@@ -1114,10 +1143,17 @@ function escHtml(s) { var d = document.createElement("div"); d.textContent = s; 
 function formatDate(d) { return d.getFullYear()+"/"+String(d.getMonth()+1).padStart(2,"0")+"/"+String(d.getDate()).padStart(2,"0")+" "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0"); }
 function shuffle(arr) { var a = arr.slice(); for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=a[i];a[i]=a[j];a[j]=tmp;} return a; }
 
+var installBannerWanted = false;   // バナー表示条件を満たしているか（表示自体はホーム画面のみ）
 function showScreen(id) {
   document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("active");});
   document.getElementById(id).classList.add("active");
   window.scrollTo(0,0);
+  // インストールバナーはホーム画面限定（試験中の誤タップ・OSプロンプトによる中断を防ぐ）
+  var banner = document.getElementById("install-banner");
+  if(banner){
+    if(id === "home-screen" && installBannerWanted) banner.classList.add("show");
+    else banner.classList.remove("show");
+  }
 }
 
 async function sha256(message) {
@@ -1445,6 +1481,7 @@ function awayLogText(){
 var PROGRESS_KEY = "hss_progress_v1";
 
 function saveProgress(){
+  if(isDemo()) return;   // デモは練習用のため永続化しない（翌日開いて突然「期限切れデモ」に放り込まない）
   if(quizSubmitted || selectedQuestions.length === 0) return;
   try{
     var pool = isDemo() ? demoQuestions : allQuestions;
@@ -1470,7 +1507,8 @@ function tryResume(){
   if(!raw) return;
   var p; try{ p = JSON.parse(raw); }catch(e){ clearProgress(); return; }
   if(!p || p.v !== 1 || !Array.isArray(p.qIdx) || !p.startEpoch){ clearProgress(); return; }
-  examMode = (p.mode === "demo") ? "demo" : "exam";
+  if(p.mode === "demo"){ clearProgress(); return; }   // デモの進行は復元しない
+  examMode = "exam";
   var file = isDemo() ? CONFIG.demo.questionsFile : "data/questions.json";
   document.getElementById("loading-msg").textContent = t("loadingQuestions");
   document.getElementById("loading-overlay").classList.add("show");
@@ -1506,16 +1544,11 @@ function tryResume(){
       quizLocked = false; quizSubmitted = false; score = 0; answers = [];
       startTime = new Date(p.startEpoch);
       totalTime = p.totalTime | 0;
-      var elapsed = Math.floor((Date.now() - p.startEpoch) / 1000);
-      timeRemaining = Math.max(0, totalTime - elapsed);
       document.getElementById("loading-overlay").classList.remove("show");
       applyTranslations();
-      buildStepDots();
-      showScreen("quiz-screen");
-      renderQuestion();
-      pushExamGuard();
-      if(timeRemaining <= 0){ onTimeout(); }
-      else { startTimer(); requestWakeLock(); }
+      // 無断で再開・送信しない: 誰の試験か・何が起きるかを明示した確認画面を必ず挟む
+      // （共有端末で別人が開いた場合や、翌日に突然「時間切れ」が出る事故を防ぐ）
+      showResumeConfirm(p);
     })
     .catch(function(){
       // 読み込み失敗: progressは残す（次回オンライン時に再開できる）
@@ -1523,6 +1556,38 @@ function tryResume(){
     });
 }
 window.addEventListener("load", function(){ try{ tryResume(); }catch(e){} });
+
+// 復帰確認画面: 「再開する」を押すまでタイマーも送信も動かさない
+// （残り時間は開始時刻からの実時間で計算するため、この画面で待っても時間は稼げない）
+function showResumeConfirm(p){
+  var expired = (totalTime - Math.floor((Date.now() - p.startEpoch) / 1000)) <= 0;
+  document.getElementById("resume-title").textContent = t("resumeTitle");
+  var remain = Math.max(0, totalTime - Math.floor((Date.now() - p.startEpoch) / 1000));
+  var mm = Math.floor(remain / 60), ss = remain % 60;
+  var desc = expired
+    ? t("resumeExpiredDesc").replace("{name}", playerName)
+    : t("resumeDesc").replace("{name}", playerName).replace("{time}", mm + ":" + String(ss).padStart(2, "0"));
+  document.getElementById("resume-desc").textContent = desc;
+  var btn = document.getElementById("resume-btn");
+  btn.textContent = expired ? t("resumeSendBtn") : t("resumeBtn");
+  document.getElementById("resume-overlay").classList.add("show");
+  btn.onclick = function(){
+    document.getElementById("resume-overlay").classList.remove("show");
+    var elapsed = Math.floor((Date.now() - p.startEpoch) / 1000);
+    timeRemaining = Math.max(0, totalTime - elapsed);
+    if(timeRemaining <= 0){
+      // 期限切れ: 保存済みの回答をそのまま採点・送信して終了（時間切れ扱い）
+      submitQuiz();
+    } else {
+      buildStepDots();
+      showScreen("quiz-screen");
+      renderQuestion();
+      pushExamGuard();
+      startTimer();
+      requestWakeLock();
+    }
+  };
+}
 
 // リロード・タブ閉じの直前警告（試験中/送信未完了中のみ）
 window.addEventListener("beforeunload", function(e){
@@ -1548,7 +1613,7 @@ function openFinishConfirm(){
     summary += '<br><span class="finish-unanswered">' + escHtml(t("finishUnanswered").replace("{n}", unanswered)) + '</span>';
   }
   document.getElementById("finish-summary").innerHTML = summary;
-  document.getElementById("finish-warn").textContent = t("finishWarn");
+  document.getElementById("finish-warn").textContent = tm("finishWarn");
   document.getElementById("finish-yes").textContent = t("finishYes");
   document.getElementById("finish-no").textContent = t("finishNo");
   document.getElementById("finish-overlay").classList.add("show");
@@ -1962,6 +2027,8 @@ function autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec){
 }
 
 function showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec){
+  var keep = document.querySelector(".exam-done-keep");
+  if(keep) keep.style.display = "none";   // 「✅が出るまで待て」と「開き直せば再送」の同時表示を避ける
   document.getElementById("submit-notice").innerHTML = escHtml(t("autoSentFail"));
   var btn = document.getElementById("submit-btn");
   btn.style.display = "block";
@@ -2181,6 +2248,16 @@ if("serviceWorker" in navigator){
   window.addEventListener("load",function(){
     navigator.serviceWorker.register("sw.js").catch(function(err){console.log("SW registration failed:",err);});
   });
+  // 新しいSWが制御を握ったら1回だけリロードして新版を即反映する
+  // （cache-firstの「1版遅れ」対策。試験中・送信中は絶対にリロードしない）
+  var _swReloaded = false;
+  var _hadController = !!navigator.serviceWorker.controller;  // 初回インストール(制御開始)と更新を区別する
+  navigator.serviceWorker.addEventListener("controllerchange", function(){
+    if(_swReloaded || !_hadController) return;
+    if(isExamActive() || sendInFlight) return;
+    _swReloaded = true;
+    location.reload();
+  });
 }
 
 // ==================== INSTALL BANNER ====================
@@ -2223,7 +2300,8 @@ if("serviceWorker" in navigator){
     var btnTexts = {ja:"追加",en:"Install",vi:"Cài đặt",id:"Pasang"};
     installBtn.textContent = btnTexts[currentLang] || btnTexts.ja;
 
-    banner.classList.add("show");
+    installBannerWanted = true;
+    if(document.getElementById("home-screen").classList.contains("active")) banner.classList.add("show");
 
     installBtn.addEventListener("click", function(){
       if(platform === "android" && deferredPrompt){
