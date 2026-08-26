@@ -34,10 +34,28 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "$HOME\hss-exam\gas\copy-to-
 
 ### 1. Apps Script エディタを開く
 
-https://script.google.com/home/projects
+**https://script.google.com/home/my**
 
-- 一覧から **HSS試験のプロジェクト** を開く（結果記録用スプレッドシートに紐づくプロジェクト）
-- 見つからない場合: 記録用スプレッドシートを開き、メニュー「拡張機能」→「Apps Script」
+（`/home/projects` は存在しないURLです。`/home` `/home/my` `/home/all` が有効）
+
+一覧から **HSS試験のプロジェクト** を開きます。
+
+**開けない・一覧に無い場合**、原因はほぼアカウント違いです。GASは**個人Gmailアカウント**でデプロイされています。
+
+1. **アカウントを指定して開く**（複数のGoogleアカウントにログインしている場合）
+   - https://script.google.com/u/0/home/my （1つ目のアカウント）
+   - https://script.google.com/u/1/home/my （2つ目）
+   - https://script.google.com/u/2/home/my （3つ目）
+   - 右上のアイコンで、`so@oikk.co.jp` ではなく**個人Gmail**に切り替える
+
+2. **スプレッドシートから辿る（最も確実）**
+   - 記録用スプレッドシート（`HSS試験記録_2026` 等）を開く
+   - メニュー「**拡張機能**」→「**Apps Script**」
+   - ※コンテナバインド型ならこの経路でしか一覧に出ないことがあります
+
+3. **Google ドライブで探す**
+   - https://drive.google.com で `HSS` と検索
+   - 種類が「Google Apps Script」のファイルを開く
 
 ### 2. コードを貼り替えて保存
 
