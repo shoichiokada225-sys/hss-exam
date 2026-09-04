@@ -169,6 +169,17 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 .step-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); transition: all var(--transition); flex-shrink: 0; cursor: pointer; }
 .step-dot.answered { background: var(--primary-light); }
 .step-dot.current { background: var(--primary-light); transform: scale(1.3); box-shadow: 0 0 6px rgba(74,127,168,0.5); }
+/* 後回し(見直しマーク)の問題は他と一目で区別できるよう橙＋輪郭で表示 */
+.step-dot.flagged { background: var(--warning); box-shadow: 0 0 0 2px rgba(243,156,18,0.35); }
+
+/* 後で見直す（後回し） */
+.flag-btn { width: 100%; margin-top: 16px; padding: 12px; border: 2px dashed var(--border); border-radius: var(--radius-sm); background: var(--card); color: var(--text-light); font-family: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all var(--transition); min-height: 48px; }
+.flag-btn:hover { border-color: var(--warning); color: var(--text); }
+.flag-btn.on { border-style: solid; border-color: var(--warning); background: rgba(243,156,18,0.12); color: var(--text); }
+.flag-hint { margin-top: 8px; font-size: 0.8rem; color: var(--text-light); line-height: 1.5; }
+.flag-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; padding: 10px 12px; border-radius: var(--radius-sm); background: rgba(243,156,18,0.12); border: 1px solid rgba(243,156,18,0.35); font-size: 0.85rem; font-weight: 700; color: var(--text); }
+.flag-bar button { padding: 8px 14px; min-height: 40px; border: none; border-radius: 8px; background: var(--warning); color: #fff; font-family: inherit; font-size: 0.85rem; font-weight: 700; cursor: pointer; }
+.finish-card .finish-flagged { color: var(--warning); font-weight: 700; }
 
 .progress-bar-wrap { margin-top: 8px; }
 .progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
@@ -393,7 +404,7 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
 /* Print */
 @media print {
   body, .app-bg { background: #fff !important; }
-  .theme-toggle, .lang-selector, .timer-section, .nav-buttons, .results-actions, .submit-notice, .notice-box, .keyboard-hint, .btn-submit, .btn-retry, .btn-home, .timeout-overlay, .loading-overlay, .away-warning, .swipe-hint, .ios-guide-overlay, .skip-link, .install-banner { display: none !important; }
+  .theme-toggle, .lang-selector, .timer-section, .nav-buttons, .flag-btn, .flag-hint, .flag-bar, .results-actions, .submit-notice, .notice-box, .keyboard-hint, .btn-submit, .btn-retry, .btn-home, .timeout-overlay, .loading-overlay, .away-warning, .swipe-hint, .ios-guide-overlay, .skip-link, .install-banner { display: none !important; }
   .app { max-width: 100%; padding: 0; }
   .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
 }
@@ -616,10 +627,13 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); min-
       <div class="question-section-title" id="q-section-title"></div>
       <div class="question-label" id="q-label"></div>
       <div class="options" id="q-options" role="radiogroup" aria-label="選択肢"></div>
+      <button class="flag-btn" id="flag-btn" type="button" aria-pressed="false">🚩 後で見直す</button>
+      <div class="flag-hint" id="flag-hint"></div>
       <div class="nav-buttons" id="nav-buttons">
         <button class="nav-btn" id="prev-btn" type="button" disabled>前へ</button>
         <button class="nav-btn primary" id="next-btn" type="button" disabled>次へ</button>
       </div>
+      <div class="flag-bar" id="flag-bar" style="display:none"><span id="flag-bar-text"></span><button type="button" id="flag-jump-btn"></button></div>
     </div>
     <div class="keyboard-hint" aria-hidden="true">
       <kbd class="kbd">1</kbd>-<kbd class="kbd">4</kbd> 選択肢 &nbsp;
@@ -755,6 +769,10 @@ var TRANSLATIONS = {
     finishUnanswered: "未回答が {n}問あります。",
     finishWarn: "終了すると回答が送信され、あとから変更することはできません。",
     finishYes: "試験を終了する", finishNo: "戻って見直す",
+    flagAdd: "🚩 後で見直す", flagRemove: "🚩 見直しマークを外す",
+    flagHint: "この問題をあとに回したいときは「後で見直す」を押してください。未回答のまま次へ進めます。",
+    flagBar: "🚩 見直しマーク {n}問", flagJump: "次の見直しへ",
+    finishFlagged: "見直しマークが {n}問 残っています。",
     awayWarn: "⚠ 試験中にアプリを離れたことが記録されました（{n}回目・{sec}秒）。この記録は管理者へ送信されます。",
     awayLabel: "離脱：", awayTimes: "回",
     correctAnswerLabel: "正解：", explanationLabel: "解説：",
@@ -859,6 +877,10 @@ var TRANSLATIONS = {
     finishUnanswered: "{n} question(s) left unanswered.",
     finishWarn: "Once you finish, your answers are submitted and cannot be changed.",
     finishYes: "Finish the exam", finishNo: "Go back and review",
+    flagAdd: "🚩 Review later", flagRemove: "🚩 Remove review mark",
+    flagHint: "Press \"Review later\" to skip this question for now. You can move on without answering and come back later.",
+    flagBar: "🚩 Marked: {n}", flagJump: "Next marked",
+    finishFlagged: "{n} question(s) are still marked for review.",
     awayWarn: "⚠ Leaving the app during the exam was recorded ({n} time(s) so far, {sec} seconds). This record is sent to the administrator.",
     awayLabel: "Left the app: ", awayTimes: " time(s)",
     correctAnswerLabel: "Correct answer: ", explanationLabel: "Explanation: ",
@@ -962,6 +984,10 @@ var TRANSLATIONS = {
     finishUnanswered: "Còn {n} câu chưa trả lời.",
     finishWarn: "Sau khi kết thúc, câu trả lời sẽ được gửi đi và không thể thay đổi.",
     finishYes: "Kết thúc bài thi", finishNo: "Quay lại xem lại",
+    flagAdd: "🚩 Xem lại sau", flagRemove: "🚩 Bỏ đánh dấu",
+    flagHint: "Nhấn \"Xem lại sau\" để tạm bỏ qua câu này. Bạn có thể sang câu tiếp theo mà chưa trả lời và quay lại sau.",
+    flagBar: "🚩 Đã đánh dấu: {n} câu", flagJump: "Đến câu đánh dấu tiếp theo",
+    finishFlagged: "Còn {n} câu đang được đánh dấu xem lại.",
     awayWarn: "⚠ Việc rời khỏi ứng dụng đã được ghi lại (lần thứ {n}, {sec} giây). Ghi nhận này sẽ được gửi cho quản trị viên.",
     awayLabel: "Rời khỏi ứng dụng: ", awayTimes: " lần",
     correctAnswerLabel: "Đáp án đúng: ", explanationLabel: "Giải thích: ",
@@ -1065,6 +1091,10 @@ var TRANSLATIONS = {
     finishUnanswered: "Masih ada {n} soal yang belum dijawab.",
     finishWarn: "Setelah diakhiri, jawaban akan dikirim dan tidak dapat diubah.",
     finishYes: "Akhiri ujian", finishNo: "Kembali dan periksa",
+    flagAdd: "🚩 Tinjau nanti", flagRemove: "🚩 Hapus tanda",
+    flagHint: "Tekan \"Tinjau nanti\" untuk melewati soal ini. Anda bisa lanjut tanpa menjawab dan kembali lagi nanti.",
+    flagBar: "🚩 Ditandai: {n} soal", flagJump: "Ke soal bertanda berikutnya",
+    finishFlagged: "Masih ada {n} soal yang ditandai untuk ditinjau.",
     awayWarn: "⚠ Meninggalkan aplikasi selama ujian telah dicatat (ke-{n}, {sec} detik). Catatan ini dikirim ke administrator.",
     awayLabel: "Meninggalkan aplikasi: ", awayTimes: " kali",
     correctAnswerLabel: "Jawaban benar: ", explanationLabel: "Penjelasan: ",
@@ -1168,6 +1198,10 @@ var TRANSLATIONS = {
     finishUnanswered: "Quedan {n} preguntas sin responder.",
     finishWarn: "Al terminar, sus respuestas se enviarán y no podrán cambiarse.",
     finishYes: "Terminar el examen", finishNo: "Volver a revisar",
+    flagAdd: "🚩 Revisar después", flagRemove: "🚩 Quitar la marca",
+    flagHint: "Pulse \"Revisar después\" para dejar esta pregunta para más tarde. Puede continuar sin responder y volver luego.",
+    flagBar: "🚩 Marcadas: {n}", flagJump: "Siguiente marcada",
+    finishFlagged: "Quedan {n} pregunta(s) marcadas para revisar.",
     awayWarn: "⚠ Se registró que salió de la aplicación durante el examen (vez n.º {n}, {sec} segundos). Este registro se envía al administrador.",
     awayLabel: "Salidas de la app: ", awayTimes: " veces",
     correctAnswerLabel: "Respuesta correcta: ", explanationLabel: "Explicación: ",
@@ -1272,6 +1306,7 @@ var demoQuestions = [];
 var selectedQuestions = [];
 var shuffledOptions = [];
 var userAnswers = [];
+var flagged = [];   // 「後で見直す」マーク（問題ごと）
 var currentQuestion = 0;
 var score = 0;
 var answers = [];
@@ -1690,6 +1725,7 @@ function saveProgress(){
       qIdx: selectedQuestions.map(function(q){ return pool.indexOf(q); }),
       opt: shuffledOptions.map(function(opts, i){ return opts.map(function(o){ return selectedQuestions[i].options.indexOf(o); }); }),
       ua: userAnswers,
+      fl: flagged,
       cur: currentQuestion,
       awayCount: awayCount, awaySeconds: awaySeconds, awayLog: awayLog,
       clockAnomaly: clockAnomaly,
@@ -1727,6 +1763,7 @@ function tryResume(){
         return shuffle(q.options.slice());
       });
       userAnswers = (Array.isArray(p.ua) && p.ua.length === selectedQuestions.length) ? p.ua : new Array(selectedQuestions.length).fill(null);
+      flagged = (Array.isArray(p.fl) && p.fl.length === selectedQuestions.length) ? p.fl.map(Boolean) : new Array(selectedQuestions.length).fill(false);
       currentQuestion = Math.min(Math.max(0, p.cur | 0), selectedQuestions.length - 1);
       playerName = String(p.name || "");
       awayCount = p.awayCount | 0; awaySeconds = p.awaySeconds | 0;
@@ -1841,6 +1878,10 @@ function openFinishConfirm(){
   if(unanswered > 0){
     summary += '<br><span class="finish-unanswered">' + escHtml(t("finishUnanswered").replace("{n}", unanswered)) + '</span>';
   }
+  var flagN = flaggedCount();
+  if(flagN > 0){
+    summary += '<br><span class="finish-flagged">' + escHtml(t("finishFlagged").replace("{n}", flagN)) + '</span>';
+  }
   document.getElementById("finish-summary").innerHTML = summary;
   document.getElementById("finish-warn").textContent = tm("finishWarn");
   document.getElementById("finish-yes").textContent = t("finishYes");
@@ -1855,7 +1896,10 @@ document.getElementById("finish-yes").addEventListener("click", function(){
   closeFinishConfirm();
   submitQuiz();
 });
-document.getElementById("finish-no").addEventListener("click", closeFinishConfirm);
+document.getElementById("finish-no").addEventListener("click", function(){
+  closeFinishConfirm();
+  gotoFirstPending();   // マーク済み→未回答の順に、見直すべき問題へ実際に移動する
+});
 
 // ==================== QUIZ ENGINE ====================
 function startQuiz(){
@@ -1877,6 +1921,7 @@ function startQuiz(){
     selectedQuestions = shuffle(fixedQs.concat(pickedExcel));        // 合計60問を順序シャッフル
   }
   userAnswers = new Array(selectedQuestions.length).fill(null);
+  flagged = new Array(selectedQuestions.length).fill(false);
   shuffledOptions = selectedQuestions.map(function(q){ return shuffle(q.options.slice()); });
   totalTime = modeConf().timeLimit * 60;
   timeRemaining = totalTime;
@@ -1912,6 +1957,7 @@ function updateStepDots(){
     if(!dot) continue;
     dot.className = "step-dot";
     if(userAnswers[i] !== null) dot.classList.add("answered");
+    if(flagged[i]) dot.classList.add("flagged");
     if(i === currentQuestion) dot.classList.add("current");
   }
 }
@@ -1964,6 +2010,63 @@ function onTimeout(){
   setTimeout(function(){ document.getElementById("timeout-overlay").classList.remove("show"); submitQuiz(); }, 2500);
 }
 
+// ==================== 後で見直す（後回し） ====================
+// マークした問題は未回答のままでも次へ進める。マーク数とジャンプ導線を常に表示し、
+// 終了確認でも「見直しが残っている」ことを警告する（解き忘れを防ぐ）。
+function flaggedCount(){ return flagged.filter(Boolean).length; }
+
+function toggleFlag(){
+  if(quizLocked) return;
+  flagged[currentQuestion] = !flagged[currentQuestion];
+  updateFlagUI();
+  updateStepDots();
+  updateNavButtons();
+  saveProgress();
+}
+
+// 現在位置から次のマーク済み問題へ（末尾まで無ければ先頭へ回り込む）
+function gotoNextFlagged(){
+  if(quizLocked) return;
+  var n = selectedQuestions.length;
+  for(var k=1; k<=n; k++){
+    var i = (currentQuestion + k) % n;
+    if(flagged[i]){ currentQuestion = i; renderQuestion(); return; }
+  }
+}
+
+// 見直すべき最初の問題（マーク済み優先、無ければ未回答）へ移動
+function gotoFirstPending(){
+  var i;
+  for(i=0;i<selectedQuestions.length;i++){ if(flagged[i]){ currentQuestion = i; renderQuestion(); return true; } }
+  for(i=0;i<selectedQuestions.length;i++){ if(userAnswers[i] === null){ currentQuestion = i; renderQuestion(); return true; } }
+  return false;
+}
+
+function updateFlagUI(){
+  var on = !!flagged[currentQuestion];
+  var btn = document.getElementById("flag-btn");
+  btn.textContent = on ? t("flagRemove") : t("flagAdd");
+  btn.classList.toggle("on", on);
+  btn.setAttribute("aria-pressed", on ? "true" : "false");
+  // ヒントは「未回答かつ未マーク」のときだけ出す（回答済みの画面を文字で埋めない）
+  var hint = document.getElementById("flag-hint");
+  hint.textContent = (userAnswers[currentQuestion] === null && !on) ? t("flagHint") : "";
+  var cnt = flaggedCount();
+  var bar = document.getElementById("flag-bar");
+  if(cnt > 0){
+    document.getElementById("flag-bar-text").textContent = t("flagBar").replace("{n}", cnt);
+    document.getElementById("flag-jump-btn").textContent = t("flagJump");
+    // マークが今いる1問だけのときは「次の見直しへ」は無意味なので隠す
+    document.getElementById("flag-jump-btn").style.display = (cnt === 1 && on) ? "none" : "";
+    bar.style.display = "flex";
+  } else {
+    bar.style.display = "none";
+  }
+}
+
+document.getElementById("flag-btn").addEventListener("click", toggleFlag);
+document.getElementById("flag-jump-btn").addEventListener("click", gotoNextFlagged);
+
 function renderQuestion(){
   var q = selectedQuestions[currentQuestion];
   var total = selectedQuestions.length;
@@ -1992,6 +2095,7 @@ function renderQuestion(){
   document.querySelectorAll(".option-btn").forEach(function(btn){
     btn.addEventListener("click",function(){ selectAnswer(this, parseInt(this.getAttribute("data-index"))); });
   });
+  updateFlagUI();
   var card = document.getElementById("question-card");
   card.classList.remove("fade-in"); void card.offsetWidth; card.classList.add("fade-in");
   updateNavButtons();
@@ -2004,6 +2108,7 @@ function selectAnswer(btn, selectedIndex){
   document.querySelectorAll(".option-btn").forEach(function(b){b.classList.remove("selected");b.setAttribute("aria-checked","false");});
   btn.classList.add("selected"); btn.setAttribute("aria-checked","true");
   updateStepDots();
+  updateFlagUI();
   var answeredCount = userAnswers.filter(function(a){return a!==null;}).length;
   document.getElementById("progress-fill").style.width = (answeredCount/selectedQuestions.length)*100+"%";
   updateNavButtons();
@@ -2023,7 +2128,8 @@ function updateNavButtons(){
   } else {
     nextBtn.textContent = t("next");
     nextBtn.className = "nav-btn primary";
-    nextBtn.disabled = (userAnswers[currentQuestion] === null);
+    // 「後で見直す」でマークした問題は未回答のまま次へ進める
+    nextBtn.disabled = (userAnswers[currentQuestion] === null && !flagged[currentQuestion]);
   }
   var parent = prevBtn.parentNode;
   var newPrev = prevBtn.cloneNode(true);
@@ -2051,7 +2157,8 @@ document.addEventListener("keydown",function(e){
   var btns = document.querySelectorAll(".option-btn");
   if(btns.length === 0) return;
   if(e.key>="1" && e.key<="9"){var idx=parseInt(e.key)-1;if(idx<btns.length){btns[idx].click();e.preventDefault();}}
-  if(e.key==="Enter" && userAnswers[currentQuestion]!==null){
+  if(e.key==="f" || e.key==="F"){ toggleFlag(); e.preventDefault(); return; }
+  if(e.key==="Enter" && (userAnswers[currentQuestion]!==null || flagged[currentQuestion])){
     if(currentQuestion===selectedQuestions.length-1) openFinishConfirm();
     else goNext();
     e.preventDefault();
@@ -2068,7 +2175,7 @@ document.addEventListener("keydown",function(e){
     var dx=ex-sx,dy=Math.abs(ey-sy);
     if(Math.abs(dx)<minD||dy>maxV) return;
     if(quizLocked||!qs.classList.contains("active")) return;
-    if(dx<0 && currentQuestion<selectedQuestions.length-1 && userAnswers[currentQuestion]!==null) goNext();
+    if(dx<0 && currentQuestion<selectedQuestions.length-1 && (userAnswers[currentQuestion]!==null || flagged[currentQuestion])) goNext();
     else if(dx>0 && currentQuestion>0) goPrev();
   },{passive:true});
 })();

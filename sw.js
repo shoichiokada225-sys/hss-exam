@@ -1,4 +1,4 @@
-var CACHE_NAME = "hss-exam-v6";
+var CACHE_NAME = "hss-exam-v7";
 var ASSETS = [
   "./",
   "./index.html",
