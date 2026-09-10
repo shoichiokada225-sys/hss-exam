@@ -19,12 +19,12 @@ await wait(4000);
 const sw = await page.evaluate(async () => {
   const reg = await navigator.serviceWorker.getRegistration();
   const keys = await caches.keys();
-  const c = keys.includes("hss-exam-v7") ? await caches.open("hss-exam-v7") : null;
+  const c = keys.includes("hss-exam-v8") ? await caches.open("hss-exam-v8") : null;
   const n = c ? (await c.keys()).length : 0;
   return { reg: !!reg, active: !!(reg && reg.active), keys, n, ctrl: !!navigator.serviceWorker.controller };
 });
 ok("SW登録・active", sw.reg && sw.active, JSON.stringify(sw.keys));
-ok("キャッシュ hss-exam-v7 に11件", sw.n === 11, String(sw.n));
+ok("キャッシュ hss-exam-v8 に11件", sw.n === 11, String(sw.n));
 // questions.json served & 79 questions
 const qinfo = await page.evaluate(async () => { const r = await fetch("data/questions.json"); const j = await r.json(); return { n: j.length, hon: j.filter(q => String(q.source).startsWith("honshiken")).length, es: j.filter(q => q.es && q.es.question).length }; });
 ok("問題79問(必出10+セットA69)", qinfo.n === 79 && qinfo.hon === 10, JSON.stringify(qinfo));
