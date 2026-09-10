@@ -30,3 +30,8 @@
 
 ## Untuk yang ingin berlatih
 Anda dapat berlatih dengan "Demo Ujian" di dalam aplikasi (5 soal, kata sandi 123, hasil tidak akan dikirim ke mana pun)
+
+## Sebelum ujian (penting)
+- Di iPhone, jika Pengaturan → Safari → "Blokir Semua Cookie" AKTIF, aplikasi tidak akan berjalan. Matikan pengaturan itu.
+- Setelah selesai, jangan tutup aplikasi sampai muncul "✅ Terkirim". Jika waktu habis, ini bisa memakan waktu hingga 5 menit.
+- Jika muncul "⚠", jangan tutup aplikasi; beri tahu pengawas. Membuka kembali aplikasi di tempat dengan sinyal bagus akan mengirim ulang secara otomatis.

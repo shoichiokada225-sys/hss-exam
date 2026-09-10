@@ -30,3 +30,8 @@
 
 ## For those who want to practice
 You can practice with the app's "Demo Quiz" (5 questions, password 123, results are not sent anywhere)
+
+## Before the exam (important)
+- On iPhone, if Settings → Safari → "Block All Cookies" is ON, the app will not work. Turn it OFF.
+- After finishing, do not close the app until you see "✅ Sent". If time runs out, this can take up to 5 minutes.
+- If you see "⚠", do not close the app; tell the proctor. Reopening the app where the signal is good will resend automatically.

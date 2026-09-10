@@ -30,3 +30,8 @@
 
 ## Dành cho những ai muốn luyện tập
 Bạn có thể luyện tập bằng "Bản demo" trong ứng dụng (5 câu hỏi, mật khẩu 123, kết quả sẽ không được gửi đi đâu cả)
+
+## Trước khi thi (quan trọng)
+- Trên iPhone, nếu Cài đặt → Safari → "Chặn tất cả cookie" đang BẬT thì ứng dụng không hoạt động. Hãy TẮT đi.
+- Sau khi làm xong, đừng đóng ứng dụng cho đến khi thấy "✅ Đã gửi". Nếu hết giờ, việc này có thể mất tối đa 5 phút.
+- Nếu thấy "⚠", đừng đóng ứng dụng, hãy báo cho giám thị. Mở lại ứng dụng ở nơi sóng tốt thì kết quả sẽ tự động gửi lại.

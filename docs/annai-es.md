@@ -30,3 +30,8 @@
 
 ## Para quienes quieran practicar
 Puede practicar con el "Demo" de la aplicación (5 preguntas, contraseña 123, los resultados no se envían a ningún lugar)
+
+## Antes del examen (importante)
+- En iPhone, si Ajustes → Safari → "Bloquear todas las cookies" está ACTIVADO, la aplicación no funciona. Desactívelo.
+- Al terminar, no cierre la aplicación hasta ver "✅ Enviado". Si se acaba el tiempo, puede tardar hasta 5 minutos.
+- Si aparece "⚠", no cierre la aplicación; avise al supervisor. Al volver a abrir la aplicación donde haya buena señal, se reenviará automáticamente.
