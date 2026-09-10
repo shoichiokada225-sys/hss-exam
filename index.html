@@ -833,7 +833,7 @@ var TRANSLATIONS = {
     skipLink: "本文にスキップ", darkModeToggle: "ダークモード切替",
     minutes: "分", seconds: "秒",
     swipeHint: "← スワイプで前後の問題に移動 →",
-    sending: "送信中...", sendingSlow: "順番に送信しています。最大3分ほどかかることがあります。画面はこのままお待ちください。", loadingQuestions: "問題を読み込み中..."
+    sending: "送信中...", sendingSlow: "順番に送信しています。最大5分ほどかかることがあります。画面はこのままお待ちください。", loadingQuestions: "問題を読み込み中..."
   },
   en: {
     homeTitle: "HSS Certification Exam", homeSubtitle: "Hirano Co., Ltd.",
@@ -940,7 +940,7 @@ var TRANSLATIONS = {
     skipLink: "Skip to content", darkModeToggle: "Toggle dark mode",
     minutes: "min", seconds: "sec",
     swipeHint: "← Swipe to navigate →",
-    sending: "Sending...", sendingSlow: "Sending in turn. This may take up to 3 minutes. Please keep this screen open.", loadingQuestions: "Loading questions..."
+    sending: "Sending...", sendingSlow: "Sending in turn. This may take up to 5 minutes. Please keep this screen open.", loadingQuestions: "Loading questions..."
   },
   vi: {
     homeTitle: "Kỳ thi Chứng chỉ HSS", homeSubtitle: "Công ty Hirano",
@@ -1047,7 +1047,7 @@ var TRANSLATIONS = {
     skipLink: "Chuyển đến nội dung", darkModeToggle: "Chế độ tối",
     minutes: "phút", seconds: "giây",
     swipeHint: "← Vuốt để chuyển câu →",
-    sending: "Đang gửi...", sendingSlow: "Đang gửi theo thứ tự. Có thể mất tối đa 3 phút. Vui lòng giữ nguyên màn hình này.", loadingQuestions: "Đang tải câu hỏi..."
+    sending: "Đang gửi...", sendingSlow: "Đang gửi theo thứ tự. Có thể mất tối đa 5 phút. Vui lòng giữ nguyên màn hình này.", loadingQuestions: "Đang tải câu hỏi..."
   },
   id: {
     homeTitle: "Ujian Sertifikasi HSS", homeSubtitle: "PT Hirano",
@@ -1154,7 +1154,7 @@ var TRANSLATIONS = {
     skipLink: "Langsung ke konten", darkModeToggle: "Mode gelap",
     minutes: "menit", seconds: "detik",
     swipeHint: "← Geser untuk navigasi →",
-    sending: "Mengirim...", sendingSlow: "Mengirim secara bergiliran. Bisa memakan waktu hingga 3 menit. Mohon biarkan layar ini terbuka.", loadingQuestions: "Memuat soal..."
+    sending: "Mengirim...", sendingSlow: "Mengirim secara bergiliran. Bisa memakan waktu hingga 5 menit. Mohon biarkan layar ini terbuka.", loadingQuestions: "Memuat soal..."
   },
   es: {
     homeTitle: "Examen de Certificación HSS", homeSubtitle: "Compañía Hirano",
@@ -1261,7 +1261,7 @@ var TRANSLATIONS = {
     skipLink: "Ir al contenido", darkModeToggle: "Modo oscuro",
     minutes: " min ", seconds: " seg",
     swipeHint: "← Deslice para cambiar de pregunta →",
-    sending: "Enviando...", sendingSlow: "Enviando por turnos. Puede tardar hasta 3 minutos. Mantenga esta pantalla abierta.", loadingQuestions: "Cargando preguntas..."
+    sending: "Enviando...", sendingSlow: "Enviando por turnos. Puede tardar hasta 5 minutos. Mantenga esta pantalla abierta.", loadingQuestions: "Cargando preguntas..."
   }
 };
 
@@ -1291,7 +1291,9 @@ var CATEGORY_CLASSES = {
 };
 
 // ==================== STATE ====================
-var currentLang = localStorage.getItem("hss_lang") || "ja";
+function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+function lsSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+var currentLang = lsGet("hss_lang") || "ja";
 // 受験モード: "exam"=HSS認定本試験 / "demo"=練習用デモ問題（旧hss-exam-demoを統合）
 var examMode = "exam";
 var isDemo = function(){ return examMode === "demo"; };
@@ -1379,7 +1381,7 @@ async function sha256(message) {
 
 // ==================== THEME ====================
 (function initTheme(){
-  var saved = localStorage.getItem("hss_theme");
+  var saved = lsGet("hss_theme");
   if(saved==="dark") document.documentElement.setAttribute("data-theme","dark");
   updateThemeIcon();
 })();
@@ -1389,8 +1391,8 @@ function updateThemeIcon(){
 }
 document.getElementById("theme-toggle").addEventListener("click",function(){
   var isDark = document.documentElement.getAttribute("data-theme")==="dark";
-  if(isDark){document.documentElement.removeAttribute("data-theme");localStorage.setItem("hss_theme","light");}
-  else{document.documentElement.setAttribute("data-theme","dark");localStorage.setItem("hss_theme","dark");}
+  if(isDark){document.documentElement.removeAttribute("data-theme");lsSet("hss_theme","light");}
+  else{document.documentElement.setAttribute("data-theme","dark");lsSet("hss_theme","dark");}
   updateThemeIcon();
 });
 
@@ -1398,7 +1400,7 @@ document.getElementById("theme-toggle").addEventListener("click",function(){
 document.getElementById("lang-selector").value = currentLang;
 document.getElementById("lang-selector").addEventListener("change",function(){
   currentLang = this.value;
-  localStorage.setItem("hss_lang", currentLang);
+  lsSet("hss_lang", currentLang);
   applyTranslations();
   // Re-render current question if quiz is active
   if(document.getElementById("quiz-screen").classList.contains("active") && selectedQuestions.length > 0 && !quizLocked){
@@ -2207,9 +2209,11 @@ function settlePendingAway(){
 function submitQuiz(){
   if(quizSubmitted) return;
   quizSubmitted = true;
-  clearProgress();
-  _resumeData = null;
-  updateResumeBadge();
+  if(!isDemo()){   // デモ終了で中断中の本試験の進行を消さない
+    clearProgress();
+    _resumeData = null;
+    updateResumeBadge();
+  }
   settlePendingAway();
   quizLocked = true;
   clearInterval(timerInterval);
@@ -2276,6 +2280,8 @@ function finishQuiz(){
 
   // デモは結果をどこにも送信しない
   if(isDemo()) return;
+  // 送信結果(✅/⚠)が確定するまで「ホームに戻る」を隠す（送信中に閉じられる抜け穴を塞ぐ）
+  document.getElementById("results-home-btn").style.display = "none";
   autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec);
 }
 
@@ -2380,10 +2386,12 @@ function autoSendResults(timedOut, pct, elapsed, elapsedMin, elapsedSec){
     else if(state === "done") notice.textContent = t("autoSent");
   }}).then(function(success){
     sendInFlight = false;
+    var homeBtn = document.getElementById("results-home-btn"); if(homeBtn) homeBtn.style.display = "";
     if(success){ notice.textContent = t("autoSent"); notice.classList.add("sent-ok"); }
     else { showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec); }
   }).catch(function(){
     sendInFlight = false;
+    var homeBtn2 = document.getElementById("results-home-btn"); if(homeBtn2) homeBtn2.style.display = "";
     showManualSendOption(pct, passOrFail, dateStr, timedOut, elapsedMin, elapsedSec);
   });
 }
@@ -2492,7 +2500,8 @@ function fallbackMailto(subject, body, btn){
 // 方針: 送信前にジッターでバースト分散 → POST(no-cors)後にJSONPで記録確認 →
 //       未記録なら自動再送。結果はlocalStorageに保持し、再アクセス時に未達分を再送。
 var SUBMIT_JITTER_MS = 3000;   // 送信前ランダム遅延の最大(ms)。終了時刻は自然に分散するため短くてよい
-var SUBMIT_ATTEMPTS  = 6;      // 最大試行回数
+var SUBMIT_ATTEMPTS  = 12;     // 最大試行回数（100人同時終了でGASロック待ちが続いても粘る）
+var VERIFY_TIMEOUT_MS = 25000; // JSONP(probe/verify)の待ち時間。GASコールドスタート実測9〜19秒に6秒では足りず全員⚠になる
 var PENDING_KEY      = "hss_pending_v1";
 
 function genSubmissionId(type){
@@ -2530,7 +2539,7 @@ function _verifyRecorded(id){
     var cb = "hsscb_" + Date.now() + "_" + Math.floor(Math.random()*1e6);
     var s = document.createElement("script");
     var done = false;
-    var timer = setTimeout(function(){ finish(false); }, 6000);
+    var timer = setTimeout(function(){ finish(false); }, VERIFY_TIMEOUT_MS);
     function finish(val){ if(done) return; done=true; clearTimeout(timer); try{ delete window[cb]; }catch(e){ window[cb]=undefined; } if(s.parentNode) s.parentNode.removeChild(s); resolve(val); }
     window[cb] = function(res){ finish(!!(res && res.recorded)); };
     s.onerror = function(){ finish(false); };
@@ -2547,7 +2556,7 @@ function _probeVerifySupport(){
     var cb = "hssprobe_" + Date.now() + "_" + Math.floor(Math.random()*1e6);
     var s = document.createElement("script");
     var done = false;
-    var timer = setTimeout(function(){ finish(false); }, 6000);
+    var timer = setTimeout(function(){ finish(false); }, VERIFY_TIMEOUT_MS);
     function finish(v){ if(done) return; done=true; clearTimeout(timer); try{ delete window[cb]; }catch(e){ window[cb]=undefined; } if(s.parentNode) s.parentNode.removeChild(s); resolve(v); }
     window[cb] = function(){ finish(true); };   // JSONP応答が返れば新GAS
     s.onerror = function(){ finish(false); };
@@ -2583,6 +2592,16 @@ function reliableSubmit(payload, opts){
       // 成功と偽らない・pendingも消さない。結果は次回起動時のflushPendingが再送する。
       onStatus("sending", 1);
       await _postNoCors(payload);
+      // probeが間に合わなくても(コールドスタート等)POST自体は届いていることが多い。
+      // ⚠を出す前に記録確認を2回だけ試し、記録済みなら✅にする
+      for(var k=0; k<2; k++){
+        await _delay(3000);
+        if(await _verifyRecorded(payload.submissionId)){
+          _removePending(payload.submissionId);
+          onStatus("done", 1);
+          return true;
+        }
+      }
       onStatus("unverified", 1);
       return false;
     }
@@ -2596,7 +2615,7 @@ function reliableSubmit(payload, opts){
         onStatus("done", attempt);
         return true;
       }
-      await _delay(Math.min(1000*Math.pow(2, attempt), 8000)); // 指数バックオフ
+      await _delay(Math.min(1000*Math.pow(2, attempt), 20000)); // 指数バックオフ（上限20秒）
     }
     onStatus("failed", SUBMIT_ATTEMPTS);
     return false; // localStorageに残し、次回アクセス時に自動再送
@@ -2646,7 +2665,7 @@ if("serviceWorker" in navigator){
 
 // ==================== INSTALL BANNER ====================
 (function(){
-  var dismissed = localStorage.getItem("hss_install_dismissed");
+  var dismissed = lsGet("hss_install_dismissed");
   var isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
   if(isStandalone || dismissed) return;
 
@@ -2703,7 +2722,7 @@ if("serviceWorker" in navigator){
 
     dismissBtn.addEventListener("click", function(){
       banner.classList.remove("show");
-      localStorage.setItem("hss_install_dismissed", "1");
+      lsSet("hss_install_dismissed", "1");
     });
   }
 
@@ -2732,13 +2751,13 @@ if("serviceWorker" in navigator){
 
     document.getElementById("ios-guide-close").addEventListener("click", function(){
       guide.classList.remove("show");
-      localStorage.setItem("hss_install_dismissed", "1");
+      lsSet("hss_install_dismissed", "1");
     });
 
     guide.addEventListener("click", function(e){
       if(e.target === guide){
         guide.classList.remove("show");
-        localStorage.setItem("hss_install_dismissed", "1");
+        lsSet("hss_install_dismissed", "1");
       }
     });
   }
