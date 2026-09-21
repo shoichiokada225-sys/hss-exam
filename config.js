@@ -19,7 +19,7 @@
  */
 var CONFIG = {
   // === パスワード（SHA-256ハッシュ） ===
-  passwordHash: "354948ef61d10149fa91ad1bf6a8676f94e7d6f2b0f7d1920797b8fbe56b3c81",
+  passwordHash: "a7dd571718347974f850dc66f8a8f7bbb64bc1ffd8c5350e479b318b6a9c35ec",
 
   // === メール設定 ===
   email: {
